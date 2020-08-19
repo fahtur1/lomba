@@ -11,7 +11,7 @@ class Home extends CI_Controller
 
     public function index()
     {
-        print('fahtur k&2');
+        print('fahturrrr');
     }
 
     public function dashboard()
