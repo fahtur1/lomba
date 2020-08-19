@@ -57,7 +57,7 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('admin') ?>/home/createplan">
+        <a class="nav-link" href="<?= base_url('admin') ?>/home/create_plan">
           <i class="fas fa-fw fa-cog"></i>
           <span>Create Plan PS</span>
         </a>

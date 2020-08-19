@@ -4,7 +4,7 @@
     </div>
     <div class="row">
         <div class="col-lg-4">
-            <form method="post" action="<?= base_url('admin') ?>/home/createplan">
+            <form method="post" action="<?= base_url('admin') ?>/home/create_plan">
                 <div class="form-group">
                     <label for="inputState">Unit Model</label>
                     <select id="unit_model" class="form-control" name="unit_model">

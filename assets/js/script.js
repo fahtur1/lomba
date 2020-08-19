@@ -1,10 +1,15 @@
+// Combo Box Components
 let unitModel = document.getElementById("unit_model");
 let unitCode = document.getElementById("unit_code");
 
 unitModel.addEventListener("change", (e) => {
-	let select = listUnitCode(e.target.value).sort();
-	unitCode.innerHTML = selectedUnit(select);
+	changeSelected(e.target.value);
 });
+
+let changeSelected = (selected) => {
+	let select = listUnitCode(selected).sort();
+	unitCode.innerHTML = selectedUnit(select);
+};
 
 let selectedUnit = (list) => {
 	let value = "";
@@ -101,3 +106,71 @@ let listUnitCode = (model) => {
 	}
 	return value;
 };
+
+// Update Button Components
+let updateButton = document.getElementsByClassName("update_button");
+
+// Date Components
+let dateForm = document.getElementById("date");
+
+// Type ComboBox Components
+let typePs = document.getElementById("ps_type");
+
+// Remark Components
+let remark = document.getElementById("remark");
+let idHidden = document.getElementById("id");
+
+// Button Update Clicked
+for (let item of updateButton) {
+	item.addEventListener("click", async (e) => {
+		let id = e.target.dataset.productId;
+
+		let result = await fetch(
+			`http://localhost/lomba/admin/home/getProductById/${id}`,
+			{
+				method: "post",
+			}
+		);
+
+		let dummy = await result.json();
+		let product = dummy.data;
+
+		idHidden.value = product.product_id;
+		unitModel.value = product.product_model;
+		changeSelected(product.product_model);
+		unitCode.value = product.product_code;
+		dateForm.value = product.product_plandate;
+		typePs.value = product.product_type;
+		remark.value = product.product_remark;
+	});
+}
+
+// Submit Update Click Button
+
+// let formUpdate = document.getElementById("form_update");
+
+// formUpdate.addEventListener("submit", async (e) => {
+// 	e.preventDefault();
+
+// 	let id = e.target.dataset.id;
+// 	let data = {
+// 		product_id: id,
+// 		product_model: unitModel.value,
+// 		product_code: unitCode.value,
+// 		product_plandate: dateForm.value,
+// 		product_type: typePs.value,
+// 		product_remark: remark.value,
+// 	};
+
+// 	$.ajax({
+// 		type: "POST",
+// 		url: "http://localhost/lomba/admin/home/updateData",
+// 		data: data,
+// 		success: function (response) {
+// 			console.log(JSON.parse(response));
+// 		},
+// 	});
+
+// 	// console.log(await result.json());
+// 	e.target.removeAttribute("data-id");
+// });
