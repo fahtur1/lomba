@@ -183,7 +183,7 @@
                         <!-- Inching Pedal -->
                         <!-- row 1 -->
                         <tr>
-                            <td class="align-middle" rowspan="4">Exhaust Gas Temp</td>
+                            <td class="align-middle" rowspan="4">Inching Pedal</td>
                             <td>Operating Effect</td>
                             <td>Engine Stop</td>
                             <td class="text-center">Kg</td>
@@ -231,6 +231,136 @@
                             <td class="text-center">mm</td>
                             <td class="text-center">55-65</td>
                             <td class="text-center">Max. 65</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+
+                        <!-- T/M Valve Press -->
+                        <!-- row 1 -->
+                        <tr>
+                            <td class="align-middle" rowspan="11">T/M Valve Press</td>
+                            <td>Pilot oil Press.</td>
+                            <td class="align-middle text-center" rowspan="3">Engine at full throttle Oil Temp 40-60°C</td>
+                            <td class="align-middle text-center" rowspan="11">Kg/cm2.</td>
+                            <td class="text-center">10 - 12</td>
+                            <td class="text-center">-</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- row 2 -->
+                        <tr>
+                            <td>Lubricating Oil Press.</td>
+                            <td class="text-center">1,0 - 2,5</td>
+                            <td class="text-center">-</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- row 3 -->
+                        <tr>
+                            <td>Main oil press.</td>
+                            <td class="align-middle text-center" rowspan="9">31 - 34</td>
+                            <td class="text-center">-</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- row 4 -->
+                        <tr>
+                            <td>Clutch F</td>
+                            <td class="align-middle text-center" rowspan="8">Mannual Spool Engine at full throttle Oil Temp 40-60°C</td>
+                            <td class="text-center"></td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- row 5 -->
+                        <tr>
+                            <td>Clutch R</td>
+                            <td class="text-center"></td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- row 6 -->
+                        <tr>
+                            <td>Clutch High</td>
+                            <td class="text-center"></td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- row 7 -->
+                        <tr>
+                            <td>Clutch Low</td>
+                            <td class="text-center"></td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- row 7 -->
+                        <tr>
+                            <td>Clutch 1</td>
+                            <td class="text-center"></td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- row 7 -->
+                        <tr>
+                            <td>Clutch 2</td>
+                            <td class="text-center"></td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- row 7 -->
+                        <tr>
+                            <td>Clutch 3</td>
+                            <td class="text-center"></td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- row 7 -->
+                        <tr>
+                            <td>Clutch 4</td>
+                            <td class="text-center"></td>
                             <td class="align-middle text-center">
                                 <input type="text" class="form-control no-border" size="5">
                             </td>
