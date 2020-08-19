@@ -40,9 +40,9 @@
                                 <td><?= $product['product_type'] ?></td>
                                 <td><?= $product['product_remark'] ?></td>
                                 <td class="text-center">
-                                    <button href="#" class="btn btn-warning btn-icon-split px-3 py-2 update_button" data-toggle="modal" data-target="#modalUpdate" data-product-id="<?= $product['product_id'] ?>">
+                                    <a href="<?= base_url("admin/home/update_plan/") . $product['product_model']  ?>" class="btn btn-warning btn-icon-split px-3 py-2 update_button">
                                         Update
-                                    </button>
+                                    </a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

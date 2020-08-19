@@ -75,30 +75,50 @@ class Home extends CI_Controller
         </div>';
     }
 
-    public function update_plan()
-    {
-        $data = [
-            'product_id' => $this->input->post('id'),
-            'product_model' => $this->input->post('unit_model'),
-            'product_code' => $this->input->post('unit_code'),
-            'product_plandate' => $this->input->post('date'),
-            'product_type' => $this->input->post('ps_type'),
-            'product_remark' => $this->input->post('remark')
-        ];
+    // public function update_plan()
+    // {
+    //     $data = [
+    //         'product_id' => $this->input->post('id'),
+    //         'product_model' => $this->input->post('unit_model'),
+    //         'product_code' => $this->input->post('unit_code'),
+    //         'product_plandate' => $this->input->post('date'),
+    //         'product_type' => $this->input->post('ps_type'),
+    //         'product_remark' => $this->input->post('remark')
+    //     ];
 
-        if ($this->Product_model->updateProduct($data)) {
-            $this->session->set_flashdata('message', $this->flask('success', 'Data Has Been Update'));
-        } else {
-            $this->session->set_flashdata('message', $this->flask('danger', 'Failed to Update Data'));
-        }
+    //     if ($this->Product_model->updateProduct($data)) {
+    //         $this->session->set_flashdata('message', $this->flask('success', 'Data Has Been Update'));
+    //     } else {
+    //         $this->session->set_flashdata('message', $this->flask('danger', 'Failed to Update Data'));
+    //     }
 
-        redirect('/admin/home/planps');
-    }
+    //     redirect('/admin/home/planps');
+    // }
 
     public function getProductById($id)
     {
         echo json_encode([
             'data' => $this->Product_model->getProductById($id)
         ]);
+    }
+
+    public function update_plan($unit)
+    {
+        if ($this->input->post()) {
+        } else {
+            $this->load->view('templates/sidebar');
+            $this->load->view('templates/header');
+
+            switch ($unit) {
+                case "PC2000-8":
+                case "HD785-7":
+                case "GD825A-2":
+                    $this->load->view("admin/update_plan");
+                    break;
+                case "HD785-7":
+                default:
+            }
+            $this->load->view('templates/footer');
+        }
     }
 }
