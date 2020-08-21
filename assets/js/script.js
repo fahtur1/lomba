@@ -107,43 +107,43 @@ let listUnitCode = (model) => {
 	return value;
 };
 
-// Update Button Components
-let updateButton = document.getElementsByClassName("update_button");
+// // Update Button Components
+// let updateButton = document.getElementsByClassName("update_button");
 
-// Date Components
-let dateForm = document.getElementById("date");
+// // Date Components
+// let dateForm = document.getElementById("date");
 
-// Type ComboBox Components
-let typePs = document.getElementById("ps_type");
+// // Type ComboBox Components
+// let typePs = document.getElementById("ps_type");
 
-// Remark Components
-let remark = document.getElementById("remark");
-let idHidden = document.getElementById("id");
+// // Remark Components
+// let remark = document.getElementById("remark");
+// let idHidden = document.getElementById("id");
 
-// Button Update Clicked
-for (let item of updateButton) {
-	item.addEventListener("click", async (e) => {
-		let id = e.target.dataset.productId;
+// // Button Update Clicked
+// for (let item of updateButton) {
+// 	item.addEventListener("click", async (e) => {
+// 		let id = e.target.dataset.productId;
 
-		let result = await fetch(
-			`http://localhost/lomba/admin/home/getProductById/${id}`,
-			{
-				method: "post",
-			}
-		);
+// 		let result = await fetch(
+// 			`http://localhost/lomba/admin/home/getProductById/${id}`,
+// 			{
+// 				method: "post",
+// 			}
+// 		);
 
-		let dummy = await result.json();
-		let product = dummy.data;
+// 		let dummy = await result.json();
+// 		let product = dummy.data;
 
-		idHidden.value = product.product_id;
-		unitModel.value = product.product_model;
-		changeSelected(product.product_model);
-		unitCode.value = product.product_code;
-		dateForm.value = product.product_plandate;
-		typePs.value = product.product_type;
-		remark.value = product.product_remark;
-	});
-}
+// 		idHidden.value = product.product_id;
+// 		unitModel.value = product.product_model;
+// 		changeSelected(product.product_model);
+// 		unitCode.value = product.product_code;
+// 		dateForm.value = product.product_plandate;
+// 		typePs.value = product.product_type;
+// 		remark.value = product.product_remark;
+// 	});
+// }
 
 // Submit Update Click Button
 

@@ -7,6 +7,8 @@ class Home extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Product_model');
+        $this->load->model('Plan_model');
+        $this->load->model('Model_model');
     }
 
     public function index()
@@ -26,20 +28,29 @@ class Home extends CI_Controller
     {
         if ($this->input->post()) {
             $data = [
-                'product_id' => uniqid(),
-                'product_model' => $this->input->post('unit_model'),
-                'product_code' => $this->input->post('unit_code'),
-                'product_plandate' => $this->input->post('date'),
-                'product_type' => $this->input->post('ps_type'),
-                'product_remark' => $this->input->post('remark')
+                'plan_id' => uniqid(),
+                'plan_date' => $this->input->post('date'),
+                'ps_type' => $this->input->post('ps_type'),
+                'remark' => $this->input->post('remark'),
+                'product_id' => $this->input->post('unit_model')
             ];
 
-            $this->Product_model->insertProduct($data);
+            if ($this->Plan_model->insertPlan($data) > 0) {
+                $this->flask('success', 'Plan has been Created!');
+            } else {
+                $this->flask('danger', 'Failed to create Plan!');
+            }
+
             redirect('admin/home/planps');
         } else {
+            $data = [
+                'models' => $this->Model_model->getModels(),
+                'product' => $this->Product_model->getProducts()
+            ];
+
             $this->load->view('templates/sidebar');
             $this->load->view('templates/header');
-            $this->load->view('admin/create_plan');
+            $this->load->view('admin/create_plan', $data);
             $this->load->view('templates/footer');
         }
     }
@@ -47,9 +58,11 @@ class Home extends CI_Controller
     public function planps()
     {
         $data = [
-            'products' => $this->Product_model->getProducts()
+            'plans' => $this->Plan_model->getPlans()
         ];
 
+        // var_dump($data);
+        // die;
         $this->load->view('templates/sidebar');
         $this->load->view('templates/header');
         $this->load->view('admin/plan_ps', $data);
@@ -66,13 +79,15 @@ class Home extends CI_Controller
 
     public function flask($class, $message)
     {
-        return
+        $this->session->set_flashdata(
+            'message',
             '<div class="alert alert-' . $class . ' alert-dismissible fade show" role="alert">
-            ' . $message . '
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>';
+                ' . $message . '
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>'
+        );
     }
 
     // public function update_plan()
