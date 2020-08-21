@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">UPDATE PLAN</h1>
+        <h1 class="h3 mb-0 text-gray-800">UPDATE GD825-2 / PS3/4</h1>
     </div>
 
     <div class="card shadow mb-4">
@@ -911,7 +911,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <button class="btn btn-primary mt-5">Update</button>
+                <button class="btn btn-warning px-3 py-2 float-right">Update</button>
             </div>
         </div>
     </div>
