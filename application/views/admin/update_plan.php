@@ -11,9 +11,9 @@
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
-                        <tr>
+                        <tr class="text-center">
                             <th>ITEM</th>
-                            <th colspan="2">CONDITION</th>
+                            <th style="width: 20%;" colspan="2">CONDITION</th>
                             <th>UNIT</th>
                             <th>STD</th>
                             <th>PMS</th>
@@ -22,7 +22,7 @@
                         </tr>
                     </thead>
                     <tfoot>
-                        <tr>
+                        <tr class="text-center">
                             <th>Unit Model</th>
                             <th colspan="2">CONDITION</th>
                             <th>UNIT</th>
@@ -368,8 +368,574 @@
                                 <input type="text" class="form-control no-border" size="5">
                             </td>
                         </tr>
+                        <!-- STEERING & BRAKE -->
+                        <tr class="bg-primary">
+                            <td class="text-white text-center font-weight-bold font-italic" colspan="8">
+                                STEERING & BRAKE
+                            </td>
+                        </tr>
+                        <!-- Wheel -->
+                        <!-- row 1 -->
+                        <tr>
+                            <td>Wheel</td>
+                            <td>Play of steering wheel</td>
+                            <td></td>
+                            <td class="align-middle text-center">mm</td>
+                            <td>25 - 45</td>
+                            <td>Max. 45</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- Wheel -->
+                        <!-- row 1 -->
+                        <tr>
+                            <td>Wheel</td>
+                            <td>Operating Effort.</td>
+                            <td>Engine at low idling.</td>
+                            <td class="text-center">kg.</td>
+                            <td>Max. 5</td>
+                            <td>Max. 6</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- Steering Pressure. -->
+                        <!-- row 1 -->
+                        <tr>
+                            <td>Steering Pressure.</td>
+                            <td>Priority relief valve</td>
+                            <td>Engine at full throtte</td>
+                            <td class="text-center">Kg/cm2</td>
+                            <td>170 - 180</td>
+                            <td>165 - 185</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- Brake Pedal -->
+                        <!-- row 1 -->
+                        <tr>
+                            <td>Brake Pedal</td>
+                            <td>Operating Effort.</td>
+                            <td>Engine at low idling.</td>
+                            <td class="text-center">kg.</td>
+                            <td>30 - 34</td>
+                            <td>Max. 50</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- Air Pressure -->
+                        <!-- row 1 -->
+                        <tr>
+                            <td>Air Pressure</td>
+                            <td colspan="2">Engine at full throtte</td>
+                            <td class="text-center">Kg/cm2</td>
+                            <td>4.2 - 9.5</td>
+                            <td>Min 3.7</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- HYDRAULIC -->
+                        <tr class="bg-primary">
+                            <td class="text-white text-center font-weight-bold font-italic" colspan="8">
+                                HYDRAULIC
+                            </td>
+                        </tr>
+                        <!-- Blade Lifting Speed -->
+                        <!-- row 1 -->
+                        <tr>
+                            <td class="align-middle" rowspan="2">Blade Lifting Speed</td>
+                            <td>Raise</td>
+                            <td class="align-middle text-center" rowspan="17">Engine rated speed.</td>
+                            <td class="align-middle text-center" rowspan="8">mm/Sec.</td>
+                            <td>115-145</td>
+                            <td>115-145</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- row 2 -->
+                        <tr>
+                            <td>Lower</td>
+                            <td>115-145</td>
+                            <td>115-145</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- Balde side shift speed, with out move of circle -->
+                        <!-- row 1 -->
+                        <tr>
+                            <td class="align-middle" rowspan="2">Balde side shift speed, <br> with out move of circle</td>
+                            <td>Left</td>
+                            <td>115-145</td>
+                            <td>115-145</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- row 2 -->
+                        <tr>
+                            <td>Right</td>
+                            <td>115-145</td>
+                            <td>115-145</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- Balde side shift speed, compared to circle -->
+                        <!-- row 1 -->
+                        <tr>
+                            <td class="align-middle" rowspan="2">Balde side shift speed, <br> compared to circle</td>
+                            <td>Left</td>
+                            <td>115-145</td>
+                            <td>115-145</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- row 2 -->
+                        <tr>
+                            <td>Right</td>
+                            <td>115-145</td>
+                            <td>115-145</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- Ripper lifting speed -->
+                        <!-- row 1 -->
+                        <tr>
+                            <td class="align-middle" rowspan="2">Ripper lifting speed</td>
+                            <td>Raise</td>
+                            <td>85 - 115</td>
+                            <td>85 - 115</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- row 2 -->
+                        <tr>
+                            <td>Lower</td>
+                            <td>85 - 115</td>
+                            <td>85 - 115</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- Blade rotation speed -->
+                        <!-- row 1 -->
+                        <tr>
+                            <td class="align-middle" rowspan="2">Blade rotation speed</td>
+                            <td>sn. 11001 - 12050</td>
+                            <td class="align-middle text-center" rowspan="2">deg/sec</td>
+                            <td>8.5 - 9.5</td>
+                            <td>8.5 - 9.5</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- row 2 -->
+                        <tr>
+                            <td>sn. 12051 and up</td>
+                            <td>6.5 - 7.5</td>
+                            <td>6.5 - 7.5</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- Hyd. Drift -->
+                        <!-- row 1 -->
+                        <tr>
+                            <td class="align-middle" rowspan="4">Hyd. Drift</td>
+                            <td>Extension of Blade Cyl.</td>
+                            <td class="align-middle text-center" rowspan="4">mm/min.</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- row 2 -->
+                        <tr>
+                            <td>Retraction of Blade Cyl.</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- row 3 -->
+                        <tr>
+                            <td>Extension of Riper Cyl.</td>
+                            <td>20</td>
+                            <td>20</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- row 4 -->
+                        <tr>
+                            <td>Retraction of Riper Cyl.</td>
+                            <td>20</td>
+                            <td>20</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- Hydraulic pressure -->
+                        <!-- row 1 -->
+                        <tr>
+                            <td class="align-middle" rowspan="3">Hydraulic pressure</td>
+                            <td>Priority v relieve press.</td>
+                            <td class="align-middle text-center" rowspan="3">mm/min.</td>
+                            <td>240 - 260</td>
+                            <td>235 - 265</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- row 2 -->
+                        <tr>
+                            <td>Control valve RH</td>
+                            <td>240 - 260</td>
+                            <td>235 - 265</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- row 3 -->
+                        <tr>
+                            <td>Control valve LH</td>
+                            <td>240 - 260</td>
+                            <td>235 - 265</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- DIFFERENTIAL / FINAL DRIVE & TANDEM -->
+                        <tr class="bg-primary">
+                            <td class="text-white text-center font-weight-bold font-italic" colspan="8">
+                                DIFFERENTIAL / FINAL DRIVE & TANDEM
+                            </td>
+                        </tr>
+                        <!-- Diff. Drain Plug -->
+                        <tr>
+                            <td>Diff. Drain Plug</td>
+                            <td class="align-middle text-center" rowspan="3">Visual Check</td>
+                            <td></td>
+                            <td class="align-middle text-center" colspan="3" rowspan="3">No excessive metalic powder</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- Tandem Drain Plug -->
+                        <!-- row 1 -->
+                        <tr>
+                            <td class="align-middle" rowspan="2">Tandem Drain Plug</td>
+                            <td>L/H</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- row 2 -->
+                        <tr>
+                            <td>R/H</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- ELECTRICAL -->
+                        <tr class="bg-primary">
+                            <td class="text-white text-center font-weight-bold font-italic" colspan="8">
+                                ELECTRICAL
+                            </td>
+                        </tr>
+                        <!-- Instrument panel -->
+                        <tr>
+                            <td>Instrument panel</td>
+                            <td colspan="2">Completeness and function</td>
+                            <td colspan="3">Complete and normal function</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- Starting system -->
+                        <tr>
+                            <td>Starting system</td>
+                            <td colspan="2">Condition and function</td>
+                            <td colspan="3">Good installation and normal function</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- Chargin System -->
+                        <tr>
+                            <td>Chargin System</td>
+                            <td colspan="2">Condition and function</td>
+                            <td colspan="3">Good installation and normal function</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- Lighting -->
+                        <tr>
+                            <td>Lighting</td>
+                            <td colspan="2">Condition and function</td>
+                            <td colspan="3">Complete and normal function</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- Battery -->
+                        <tr>
+                            <td>Battery</td>
+                            <td colspan="2">Condition, electrolite level, specific grafity and load test. </td>
+                            <td colspan="3">Good condition</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- Wiring harness -->
+                        <tr>
+                            <td>Wiring harness</td>
+                            <td colspan="2">Condition, connection, clamping</td>
+                            <td colspan="3">Good installation and condition</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- VHMS/Komtrak -->
+                        <tr>
+                            <td>VHMS/Komtrak</td>
+                            <td colspan="2">Condition and function</td>
+                            <td colspan="3">Good condition and function</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- OPTIONAL EQUIPMENT -->
+                        <tr class="bg-primary">
+                            <td class="text-white text-center font-weight-bold font-italic" colspan="8">
+                                OPTIONAL EQUIPMENT
+                            </td>
+                        </tr>
+                        <!-- Emergency shutdown -->
+                        <tr>
+                            <td>Emergency shutdown</td>
+                            <td colspan="2">Completeness, condition and function</td>
+                            <td colspan="3">Complete and normal function</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- Logout Switch -->
+                        <tr>
+                            <td>Logout Switch</td>
+                            <td colspan="2">Completeness, condition and function</td>
+                            <td colspan="3">Complete and normal function</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- PDU -->
+                        <tr>
+                            <td>PDU</td>
+                            <td colspan="2">Completeness, condition and function</td>
+                            <td colspan="3">Complete and normal function</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- Autolube -->
+                        <tr>
+                            <td>Autolube</td>
+                            <td colspan="2">Completeness, condition and function</td>
+                            <td colspan="3">Complete and normal function</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- Fire suppression -->
+                        <tr>
+                            <td>Fire suppression</td>
+                            <td colspan="2">Completeness, condition and function</td>
+                            <td colspan="3">Complete and normal function</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- Fatique warning -->
+                        <tr>
+                            <td>Fatique warning</td>
+                            <td colspan="2">Completeness, condition and function</td>
+                            <td colspan="3">Complete and normal function</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- Backup alarm -->
+                        <tr>
+                            <td>Backup alarm</td>
+                            <td colspan="2">Completeness, condition and function</td>
+                            <td colspan="3">Complete and normal function</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- GENERAL MACHINE CONDITION -->
+                        <tr class="bg-primary">
+                            <td class="text-white text-center font-weight-bold font-italic" colspan="8">
+                                GENERAL MACHINE CONDITION
+                            </td>
+                        </tr>
+                        <!-- Attachment & Frame -->
+                        <tr>
+                            <td>Attachment & Frame</td>
+                            <td colspan="2">Completeness, worn and crack detection</td>
+                            <td colspan="3">No crack</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
+                        <!-- Machine -->
+                        <tr>
+                            <td>Machine</td>
+                            <td colspan="2">Clearness</td>
+                            <td colspan="3">Complete and normal condition</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
+                <button class="btn btn-primary mt-5">Update</button>
             </div>
         </div>
     </div>
