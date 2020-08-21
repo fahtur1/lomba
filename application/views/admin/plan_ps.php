@@ -32,15 +32,15 @@
                         </tr>
                     </tfoot>
                     <tbody>
-                        <?php foreach ($products as $product) : ?>
+                        <?php foreach ($plans as $plan) : ?>
                             <tr>
-                                <td><?= $product['product_model'] ?></td>
-                                <td><?= $product['product_code'] ?></td>
-                                <td><?= $product['product_plandate'] ?></td>
-                                <td><?= $product['product_type'] ?></td>
-                                <td><?= $product['product_remark'] ?></td>
+                                <td><?= $plan['model_name'] ?></td>
+                                <td><?= $plan['product_code'] ?></td>
+                                <td><?= $plan['plan_date'] ?></td>
+                                <td><?= $plan['ps_type'] ?></td>
+                                <td><?= $plan['remark'] ?></td>
                                 <td class="text-center">
-                                    <a href="<?= base_url("admin/home/update_plan/") . $product['product_model']  ?>" class="btn btn-warning btn-icon-split px-3 py-2 update_button">
+                                    <a href="<?= base_url("admin/home/update_plan/") . $plan['model_name']  ?>" class="btn btn-warning btn-icon-split px-3 py-2 update_button">
                                         Update
                                     </a>
                                 </td>

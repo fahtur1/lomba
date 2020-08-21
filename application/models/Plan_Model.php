@@ -22,7 +22,7 @@ class Plan_Model extends CI_Model
         $this->db->select('*');
         $this->db->from($this->table);
         $this->db->join('product', 'product.product_id = plan.product_id');
-        $this->db->join('model', 'model.product_id = product.product_id');
+        $this->db->join('model', 'model.model_id = product.model_id');
         return $this->db->get()->result_array();
     }
 
@@ -31,7 +31,7 @@ class Plan_Model extends CI_Model
         $this->db->select('*');
         $this->db->from($this->table);
         $this->db->join('product', 'product.product_id = plan.product_id');
-        $this->db->join('model', 'model.product_id = product.product_id');
+        $this->db->join('model', 'model.model_id = product.model_id');
         $this->db->where($this->key, $id);
         return $this->db->get()->row_array();
     }
