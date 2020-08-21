@@ -32,13 +32,13 @@ class Home extends CI_Controller
                 'plan_date' => $this->input->post('date'),
                 'ps_type' => $this->input->post('ps_type'),
                 'remark' => $this->input->post('remark'),
-                'product_id' => $this->input->post('unit_model')
+                'product_id' => $this->input->post('unit_code')
             ];
 
             if ($this->Plan_model->insertPlan($data) > 0) {
-                $this->flask('success', 'Plan has been Created!');
+                $this->flask('success', 'Plan has been Created!', 'message');
             } else {
-                $this->flask('danger', 'Failed to create Plan!');
+                $this->flask('danger', 'Failed to create Plan!', 'message');
             }
 
             redirect('admin/home/planps');
@@ -77,10 +77,10 @@ class Home extends CI_Controller
         $this->load->view('templates/footer');
     }
 
-    public function flask($class, $message)
+    public function flask($class, $message, $tag)
     {
         $this->session->set_flashdata(
-            'message',
+            $tag,
             '<div class="alert alert-' . $class . ' alert-dismissible fade show" role="alert">
                 ' . $message . '
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
