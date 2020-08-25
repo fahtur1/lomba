@@ -64,7 +64,7 @@
                             <!-- row 1 -->
                             <tr>
                                 <td class="align-middle" rowspan="2">
-
+                                    Engine Speed
                                 </td>
                                 <td class="align-middle">
                                     Eng. Low
@@ -113,7 +113,7 @@
                             <!-- Lub Oil -->
                             <!-- row 1 -->
                             <tr>
-                                <td class="align-middle" rowspan="2"></td>
+                                <td class="align-middle" rowspan="2">Lub Oil Press.</td>
                                 <td>Eng. Low</td>
                                 <td>S6D140-1</td>
                                 <td class="align-middle text-center" rowspan="2"></td>
@@ -142,7 +142,7 @@
                             <!-- Boost Press -->
                             <!-- row 1 -->
                             <tr>
-                                <td class="align-middle"></td>
+                                <td class="align-middle">Boost Press.</td>
                                 <td class="align-middle">Eng. Rated</td>
                                 <td>S6D140E-2</td>
                                 <td class="align-middle text-center"></td>
@@ -158,7 +158,7 @@
                             <!-- Exhaust Gas Temp -->
                             <!-- row 1 -->
                             <tr>
-                                <td class="align-middle"></td>
+                                <td class="align-middle">Exhaust Gas Temp</td>
                                 <td class="align-middle">T/C Stall</td>
                                 <td>S6D140E-2</td>
                                 <td class="align-middle text-center">°C</td>

@@ -126,6 +126,12 @@ class Home extends CI_Controller
 
             switch ($unit) {
                 case "PC2000-8":
+                    if ($ps == "PS2") {
+                        $this->load->view("admin/engine/pc2000-8");
+                    } else if ($ps == "PS3" || $ps == "PS4") {
+                        $this->load->view("admin/complete/pc2000-8");
+                    }
+                    break;
                 case "HD785-5":
                     if ($ps == "PS2") {
                         $this->load->view("admin/engine/hd785-5");
