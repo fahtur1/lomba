@@ -18,9 +18,15 @@ class Home extends CI_Controller
 
     public function dashboard()
     {
+        $data = [
+            'reports' => $this->getDataDummy(),
+            'title' => 'Dashboard'
+        ];
+
+        $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar');
-        $this->load->view('templates/header');
-        $this->load->view('admin/dashboard');
+        $this->load->view('templates/navbar');
+        $this->load->view('admin/dashboard', $data);
         $this->load->view('templates/footer');
     }
 
@@ -45,11 +51,13 @@ class Home extends CI_Controller
         } else {
             $data = [
                 'models' => $this->Model_model->getModels(),
-                'product' => $this->Product_model->getProducts()
+                'product' => $this->Product_model->getProducts(),
+                'title' => 'Create Plan'
             ];
 
+            $this->load->view('templates/header', $data);
             $this->load->view('templates/sidebar');
-            $this->load->view('templates/header');
+            $this->load->view('templates/navbar');
             $this->load->view('admin/create_plan', $data);
             $this->load->view('templates/footer');
         }
@@ -58,21 +66,26 @@ class Home extends CI_Controller
     public function planps()
     {
         $data = [
-            'plans' => $this->Plan_model->getPlans()
+            'plans' => $this->Plan_model->getPlans(),
+            'title' => 'Plan PS'
         ];
 
-        // var_dump($data);
-        // die;
+        $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar');
-        $this->load->view('templates/header');
+        $this->load->view('templates/navbar');
         $this->load->view('admin/plan_ps', $data);
         $this->load->view('templates/footer');
     }
 
     public function actualps()
     {
+        $data = [
+            'title' => 'Actual PS'
+        ];
+
+        $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar');
-        $this->load->view('templates/header');
+        $this->load->view('templates/navbar');
         $this->load->view('admin/actual_ps');
         $this->load->view('templates/footer');
     }
@@ -110,12 +123,69 @@ class Home extends CI_Controller
     //     redirect('/admin/home/planps');
     // }
 
-    public function getProductById($id)
+    public function ppm_report($detail = '')
     {
-        echo json_encode([
-            'data' => $this->Product_model->getProductById($id)
-        ]);
+        $data = [
+            'reports' => $this->getDataDummy(),
+            'title' => 'PPM Report'
+        ];
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar');
+        $this->load->view('templates/navbar');
+
+        if (!isset($detail) or empty($detail)) {
+            $this->load->view('admin/ppm_report', $data);
+        } else {
+            switch ($detail) {
+                case "PC2000-8":
+                    $data['detail'] = ["name" => "PC2000-8"];
+                    $this->load->view('admin/ppm_report_detail', $data);
+                    break;
+                case "GD825A-2":
+                    $data['detail'] = ["name" => "GD825A-2"];
+                    $this->load->view('admin/ppm_report_detail', $data);
+                    break;
+                case "HD785-7":
+                    $data['detail'] = ["name" => "HD785-7"];
+                    $this->load->view('admin/ppm_report_detail', $data);
+                    break;
+                case "HD785-5":
+                    $data['detail'] = ["name" => "HD785-5"];
+                    $this->load->view('admin/ppm_report_detail', $data);
+                    break;
+                default:
+                    show_404();
+                    break;
+            }
+        }
+        $this->load->view('templates/footer');
     }
+
+    public function getDataDummy()
+    {
+        return $data = [
+            [
+                "name" => "PC2000-8"
+            ],
+            [
+                "name" => "GD825A-2"
+            ],
+            [
+                "name" => "HD785-7"
+            ],
+            [
+                "name" => "HD785-5"
+            ]
+        ];
+    }
+
+    // public function getProductById($id)
+    // {
+    //     echo json_encode([
+    //         'data' => $this->Product_model->getProductById($id)
+    //     ]);
+    // }
 
     public function update_plan($unit)
     {
@@ -133,6 +203,7 @@ class Home extends CI_Controller
                 case "HD785-7":
                 default:
             }
+
             $this->load->view('templates/footer');
         }
     }
