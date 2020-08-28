@@ -187,7 +187,11 @@ class Home extends CI_Controller
     //     ]);
     // }
 
+<<<<<<< HEAD
     public function update_plan($unit)
+=======
+    public function update_plan($unit, $ps)
+>>>>>>> master
     {
         if ($this->input->post()) {
         } else {
