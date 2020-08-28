@@ -187,7 +187,7 @@ class Home extends CI_Controller
     //     ]);
     // }
 
-    public function update_plan($unit)
+    public function update_plan($unit, $ps)
     {
         if ($this->input->post()) {
         } else {
