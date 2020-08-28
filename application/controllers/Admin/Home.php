@@ -162,7 +162,6 @@ class Home extends CI_Controller
         $this->load->view('templates/footer');
     }
 
-<<<<<<< HEAD
     public function getDataDummy()
     {
         return $data = [
@@ -189,9 +188,6 @@ class Home extends CI_Controller
     // }
 
     public function update_plan($unit)
-=======
-    public function update_plan($unit, $ps)
->>>>>>> 9789e318ae0fd99728bed6603f263650b0603200
     {
         if ($this->input->post()) {
         } else {
