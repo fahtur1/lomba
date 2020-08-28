@@ -40,7 +40,7 @@
                                 <td><?= $plan['ps_type'] ?></td>
                                 <td><?= $plan['remark'] ?></td>
                                 <td class="text-center">
-                                    <a href="<?= base_url("admin/home/update_plan/") . $plan['model_name']  ?>" class="btn btn-warning btn-icon-split px-3 py-2 update_button">
+                                    <a href="<?= base_url("admin/home/update_plan/") . $plan['model_name'] . "/" . $plan['ps_type']  ?>" class="btn btn-warning btn-icon-split px-3 py-2 update_button">
                                         Update
                                     </a>
                                 </td>

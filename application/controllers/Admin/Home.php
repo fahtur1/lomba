@@ -162,6 +162,7 @@ class Home extends CI_Controller
         $this->load->view('templates/footer');
     }
 
+<<<<<<< HEAD
     public function getDataDummy()
     {
         return $data = [
@@ -188,6 +189,9 @@ class Home extends CI_Controller
     // }
 
     public function update_plan($unit)
+=======
+    public function update_plan($unit, $ps)
+>>>>>>> 9789e318ae0fd99728bed6603f263650b0603200
     {
         if ($this->input->post()) {
         } else {
@@ -196,9 +200,14 @@ class Home extends CI_Controller
 
             switch ($unit) {
                 case "PC2000-8":
-                case "HD785-7":
+                case "HD785-5":
+                    $this->load->view("admin/update_hd785-5");
                 case "GD825A-2":
-                    $this->load->view("admin/update_plan");
+                    if ($ps == "PS2") {
+                        $this->load->view("admin/engine/gd825-2");
+                    } else if ($ps == "PS3" || $ps == "PS4") {
+                        $this->load->view("admin/complete/gd825-2");
+                    }
                     break;
                 case "HD785-7":
                 default:

@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">UPDATE PLAN</h1>
+        <h1 class="h3 mb-0 text-gray-800">UPDATE GD825-2 / PS3/4</h1>
     </div>
 
     <div class="card shadow mb-4">
@@ -41,30 +41,24 @@
                         <!-- Engine Speed -->
                         <!-- row 1 -->
                         <tr>
-                            <td class="align-middle" rowspan="3">
-                                Engine Speed
-                            </td>
                             <td class="align-middle" rowspan="2">
+
+                            </td>
+                            <td class="align-middle">
                                 Eng. Low
                             </td>
-                            <td>S6D140-1</td>
-                            <td class="align-middle text-center" rowspan="3">RPM</td>
-                            <td>650-680</td>
+                            <td>S6D140E-2</td>
+                            <td class="align-middle text-center" rowspan="2"></td>
+                            <td>600-700</td>
                             <td class="text-center">-</td>
-                            <td class="align-middle text-center" rowspan="2">
+                            <td class="align-middle text-center">
                                 <input type="text" class="form-control no-border" size="5">
                             </td>
-                            <td class="align-middle text-center" rowspan="2">
+                            <td class="align-middle text-center">
                                 <input type="text" class="form-control no-border" size="5">
                             </td>
                         </tr>
                         <!-- row 2 -->
-                        <tr>
-                            <td>S6D140E-2</td>
-                            <td>600-700</td>
-                            <td class="text-center">-</td>
-                        </tr>
-                        <!-- row 3 -->
                         <tr>
                             <td>
                                 Eng. High
@@ -97,12 +91,12 @@
                         <!-- Lub Oil -->
                         <!-- row 1 -->
                         <tr>
-                            <td class="align-middle" rowspan="3">Lub Oil Press</td>
-                            <td>Eng. High</td>
-                            <td></td>
-                            <td class="align-middle text-center" rowspan="3">Kg/cm2.</td>
-                            <td>3,0 - 5,0</td>
-                            <td>2.0</td>
+                            <td class="align-middle" rowspan="2"></td>
+                            <td>Eng. Low</td>
+                            <td>S6D140-1</td>
+                            <td class="align-middle text-center" rowspan="2"></td>
+                            <td>Min. 1</td>
+                            <td>Min. 0.7</td>
                             <td class="align-middle text-center">
                                 <input type="text" class="form-control no-border" size="5">
                             </td>
@@ -112,66 +106,48 @@
                         </tr>
                         <!-- row 2 -->
                         <tr>
-                            <td class="align-middle" rowspan="2">Eng. Low</td>
-                            <td>S6D140-1</td>
-                            <td>Min. 1</td>
+                            <td class="align-middle">Eng. Low</td>
+                            <td>S6D140E-2</td>
+                            <td>Min. 1.2</td>
                             <td>Min. 0.7</td>
-                            <td class="align-middle text-center" rowspan="2">
+                            <td class="align-middle text-center">
                                 <input type="text" class="form-control no-border" size="5">
                             </td>
-                            <td class="align-middle text-center" rowspan="2">
+                            <td class="align-middle text-center">
                                 <input type="text" class="form-control no-border" size="5">
                             </td>
-                        </tr>
-                        <!-- row 3 -->
-                        <tr>
-                            <td></td>
-                            <td>Min. 1</td>
-                            <td>Min. 0.7</td>
                         </tr>
                         <!-- Boost Press -->
                         <!-- row 1 -->
                         <tr>
-                            <td class="align-middle" rowspan="2">Boost Press</td>
-                            <td class="align-middle" rowspan="2">Eng. Rated</td>
-                            <td>S6D140-1</td>
-                            <td class="align-middle text-center" rowspan="2">mmHg</td>
-                            <td>Min. 405</td>
-                            <td>Min. 320</td>
-                            <td class="align-middle text-center" rowspan="2">
-                                <input type="text" class="form-control no-border" size="5">
-                            </td>
-                            <td class="align-middle text-center" rowspan="2">
-                                <input type="text" class="form-control no-border" size="5">
-                            </td>
-                        </tr>
-                        <!-- row 2 -->
-                        <tr>
+                            <td class="align-middle"></td>
+                            <td class="align-middle">Eng. Rated</td>
                             <td>S6D140E-2</td>
+                            <td class="align-middle text-center"></td>
                             <td>Min. 590</td>
-                            <td>Min. 300</td>
+                            <td>Min. 500</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
                         </tr>
                         <!-- Exhaust Gas Temp -->
                         <!-- row 1 -->
                         <tr>
-                            <td class="align-middle" rowspan="2">Exhaust Gas Temp</td>
-                            <td class="align-middle" rowspan="2">T/C Stall</td>
-                            <td>S6D140-1</td>
-                            <td class="align-middle text-center" rowspan="2">°C</td>
-                            <td>Min. 400</td>
-                            <td>Min. 600</td>
-                            <td class="align-middle text-center" rowspan="2">
-                                <input type="text" class="form-control no-border" size="5">
-                            </td>
-                            <td class="align-middle text-center" rowspan="2">
-                                <input type="text" class="form-control no-border" size="5">
-                            </td>
-                        </tr>
-                        <!-- row 2 -->
-                        <tr>
+                            <td class="align-middle"></td>
+                            <td class="align-middle">T/C Stall</td>
                             <td>S6D140E-2</td>
+                            <td class="align-middle text-center">°C</td>
                             <td>Min. 700</td>
                             <td>Min. 700</td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
+                            <td class="align-middle text-center">
+                                <input type="text" class="form-control no-border" size="5">
+                            </td>
                         </tr>
 
                         <!-- TRANSMISSION & TORQUE CONVERTER -->
@@ -935,7 +911,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <button class="btn btn-primary mt-5">Update</button>
+                <button class="btn btn-warning px-3 py-2 float-right">Update</button>
             </div>
         </div>
     </div>
