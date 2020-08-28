@@ -147,6 +147,12 @@ class Home extends CI_Controller
                     }
                     break;
                 case "HD785-7":
+                    if ($ps == "PS2") {
+                        $this->load->view("admin/engine/hd785-7");
+                    } else if ($ps == "PS3" || $ps == "PS4") {
+                        $this->load->view("admin/complete/hd785-7");
+                    }
+                    break;
                 default:
             }
             $this->load->view('templates/footer');
