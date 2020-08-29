@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 21, 2020 at 02:22 PM
+-- Generation Time: Aug 29, 2020 at 03:15 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -31,6 +31,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `actual` (
   `actual_id` varchar(16) NOT NULL,
   `actual_date` varchar(16) NOT NULL,
+  `leader_name` varchar(32) NOT NULL,
+  `actual_branch` varchar(32) NOT NULL,
   `plan_id` varchar(16) NOT NULL,
   `ppm_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -76,7 +78,9 @@ CREATE TABLE `plan` (
 
 INSERT INTO `plan` (`plan_id`, `plan_date`, `ps_type`, `remark`, `product_id`) VALUES
 ('5f3f893cb4ca9', '2020-08-22', 'PS3', 'SB Admin', 2),
-('5f3f894abd15a', '2020-08-29', 'PS2', 'dsadsa', 4);
+('5f3f894abd15a', '2020-08-29', 'PS2', 'dsadsa', 4),
+('5f3fd8d59c538', '2020-08-28', 'PS3', 'Ayam Goreng', 4),
+('5f3ff83849e9a', '2020-08-29', 'PS3', 'dsadsa', 13);
 
 -- --------------------------------------------------------
 
