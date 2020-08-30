@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 29, 2020 at 03:15 PM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.11
+-- Waktu pembuatan: 30 Agu 2020 pada 17.08
+-- Versi server: 10.1.38-MariaDB
+-- Versi PHP: 7.3.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `actual`
+-- Struktur dari tabel `actual`
 --
 
 CREATE TABLE `actual` (
@@ -40,7 +40,7 @@ CREATE TABLE `actual` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `model`
+-- Struktur dari tabel `model`
 --
 
 CREATE TABLE `model` (
@@ -49,7 +49,7 @@ CREATE TABLE `model` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `model`
+-- Dumping data untuk tabel `model`
 --
 
 INSERT INTO `model` (`model_id`, `model_name`) VALUES
@@ -61,7 +61,162 @@ INSERT INTO `model` (`model_id`, `model_name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `plan`
+-- Struktur dari tabel `pc2000-8_actual`
+--
+
+CREATE TABLE `pc2000-8_actual` (
+  `id_update` int(11) NOT NULL,
+  `engine_low_idle` varchar(64) NOT NULL,
+  `engine_high_idle` varchar(64) NOT NULL,
+  `engine_full_throttle_raise` varchar(64) NOT NULL,
+  `engine_full_throttle_heavy` varchar(64) NOT NULL,
+  `engine_control_valve_neutral` varchar(64) NOT NULL,
+  `blow_horsepower` varchar(64) NOT NULL,
+  `oil_run_low_idle` varchar(64) NOT NULL,
+  `oil_run_high_idle` varchar(64) NOT NULL,
+  `boost_horsepower` varchar(64) NOT NULL,
+  `exhaust_speed_range` varchar(64) NOT NULL,
+  `exhaust_ambient_temp` varchar(64) NOT NULL,
+  `visual_inspection` varchar(64) NOT NULL,
+  `check_of_thermo` varchar(64) NOT NULL,
+  `boom_raise` varchar(64) NOT NULL,
+  `boom_lower` varchar(64) NOT NULL,
+  `arm_in` varchar(64) NOT NULL,
+  `arm_out` varchar(64) NOT NULL,
+  `bucket_curl` varchar(64) NOT NULL,
+  `bucket_dump` varchar(64) NOT NULL,
+  `swing_5_turns` varchar(64) NOT NULL,
+  `drive_right_track` varchar(64) NOT NULL,
+  `drive_left_track` varchar(64) NOT NULL,
+  `whole_work` varchar(64) NOT NULL,
+  `boom_cylinder` varchar(64) NOT NULL,
+  `arm_cylinder` varchar(64) NOT NULL,
+  `bucket_cylinder` varchar(64) NOT NULL,
+  `control_pressure` varchar(64) NOT NULL,
+  `jet_control_lever` varchar(64) NOT NULL,
+  `jet_right_travel_lever` varchar(64) NOT NULL,
+  `jet_left_travel_lever` varchar(64) NOT NULL,
+  `pump_control_lever` varchar(64) NOT NULL,
+  `pump_right_travel_lever` varchar(64) NOT NULL,
+  `pump_left_travel_lever` varchar(64) NOT NULL,
+  `p1f_boom_raise` varchar(64) NOT NULL,
+  `p1f_boom_raise_heavy` varchar(64) NOT NULL,
+  `p1f_arm_in` varchar(64) NOT NULL,
+  `p1f_arm_out` varchar(64) NOT NULL,
+  `p1f_bucket_curl` varchar(64) NOT NULL,
+  `p1f_swing` varchar(64) NOT NULL,
+  `p1r_boom_raise` varchar(64) NOT NULL,
+  `p1r_boom_raise_heavy` varchar(64) NOT NULL,
+  `p1r_arm_in` varchar(64) NOT NULL,
+  `p1r_arm_out` varchar(64) NOT NULL,
+  `p1r_bucket_curl` varchar(64) NOT NULL,
+  `p2f_boom_raise` varchar(64) NOT NULL,
+  `p2f_boom_raise_heavy` varchar(64) NOT NULL,
+  `p2f_arm_in` varchar(64) NOT NULL,
+  `p2f_arm_out` varchar(64) NOT NULL,
+  `p2f_bucket_curl` varchar(64) NOT NULL,
+  `p2r_boom_raise` varchar(64) NOT NULL,
+  `p2r_boom_raise_heavy` varchar(64) NOT NULL,
+  `p2r_arm_in` varchar(64) NOT NULL,
+  `p2r_arm_out` varchar(64) NOT NULL,
+  `p2r_bucket_curl` varchar(64) NOT NULL,
+  `fan_pump_radiator` varchar(64) NOT NULL,
+  `fan_pump_oil` varchar(64) NOT NULL,
+  `fan_speed_radiator` varchar(64) NOT NULL,
+  `fan_speed_oil` varchar(64) NOT NULL,
+  `hydraulic_oil_temp` varchar(64) NOT NULL,
+  `visual_check_hydraulic` varchar(64) NOT NULL,
+  `drive_drain_plug` varchar(64) NOT NULL,
+  `drive_oil_leak` varchar(64) NOT NULL,
+  `drive_abnormal_noise` varchar(64) NOT NULL,
+  `swing_drain_plug` varchar(64) NOT NULL,
+  `swing_oil_leak` varchar(64) NOT NULL,
+  `axial_play` varchar(64) NOT NULL,
+  `id_remark` int(11) NOT NULL,
+  `id_other` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pc2000-8_remark`
+--
+
+CREATE TABLE `pc2000-8_remark` (
+  `id_remark` int(11) NOT NULL,
+  `engine_low_idle_remark` varchar(64) NOT NULL,
+  `engine_high_idle_remark` varchar(64) NOT NULL,
+  `engine_full_throttle_raise_remark` varchar(64) NOT NULL,
+  `engine_full_throttle_heavy_remark` varchar(64) NOT NULL,
+  `engine_control_valve_neutral_remark` varchar(64) NOT NULL,
+  `blow_horsepower_remark` varchar(64) NOT NULL,
+  `oil_run_low_idle_remark` varchar(64) NOT NULL,
+  `oil_run_high_idle_remark` varchar(64) NOT NULL,
+  `boost_horsepower_remark` varchar(64) NOT NULL,
+  `exhaust_speed_range_remark` varchar(64) NOT NULL,
+  `exhaust_ambient_temp_remark` varchar(64) NOT NULL,
+  `visual_inspection_remark` varchar(64) NOT NULL,
+  `check_of_thermo_remark` varchar(64) NOT NULL,
+  `boom_raise_remark` varchar(64) NOT NULL,
+  `boom_lower_remark` varchar(64) NOT NULL,
+  `arm_in_remark` varchar(64) NOT NULL,
+  `arm_out_remark` varchar(64) NOT NULL,
+  `bucket_curl_remark` varchar(64) NOT NULL,
+  `bucket_dump_remark` varchar(64) NOT NULL,
+  `swing_5_turns_remark` varchar(64) NOT NULL,
+  `drive_right_track_remark` varchar(64) NOT NULL,
+  `drive_left_track_remark` varchar(64) NOT NULL,
+  `whole_work_remark` varchar(64) NOT NULL,
+  `boom_cylinder_remark` varchar(64) NOT NULL,
+  `arm_cylinder_remark` varchar(64) NOT NULL,
+  `bucket_cylinder_remark` varchar(64) NOT NULL,
+  `control_pressure_remark` varchar(64) NOT NULL,
+  `jet_control_lever_remark` varchar(64) NOT NULL,
+  `jet_right_travel_lever_remark` varchar(64) NOT NULL,
+  `jet_left_travel_lever_remark` varchar(64) NOT NULL,
+  `pump_control_lever_remark` varchar(64) NOT NULL,
+  `pump_right_travel_lever_remark` varchar(64) NOT NULL,
+  `pump_left_travel_lever_remark` varchar(64) NOT NULL,
+  `p1f_boom_raise_remark` varchar(64) NOT NULL,
+  `p1f_boom_raise_heavy_remark` varchar(64) NOT NULL,
+  `p1f_arm_in_remark` varchar(64) NOT NULL,
+  `p1f_arm_out_remark` varchar(64) NOT NULL,
+  `p1f_bucket_curl_remark` varchar(64) NOT NULL,
+  `p1f_swing_remark` varchar(64) NOT NULL,
+  `p1r_boom_raise_remark` varchar(64) NOT NULL,
+  `p1r_boom_raise_heavy_remark` varchar(64) NOT NULL,
+  `p1r_arm_in_remark` varchar(64) NOT NULL,
+  `p1r_arm_out_remark` varchar(64) NOT NULL,
+  `p1r_bucket_curl_remark` varchar(64) NOT NULL,
+  `p2f_boom_raise_remark` varchar(64) NOT NULL,
+  `p2f_boom_raise_heavy_remark` varchar(64) NOT NULL,
+  `p2f_arm_in_remark` varchar(64) NOT NULL,
+  `p2f_arm_out_remark` varchar(64) NOT NULL,
+  `p2f_bucket_curl_remark` varchar(64) NOT NULL,
+  `p2r_boom_raise_remark` varchar(64) NOT NULL,
+  `p2r_boom_raise_heavy_remark` varchar(64) NOT NULL,
+  `p2r_arm_in_remark` varchar(64) NOT NULL,
+  `p2r_arm_out_remark` varchar(64) NOT NULL,
+  `p2r_bucket_curl_remark` varchar(64) NOT NULL,
+  `fan_pump_radiator_remark` varchar(64) NOT NULL,
+  `fan_pump_oil_remark` varchar(64) NOT NULL,
+  `fan_speed_radiator_remark` varchar(64) NOT NULL,
+  `fan_speed_oil_remark` varchar(64) NOT NULL,
+  `hydraulic_oil_temp_remark` varchar(64) NOT NULL,
+  `visual_check_hydraulic_remark` varchar(64) NOT NULL,
+  `drive_drain_plug_remark` varchar(64) NOT NULL,
+  `drive_oil_leak_remark` varchar(64) NOT NULL,
+  `drive_abnormal_noise_remark` varchar(64) NOT NULL,
+  `swing_drain_plug_remark` varchar(64) NOT NULL,
+  `swing_oil_leak_remark` varchar(64) NOT NULL,
+  `axial_play_remark` varchar(64) NOT NULL,
+  `id_other_remark` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `plan`
 --
 
 CREATE TABLE `plan` (
@@ -73,7 +228,7 @@ CREATE TABLE `plan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `plan`
+-- Dumping data untuk tabel `plan`
 --
 
 INSERT INTO `plan` (`plan_id`, `plan_date`, `ps_type`, `remark`, `product_id`) VALUES
@@ -85,7 +240,7 @@ INSERT INTO `plan` (`plan_id`, `plan_date`, `ps_type`, `remark`, `product_id`) V
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ppm`
+-- Struktur dari tabel `ppm`
 --
 
 CREATE TABLE `ppm` (
@@ -96,7 +251,7 @@ CREATE TABLE `ppm` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `product`
+-- Struktur dari tabel `product`
 --
 
 CREATE TABLE `product` (
@@ -106,7 +261,7 @@ CREATE TABLE `product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `product`
+-- Dumping data untuk tabel `product`
 --
 
 INSERT INTO `product` (`product_id`, `product_code`, `model_id`) VALUES
@@ -178,116 +333,96 @@ INSERT INTO `product` (`product_id`, `product_code`, `model_id`) VALUES
 (68, 'HD613', 4),
 (69, 'HD614', 4);
 
--- --------------------------------------------------------
-
---
--- Table structure for table `ps2`
---
-
-CREATE TABLE `ps2` (
-  `id_ps2` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `ps3/4`
---
-
-CREATE TABLE `ps3/4` (
-  `id_ps3/4` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `actual`
+-- Indeks untuk tabel `actual`
 --
 ALTER TABLE `actual`
   ADD KEY `fk_plan_id` (`plan_id`),
   ADD KEY `fk_ppm_id` (`ppm_id`);
 
 --
--- Indexes for table `model`
+-- Indeks untuk tabel `model`
 --
 ALTER TABLE `model`
   ADD PRIMARY KEY (`model_id`);
 
 --
--- Indexes for table `plan`
+-- Indeks untuk tabel `pc2000-8_actual`
+--
+ALTER TABLE `pc2000-8_actual`
+  ADD PRIMARY KEY (`id_update`);
+
+--
+-- Indeks untuk tabel `pc2000-8_remark`
+--
+ALTER TABLE `pc2000-8_remark`
+  ADD PRIMARY KEY (`id_remark`);
+
+--
+-- Indeks untuk tabel `plan`
 --
 ALTER TABLE `plan`
   ADD PRIMARY KEY (`plan_id`),
   ADD KEY `fk_product_id` (`product_id`);
 
 --
--- Indexes for table `ppm`
+-- Indeks untuk tabel `ppm`
 --
 ALTER TABLE `ppm`
   ADD PRIMARY KEY (`ppm_id`);
 
 --
--- Indexes for table `product`
+-- Indeks untuk tabel `product`
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`product_id`),
   ADD KEY `fk_model_id` (`model_id`);
 
 --
--- Indexes for table `ps2`
---
-ALTER TABLE `ps2`
-  ADD PRIMARY KEY (`id_ps2`);
-
---
--- Indexes for table `ps3/4`
---
-ALTER TABLE `ps3/4`
-  ADD PRIMARY KEY (`id_ps3/4`);
-
---
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `product`
+-- AUTO_INCREMENT untuk tabel `pc2000-8_actual`
+--
+ALTER TABLE `pc2000-8_actual`
+  MODIFY `id_update` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `pc2000-8_remark`
+--
+ALTER TABLE `pc2000-8_remark`
+  MODIFY `id_remark` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `product`
 --
 ALTER TABLE `product`
   MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 
 --
--- AUTO_INCREMENT for table `ps2`
---
-ALTER TABLE `ps2`
-  MODIFY `id_ps2` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `ps3/4`
---
-ALTER TABLE `ps3/4`
-  MODIFY `id_ps3/4` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `actual`
+-- Ketidakleluasaan untuk tabel `actual`
 --
 ALTER TABLE `actual`
   ADD CONSTRAINT `fk_plan_id` FOREIGN KEY (`plan_id`) REFERENCES `plan` (`plan_id`),
   ADD CONSTRAINT `fk_ppm_id` FOREIGN KEY (`ppm_id`) REFERENCES `ppm` (`ppm_id`);
 
 --
--- Constraints for table `plan`
+-- Ketidakleluasaan untuk tabel `plan`
 --
 ALTER TABLE `plan`
   ADD CONSTRAINT `fk_product_id` FOREIGN KEY (`product_id`) REFERENCES `product` (`product_id`);
 
 --
--- Constraints for table `product`
+-- Ketidakleluasaan untuk tabel `product`
 --
 ALTER TABLE `product`
   ADD CONSTRAINT `fk_model_id` FOREIGN KEY (`model_id`) REFERENCES `model` (`model_id`);
