@@ -187,40 +187,44 @@ class Home extends CI_Controller
     //     ]);
     // }
 
-    public function update_plan($unit, $ps)
+    public function update_plan($unit = 1, $ps = 2)
     {
         if ($this->input->post()) {
         } else {
             $this->load->view('templates/sidebar');
+            $this->load->view('templates/navbar');
             $this->load->view('templates/header');
-
+            $data = [
+                'unit' => $unit,
+                'ps' => $ps
+            ];
             switch ($unit) {
                 case "PC2000-8":
                     if ($ps == "PS2") {
-                        $this->load->view("admin/engine/pc2000-8");
+                        $this->load->view("admin/engine/pc2000-8", $data);
                     } else if ($ps == "PS3" || $ps == "PS4") {
-                        $this->load->view("admin/complete/pc2000-8");
+                        $this->load->view("admin/complete/pc2000-8", $data);
                     }
                     break;
                 case "HD785-5":
                     if ($ps == "PS2") {
-                        $this->load->view("admin/engine/hd785-5");
+                        $this->load->view("admin/engine/hd785-5", $data);
                     } else if ($ps == "PS3" || $ps == "PS4") {
-                        $this->load->view("admin/complete/hd785-5");
+                        $this->load->view("admin/complete/hd785-5", $data);
                     }
                     break;
                 case "GD825A-2":
                     if ($ps == "PS2") {
-                        $this->load->view("admin/engine/gd825-2");
+                        $this->load->view("admin/engine/gd825-2", $data);
                     } else if ($ps == "PS3" || $ps == "PS4") {
-                        $this->load->view("admin/complete/gd825-2");
+                        $this->load->view("admin/complete/gd825-2", $data);
                     }
                     break;
                 case "HD785-7":
                     if ($ps == "PS2") {
-                        $this->load->view("admin/engine/hd785-7");
+                        $this->load->view("admin/engine/hd785-7", $data);
                     } else if ($ps == "PS3" || $ps == "PS4") {
-                        $this->load->view("admin/complete/hd785-7");
+                        $this->load->view("admin/complete/hd785-7", $data);
                     }
                     break;
                 default:

@@ -1,9 +1,9 @@
 <div class="container-fluid">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">UPDATE GD825-2 / PS3/4</h1>
+        <h1 class="h3 mb-0 text-gray-800">UPDATE <?= $unit ?> / <?= $ps ?></h1>
     </div>
 
-    <form action="" method="post">
+    <form action="<?= base_url("admin/home/update_plan") ?>" method="post">
         <div class="row">
             <div class="col-lg-4">
                 <div class="form-group">
@@ -16,7 +16,7 @@
                 </div>
                 <div class="form-group">
                     <label>Code Unit</label>
-                    <input type="text" class="form-control" id="codeunit" name="codeunit" disabled>
+                    <input type="text" class="form-control" id="codeunit" value="<?= $unit ?>" name="codeunit" disabled>
                 </div>
                 <div class="form-group">
                     <label>Branch Site</label>

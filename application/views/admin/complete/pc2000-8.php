@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">UPDATE PC2000-8 / PS3 / PS4</h1>
+        <h1 class="h3 mb-0 text-gray-800">UPDATE <?= $unit ?> / <?= $ps ?></h1>
     </div>
     <form action="" method="post">
         <div class="row">
@@ -15,7 +15,7 @@
                 </div>
                 <div class="form-group">
                     <label>Code Unit</label>
-                    <input type="text" class="form-control" id="codeunit" name="codeunit" disabled>
+                    <input type="text" class="form-control" id="codeunit" value="<?= $unit ?>" name="codeunit" disabled>
                 </div>
                 <div class="form-group">
                     <label>Branch Site</label>
@@ -69,10 +69,10 @@
                                 <td class="align-middle text-center" rowspan="7">Rpm</td>
                                 <td colspan="2" class="text-center">775 - 875</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="englllAct" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_low_idle" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="englllRe" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_low_idle_remark" size="5">
                                 </td>
                             </tr>
                             <!-- row 2 -->
