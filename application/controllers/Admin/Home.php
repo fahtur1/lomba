@@ -229,7 +229,6 @@ class Home extends CI_Controller
                     break;
                 default:
             }
-
             $this->load->view('templates/footer');
         }
     }
