@@ -414,7 +414,7 @@ class Home extends CI_Controller
                 endif;
 
                 break;
-            case "Hd785-5":
+            case "HD785-5":
 
                 if ($this->input->post()) :
 
@@ -432,11 +432,212 @@ class Home extends CI_Controller
                 endif;
 
                 break;
-            case "Hd785-7":
+            case "HD785-7":
+                $id_update = uniqid("hd7-");
+                if ($this->input->post()) {
+                    $data = [
+                        'id_update' => $id_update,
+                        'engine_low_idle' => $this->input->post('engine_low_idle'),
+                        'engine_high_idle' => $this->input->post('engine_high_idle'),
+                        'engine_full_throttle_raise' => $this->input->post('engine_full_throttle_raise'),
+                        'engine_full_throttle_heavy' => $this->input->post('engine_full_throttle_heavy'),
+                        'engine_control_valve_neutral' => $this->input->post('engine_control_valve_neutral'),
+                        'blow_horsepower' => $this->input->post('blow_horsepower'),
+                        'oil_run_low_idle' => $this->input->post('oil_run_low_idle'),
+                        'oil_run_high_idle' => $this->input->post('oil_run_high_idle'),
+                        'boost_horsepower' => $this->input->post('boost_horsepower'),
+                        'exhaust_speed_range' => $this->input->post('exhaust_speed_range'),
+                        'exhaust_ambient_temp' => $this->input->post('exhaust_ambient_temp'),
+                        // remark
+                        'engine_low_idle_remark' => $this->input->post('engine_low_idle_remark'),
+                        'engine_high_idle_remark' => $this->input->post('engine_high_idle_remark'),
+                        'engine_full_throttle_raise_remark' => $this->input->post('engine_full_throttle_raise_remark'),
+                        'engine_full_throttle_heavy_remark' => $this->input->post('engine_full_throttle_heavy_remark'),
+                        'engine_control_valve_neutral_remark' => $this->input->post('engine_control_valve_neutral_remark'),
+                        'blow_horsepower_remark' => $this->input->post('blow_horsepower_remark'),
+                        'oil_run_low_idle_remark' => $this->input->post('oil_run_low_idle_remark'),
+                        'oil_run_high_idle_remark' => $this->input->post('oil_run_high_idle_remark'),
+                        'boost_horsepower_remark' => $this->input->post('boost_horsepower_remark'),
+                        'exhaust_speed_range_remark' => $this->input->post('exhaust_speed_range_remark'),
+                        'exhaust_ambient_temp_remark' => $this->input->post('exhaust_ambient_temp_remark'),
+                    ];
 
-                if ($this->input->post()) :
+                    $actual_data = [
+                        'actual_id' => $id_actual,
+                        'actual_date' => $this->input->post('date'),
+                        'leader_name' => $this->input->post('name'),
+                        'actual_branch' => $this->input->post('site'),
+                        'plan_id' => $plan,
+                        'ppm_id' => '4',
+                        'id_update' => $id_update
+                    ];
 
-                else :
+                    if ($ps == 'PS2') {
+                        if ($this->Hd7857_model->insertPs2($data, $actual_data)) {
+                            $this->flask('success', 'Actual Plan added Succesfuly', 'message');
+                        } else {
+                            $this->flask('danger', 'Failed to add Actual Plan', 'message');
+                        }
+                    } elseif ($ps == 'PS3' || $ps == 'PS4') {
+                        $other = [
+                            'id_other' => $id_other,
+                            'instrument_panel' => $this->input->post('instrument_panel'),
+                            'starting_system' => $this->input->post('starting_system'),
+                            'charging_system' => $this->input->post('charging_system'),
+                            'lighting' => $this->input->post('lighting'),
+                            'battery' => $this->input->post('battery'),
+                            'wiring_harness' => $this->input->post('wiring_harness'),
+                            'vhms_komtrak' => $this->input->post('vhms_komtrak'),
+                            'emergency_shutdown' => $this->input->post('emergency_shutdown'),
+                            'logout_switch' => $this->input->post('logout_switch'),
+                            'pdu' => $this->input->post('pdu'),
+                            'autolube' => $this->input->post('autolube'),
+                            'fire_suppression' => $this->input->post('fire_suppression'),
+                            'fatique_warning' => $this->input->post('fatique_warning'),
+                            'backup_alarm' => $this->input->post('backup_alarm'),
+                            'attachment_frame' => $this->input->post('attachment_frame'),
+                            'machine' => $this->input->post('machine'),
+                            'undercarriage' => $this->input->post('undercarriage'),
+                            'instrument_panel_remark' => $this->input->post('instrument_panel'),
+                            'starting_system_remark' => $this->input->post('starting_system'),
+                            'charging_system_remark' => $this->input->post('charging_system'),
+                            'lighting_remark' => $this->input->post('lighting'),
+                            'battery_remark' => $this->input->post('battery'),
+                            'wiring_harness_remark' => $this->input->post('wiring_harness'),
+                            'vhms_komtrak_remark' => $this->input->post('vhms_komtrak'),
+                            'emergency_shutdown_remark' => $this->input->post('emergency_shutdown'),
+                            'logout_switch_remark' => $this->input->post('logout_switch'),
+                            'pdu_remark' => $this->input->post('pdu'),
+                            'autolube_remark' => $this->input->post('autolube'),
+                            'fire_suppression_remark' => $this->input->post('fire_suppression'),
+                            'fatique_warning_remark' => $this->input->post('fatique_warning'),
+                            'backup_alarm_remark' => $this->input->post('backup_alarm'),
+                            'attachment_frame_remark' => $this->input->post('attachment_frame'),
+                            'machine_remark' => $this->input->post('machine'),
+                            'undercarriage_remark' => $this->input->post('undercarriage'),
+                        ];
+
+                        $data += [
+                            'visual_inspection' => $this->input->post('visual_inspection'),
+                            'check_of_thermo' => $this->input->post('check_of_thermo'),
+                            'boom_raise' => $this->input->post('boom_raise'),
+                            'boom_lower' => $this->input->post('boom_lower'),
+                            'arm_in' => $this->input->post('arm_in'),
+                            'arm_out' => $this->input->post('arm_out'),
+                            'bucket_curl' => $this->input->post('bucket_curl'),
+                            'bucket_dump' => $this->input->post('bucket_dump'),
+                            'swing_5_turns' => $this->input->post('swing_5_turns'),
+                            'drive_right_track' => $this->input->post('drive_right_track'),
+                            'drive_left_track' => $this->input->post('drive_left_track'),
+                            'whole_work' => $this->input->post('whole_work'),
+                            'boom_cylinder' => $this->input->post('boom_cylinder'),
+                            'arm_cylinder' => $this->input->post('arm_cylinder'),
+                            'bucket_cylinder' => $this->input->post('bucket_cylinder'),
+                            'control_pressure' => $this->input->post('control_pressure'),
+                            'jet_control_lever' => $this->input->post('jet_control_lever'),
+                            'jet_right_travel_lever' => $this->input->post('jet_right_travel_lever'),
+                            'jet_left_travel_lever' => $this->input->post('jet_left_travel_lever'),
+                            'pump_control_lever' => $this->input->post('pump_control_lever'),
+                            'pump_right_travel_lever' => $this->input->post('pump_right_travel_lever'),
+                            'pump_left_travel_lever' => $this->input->post('pump_left_travel_lever'),
+                            'p1f_boom_raise' => $this->input->post('p1f_boom_raise'),
+                            'p1f_boom_raise_heavy' => $this->input->post('p1f_boom_raise_heavy'),
+                            'p1f_arm_in' => $this->input->post('p1f_arm_in'),
+                            'p1f_arm_out' => $this->input->post('p1f_arm_out'),
+                            'p1f_bucket_curl' => $this->input->post('p1f_bucket_curl'),
+                            'p1f_swing' => $this->input->post('p1f_swing'),
+                            'p1r_boom_raise' => $this->input->post('p1r_boom_raise'),
+                            'p1r_boom_raise_heavy' => $this->input->post('p1r_boom_raise_heavy'),
+                            'p1r_arm_in' => $this->input->post('p1r_arm_in'),
+                            'p1r_arm_out' => $this->input->post('p1r_arm_out'),
+                            'p1r_bucket_curl' => $this->input->post('p1r_bucket_curl'),
+                            'p2f_boom_raise' => $this->input->post('p2f_boom_raise'),
+                            'p2f_boom_raise_heavy' => $this->input->post('p2f_boom_raise_heavy'),
+                            'p2f_arm_in' => $this->input->post('p2f_arm_in'),
+                            'p2f_arm_out' => $this->input->post('p2f_arm_out'),
+                            'p2f_bucket_curl' => $this->input->post('p2f_bucket_curl'),
+                            'p2r_boom_raise_heavy' => $this->input->post('p2r_boom_raise_heavy'),
+                            'p2r_arm_in' => $this->input->post('p2r_arm_in'),
+                            'p2r_arm_out' => $this->input->post('p2r_arm_out'),
+                            'p2r_bucket_curl' => $this->input->post('p2r_bucket_curl'),
+                            'fan_pump_radiator' => $this->input->post('fan_pump_radiator'),
+                            'fan_pump_oil' => $this->input->post('fan_pump_oil'),
+                            'fan_speed_radiator' => $this->input->post('fan_speed_radiator'),
+                            'fan_speed_oil' => $this->input->post('fan_speed_oil'),
+                            'hydraulic_oil_temp' => $this->input->post('hydraulic_oil_temp'),
+                            'visual_check_hydraulic' => $this->input->post('visual_check_hydraulic'),
+                            'drive_drain_plug' => $this->input->post('drive_drain_plug'),
+                            'drive_oil_leak' => $this->input->post('drive_oil_leak'),
+                            'drive_abnormal_noise' => $this->input->post('drive_abnormal_noise'),
+                            'swing_drain_plug' => $this->input->post('swing_drain_plug'),
+                            'swing_oil_leak' => $this->input->post('swing_oil_leak'),
+                            'axial_play' => $this->input->post('axial_play'),
+                            // remark
+                            'visual_inspection_remark' => $this->input->post('visual_inspection_remark'),
+                            'check_of_thermo_remark' => $this->input->post('check_of_thermo_remark'),
+                            'boom_raise_remark' => $this->input->post('boom_raise_remark'),
+                            'boom_lower_remark' => $this->input->post('boom_lower_remark'),
+                            'arm_in_remark' => $this->input->post('arm_in_remark'),
+                            'arm_out_remark' => $this->input->post('arm_out_remark'),
+                            'bucket_curl_remark' => $this->input->post('bucket_curl_remark'),
+                            'bucket_dump_remark' => $this->input->post('bucket_dump_remark'),
+                            'swing_5_turns_remark' => $this->input->post('swing_5_turns_remark'),
+                            'drive_right_track_remark' => $this->input->post('drive_right_track_remark'),
+                            'drive_left_track_remark' => $this->input->post('drive_left_track_remark'),
+                            'whole_work_remark' => $this->input->post('whole_work_remark'),
+                            'boom_cylinder_remark' => $this->input->post('boom_cylinder_remark'),
+                            'arm_cylinder_remark' => $this->input->post('arm_cylinder_remark'),
+                            'bucket_cylinder_remark' => $this->input->post('bucket_cylinder_remark'),
+                            'control_pressure_remark' => $this->input->post('control_pressure_remark'),
+                            'jet_control_lever_remark' => $this->input->post('jet_control_lever_remark'),
+                            'jet_right_travel_lever_remark' => $this->input->post('jet_right_travel_lever_remark'),
+                            'jet_left_travel_lever_remark' => $this->input->post('jet_left_travel_lever_remark'),
+                            'pump_control_lever_remark' => $this->input->post('pump_control_lever_remark'),
+                            'pump_right_travel_lever_remark' => $this->input->post('pump_right_travel_lever_remark'),
+                            'pump_left_travel_lever_remark' => $this->input->post('pump_left_travel_lever_remark'),
+                            'p1f_boom_raise_remark' => $this->input->post('p1f_boom_raise_remark'),
+                            'p1f_boom_raise_heavy_remark' => $this->input->post('p1f_boom_raise_heavy_remark'),
+                            'p1f_arm_in_remark' => $this->input->post('p1f_arm_in_remark'),
+                            'p1f_arm_out_remark' => $this->input->post('p1f_arm_out_remark'),
+                            'p1f_bucket_curl_remark' => $this->input->post('p1f_bucket_curl_remark'),
+                            'p1f_swing_remark' => $this->input->post('p1f_swing_remark'),
+                            'p1r_boom_raise_remark' => $this->input->post('p1r_boom_raise_remark'),
+                            'p1r_boom_raise_heavy_remark' => $this->input->post('p1r_boom_raise_heavy_remark'),
+                            'p1r_arm_in_remark' => $this->input->post('p1r_arm_in_remark'),
+                            'p1r_arm_out_remark' => $this->input->post('p1r_arm_out_remark'),
+                            'p1r_bucket_curl_remark' => $this->input->post('p1r_bucket_curl_remark'),
+                            'p2f_boom_raise_remark' => $this->input->post('p2f_boom_raise_remark'),
+                            'p2f_boom_raise_heavy_remark' => $this->input->post('p2f_boom_raise_heavy_remark'),
+                            'p2f_arm_in_remark' => $this->input->post('p2f_arm_in_remark'),
+                            'p2f_arm_out_remark' => $this->input->post('p2f_arm_out_remark'),
+                            'p2f_bucket_curl_remark' => $this->input->post('p2f_bucket_curl_remark'),
+                            'p2r_boom_raise_heavy_remark' => $this->input->post('p2r_boom_raise_heavy_remark'),
+                            'p2r_arm_in_remark' => $this->input->post('p2r_arm_in_remark'),
+                            'p2r_arm_out_remark' => $this->input->post('p2r_arm_out_remark'),
+                            'p2r_bucket_curl_remark' => $this->input->post('p2r_bucket_curl_remark'),
+                            'fan_pump_radiator_remark' => $this->input->post('fan_pump_radiator_remark'),
+                            'fan_pump_oil_remark' => $this->input->post('fan_pump_oil_remark'),
+                            'fan_speed_radiator_remark' => $this->input->post('fan_speed_radiator_remark'),
+                            'fan_speed_oil_remark' => $this->input->post('fan_speed_oil_remark'),
+                            'hydraulic_oil_temp_remark' => $this->input->post('hydraulic_oil_temp_remark'),
+                            'visual_check_hydraulic_remark' => $this->input->post('visual_check_hydraulic_remark'),
+                            'drive_drain_plug_remark' => $this->input->post('drive_drain_plug_remark'),
+                            'drive_oil_leak_remark' => $this->input->post('drive_oil_leak_remark'),
+                            'drive_abnormal_noise_remark' => $this->input->post('drive_abnormal_noise_remark'),
+                            'swing_drain_plug_remark' => $this->input->post('swing_drain_plug_remark'),
+                            'swing_oil_leak_remark' => $this->input->post('swing_oil_leak_remark'),
+                            'axial_play_remark' => $this->input->post('axial_play_remark'),
+                            'id_other' => $id_other
+                        ];
+
+                        if ($this->Hd7857_model->insertPs34($data, $actual_data, $other)) {
+                            $this->flask('success', 'Actual Plan added Succesfuly', 'message');
+                        } else {
+                            $this->flask('danger', 'Failed to add Actual Plan', 'message');
+                        }
+                    }
+                    redirect('/admin/home/dashboard');
+                } else {
                     $this->load->view('templates/sidebar');
                     $this->load->view('templates/navbar', $dataa);
                     $this->load->view('templates/header');
@@ -447,7 +648,7 @@ class Home extends CI_Controller
                         $this->load->view("admin/complete/hd785-7", $dataa);
 
                     $this->load->view('templates/footer');
-                endif;
+                }
 
                 break;
             default:
