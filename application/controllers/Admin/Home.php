@@ -172,11 +172,11 @@ class Home extends CI_Controller
         ];
 
         $id_other = uniqid("oth-");
-        $id_update = uniqid("pc-");
         $id_actual = uniqid("act-");
 
         switch ($unit) {
             case "PC2000-8":
+                $id_update = uniqid("pc-");
 
                 if ($this->input->post()) {
                     // Data Post dari Halaman View
@@ -261,7 +261,7 @@ class Home extends CI_Controller
                             'undercarriage_remark' => $this->input->post('undercarriage'),
                         ];
 
-                        $data = [
+                        $data += [
                             'visual_inspection' => $this->input->post('visual_inspection'),
                             'check_of_thermo' => $this->input->post('check_of_thermo'),
                             'boom_raise' => $this->input->post('boom_raise'),
@@ -414,7 +414,7 @@ class Home extends CI_Controller
                 endif;
 
                 break;
-            case "HD825-5":
+            case "Hd785-5":
 
                 if ($this->input->post()) :
 
@@ -424,15 +424,15 @@ class Home extends CI_Controller
                     $this->load->view('templates/header');
 
                     if ($ps == 'PS2')
-                        $this->load->view("admin/engine/hd825-5", $dataa);
+                        $this->load->view("admin/engine/hd785-5", $dataa);
                     elseif ($ps == 'PS3' || $ps == 'PS4')
-                        $this->load->view("admin/complete/hd825-5", $dataa);
+                        $this->load->view("admin/complete/hd785-5", $dataa);
 
                     $this->load->view('templates/footer');
                 endif;
 
                 break;
-            case "HD825-7":
+            case "Hd785-7":
 
                 if ($this->input->post()) :
 
@@ -442,9 +442,9 @@ class Home extends CI_Controller
                     $this->load->view('templates/header');
 
                     if ($ps == 'PS2')
-                        $this->load->view("admin/engine/hd825-7", $dataa);
+                        $this->load->view("admin/engine/hd785-7", $dataa);
                     elseif ($ps == 'PS3' || $ps == 'PS4')
-                        $this->load->view("admin/complete/hd825-7", $dataa);
+                        $this->load->view("admin/complete/hd785-7", $dataa);
 
                     $this->load->view('templates/footer');
                 endif;
