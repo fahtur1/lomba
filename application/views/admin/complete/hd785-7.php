@@ -1238,18 +1238,6 @@
                                     <input type="text" class="form-control no-border" name="machine_remark" size="5">
                                 </td>
                             </tr>
-                            <!-- Undercarriage -->
-                            <tr>
-                                <td>Undercarriage</td>
-                                <td colspan="2">Cleaness, wear, completeness and condition</td>
-                                <td colspan="3">Complete and normal condition</td>
-                                <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="undercarriage" size="5">
-                                </td>
-                                <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="undercarriage_remark" size="5">
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
                     <button class="btn btn-warning px-3 py-2 float-right">Update</button>
