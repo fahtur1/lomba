@@ -374,9 +374,6 @@ class Home extends CI_Controller
                             'id_other' => $id_other
                         ];
 
-                        var_dump($data);
-                        die;
-
                         if ($this->Pc2000_model->insertPs34($data, $actual_data, $other)) {
                             $this->flask('success', 'Actual Plan added Succesfuly', 'message');
                         } else {
