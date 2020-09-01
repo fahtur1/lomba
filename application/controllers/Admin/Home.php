@@ -178,7 +178,7 @@ class Home extends CI_Controller
             case "PC2000-8":
                 $id_update = uniqid("pc-");
 
-                if ($this->input->post()) :
+                if ($this->input->post()) {
                     // Data Post dari Halaman View
                     $data = [
                         'id_update' => $id_update,
@@ -382,8 +382,7 @@ class Home extends CI_Controller
                     }
 
                     redirect('/admin/home/dashboard');
-
-                else :
+                } else {
                     $this->load->view('templates/sidebar');
                     $this->load->view('templates/navbar', $dataa);
                     $this->load->view('templates/header');
@@ -394,14 +393,13 @@ class Home extends CI_Controller
                         $this->load->view("admin/complete/pc2000-8", $dataa);
 
                     $this->load->view('templates/footer');
-                endif;
+                }
 
                 break;
             case "GD825A-2":
 
-                if ($this->input->post()) :
-
-                else :
+                if ($this->input->post()) {
+                } else {
                     $this->load->view('templates/sidebar');
                     $this->load->view('templates/navbar', $dataa);
                     $this->load->view('templates/header');
@@ -413,14 +411,13 @@ class Home extends CI_Controller
 
 
                     $this->load->view('templates/footer');
-                endif;
+                }
 
                 break;
-            case "HD825-5":
+            case "HD785-5":
 
-                if ($this->input->post()) :
-
-                else :
+                if ($this->input->post()) {
+                } else {
                     $this->load->view('templates/sidebar');
                     $this->load->view('templates/navbar', $dataa);
                     $this->load->view('templates/header');
@@ -431,25 +428,24 @@ class Home extends CI_Controller
                         $this->load->view("admin/complete/hd825-5", $dataa);
 
                     $this->load->view('templates/footer');
-                endif;
+                }
 
                 break;
-            case "HD825-7":
+            case "HD785-7":
 
-                if ($this->input->post()) :
-
-                else :
+                if ($this->input->post()) {
+                } else {
                     $this->load->view('templates/sidebar');
                     $this->load->view('templates/navbar', $dataa);
                     $this->load->view('templates/header');
 
                     if ($ps == 'PS2')
-                        $this->load->view("admin/engine/hd825-7", $dataa);
+                        $this->load->view("admin/engine/hd785-7", $dataa);
                     elseif ($ps == 'PS3' || $ps == 'PS4')
-                        $this->load->view("admin/complete/hd825-7", $dataa);
+                        $this->load->view("admin/complete/hd785-7", $dataa);
 
                     $this->load->view('templates/footer');
-                endif;
+                }
 
                 break;
             default:
