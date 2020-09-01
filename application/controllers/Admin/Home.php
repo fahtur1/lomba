@@ -437,6 +437,7 @@ class Home extends CI_Controller
 
                 if ($this->input->post()) :
                     $id_update = uniqid("hd7-");
+
                 else :
                     $this->load->view('templates/sidebar');
                     $this->load->view('templates/navbar', $dataa);
