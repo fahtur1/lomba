@@ -31,7 +31,7 @@
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr class="text-center">
-                                <th>ITEM</th>
+                                <th style="width: 20%;">ITEM</th>
                                 <th style="width: 20%;" colspan="2">CONDITION</th>
                                 <th>UNIT</th>
                                 <th>STD</th>
@@ -69,10 +69,10 @@
                                 <td class="align-middle text-center" rowspan="6">Rpm</td>
                                 <td colspan="2" class="text-center">625 - 675</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="englllAct" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_low" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="englllRe" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_low_remark" size="5">
                                 </td>
                             </tr>
                             <!-- row 2 -->
@@ -82,10 +82,10 @@
                                 </td>
                                 <td class="text-center" colspan="2">970 - 1030</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="engllhAct" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_hi" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="engllhRe" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_hi_remark" size="5">
                                 </td>
                             </tr>
                             <!-- row 3 -->
@@ -95,10 +95,10 @@
                                 </td>
                                 <td class="text-center" colspan="2">2300 - 2400</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_power" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_power_remark" size="5">
                                 </td>
                             </tr>
                             <!-- row 4 -->
@@ -108,10 +108,10 @@
                                 </td>
                                 <td class="text-center" colspan="2">2250 - 2350</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_eco" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_eco_remark" size="5">
                                 </td>
                             </tr>
                             <!-- row 5 -->
@@ -125,10 +125,10 @@
                                     1790-1990 (sn. 4188 - up)
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_power_high" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_power_high_remark" size="5">
                                 </td>
                             </tr>
                             <!-- row 6 -->
@@ -139,10 +139,10 @@
                                     1730-1930 (sn. 4188 - up)
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_power_eco" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_power_eco_remark" size="5">
                                 </td>
                             </tr>
                             <!-- Blow-by Press -->
@@ -154,10 +154,10 @@
                                 <td>Max. 150</td>
                                 <td>Max. 300</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="blow_power" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="blow_power_remark" size="5">
                                 </td>
                             </tr>
                             <!-- Lub Oil -->
@@ -169,10 +169,10 @@
                                 <td>3.0 - 4.0</td>
                                 <td>Min 2.1</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="lub_power" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="lub_power_remark" size="5">
                                 </td>
                             </tr>
                             <!-- row 2 -->
@@ -181,10 +181,10 @@
                                 <td>Min. 1</td>
                                 <td>Min. 0.7</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="lub_low" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="lub_low_remark" size="5">
                                 </td>
                             </tr>
                             <!-- Boost Press -->
@@ -197,19 +197,19 @@
                                 <td class="align-middle text-center" rowspan="2">Min. 950</td>
                                 <td class="align-middle text-center" rowspan="2">Min. 850</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="boost_stall_rh" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="boost_stall_rh_remark" size="5">
                                 </td>
                             </tr>
                             <tr>
                                 <td>LH</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="boost_stall_lh" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="boost_stall_lh_remark" size="5">
                                 </td>
                             </tr>
                             <!-- Exhaust Gas Temp -->
@@ -221,10 +221,10 @@
                                 <td class="text-center">-</td>
                                 <td class="text-center">-</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="exhaust_ambient" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="exhaust_ambient_remark" size="5">
                                 </td>
                             </tr>
                             <!-- row 2 -->
@@ -234,20 +234,20 @@
                                 <td class="align-middle text-center" rowspan="2">Max. 650</td>
                                 <td class="align-middle text-center" rowspan="2">Max. 700</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="exhaust_stall_rh" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="exhaust_stall_rh_remark" size="5">
                                 </td>
                             </tr>
                             <!-- row 3 -->
                             <tr>
                                 <td>LH</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="exhaust_stall_lh" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="exhaust_stall_lh_remark" size="5">
                                 </td>
                             </tr>
                         </tbody>
