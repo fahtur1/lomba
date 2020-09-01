@@ -1,8 +1,8 @@
 <div class="container-fluid">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">UPDATE HD785-5 / PS2</h1>
+        <h1 class="h3 mb-0 text-gray-800">UPDATE <?= $unit ?> / <?= $ps ?></h1>
     </div>
-    <form action="" method="post">
+    <form action="<?= base_url("admin/home/update_plan/") . $unit . "/" . $ps . "/" . $plan  ?>" method="post">
         <div class="row">
             <div class="col-lg-4">
                 <div class="form-group">
@@ -15,7 +15,7 @@
                 </div>
                 <div class="form-group">
                     <label>Code Unit</label>
-                    <input type="text" class="form-control" id="codeunit" name="codeunit" disabled>
+                    <input type="text" class="form-control" id="codeunit" value="<?= $unit ?>" name="codeunit" disabled>
                 </div>
                 <div class="form-group">
                     <label>Branch Site</label>
@@ -69,10 +69,10 @@
                                 <td class="align-middle text-center" rowspan="10">Rpm</td>
                                 <td colspan="2" class="text-center">625 - 675</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="englllAct" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_low_idle_low" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="englllRe" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_low_idle_low_remark" size="5">
                                 </td>
                             </tr>
                             <!-- row 2 -->
@@ -82,10 +82,10 @@
                                 </td>
                                 <td class="text-center" colspan="2">895 - 995</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="engllhAct" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_low_idle_hi" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="engllhRe" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_low_idle_hi_remark" size="5">
                                 </td>
                             </tr>
                             <!-- row 3 -->
@@ -95,10 +95,10 @@
                                 </td>
                                 <td class="text-center" colspan="2">2200 - 2300</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_high_idle_power" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_high_idle_power_remark" size="5">
                                 </td>
                             </tr>
                             <!-- row 4 -->
@@ -108,10 +108,10 @@
                                 </td>
                                 <td class="text-center" colspan="2">2,050 - 2,150</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_high_idle_eco" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_high_idle_eco_remark" size="5">
                                 </td>
                             </tr>
                             <!-- row 5 -->
@@ -121,10 +121,10 @@
                                 </td>
                                 <td class="text-center" colspan="2">2,000 - 2,100</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_high_idle_rev" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_high_idle_rev_remark" size="5">
                                 </td>
                             </tr>
                             <!-- row 6 -->
@@ -134,10 +134,10 @@
                                 </td>
                                 <td class="text-center" colspan="2">2,200 - 2,300</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_high_idle_rev_power" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_high_idle_rev_power_remark" size="5">
                                 </td>
                             </tr>
                             <!-- row 7 -->
@@ -147,10 +147,10 @@
                                 </td>
                                 <td class="text-center" colspan="2">1,745 - 1,945 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_torque_a" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_torque_a_remark" size="5">
                                 </td>
                             </tr>
                             <!-- row 8 -->
@@ -160,10 +160,10 @@
                                 </td>
                                 <td class="text-center" colspan="2">1,680 - 1,880</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_torque_b" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_torque_b_remark" size="5">
                                 </td>
                             </tr>
                             <!-- row 9 -->
@@ -173,10 +173,10 @@
                                 </td>
                                 <td class="text-center" colspan="2">1,630 - 1,830</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_torque_c" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_torque_c_remark" size="5">
                                 </td>
                             </tr>
                             <!-- row 10 -->
@@ -186,10 +186,10 @@
                                 </td>
                                 <td class="text-center" colspan="2">1,595 - 1,795</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_torque_d" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" name="engine_torque_d_remark" size="5">
                                 </td>
                             </tr>
 
@@ -205,10 +205,10 @@
                                 <td class="text-center">Max. 2,94<br>(Max. 300)</td>
                                 <td class="text-center">Max. 5,88<br>(Max. 600)</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="englllAct" size="5">
+                                    <input type="text" class="form-control no-border" name="blow_power" name="englllAct" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="englllRe" size="5">
+                                    <input type="text" class="form-control no-border" name="blow_power_remark" name="englllRe" size="5">
                                 </td>
                             </tr>
 
@@ -225,10 +225,10 @@
                                 <td class="text-center">3.0 - 4.5</td>
                                 <td class="text-center">Min 2.0</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="englllAct" size="5">
+                                    <input type="text" class="form-control no-border" name="lub_oil_rated" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="englllRe" size="5">
+                                    <input type="text" class="form-control no-border" name="lub_oil_rated_remark" size="5">
                                 </td>
                             </tr>
                             <!-- row 2 -->
@@ -239,10 +239,10 @@
                                 <td class="text-center">Min. 0.8</td>
                                 <td class="text-center">Min 0.7</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="englllAct" size="5">
+                                    <input type="text" class="form-control no-border" name="lub_oil_low" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="englllRe" size="5">
+                                    <input type="text" class="form-control no-border" name="lub_oil_low_remark" size="5">
                                 </td>
                             </tr>
 
@@ -263,10 +263,10 @@
                                     Min. 165,40 <br> (min. 1,250)
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="englllAct" size="5">
+                                    <input type="text" class="form-control no-border" name="boost_press_rh" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="englllRe" size="5">
+                                    <input type="text" class="form-control no-border" name="boost_press_rh_remark" size="5">
                                 </td>
                             </tr>
                             <!-- row 2 -->
@@ -277,10 +277,10 @@
                                 <td class="text-center">Min. 0.8</td>
                                 <td class="text-center">Min 0.7</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="englllAct" size="5">
+                                    <input type="text" class="form-control no-border" name="boost_press_lh" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="englllRe" size="5">
+                                    <input type="text" class="form-control no-border" name="boost_press_lh_remark" size="5">
                                 </td>
                             </tr>
 
@@ -301,10 +301,10 @@
                                     -
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="englllAct" size="5">
+                                    <input type="text" class="form-control no-border" name="exhaust_ambient" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="englllRe" size="5">
+                                    <input type="text" class="form-control no-border" name="exhaust_ambient_remark" size="5">
                                 </td>
                             </tr>
                             <tr>
@@ -321,10 +321,10 @@
                                     Max. 750
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="englllAct" size="5">
+                                    <input type="text" class="form-control no-border" name="exhaust_speed_rh" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="englllRe" size="5">
+                                    <input type="text" class="form-control no-border" name="exhaust_speed_rh_remark" size="5">
                                 </td>
                             </tr>
                             <!-- row 3 -->
@@ -333,10 +333,10 @@
                                     LH
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="englllAct" size="5">
+                                    <input type="text" class="form-control no-border" name="exhaust_speed_lh" size="5">
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="englllRe" size="5">
+                                    <input type="text" class="form-control no-border" name="exhaust_speed_lh_remark" size="5">
                                 </td>
                             </tr>
                         </tbody>

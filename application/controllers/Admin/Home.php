@@ -190,16 +190,57 @@ class Home extends CI_Controller
     public function update_plan($unit = 1, $ps = 2, $plan =  0)
     {
         if ($this->input->post()) {
+            $id_other = uniqid("oth-");
+            $id_update = uniqid("pc-");
+            $id_actual = uniqid("act-");
             switch ($ps) {
                 case "PS2":
+                    switch ($unit) {
+                        case "PC2000-8":
+                            $data = [
+                                'id_update' => $id_update,
+                                'engine_low_idle' => $this->input->post('engine_low_idle'),
+                                'engine_high_idle' => $this->input->post('engine_high_idle'),
+                                'engine_full_throttle_raise' => $this->input->post('engine_full_throttle_raise'),
+                                'engine_full_throttle_heavy' => $this->input->post('engine_full_throttle_heavy'),
+                                'engine_control_valve_neutral' => $this->input->post('engine_control_valve_neutral'),
+                                'blow_horsepower' => $this->input->post('blow_horsepower'),
+                                'oil_run_low_idle' => $this->input->post('oil_run_low_idle'),
+                                'oil_run_high_idle' => $this->input->post('oil_run_high_idle'),
+                                'boost_horsepower' => $this->input->post('boost_horsepower'),
+                                'exhaust_speed_range' => $this->input->post('exhaust_speed_range'),
+                                'exhaust_ambient_temp' => $this->input->post('exhaust_ambient_temp'),
+                                // remark
+                                'engine_low_idle_remark' => $this->input->post('engine_low_idle_remark'),
+                                'engine_high_idle_remark' => $this->input->post('engine_high_idle_remark'),
+                                'engine_full_throttle_raise_remark' => $this->input->post('engine_full_throttle_raise_remark'),
+                                'engine_full_throttle_heavy_remark' => $this->input->post('engine_full_throttle_heavy_remark'),
+                                'engine_control_valve_neutral_remark' => $this->input->post('engine_control_valve_neutral_remark'),
+                                'blow_horsepower_remark' => $this->input->post('blow_horsepower_remark'),
+                                'oil_run_low_idle_remark' => $this->input->post('oil_run_low_idle_remark'),
+                                'oil_run_high_idle_remark' => $this->input->post('oil_run_high_idle_remark'),
+                                'boost_horsepower_remark' => $this->input->post('boost_horsepower_remark'),
+                                'exhaust_speed_range_remark' => $this->input->post('exhaust_speed_range_remark'),
+                            ];
+
+                            $actual_data = [
+                                'actual_id' => $id_actual,
+                                'actual_date' => $this->input->post('date'),
+                                'leader_name' => $this->input->post('name'),
+                                'actual_branch' => $this->input->post('site'),
+                                'plan_id' => $plan,
+                                'ppm_id' => '1',
+                                'id_update' => $id_update
+                            ];
+
+
+                            break;
+                    }
                     break;
                 case "PS3":
                 case "PS4":
                     switch ($unit) {
                         case "PC2000-8":
-                            $id_other = uniqid("oth-");
-                            $id_update = uniqid("pc-");
-                            $id_actual = uniqid("act-");
                             $other = [
                                 'id_other' => $id_other,
                                 'instrument_panel' => $this->input->post('instrument_panel'),
@@ -381,7 +422,7 @@ class Home extends CI_Controller
                                 'actual_branch' => $this->input->post('site'),
                                 'plan_id' => $plan,
                                 'ppm_id' => '1',
-                                'update_id' => $id_update
+                                'id_update' => $id_update
                             ];
                             $this->db->insert("actual", $actual_data);
                             $this->db->insert("other_data", $other);
