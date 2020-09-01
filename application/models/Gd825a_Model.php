@@ -1,9 +1,9 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Pc2000_Model extends CI_Model
+class Gd825a_Model extends CI_Model
 {
-    private $table = 'pc2000-8';
+    private $table = 'gd825a-2';
     private $key = 'id_update';
 
     public function insertPs2($data, $dataActual)
