@@ -115,13 +115,11 @@ class Home extends CI_Controller
     //         'product_type' => $this->input->post('ps_type'),
     //         'product_remark' => $this->input->post('remark')
     //     ];
-
     //     if ($this->Product_model->updateProduct($data)) {
     //         $this->session->set_flashdata('message', $this->flask('success', 'Data Has Been Update'));
     //     } else {
     //         $this->session->set_flashdata('message', $this->flask('danger', 'Failed to Update Data'));
     //     }
-
     //     redirect('/admin/home/planps');
     // }
 
@@ -182,14 +180,7 @@ class Home extends CI_Controller
         ];
     }
 
-    // public function getProductById($id)
-    // {
-    //     echo json_encode([
-    //         'data' => $this->Product_model->getProductById($id)
-    //     ]);
-    // }
-
-    public function update_plan($unit = 1, $ps = 2, $plan =  0)
+    public function update_plan($unit = '', $ps = '', $plan =  '')
     {
         if ($this->input->post()) {
             switch ($ps) {
