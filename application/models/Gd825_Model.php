@@ -13,7 +13,7 @@ class Gd825_Model extends CI_Model
         }
     }
 
-    public function insertPs34($data, $dataOther, $dataActual)
+    public function insertPs34($data, $dataActual, $dataOther)
     {
         if ($this->db->insert('actual', $dataActual)) {
             if ($this->db->insert('other_data', $dataOther)) {

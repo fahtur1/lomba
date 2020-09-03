@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Actual_Model extends CI_Model
+class Actual_Plan extends CI_Model
 {
     private $table = 'actual';
     private $key = 'actual_id';
@@ -25,6 +25,17 @@ class Actual_Model extends CI_Model
         $this->db->join('plan', 'plan.product_id = actual.product_id');
         $this->db->join('product', 'product.product_id = plan.product_id');
         $this->db->join('model', 'model.product_id = product.product_id');
+        return $this->db->get()->result_array();
+    }
+
+    public function getActualJoin($table)
+    {
+        $this->db->select("*");
+        $this->db->from($this->table);
+        $this->db->join($table, $table . '.id_update = ' . $this->table . '.id_update');
+        $this->db->join('plan', 'plan.plan_id = actual.plan_id');
+        $this->db->join('product', 'product.product_id = plan.product_id');
+        $this->db->join('model', 'model.model_id = product.model_id');
         return $this->db->get()->result_array();
     }
 

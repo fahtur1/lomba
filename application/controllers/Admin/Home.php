@@ -9,6 +9,7 @@ class Home extends CI_Controller
         $this->load->model('Product_model');
         $this->load->model('Plan_model');
         $this->load->model('Model_model');
+        $this->load->model('Actual_Plan', 'actual');
 
         $this->load->model('Column_model');
 
@@ -87,7 +88,11 @@ class Home extends CI_Controller
     public function actualps()
     {
         $data = [
-            'title' => 'Actual PS'
+            'title' => 'Actual PS',
+            'gd825' => $this->actual->getActualJoin('gd825-2'),
+            'hd785' => $this->actual->getActualJoin('hd785-5'),
+            'hd787' => $this->actual->getActualJoin('hd785-7'),
+            'pc2000' => $this->actual->getActualJoin('pc2000-8'),
         ];
 
         $this->load->view('templates/header', $data);
@@ -108,6 +113,10 @@ class Home extends CI_Controller
                 </button>
             </div>'
         );
+    }
+
+    public function validation($name, $rules)
+    {
     }
 
     public function ppm_report($detail = '')
@@ -225,7 +234,7 @@ class Home extends CI_Controller
                             }
                         }
 
-                        if ($this->Pc2000_model->insertPs34($data, $actual_data, $other)) {
+                        if ($this->Pc2000_model->insertPs34($dataModel, $actual_data, $other)) {
                             $this->flask('success', 'Actual Plan added Succesfuly', 'message');
                         } else {
                             $this->flask('danger', 'Failed to add Actual Plan', 'message');
@@ -257,7 +266,7 @@ class Home extends CI_Controller
 
                     // Buat Array Untuk Insert Ke Database
                     foreach ($data as $dataa) {
-                        if (!(substr($dataa['column'], 0, 2) == 'id')) {
+                        if (!(substr($dataa['column'], 0, 2) == 'id')  && !($dataa['column'] == 'undercarriage')) {
                             $dataModel[$dataa['column']] = $this->input->post($dataa['column']);
                             if ($ps == 'PS2' && $dataa['column'] == 'tc_stall_temp') break;
                         }
@@ -293,7 +302,7 @@ class Home extends CI_Controller
                             }
                         }
 
-                        if ($this->Gd825_model->insertPs34($data, $actual_data, $other)) {
+                        if ($this->Gd825_model->insertPs34($dataModel, $actual_data, $other)) {
                             $this->flask('success', 'Actual Plan added Succesfuly', 'message');
                         } else {
                             $this->flask('danger', 'Failed to add Actual Plan', 'message');
@@ -325,7 +334,7 @@ class Home extends CI_Controller
 
                     // Buat Array Untuk Insert Ke Database
                     foreach ($data as $dataa) {
-                        if (!(substr($dataa['column'], 0, 2) == 'id')) {
+                        if (!(substr($dataa['column'], 0, 2) == 'id')  && !($dataa['column'] == 'undercarriage')) {
                             $dataModel[$dataa['column']] = $this->input->post($dataa['column']);
                             if ($ps == 'PS2' && $dataa['column'] == 'tc_stall_temp') break;
                         }
@@ -361,7 +370,7 @@ class Home extends CI_Controller
                             }
                         }
 
-                        if ($this->Hd7855_model->insertPs34($data, $actual_data, $other)) {
+                        if ($this->Hd7855_model->insertPs34($dataModel, $actual_data, $other)) {
                             $this->flask('success', 'Actual Plan added Succesfuly', 'message');
                         } else {
                             $this->flask('danger', 'Failed to add Actual Plan', 'message');
@@ -423,12 +432,12 @@ class Home extends CI_Controller
                         $other['id_other'] = $id_other;
 
                         foreach ($column_other as $column) {
-                            if (!(substr($column['column'], 0, 2) == 'id')) {
+                            if (!(substr($column['column'], 0, 2) == 'id') && !($column['column'] == 'undercarriage')) {
                                 $other[$column['column']] = $this->input->post($column['column']);
                             }
                         }
 
-                        if ($this->Hd7857_model->insertPs34($data, $actual_data, $other)) {
+                        if ($this->Hd7857_model->insertPs34($dataModel, $actual_data, $other)) {
                             $this->flask('success', 'Actual Plan added Succesfuly', 'message');
                         } else {
                             $this->flask('danger', 'Failed to add Actual Plan', 'message');
