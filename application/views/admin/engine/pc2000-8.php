@@ -1,8 +1,8 @@
 <div class="container-fluid">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">UPDATE PC2000-8 / PS2</h1>
+        <h1 class="h3 mb-0 text-gray-800">UPDATE <?= $unit ?> / <?= $ps ?></h1>
     </div>
-    <form action="" method="post">
+    <form action="<?= base_url("admin/home/update_plan/") . $unit . "/" . $ps . "/" . $plan  ?>" method="post">
         <div class="row">
             <div class="col-lg-4">
                 <div class="form-group">
@@ -32,10 +32,10 @@
                         <thead>
                             <tr class="text-center">
                                 <th>ITEM</th>
-                                <th style="width: 20%;" colspan="2">CONDITION</th>
+                                <th style="width: 30%;" colspan="2">CONDITION</th>
                                 <th>UNIT</th>
-                                <th>STD</th>
-                                <th>PMS</th>
+                                <th style="width: 10%;">STD</th>
+                                <th style="width: 10%;">PMS</th>
                                 <th>ACTUAL</th>
                                 <th>REMARK</th>
                             </tr>
@@ -69,10 +69,12 @@
                                 <td class="align-middle text-center" rowspan="5">Rpm</td>
                                 <td colspan="2" class="text-center">775 - 875</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="engine_low_idle" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_low_idle') ?>" name="engine_low_idle" size="5">
+                                    <?= form_error('engine_low_idle', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="engine_low_idle_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_low_idle_remark') ?>" name="engine_low_idle_remark" size="5">
+                                    <?= form_error('engine_low_idle_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 2 -->
@@ -82,10 +84,12 @@
                                 </td>
                                 <td class="text-center" colspan="2">1930 - 2030</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="engine_high_idle" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_high_idle') ?>" name="engine_high_idle" size="5">
+                                    <?= form_error('engine_high_idle', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="engine_high_idle_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_high_idle_remark') ?>" name="engine_high_idle_remark" size="5">
+                                    <?= form_error('engine_high_idle_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 3 -->
@@ -95,10 +99,12 @@
                                 </td>
                                 <td class="text-center" colspan="2">1680 - 1880</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="engine_full_throttle_raise" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_full_throttle_raise') ?>" name="engine_full_throttle_raise" size="5">
+                                    <?= form_error('engine_full_throttle_raise', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="engine_full_throttle_raise_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_full_throttle_raise_remark') ?>" name="engine_full_throttle_raise_remark" size="5">
+                                    <?= form_error('engine_full_throttle_raise_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 4 -->
@@ -108,10 +114,12 @@
                                 </td>
                                 <td class="align-middle text-center" colspan="2">1680 - 1880</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="engine_full_throttle_heavy" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_full_throttle_heavy') ?>" name="engine_full_throttle_heavy" size="5">
+                                    <?= form_error('engine_full_throttle_heavy', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="engine_full_throttle_heavy_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_full_throttle_heavy_remark') ?>" name="engine_full_throttle_heavy_remark" size="5">
+                                    <?= form_error('engine_full_throttle_heavy_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
 
@@ -122,10 +130,12 @@
                                 </td>
                                 <td class="align-middle text-center" colspan="2">1300 - 1500</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="engine_control_valve_neutral" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_control_valve_neutral') ?>" name="engine_control_valve_neutral" size="5">
+                                    <?= form_error('engine_control_valve_neutral', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="engine_control_valve_neutral_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_control_valve_neutral_remark') ?>" name="engine_control_valve_neutral_remark" size="5">
+                                    <?= form_error('engine_control_valve_neutral_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
 
@@ -138,10 +148,12 @@
                                 <td>Max. 2.94 <br> { Max. 300 }</td>
                                 <td>Max. 5.88 <br> { Max. 600 }</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="blow_horsepower" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('blow_horsepower') ?>" name="blow_horsepower" size="5">
+                                    <?= form_error('blow_horsepower', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="blow_horsepower_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('blow_horsepower_remark') ?>" name="blow_horsepower_remark" size="5">
+                                    <?= form_error('blow_horsepower_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Engine oil -->
@@ -153,10 +165,12 @@
                                 <td class="align-middle text-center">Min 0.08 <br> { Min 0.8 }</td>
                                 <td class="align-middle text-center">Min 0.06 <br> { Min 0.06 }</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="oil_run_low_idle" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('oil_run_low_idle') ?>" name="oil_run_low_idle" size="5">
+                                    <?= form_error('oil_run_low_idle', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="oil_run_low_idle_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('oil_run_low_idle_remark') ?>" name="oil_run_low_idle_remark" size="5">
+                                    <?= form_error('oil_run_low_idle_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 2 -->
@@ -165,10 +179,12 @@
                                 <td class="align-middle text-center">0.29 - 0.44 <br> { 3.0 - 4.5 }</td>
                                 <td class="align-middle text-center">Min 0.2 <br> { Min 2.0 }</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="oil_run_high_idle" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('oil_run_high_idle') ?>" name="oil_run_high_idle" size="5">
+                                    <?= form_error('oil_run_high_idle', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="oil_run_high_idle_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('oil_run_high_idle_remark') ?>" name="oil_run_high_idle_remark" size="5">
+                                    <?= form_error('oil_run_high_idle_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Boost Press -->
@@ -180,10 +196,12 @@
                                 <td class="align-middle text-center">Max. 125.7 <br> { Max. 950 }</td>
                                 <td class="align-middle text-center">Limit is not set</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="boost_horsepower" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('boost_horsepower') ?>" name="boost_horsepower" size="5">
+                                    <?= form_error('boost_horsepower', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="boost_horsepower_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('boost_horsepower_remark') ?>" name="boost_horsepower_remark" size="5">
+                                    <?= form_error('boost_horsepower_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Exhaust Temperature -->
@@ -195,10 +213,12 @@
                                 <td class="text-center">Max 700</td>
                                 <td class="text-center">Max 750</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="exhaust_speed_range" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('exhaust_speed_range') ?>" name="exhaust_speed_range" size="5">
+                                    <?= form_error('exhaust_speed_range', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="exhaust_speed_range_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('exhaust_speed_range_remark') ?>" name="exhaust_speed_range_remark" size="5">
+                                    <?= form_error('exhaust_speed_range_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 2 -->
@@ -207,10 +227,12 @@
                                 <td class="align-middle text-center">20</td>
                                 <td class="align-middle text-center">20</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="exhaust_ambient_temp" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('exhaust_ambient_temp') ?>" name="exhaust_ambient_temp" size="5">
+                                    <?= form_error('exhaust_ambient_temp', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="exhaust_ambient_temp_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('exhaust_ambient_temp_remark') ?>" name="exhaust_ambient_temp_remark" size="5">
+                                    <?= form_error('exhaust_ambient_temp_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                         </tbody>

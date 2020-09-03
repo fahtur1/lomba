@@ -115,8 +115,20 @@ class Home extends CI_Controller
         );
     }
 
-    public function validation($name, $rules)
+    public function actual_validation($name, $min, $max)
     {
+        $this->form_validation->set_rules($name, $name, 'required|trim|greater_than[' . $min . ']|less_than[' . $max . ']', [
+            'greater_than' => 'harus ' . $min . '-' . $max,
+            'less_than' => 'harus ' . $min . '-' . $max,
+            'required' => 'harus diisi'
+        ]);
+    }
+
+    public function required_only_validation($name)
+    {
+        $this->form_validation->set_rules($name, $name, 'required|trim', [
+            'required' => 'harus diisi'
+        ]);
     }
 
     public function ppm_report($detail = '')
@@ -259,11 +271,25 @@ class Home extends CI_Controller
             case "GD825-2":
                 $id_update = uniqid("gd8-");
 
-                if ($this->input->post()) {
+                $this->required_only_validation('name');
+                $this->required_only_validation('date');
+                $this->required_only_validation('site');
+
+                $this->actual_validation('engine_low_speed', '600', '700');
+                $this->required_only_validation('engine_low_speed_remark');
+                $this->actual_validation('engine_high_speed', '2300', '2400');
+                $this->required_only_validation('engine_high_speed_remark');
+                $this->actual_validation('tc_stall_press', '2300', '2400'); // range blum
+                $this->required_only_validation('tc_stall_press_remark');
+                $this->actual_validation('engine_low_press', '2300', '2400'); //range blum
+                $this->required_only_validation('engine_low_press_remark');
+                $this->actual_validation('engine_low_press2', '2300', '2400'); //range blum
+                $this->required_only_validation('engine_low_press2_remark');
+
+                if ($this->form_validation->run() != false) {
                     $data = $this->Column_model->getColumn('gd825-2');
                     $column_other = $this->Column_model->getColumn('other_data');
                     $dataModel = [];
-
                     // Buat Array Untuk Insert Ke Database
                     foreach ($data as $dataa) {
                         if (!(substr($dataa['column'], 0, 2) == 'id')  && !($dataa['column'] == 'undercarriage')) {

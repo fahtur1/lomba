@@ -1,25 +1,29 @@
 <div class="container-fluid">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">UPDATE HD785-5 / PS2</h1>
+        <h1 class="h3 mb-0 text-gray-800">UPDATE <?= $unit ?> / <?= $ps ?></h1>
     </div>
-    <form action="" method="post">
+
+    <form action="<?= base_url("admin/home/update_plan/$unit/$ps/$plan") ?>" method="post">
         <div class="row">
             <div class="col-lg-4">
                 <div class="form-group">
                     <label for="inputState">Name</label>
-                    <input type="text" class="form-control" id="name" name="name">
+                    <input type="text" class="form-control" value="<?= set_value('name') ?>" id="name" name="name">
+                    <?= form_error('name', '<small class="text-danger">', '</small>') ?>
                 </div>
                 <div class="form-group">
                     <label>Plan Date</label>
-                    <input type="date" id="date" name="date" max="2050-12-31" min="<?= date('Y-m-d') ?>" class="form-control">
+                    <input type="date" id="date" name="date" value="<?= set_value('date') ?>" max="2050-12-31" min="<?= date('Y-m-d') ?>" class="form-control">
+                    <?= form_error('date', '<small class="text-danger">', '</small>') ?>
                 </div>
                 <div class="form-group">
                     <label>Code Unit</label>
-                    <input type="text" class="form-control" id="codeunit" name="codeunit" disabled>
+                    <input type="text" class="form-control" id="codeunit" value="<?= $unit ?>" name="codeunit" disabled>
                 </div>
                 <div class="form-group">
                     <label>Branch Site</label>
-                    <input type="text" class="form-control" id="site" name="site">
+                    <input type="text" class="form-control" value="<?= set_value('site') ?>" id="site" name="site">
+                    <?= form_error('site', '<small class="text-danger">', '</small>') ?>
                 </div>
             </div>
         </div>
@@ -69,10 +73,12 @@
                                 <td class="align-middle text-center" rowspan="6">Rpm</td>
                                 <td colspan="2" class="text-center">625 - 675</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="engine_low" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_low') ?>" name="engine_low" size="5">
+                                    <?= form_error('engine_low', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="engine_low_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_low_remark') ?>" name="engine_low_remark" size="5">
+                                    <?= form_error('engine_low_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 2 -->
@@ -82,10 +88,12 @@
                                 </td>
                                 <td class="text-center" colspan="2">970 - 1030</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="engine_hi" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_hi') ?>" name="engine_hi" size="5">
+                                    <?= form_error('engine_hi', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="engine_hi_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_hi_remark') ?>" name="engine_hi_remark" size="5">
+                                    <?= form_error('engine_hi_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 3 -->
@@ -95,10 +103,12 @@
                                 </td>
                                 <td class="text-center" colspan="2">2300 - 2400</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="engine_power" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_power') ?>" name="engine_power" size="5">
+                                    <?= form_error('engine_power', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="engine_power_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_power_remark') ?>" name="engine_power_remark" size="5">
+                                    <?= form_error('engine_power_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 4 -->
@@ -108,10 +118,12 @@
                                 </td>
                                 <td class="text-center" colspan="2">2250 - 2350</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="engine_eco" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_eco') ?>" name="engine_eco" size="5">
+                                    <?= form_error('engine_eco', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="engine_eco_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_eco_remark') ?>" name="engine_eco_remark" size="5">
+                                    <?= form_error('engine_eco_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 5 -->
@@ -125,10 +137,12 @@
                                     1790-1990 (sn. 4188 - up)
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="engine_power_high" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_power_high') ?>" name="engine_power_high" size="5">
+                                    <?= form_error('engine_power_high', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="engine_power_high_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_power_high_remark') ?>" name="engine_power_high_remark" size="5">
+                                    <?= form_error('engine_power_high_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 6 -->
@@ -139,10 +153,12 @@
                                     1730-1930 (sn. 4188 - up)
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="engine_power_eco" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_power_eco') ?>" name="engine_power_eco" size="5">
+                                    <?= form_error('engine_power_eco', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="engine_power_eco_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_power_eco_remark') ?>" name="engine_power_eco_remark" size="5">
+                                    <?= form_error('engine_power_eco_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Blow-by Press -->
@@ -154,10 +170,12 @@
                                 <td>Max. 150</td>
                                 <td>Max. 300</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="blow_power" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('blow_power') ?>" name="blow_power" size="5">
+                                    <?= form_error('blow_power', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="blow_power_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('blow_power_remark') ?>" name="blow_power_remark" size="5">
+                                    <?= form_error('blow_power_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Lub Oil -->
@@ -169,10 +187,12 @@
                                 <td>3.0 - 4.0</td>
                                 <td>Min 2.1</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="lub_power" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('lub_power') ?>" name="lub_power" size="5">
+                                    <?= form_error('lub_power', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="lub_power_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('lub_power_remark') ?>" name="lub_power_remark" size="5">
+                                    <?= form_error('lub_power_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 2 -->
@@ -181,10 +201,12 @@
                                 <td>Min. 1</td>
                                 <td>Min. 0.7</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="lub_low" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('lub_low') ?>" name="lub_low" size="5">
+                                    <?= form_error('lub_low', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="lub_low_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('lub_low_remark') ?>" name="lub_low_remark" size="5">
+                                    <?= form_error('lub_low_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Boost Press -->
@@ -197,19 +219,23 @@
                                 <td class="align-middle text-center" rowspan="2">Min. 950</td>
                                 <td class="align-middle text-center" rowspan="2">Min. 850</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="boost_stall_rh" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('boost_stall_rh') ?>" name="boost_stall_rh" size="5">
+                                    <?= form_error('boost_stall_rh', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="boost_stall_rh_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('boost_stall_rh_remark') ?>" name="boost_stall_rh_remark" size="5">
+                                    <?= form_error('boost_stall_rh_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <tr>
                                 <td>LH</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="boost_stall_lh" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('boost_stall_lh') ?>" name="boost_stall_lh" size="5">
+                                    <?= form_error('boost_stall_lh', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="boost_stall_lh_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('boost_stall_lh_remark') ?>" name="boost_stall_lh_remark" size="5">
+                                    <?= form_error('boost_stall_lh_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Exhaust Gas Temp -->
@@ -221,10 +247,12 @@
                                 <td class="text-center">-</td>
                                 <td class="text-center">-</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="exhaust_ambient" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('exhaust_ambient') ?>" name="exhaust_ambient" size="5">
+                                    <?= form_error('exhaust_ambient', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="exhaust_ambient_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('exhaust_ambient_remark') ?>" name="exhaust_ambient_remark" size="5">
+                                    <?= form_error('exhaust_ambient_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 2 -->
@@ -234,20 +262,159 @@
                                 <td class="align-middle text-center" rowspan="2">Max. 650</td>
                                 <td class="align-middle text-center" rowspan="2">Max. 700</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="exhaust_stall_rh" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('exhaust_stall_rh') ?>" name="exhaust_stall_rh" size="5">
+                                    <?= form_error('exhaust_stall_rh', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="exhaust_stall_rh_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('exhaust_stall_rh_remark') ?>" name="exhaust_stall_rh_remark" size="5">
+                                    <?= form_error('exhaust_stall_rh_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 3 -->
                             <tr>
                                 <td>LH</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="exhaust_stall_lh" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('exhaust_stall_lh') ?>" name="exhaust_stall_lh" size="5">
+                                    <?= form_error('exhaust_stall_lh', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="exhaust_stall_lh_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('exhaust_stall_lh_remark') ?>" name="exhaust_stall_lh_remark" size="5">
+                                    <?= form_error('exhaust_stall_lh_remark', '<small class="text-danger">', '</small>') ?>
+                                </td>
+                            </tr>
+
+                            <!-- TORQUE CONVERTOR & TRANSMISSION -->
+                            <tr class="bg-primary">
+                                <td class="text-white text-center font-weight-bold font-italic" colspan="8">
+                                    TORQUE CONVERTOR & TRANSMISSION
+                                </td>
+                            </tr>
+                            <!-- Inlet oil pressure -->
+                            <!-- row 1 -->
+                            <tr>
+                                <td class="align-middle" rowspan="2">Inlet oil pressure</td>
+                                <td colspan="2">High idling</td>
+                                <td rowspan="9" class="align-middle text-center">Kg/cm2</td>
+                                <td colspan="2" class="text-center">7 - 9</td>
+                                <td class="align-middle text-center">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('inlet_high') ?>" name="inlet_high" size="5">
+                                    <?= form_error('inlet_high', '<small class="text-danger">', '</small>') ?>
+                                </td>
+                                <td class="align-middle text-center">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('inlet_high_remark') ?>" name="inlet_high_remark" size="5">
+                                    <?= form_error('inlet_high_remark', '<small class="text-danger">', '</small>') ?>
+                                </td>
+                            </tr>
+                            <!-- row 2 -->
+                            <tr>
+                                <td colspan="2">Low idling</td>
+                                <td colspan="2" class="text-center">0.8 - 1.8</td>
+                                <td class="align-middle text-center">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('inlet_low') ?>" name="inlet_low" size="5">
+                                    <?= form_error('inlet_low', '<small class="text-danger">', '</small>') ?>
+                                </td>
+                                <td class="align-middle text-center">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('inlet_low_remark') ?>" name="inlet_low_remark" size="5">
+                                    <?= form_error('inlet_low_remark', '<small class="text-danger">', '</small>') ?>
+                                </td>
+                            </tr>
+                            <!-- Outlet oil pressure -->
+                            <!-- row 1 -->
+                            <tr>
+                                <td class="align-middle" rowspan="2">Outlet oil pressure</td>
+                                <td colspan="2">High idling</td>
+                                <td colspan="2" class="text-center">3 - 5</td>
+                                <td class="align-middle text-center">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('outlet_high') ?>" name="outlet_high" size="5">
+                                    <?= form_error('outlet_high', '<small class="text-danger">', '</small>') ?>
+                                </td>
+                                <td class="align-middle text-center">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('outlet_high_remark') ?>" name="outlet_high_remark" size="5">
+                                    <?= form_error('outlet_high_remark', '<small class="text-danger">', '</small>') ?>
+                                </td>
+                            </tr>
+                            <!-- row 2 -->
+                            <tr>
+                                <td colspan="2">Low idling</td>
+                                <td colspan="2" class="text-center">0.5 - 1.5</td>
+                                <td class="align-middle text-center">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('outlet_low') ?>" name="outlet_low" size="5">
+                                    <?= form_error('outlet_low', '<small class="text-danger">', '</small>') ?>
+                                </td>
+                                <td class="align-middle text-center">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('outlet_low_remark') ?>" name="outlet_low_remark" size="5">
+                                    <?= form_error('outlet_low_remark', '<small class="text-danger">', '</small>') ?>
+                                </td>
+                            </tr>
+                            <!-- Lock-up oil pressure -->
+                            <!-- row 1 -->
+                            <tr>
+                                <td class="align-middle" rowspan="2">Lock-up oil pressure</td>
+                                <td colspan="2">High idling</td>
+                                <td colspan="2" class="text-center">15.5 - 16.5</td>
+                                <td class="align-middle text-center">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('lock_high') ?>" name="lock_high" size="5">
+                                    <?= form_error('lock_high', '<small class="text-danger">', '</small>') ?>
+                                </td>
+                                <td class="align-middle text-center">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('lock_high_remark') ?>" name="lock_high_remark" size="5">
+                                    <?= form_error('lock_high_remark', '<small class="text-danger">', '</small>') ?>
+                                </td>
+                            </tr>
+                            <!-- row 2 -->
+                            <tr>
+                                <td colspan="2">Low idling</td>
+                                <td colspan="2" class="text-center">15.5 - 16.5</td>
+                                <td class="align-middle text-center">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('lock_low') ?>" name="lock_low" size="5">
+                                    <?= form_error('lock_low', '<small class="text-danger">', '</small>') ?>
+                                </td>
+                                <td class="align-middle text-center">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('lock_low_remark') ?>" name="lock_low_remark" size="5">
+                                    <?= form_error('lock_low_remark', '<small class="text-danger">', '</small>') ?>
+                                </td>
+                            </tr>
+                            <!-- Lubricating oil pressure -->
+                            <!-- row 1 -->
+                            <tr>
+                                <td>Lubricating oil pressure</td>
+                                <td colspan="2">Engine full throttle</td>
+                                <td colspan="2" class="text-center">0.75 - 1.75</td>
+                                <td class="align-middle text-center">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('lubricating_full') ?>" name="lubricating_full" size="5">
+                                    <?= form_error('lubricating_full', '<small class="text-danger">', '</small>') ?>
+                                </td>
+                                <td class="align-middle text-center">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('lubricating_full_remark') ?>" name="lubricating_full_remark" size="5">
+                                    <?= form_error('lubricating_full_remark', '<small class="text-danger">', '</small>') ?>
+                                </td>
+                            </tr>
+                            <!-- Main Relieve Pressure -->
+                            <!-- row 1 -->
+                            <tr>
+                                <td class="align-middle" rowspan="2">Main Relieve Pressure</td>
+                                <td colspan="2">Low Idling, Low T/M in N </td>
+                                <td colspan="2" class="text-center">32.5 - 36.5</td>
+                                <td class="align-middle text-center">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('main_relieve_low') ?>" name="main_relieve_low" size="5">
+                                    <?= form_error('main_relieve_low', '<small class="text-danger">', '</small>') ?>
+                                </td>
+                                <td class="align-middle text-center">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('main_relieve_low_remark') ?>" name="main_relieve_low_remark" size="5">
+                                    <?= form_error('main_relieve_low_remark', '<small class="text-danger">', '</small>') ?>
+                                </td>
+                            </tr>
+                            <!-- row 2 -->
+                            <tr>
+                                <td colspan="2">Power Mode High Idling, T/M in N </td>
+                                <td colspan="2" class="text-center">37.0 - 41.0</td>
+                                <td class="align-middle text-center">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('main_relieve_power') ?>" name="main_relieve_power" size="5">
+                                    <?= form_error('main_relieve_power', '<small class="text-danger">', '</small>') ?>
+                                </td>
+                                <td class="align-middle text-center">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('main_relieve_power_remark') ?>" name="main_relieve_power_remark" size="5">
+                                    <?= form_error('main_relieve_power_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                         </tbody>

@@ -8,11 +8,13 @@
             <div class="col-lg-4">
                 <div class="form-group">
                     <label for="inputState">Name</label>
-                    <input type="text" class="form-control" id="name" name="name">
+                    <input type="text" class="form-control" value="<?= set_value('name') ?>" id="name" name="name">
+                    <?= form_error('name', '<small class="text-danger">', '</small>') ?>
                 </div>
                 <div class="form-group">
                     <label>Plan Date</label>
-                    <input type="date" id="date" name="date" max="2050-12-31" min="<?= date('Y-m-d') ?>" class="form-control">
+                    <input type="date" id="date" name="date" value="<?= set_value('date') ?>" max="2050-12-31" min="<?= date('Y-m-d') ?>" class="form-control">
+                    <?= form_error('date', '<small class="text-danger">', '</small>') ?>
                 </div>
                 <div class="form-group">
                     <label>Code Unit</label>
@@ -20,7 +22,8 @@
                 </div>
                 <div class="form-group">
                     <label>Branch Site</label>
-                    <input type="text" class="form-control" id="site" name="site">
+                    <input type="text" class="form-control" value="<?= set_value('site') ?>" id="site" name="site">
+                    <?= form_error('site', '<small class="text-danger">', '</small>') ?>
                 </div>
             </div>
         </div>
@@ -74,10 +77,12 @@
                                 <td>600-700</td>
                                 <td class="text-center">-</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="engine_low_speed">
+                                    <input type="text" class="form-control no-border" size="5" value="<?= set_value('engine_low_speed') ?>" name="engine_low_speed">
+                                    <?= form_error('engine_low_speed', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="engine_low_speed_remark">
+                                    <input type="text" class="form-control no-border" size="5" value="<?= set_value('engine_low_speed_remark') ?>" name="engine_low_speed_remark">
+                                    <?= form_error('engine_low_speed_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 2 -->
@@ -88,10 +93,12 @@
                                 <td></td>
                                 <td class="text-center" colspan="2">2300-2400</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="engine_high_speed">
+                                    <input type="text" class="form-control no-border" size="5" value="<?= set_value('engine_high_speed') ?>" name="engine_high_speed">
+                                    <?= form_error('engine_high_speed', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
                                     <input type="text" class="form-control no-border" size="5" name="engine_high_speed_remark">
+                                    <?= form_error('engine_high_speed_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Blow-by Press -->
@@ -104,10 +111,12 @@
                                 <td>Max. 100</td>
                                 <td>Max. 200</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="tc_stall_press">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('tc_stall_press') ?>" size="5" name="tc_stall_press">
+                                    <?= form_error('tc_stall_press', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="tc_stall_press_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('tc_stall_press_remark') ?>" size="5" name="tc_stall_press_remark">
+                                    <?= form_error('tc_stall_press_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Lub Oil -->
@@ -120,10 +129,12 @@
                                 <td>Min. 1</td>
                                 <td>Min. 0.7</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="engine_low_press">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_low_press') ?>" size="5" name="engine_low_press">
+                                    <?= form_error('engine_low_press', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="engine_low_press_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_low_press_remark') ?>" size="5" name="engine_low_press_remark">
+                                    <?= form_error('engine_low_press_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 2 -->
@@ -133,10 +144,12 @@
                                 <td>Min. 1.2</td>
                                 <td>Min. 0.7</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="engine_low_press2">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_low_press2') ?>" size="5" name="engine_low_press2">
+                                    <?= form_error('engine_low_press2', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="engine_low_press2_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_low_press2_remark') ?>" size="5" name="engine_low_press2_remark">
+                                    <?= form_error('engine_low_press2_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Boost Press -->
@@ -149,10 +162,12 @@
                                 <td>Min. 590</td>
                                 <td>Min. 500</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="engine_rated_press">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_rated_press') ?>" size="5" name="engine_rated_press">
+                                    <?= form_error('engine_rated_press', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="engine_rated_press_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_rated_press_remark') ?>" size="5" name="engine_rated_press_remark">
+                                    <?= form_error('engine_rated_press_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Exhaust Gas Temp -->
@@ -165,10 +180,12 @@
                                 <td>Min. 700</td>
                                 <td>Min. 700</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="tc_stall_temp">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('tc_stall_temp') ?>" size="5" name="tc_stall_temp">
+                                    <?= form_error('tc_stall_temp', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="tc_stall_temp_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('tc_stall_temp_remark') ?>" size="5" name="tc_stall_temp_remark">
+                                    <?= form_error('tc_stall_temp_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
 
@@ -188,10 +205,12 @@
                                 <td class="text-center">11-15</td>
                                 <td class="text-center">8-18</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="operating_effect">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('operating_effect') ?>" size="5" name="operating_effect">
+                                    <?= form_error('operating_effect', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="operating_effect_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('operating_effect_remark') ?>" size="5" name="operating_effect_remark">
+                                    <?= form_error('operating_effect_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 2 -->
@@ -202,10 +221,12 @@
                                 <td class="text-center">95-105</td>
                                 <td class="text-center">90-110</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="pedal_height">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('pedal_height') ?>" size="5" name="pedal_height">
+                                    <?= form_error('pedal_height', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="pedal_height_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('pedal_height_remark') ?>" size="5" name="pedal_height_remark">
+                                    <?= form_error('pedal_height_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 3 -->
@@ -216,10 +237,12 @@
                                 <td class="text-center">39-47</td>
                                 <td class="text-center">39-48</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="pedal_height_operated">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('pedal_height_operated') ?>" size="5" name="pedal_height_operated">
+                                    <?= form_error('pedal_height_operated', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="pedal_height_operated_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('pedal_height_operated_remark') ?>" size="5" name="pedal_height_operated_remark">
+                                    <?= form_error('pedal_height_operated_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 4 -->
@@ -230,10 +253,12 @@
                                 <td class="text-center">55-65</td>
                                 <td class="text-center">Max. 65</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="pedal_travel">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('pedal_travel') ?>" size="5" name="pedal_travel">
+                                    <?= form_error('pedal_travel', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="pedal_travel_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('pedal_travel_remark') ?>" size="5" name="pedal_travel_remark">
+                                    <?= form_error('pedal_travel_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
 
@@ -247,10 +272,12 @@
                                 <td class="text-center">10 - 12</td>
                                 <td class="text-center">-</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="pilot_oil">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('pilot_oil') ?>" size="5" name="pilot_oil">
+                                    <?= form_error('pilot_oil', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="pilot_oil_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('pilot_oil_remark') ?>" size="5" name="pilot_oil_remark">
+                                    <?= form_error('pilot_oil_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 2 -->
@@ -259,10 +286,12 @@
                                 <td class="text-center">1,0 - 2,5</td>
                                 <td class="text-center">-</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="lubricating_oil">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('lubricating_oil') ?>" size="5" name="lubricating_oil">
+                                    <?= form_error('lubricating_oil', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="lubricating_oil_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('lubricating_oil_remark') ?>" size="5" name="lubricating_oil_remark">
+                                    <?= form_error('lubricating_oil_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 3 -->
@@ -271,10 +300,12 @@
                                 <td class="align-middle text-center" rowspan="9">31 - 34</td>
                                 <td class="text-center">-</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="main_oil">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('main_oil') ?>" size="5" name="main_oil">
+                                    <?= form_error('main_oil', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="main_oil_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('main_oil_remark') ?>" size="5" name="main_oil_remark">
+                                    <?= form_error('main_oil_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 4 -->
@@ -283,10 +314,12 @@
                                 <td class="align-middle text-center" rowspan="8">Mannual Spool Engine at full throttle Oil Temp 40-60°C</td>
                                 <td class="text-center"></td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="clutch_f">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('clutch_f') ?>" size="5" name="clutch_f">
+                                    <?= form_error('clutch_f', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="clutch_f_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('clutch_f_remark') ?>" size="5" name="clutch_f_remark">
+                                    <?= form_error('clutch_f_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 5 -->
@@ -294,10 +327,12 @@
                                 <td>Clutch R</td>
                                 <td class="text-center"></td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="clutch_r">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('clutch_r') ?>" size="5" name="clutch_r">
+                                    <?= form_error('clutch_r', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="clutch_r_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('clutch_r_remark') ?>" size="5" name="clutch_r_remark">
+                                    <?= form_error('clutch_r_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 6 -->
@@ -305,10 +340,12 @@
                                 <td>Clutch High</td>
                                 <td class="text-center"></td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="clutch_high">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('clutch_high') ?>" size="5" name="clutch_high">
+                                    <?= form_error('clutch_high', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="clutch_high_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('clutch_high_remark') ?>" size="5" name="clutch_high_remark">
+                                    <?= form_error('clutch_high_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 7 -->
@@ -316,10 +353,12 @@
                                 <td>Clutch Low</td>
                                 <td class="text-center"></td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="clutch_low">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('clutch_low') ?>" size="5" name="clutch_low">
+                                    <?= form_error('clutch_low', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="clutch_low_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('clutch_low_remark') ?>" size="5" name="clutch_low_remark">
+                                    <?= form_error('clutch_low_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 7 -->
@@ -327,10 +366,12 @@
                                 <td>Clutch 1</td>
                                 <td class="text-center"></td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="clutch_1">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('clutch_1') ?>" size="5" name="clutch_1">
+                                    <?= form_error('clutch_1', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="clutch_1_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('clutch_1_remark') ?>" size="5" name="clutch_1_remark">
+                                    <?= form_error('clutch_1_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 7 -->
@@ -338,10 +379,12 @@
                                 <td>Clutch 2</td>
                                 <td class="text-center"></td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="clutch_2">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('clutch_2') ?>" size="5" name="clutch_2">
+                                    <?= form_error('clutch_2', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="clutch_2_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('clutch_2_remark') ?>" size="5" name="clutch_2_remark">
+                                    <?= form_error('clutch_2_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 7 -->
@@ -349,10 +392,12 @@
                                 <td>Clutch 3</td>
                                 <td class="text-center"></td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="clutch_3">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('clutch_3') ?>" size="5" name="clutch_3">
+                                    <?= form_error('clutch_3', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="clutch_3_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('clutch_3_remark') ?>" size="5" name="clutch_3_remark">
+                                    <?= form_error('clutch_3_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 7 -->
@@ -360,10 +405,12 @@
                                 <td>Clutch 4</td>
                                 <td class="text-center"></td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="clutch_4">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('clutch_4') ?>" size="5" name="clutch_4">
+                                    <?= form_error('clutch_4', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="clutch_4_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('clutch_4_remark') ?>" size="5" name="clutch_4_remark">
+                                    <?= form_error('clutch_4_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- STEERING & BRAKE -->
@@ -382,10 +429,12 @@
                                 <td>25 - 45</td>
                                 <td>Max. 45</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="steering_wheel">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('steering_wheel') ?>" size="5" name="steering_wheel">
+                                    <?= form_error('steering_wheel', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="steering_wheel_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('steering_wheel_remark') ?>" size="5" name="steering_wheel_remark">
+                                    <?= form_error('steering_wheel_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Wheel -->
@@ -398,10 +447,12 @@
                                 <td>Max. 5</td>
                                 <td>Max. 6</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="operating_effort_wheel">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('operating_effort_wheel') ?>" size="5" name="operating_effort_wheel">
+                                    <?= form_error('operating_effort_wheel', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="operating_effort_wheel_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('operating_effort_wheel_remark') ?>" size="5" name="operating_effort_wheel_remark">
+                                    <?= form_error('operating_effort_wheel_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Steering Pressure. -->
@@ -414,10 +465,12 @@
                                 <td>170 - 180</td>
                                 <td>165 - 185</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="priority_relief">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('priority_relief') ?>" size="5" name="priority_relief">
+                                    <?= form_error('priority_relief', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="priority_relief_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('priority_relief_remark') ?>" size="5" name="priority_relief_remark">
+                                    <?= form_error('priority_relief_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Brake Pedal -->
@@ -430,10 +483,12 @@
                                 <td>30 - 34</td>
                                 <td>Max. 50</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="operating_effort_brake">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('operating_effort_brake') ?>" size="5" name="operating_effort_brake">
+                                    <?= form_error('operating_effort_brake', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="operating_effort_brake_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('operating_effort_brake_remark') ?>" size="5" name="operating_effort_brake_remark">
+                                    <?= form_error('operating_effort_brake_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Air Pressure -->
@@ -445,10 +500,12 @@
                                 <td>4.2 - 9.5</td>
                                 <td>Min 3.7</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="engine_full_throtte">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_full_throtte') ?>" size="5" name="engine_full_throtte">
+                                    <?= form_error('engine_full_throtte', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="engine_full_throtte_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_full_throtte_remark') ?>" size="5" name="engine_full_throtte_remark">
+                                    <?= form_error('engine_full_throtte_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- HYDRAULIC -->
@@ -467,10 +524,12 @@
                                 <td>115-145</td>
                                 <td>115-145</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="raise_speed">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('raise_speed') ?>" size="5" name="raise_speed">
+                                    <?= form_error('raise_speed', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="raise_speed_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('raise_speed_remark') ?>" size="5" name="raise_speed_remark">
+                                    <?= form_error('raise_speed_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 2 -->
@@ -479,10 +538,12 @@
                                 <td>115-145</td>
                                 <td>115-145</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="lower_speed">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('lower_speed') ?>" size="5" name="lower_speed">
+                                    <?= form_error('lower_speed', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="lower_speed_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('lower_speed_remark') ?>" size="5" name="lower_speed_remark">
+                                    <?= form_error('lower_speed_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Balde side shift speed, with out move of circle -->
@@ -493,10 +554,12 @@
                                 <td>115-145</td>
                                 <td>115-145</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="left_out">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('left_out') ?>" size="5" name="left_out">
+                                    <?= form_error('left_out', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="left_out_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('left_out_remark') ?>" size="5" name="left_out_remark">
+                                    <?= form_error('left_out_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 2 -->
@@ -505,10 +568,12 @@
                                 <td>115-145</td>
                                 <td>115-145</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="right_out">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('right_out') ?>" size="5" name="right_out">
+                                    <?= form_error('right_out', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="right_out_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('right_out_remark') ?>" size="5" name="right_out_remark">
+                                    <?= form_error('right_out_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Balde side shift speed, compared to circle -->
@@ -519,10 +584,12 @@
                                 <td>115-145</td>
                                 <td>115-145</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="left_compared">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('left_compared') ?>" size="5" name="left_compared">
+                                    <?= form_error('left_compared', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="left_compared_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('left_compared_remark') ?>" size="5" name="left_compared_remark">
+                                    <?= form_error('left_compared_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 2 -->
@@ -531,10 +598,12 @@
                                 <td>115-145</td>
                                 <td>115-145</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="right_compared">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('right_compared') ?>" size="5" name="right_compared">
+                                    <?= form_error('right_compared', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="right_compared_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('right_compared_remark') ?>" size="5" name="right_compared_remark">
+                                    <?= form_error('right_compared_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Ripper lifting speed -->
@@ -545,10 +614,12 @@
                                 <td>85 - 115</td>
                                 <td>85 - 115</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="raise_ripper">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('raise_ripper') ?>" size="5" name="raise_ripper">
+                                    <?= form_error('raise_ripper', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="raise_ripper">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('raise_ripper_remark') ?>" size="5" name="raise_ripper_remark">
+                                    <?= form_error('raise_ripper_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 2 -->
@@ -557,10 +628,12 @@
                                 <td>85 - 115</td>
                                 <td>85 - 115</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="lower_ripper">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('lower_ripper') ?>" size="5" name="lower_ripper">
+                                    <?= form_error('lower_ripper', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="lower_ripper">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('lower_ripper_remark') ?>" size="5" name="lower_ripper_remark">
+                                    <?= form_error('lower_ripper_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Blade rotation speed -->
@@ -572,10 +645,12 @@
                                 <td>8.5 - 9.5</td>
                                 <td>8.5 - 9.5</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="rotation_down">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('rotation_down') ?>" size="5" name="rotation_down">
+                                    <?= form_error('rotation_down', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="rotation_down">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('rotation_down_remark') ?>" size="5" name="rotation_down_remark">
+                                    <?= form_error('rotation_down_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 2 -->
@@ -584,10 +659,12 @@
                                 <td>6.5 - 7.5</td>
                                 <td>6.5 - 7.5</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="rotation_up">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('rotation_up') ?>" size="5" name="rotation_up">
+                                    <?= form_error('rotation_up', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="rotation_up_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('rotation_up_remark') ?>" size="5" name="rotation_up_remark">
+                                    <?= form_error('rotation_up_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Hyd. Drift -->
@@ -599,10 +676,12 @@
                                 <td>10</td>
                                 <td>10</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="drift_ext_blade">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('drift_ext_blade') ?>" size="5" name="drift_ext_blade">
+                                    <?= form_error('drift_ext_blade', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="drift_ext_blade_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('drift_ext_blade_remark') ?>" size="5" name="drift_ext_blade_remark">
+                                    <?= form_error('drift_ext_blade_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 2 -->
@@ -611,10 +690,12 @@
                                 <td>10</td>
                                 <td>10</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="drift_rtn_blade">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('drift_rtn_blade') ?>" size="5" name="drift_rtn_blade">
+                                    <?= form_error('drift_rtn_blade', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="drift_rtn_blade_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('drift_rtn_blade_remark') ?>" size="5" name="drift_rtn_blade_remark">
+                                    <?= form_error('drift_rtn_blade_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 3 -->
@@ -623,10 +704,12 @@
                                 <td>20</td>
                                 <td>20</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="drift_ext_ripper">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('drift_ext_ripper') ?>" size="5" name="drift_ext_ripper">
+                                    <?= form_error('drift_ext_ripper', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="drift_ext_ripper_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('drift_ext_ripper_remark') ?>" size="5" name="drift_ext_ripper_remark">
+                                    <?= form_error('drift_ext_ripper_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 4 -->
@@ -635,10 +718,12 @@
                                 <td>20</td>
                                 <td>20</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="drift_rtn_ripper">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('drift_rtn_ripper') ?>" size="5" name="drift_rtn_ripper">
+                                    <?= form_error('drift_rtn_ripper', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="drift_rtn_ripper_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('drift_rtn_ripper_remark') ?>" size="5" name="drift_rtn_ripper_remark">
+                                    <?= form_error('drift_rtn_ripper_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Hydraulic pressure -->
@@ -650,10 +735,12 @@
                                 <td>240 - 260</td>
                                 <td>235 - 265</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="hydraulic_priority">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('hydraulic_priority') ?>" size="5" name="hydraulic_priority">
+                                    <?= form_error('hydraulic_priority', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="hydraulic_priority_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('hydraulic_priority_remark') ?>" size="5" name="hydraulic_priority_remark">
+                                    <?= form_error('hydraulic_priority_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 2 -->
@@ -662,10 +749,12 @@
                                 <td>240 - 260</td>
                                 <td>235 - 265</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="hydraulic_valve_rh">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('hydraulic_valve_rh') ?>" size="5" name="hydraulic_valve_rh">
+                                    <?= form_error('hydraulic_valve_rh', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="hydraulic_valve_rh_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('hydraulic_valve_rh_remark') ?>" size="5" name="hydraulic_valve_rh_remark">
+                                    <?= form_error('hydraulic_valve_rh_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 3 -->
@@ -674,10 +763,12 @@
                                 <td>240 - 260</td>
                                 <td>235 - 265</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="hydraulic_valve_lh">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('hydraulic_valve_lh') ?>" size="5" name="hydraulic_valve_lh">
+                                    <?= form_error('hydraulic_valve_lh', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="hydraulic_valve_lh_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('hydraulic_valve_lh_remark') ?>" size="5" name="hydraulic_valve_lh_remark">
+                                    <?= form_error('hydraulic_valve_lh_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- DIFFERENTIAL / FINAL DRIVE & TANDEM -->
@@ -693,10 +784,12 @@
                                 <td></td>
                                 <td class="align-middle text-center" colspan="3" rowspan="3">No excessive metalic powder</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="diff_drain">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('diff_drain') ?>" size="5" name="diff_drain">
+                                    <?= form_error('diff_drain', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="diff_drain_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('diff_drain_remark') ?>" size="5" name="diff_drain_remark">
+                                    <?= form_error('diff_drain_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Tandem Drain Plug -->
@@ -705,20 +798,24 @@
                                 <td class="align-middle" rowspan="2">Tandem Drain Plug</td>
                                 <td>L/H</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="tandem_drain_lh">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('tandem_drain_lh') ?>" size="5" name="tandem_drain_lh">
+                                    <?= form_error('tandem_drain_lh', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="tandem_drain_lh_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('tandem_drain_lh_remark') ?>" size="5" name="tandem_drain_lh_remark">
+                                    <?= form_error('tandem_drain_lh_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 2 -->
                             <tr>
                                 <td>R/H</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="tandem_drain_rh">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('tandem_drain_rh') ?>" size="5" name="tandem_drain_rh">
+                                    <?= form_error('tandem_drain_rh', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="tandem_drain_rh_remark">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('tandem_drain_rh_remark') ?>" size="5" name="tandem_drain_rh_remark">
+                                    <?= form_error('tandem_drain_rh_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- ELECTRICAL -->
@@ -733,10 +830,12 @@
                                 <td colspan="2">Completeness and function</td>
                                 <td colspan="3">Complete and normal function</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="instrument_panel" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('instrument_panel') ?>" name="instrument_panel" size="5">
+                                    <?= form_error('instrument_panel', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="instrument_panel_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('instrument_panel_remark') ?>" name="instrument_panel_remark" size="5">
+                                    <?= form_error('instrument_panel_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Starting system -->
@@ -745,10 +844,12 @@
                                 <td colspan="2">Condition and function</td>
                                 <td colspan="3">Good installation and normal function</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="starting_system" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('starting_system') ?>" name="starting_system" size="5">
+                                    <?= form_error('starting_system', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="starting_system_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('starting_system_remark') ?>" name="starting_system_remark" size="5">
+                                    <?= form_error('starting_system_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Chargin System -->
@@ -757,10 +858,12 @@
                                 <td colspan="2">Condition and function</td>
                                 <td colspan="3">Good installation and normal function</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="charging_system" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('charging_system') ?>" name="charging_system" size="5">
+                                    <?= form_error('charging_system', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="charging_system_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('charging_system_remark') ?>" name="charging_system_remark" size="5">
+                                    <?= form_error('charging_system_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Lighting -->
@@ -769,10 +872,12 @@
                                 <td colspan="2">Condition and function</td>
                                 <td colspan="3">Complete and normal function</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="lighting" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('lighting') ?>" name="lighting" size="5">
+                                    <?= form_error('lighting', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="lighting_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('lighting_remark') ?>" name="lighting_remark" size="5">
+                                    <?= form_error('lighting_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Battery -->
@@ -781,10 +886,12 @@
                                 <td colspan="2">Condition, electrolite level, specific grafity and load test. </td>
                                 <td colspan="3">Good condition</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="battery" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('battery') ?>" name="battery" size="5">
+                                    <?= form_error('battery', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="battery_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('battery_remark') ?>" name="battery_remark" size="5">
+                                    <?= form_error('battery_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Wiring harness -->
@@ -793,10 +900,12 @@
                                 <td colspan="2">Condition, connection, clamping</td>
                                 <td colspan="3">Good installation and condition</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="wiring_harness" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('wiring_harness') ?>" name="wiring_harness" size="5">
+                                    <?= form_error('wiring_harness', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="wiring_harness_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('wiring_harness_remark') ?>" name="wiring_harness_remark" size="5">
+                                    <?= form_error('wiring_harness_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- VHMS/Komtrak -->
@@ -805,10 +914,12 @@
                                 <td colspan="2">Condition and function</td>
                                 <td colspan="3">Good condition and function</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="vhms_komtrak" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('vhms_komtrak') ?>" name="vhms_komtrak" size="5">
+                                    <?= form_error('vhms_komtrak', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="vhms_komtrak_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('vhms_komtrak_remark') ?>" name="vhms_komtrak_remark" size="5">
+                                    <?= form_error('vhms_komtrak_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- OPTIONAL EQUIPMENT -->
@@ -823,10 +934,12 @@
                                 <td colspan="2">Completeness, condition and function</td>
                                 <td colspan="3">Complete and normal function</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="emergency_shutdown" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('emergency_shutdown') ?>" name="emergency_shutdown" size="5">
+                                    <?= form_error('emergency_shutdown', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="emergency_shutdown_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('emergency_shutdown_remark') ?>" name="emergency_shutdown_remark" size="5">
+                                    <?= form_error('emergency_shutdown_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Logout Switch -->
@@ -835,10 +948,12 @@
                                 <td colspan="2">Completeness, condition and function</td>
                                 <td colspan="3">Complete and normal function</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="logout_switch" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('logout_switch') ?>" name="logout_switch" size="5">
+                                    <?= form_error('logout_switch', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="logout_switch_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('logout_switch_remark') ?>" name="logout_switch_remark" size="5">
+                                    <?= form_error('logout_switch_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- PDU -->
@@ -847,10 +962,12 @@
                                 <td colspan="2">Completeness, condition and function</td>
                                 <td colspan="3">Complete and normal function</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="pdu" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('pdu') ?>" name="pdu" size="5">
+                                    <?= form_error('pdu', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="pdu_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('pdu_remark') ?>" name="pdu_remark" size="5">
+                                    <?= form_error('pdu_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Autolube -->
@@ -859,10 +976,12 @@
                                 <td colspan="2">Completeness, condition and function</td>
                                 <td colspan="3">Complete and normal function</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="autolube" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('autolube') ?>" name="autolube" size="5">
+                                    <?= form_error('autolube', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="autolube_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('autolube_remark') ?>" name="autolube_remark" size="5">
+                                    <?= form_error('autolube_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Fire suppression -->
@@ -871,10 +990,12 @@
                                 <td colspan="2">Completeness, condition and function</td>
                                 <td colspan="3">Complete and normal function</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="fire_suppression" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('fire_suppression') ?>" name="fire_suppression" size="5">
+                                    <?= form_error('fire_suppression', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="fire_suppression_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_high_speed') ?>" name="fire_suppression_remark" size="5">
+                                    <?= form_error('engine_high_speed', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Fatique warning -->
@@ -883,10 +1004,12 @@
                                 <td colspan="2">Completeness, condition and function</td>
                                 <td colspan="3">Complete and normal function</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="fatique_warning" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('fatique_warning') ?>" name="fatique_warning" size="5">
+                                    <?= form_error('fatique_warning', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="fatique_warning_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('fatique_warning_remark') ?>" name="fatique_warning_remark" size="5">
+                                    <?= form_error('fatique_warning_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Backup alarm -->
@@ -895,10 +1018,12 @@
                                 <td colspan="2">Completeness, condition and function</td>
                                 <td colspan="3">Complete and normal function</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="backup_alarm" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('backup_alarm') ?>" name="backup_alarm" size="5">
+                                    <?= form_error('backup_alarm', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="backup_alarm_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('backup_alarm_remark') ?>" name="backup_alarm_remark" size="5">
+                                    <?= form_error('backup_alarm_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- GENERAL MACHINE CONDITION -->
@@ -913,10 +1038,12 @@
                                 <td colspan="2">Completeness, worn and crack detection</td>
                                 <td colspan="3">No crack</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="attachment_frame" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('attachment_frame') ?>" name="attachment_frame" size="5">
+                                    <?= form_error('attachment_frame', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="attachment_frame_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('attachment_frame_remark') ?>" name="attachment_frame_remark" size="5">
+                                    <?= form_error('attachment_frame_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Machine -->
@@ -925,10 +1052,12 @@
                                 <td colspan="2">Cleaness, wear, completeness and condition</td>
                                 <td colspan="3">Complete and normal condition</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="machine" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('machine') ?>" name="machine" size="5">
+                                    <?= form_error('machine', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="machine_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('machine_remark') ?>" name="machine_remark" size="5">
+                                    <?= form_error('machine_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Undercarriage -->
@@ -937,10 +1066,12 @@
                                 <td colspan="2">Cleaness, wear, completeness and condition</td>
                                 <td colspan="3">Complete and normal condition</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="undercarriage" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('undercarriage') ?>" name="undercarriage" size="5">
+                                    <?= form_error('undercarriage', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" name="undercarriage_remark" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('undercarriage_remark') ?>" name="undercarriage_remark" size="5">
+                                    <?= form_error('undercarriage_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                         </tbody>
