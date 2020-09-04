@@ -13,7 +13,7 @@
         <!-- Bar Chart -->
         <div class="card shadow mb-4">
           <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary"><?= $report['name'] ?></h6>
+            <h6 class="m-0 font-weight-bold text-primary"><?= $report['model_name'] ?></h6>
           </div>
           <div class="card-body">
             <div class="chart-bar">
@@ -56,8 +56,12 @@
     return s.join(dec);
   }
 
-  for (let i = 0; i < 4; i++) {
-    var ctx = document.getElementById(`myBarChart${i}`);
+  let data = <?= json_encode($results) ?>;
+  let no = 0;
+  console.log(data);
+
+  for (let i in data) {
+    var ctx = document.getElementById(`myBarChart${no}`);
     var myBarChart = new Chart(ctx, {
       type: "bar",
       data: {
@@ -67,14 +71,22 @@
             backgroundColor: "#e74a3b",
             hoverBackgroundColor: "#c23f32",
             borderColor: "#4e73df",
-            data: [4215, 5312, 6251],
+            data: [
+              data[i].actual.ps2,
+              data[i].actual.ps3,
+              data[i].actual.ps4
+            ],
           },
           {
             label: "Plan",
             backgroundColor: "#1cc88a",
             hoverBackgroundColor: "#19a875",
             borderColor: "#4e73df",
-            data: [4215, 5312, 6251],
+            data: [
+              data[i].actual.ps2,
+              data[i].actual.ps3,
+              data[i].actual.ps4
+            ],
           },
         ],
       },
@@ -104,14 +116,10 @@
           }, ],
           yAxes: [{
             ticks: {
-              min: 2000,
-              max: 8000,
+              min: 0,
+              max: 10,
               maxTicksLimit: 5,
               padding: 3,
-              // Include a dollar sign in the ticks
-              callback: function(value, index, values) {
-                return "$" + number_format(value);
-              },
             },
             gridLines: {
               color: "rgb(234, 236, 244)",
@@ -119,7 +127,7 @@
               drawBorder: false,
               borderDash: [2],
               zeroLineBorderDash: [2],
-            },
+            }
           }, ],
         },
         legend: {
@@ -137,15 +145,16 @@
           yPadding: 15,
           displayColors: false,
           caretPadding: 10,
-          callbacks: {
-            label: function(tooltipItem, chart) {
-              var datasetLabel =
-                chart.datasets[tooltipItem.datasetIndex].label || "";
-              return datasetLabel + ": $" + number_format(tooltipItem.yLabel);
-            },
-          },
+          // callbacks: {
+          //   label: function(tooltipItem, chart) {
+          //     var datasetLabel =
+          //       chart.datasets[tooltipItem.datasetIndex].label || "";
+          //     return datasetLabel + ": $" + number_format(tooltipItem.yLabel);
+          //   },
+          // },
         },
       },
     });
+    no++;
   }
 </script>

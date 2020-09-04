@@ -34,16 +34,18 @@
                                 </tr>
                             </tfoot>
                             <tbody>
-                                <tr>
-                                    <td>PC2000-8</td>
-                                    <td>27/06/2020</td>
-                                    <td>PS3</td>
-                                    <td class="text-center">
-                                        <a href="<?= base_url("admin/home/update_plan/") . $detail['name']  ?>" class="btn btn-warning btn-icon-split px-3 py-2 update_button">
-                                            PDF
-                                        </a>
-                                    </td>
-                                </tr>
+                                <?php foreach ($detail['actual'] as $actual) : ?>
+                                    <tr>
+                                        <td><?= $actual['model_name'] ?></td>
+                                        <td><?= $actual['plan_date'] ?></td>
+                                        <td><?= $actual['ps_type'] ?></td>
+                                        <td class="text-center">
+                                            <a href="<?= base_url("admin/home/update_plan/") . $detail['name']  ?>" class="btn btn-warning btn-icon-split px-3 py-2 update_button">
+                                                PDF
+                                            </a>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
                             </tbody>
                         </table>
                     </div>

@@ -27,8 +27,58 @@ class Home extends CI_Controller
     public function dashboard()
     {
         $data = [
-            'reports' => $this->getDataDummy(),
-            'title' => 'Dashboard'
+            'reports' => $this->Model_model->getModels(),
+            'title' => 'Dashboard',
+            'results' => [
+                'pc2000' => [
+                    'actual' => [
+                        'ps2' => $this->actual->getActualRow('pc2000-8', 'ps2'),
+                        'ps3' => $this->actual->getActualRow('pc2000-8', 'ps3'),
+                        'ps4' => $this->actual->getActualRow('pc2000-8', 'ps4'),
+                    ],
+                    'plan' => [
+                        'ps2' => $this->Plan_model->getPlanRow('PC2000-8', 'ps2'),
+                        'ps3' => $this->Plan_model->getPlanRow('PC2000-8', 'ps3'),
+                        'ps4' => $this->Plan_model->getPlanRow('PC2000-8', 'ps4'),
+                    ]
+                ],
+                'gd825' => [
+                    'actual' => [
+                        'ps2' => $this->actual->getActualRow('gd825-2', 'ps2'),
+                        'ps3' => $this->actual->getActualRow('gd825-2', 'ps3'),
+                        'ps4' => $this->actual->getActualRow('gd825-2', 'ps4'),
+                    ],
+                    'plan' => [
+                        'ps2' => $this->Plan_model->getPlanRow('GD825-2', 'ps2'),
+                        'ps3' => $this->Plan_model->getPlanRow('GD825-2', 'ps3'),
+                        'ps4' => $this->Plan_model->getPlanRow('GD825-2', 'ps4'),
+                    ]
+                ],
+                'hd785' => [
+                    'actual' => [
+                        'ps2' => $this->actual->getActualRow('hd785-5', 'ps2'),
+                        'ps3' => $this->actual->getActualRow('hd785-5', 'ps3'),
+                        'ps4' => $this->actual->getActualRow('hd785-5', 'ps4'),
+                    ],
+                    'plan' => [
+                        'ps2' => $this->Plan_model->getPlanRow('HD785-5', 'ps2'),
+                        'ps3' => $this->Plan_model->getPlanRow('HD785-5', 'ps3'),
+                        'ps4' => $this->Plan_model->getPlanRow('HD785-5', 'ps4'),
+                    ]
+                ],
+                'hd787' => [
+                    'actual' => [
+                        'ps2' => $this->actual->getActualRow('hd785-7', 'ps2'),
+                        'ps3' => $this->actual->getActualRow('hd785-7', 'ps3'),
+                        'ps4' => $this->actual->getActualRow('hd785-7', 'ps4'),
+                    ],
+                    'plan' => [
+                        'ps2' => $this->Plan_model->getPlanRow('HD785-7', 'ps2'),
+                        'ps3' => $this->Plan_model->getPlanRow('HD785-7', 'ps3'),
+                        'ps4' => $this->Plan_model->getPlanRow('HD785-7', 'ps4'),
+                    ]
+                ]
+            ]
         ];
 
         $this->load->view('templates/header', $data);
@@ -859,7 +909,13 @@ class Home extends CI_Controller
     public function ppm_report($detail = '')
     {
         $data = [
-            'reports' => $this->getDataDummy(),
+            'reports' => $this->Model_model->getModels(),
+            'actuals' => [
+                'pc2000' => $this->actual->getActualJoin('pc2000-8'),
+                'gd825' => $this->actual->getActualJoin('gd825-2'),
+                'hd787' => $this->actual->getActualJoin('hd785-7'),
+                'hd785' => $this->actual->getActualJoin('hd785-5')
+            ],
             'title' => 'PPM Report'
         ];
 
@@ -872,19 +928,31 @@ class Home extends CI_Controller
         } else {
             switch ($detail) {
                 case "PC2000-8":
-                    $data['detail'] = ["name" => "PC2000-8"];
+                    $data['detail'] = [
+                        "name" => "PC2000-8",
+                        'actual' => $this->actual->getActualJoin('pc2000-8')
+                    ];
                     $this->load->view('admin/ppm_report_detail', $data);
                     break;
-                case "GD825A-2":
-                    $data['detail'] = ["name" => "GD825A-2"];
+                case "GD825-2":
+                    $data['detail'] = [
+                        "name" => "GD825-2",
+                        'actual' => $this->actual->getActualJoin('gd825-2')
+                    ];
                     $this->load->view('admin/ppm_report_detail', $data);
                     break;
                 case "HD785-7":
-                    $data['detail'] = ["name" => "HD785-7"];
+                    $data['detail'] = [
+                        "name" => "HD785-7",
+                        'actual' => $this->actual->getActualJoin('hd785-5')
+                    ];
                     $this->load->view('admin/ppm_report_detail', $data);
                     break;
                 case "HD785-5":
-                    $data['detail'] = ["name" => "HD785-5"];
+                    $data['detail'] = [
+                        "name" => "HD785-5",
+                        'actual' => $this->actual->getActualJoin('hd785-7')
+                    ];
                     $this->load->view('admin/ppm_report_detail', $data);
                     break;
                 default:
@@ -902,7 +970,7 @@ class Home extends CI_Controller
                 "name" => "PC2000-8"
             ],
             [
-                "name" => "GD825A-2"
+                "name" => "GD825-2"
             ],
             [
                 "name" => "HD785-7"
