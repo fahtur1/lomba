@@ -2,16 +2,19 @@
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">UPDATE <?= $unit ?> / <?= $ps ?></h1>
     </div>
-    <form action="<?= base_url("admin/home/update_plan/") . $unit . "/" . $ps . "/" . $plan  ?>" method="post">
+
+    <form action="<?= base_url("admin/home/update_plan/$unit/$ps/$plan") ?>" method="post">
         <div class="row">
             <div class="col-lg-4">
                 <div class="form-group">
                     <label for="inputState">Name</label>
-                    <input type="text" class="form-control" id="name" name="name">
+                    <input type="text" class="form-control" value="<?= set_value('name') ?>" id="name" name="name">
+                    <?= form_error('name', '<small class="text-danger">', '</small>') ?>
                 </div>
                 <div class="form-group">
                     <label>Plan Date</label>
-                    <input type="date" id="date" name="date" max="2050-12-31" min="<?= date('Y-m-d') ?>" class="form-control">
+                    <input type="date" id="date" name="date" value="<?= set_value('date') ?>" max="2050-12-31" min="<?= date('Y-m-d') ?>" class="form-control">
+                    <?= form_error('date', '<small class="text-danger">', '</small>') ?>
                 </div>
                 <div class="form-group">
                     <label>Code Unit</label>
@@ -19,7 +22,8 @@
                 </div>
                 <div class="form-group">
                     <label>Branch Site</label>
-                    <input type="text" class="form-control" id="site" name="site">
+                    <input type="text" class="form-control" value="<?= set_value('site') ?>" id="site" name="site">
+                    <?= form_error('site', '<small class="text-danger">', '</small>') ?>
                 </div>
             </div>
         </div>
@@ -460,7 +464,7 @@
                                 </td>
                                 <td class="align-middle text-center">
                                     <input type="text" class="form-control no-border" value="<?= set_value('boom_cylinder_remark') ?>" name="boom_cylinder_remark" size="5">
-                                    <?= form_error('engine_low_speed', '<small class="text-danger">', '</small>') ?>
+                                    <?= form_error('boom_cylinder_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Arm cylinder -->
@@ -594,8 +598,8 @@
                                 <td class="text-center align-middle">P1: 390 - 510<br>P2: 615 - 735</td>
                                 <td class="text-center align-middle">P1: 390 - 510<br>P2: 615 - 735</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_low_speed') ?>" name="pump_right_travel_lever" size="5">
-                                    <?= form_error('engine_low_speed', '<small class="text-danger">', '</small>') ?>
+                                    <input type="text" class="form-control no-border" value="<?= set_value('pump_right_travel_lever') ?>" name="pump_right_travel_lever" size="5">
+                                    <?= form_error('pump_right_travel_lever', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
                                     <input type="text" class="form-control no-border" value="<?= set_value('pump_right_travel_lever_remark') ?>" name="pump_right_travel_lever_remark" size="5">
@@ -850,8 +854,8 @@
                                     <?= form_error('p2f_arm_out', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_low_speed') ?>" name="p2f_arm_out_remark" size="5">
-                                    <?= form_error('engine_low_speed', '<small class="text-danger">', '</small>') ?>
+                                    <input type="text" class="form-control no-border" value="<?= set_value('p2f_arm_out_remark') ?>" name="p2f_arm_out_remark" size="5">
+                                    <?= form_error('p2f_arm_out_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
 
@@ -1326,8 +1330,8 @@
                                     <?= form_error('fire_suppression', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_high_speed') ?>" name="fire_suppression_remark" size="5">
-                                    <?= form_error('engine_high_speed', '<small class="text-danger">', '</small>') ?>
+                                    <input type="text" class="form-control no-border" value="<?= set_value('fire_suppression_remark') ?>" name="fire_suppression_remark" size="5">
+                                    <?= form_error('fire_suppression_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Fatique warning -->

@@ -2,16 +2,19 @@
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">UPDATE <?= $unit ?> / <?= $ps ?></h1>
     </div>
-    <form action="<?= base_url("admin/home/update_plan/") . $unit . "/" . $ps . "/" . $plan  ?>" method="post">
+
+    <form action="<?= base_url("admin/home/update_plan/$unit/$ps/$plan") ?>" method="post">
         <div class="row">
             <div class="col-lg-4">
                 <div class="form-group">
                     <label for="inputState">Name</label>
-                    <input type="text" class="form-control" id="name" name="name">
+                    <input type="text" class="form-control" value="<?= set_value('name') ?>" id="name" name="name">
+                    <?= form_error('name', '<small class="text-danger">', '</small>') ?>
                 </div>
                 <div class="form-group">
                     <label>Plan Date</label>
-                    <input type="date" id="date" name="date" max="2050-12-31" min="<?= date('Y-m-d') ?>" class="form-control">
+                    <input type="date" id="date" name="date" value="<?= set_value('date') ?>" max="2050-12-31" min="<?= date('Y-m-d') ?>" class="form-control">
+                    <?= form_error('date', '<small class="text-danger">', '</small>') ?>
                 </div>
                 <div class="form-group">
                     <label>Code Unit</label>
@@ -19,7 +22,8 @@
                 </div>
                 <div class="form-group">
                     <label>Branch Site</label>
-                    <input type="text" class="form-control" id="site" name="site">
+                    <input type="text" class="form-control" value="<?= set_value('site') ?>" id="site" name="site">
+                    <?= form_error('site', '<small class="text-danger">', '</small>') ?>
                 </div>
             </div>
         </div>

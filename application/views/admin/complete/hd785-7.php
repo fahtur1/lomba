@@ -904,7 +904,7 @@
                                 <td class="align-middle" colspan="2">
                                     Set With No. 2 Cylinder Extended 200 mm, Then Stop The Engine !
                                 </td>
-                                <td class="align-middle text-center" rowspan="2">
+                                <td class="align-middle text-center">
                                     mm / 5 min.
                                 </td>
                                 <td class="text-center align-middle ">Max. 85</td>
@@ -1129,7 +1129,7 @@
                                 </td>
                                 <td class="align-middle text-center">
                                     <input type="text" class="form-control no-border" value="<?= set_value('final_drive_lh_remark') ?>" name="final_drive_lh_remark" size="5">
-                                    <?= form_error('engine_low_speed', '<small class="text-danger">', '</small>') ?>
+                                    <?= form_error('final_drive_lh_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 2 -->
@@ -1320,8 +1320,8 @@
                                     <?= form_error('fire_suppression', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_high_speed') ?>" name="fire_suppression_remark" size="5">
-                                    <?= form_error('engine_high_speed', '<small class="text-danger">', '</small>') ?>
+                                    <input type="text" class="form-control no-border" value="<?= set_value('fire_suppression_remark') ?>" name="fire_suppression_remark" size="5">
+                                    <?= form_error('fire_suppression_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Fatique warning -->
@@ -1384,20 +1384,6 @@
                                 <td class="align-middle text-center">
                                     <input type="text" class="form-control no-border" value="<?= set_value('machine_remark') ?>" name="machine_remark" size="5">
                                     <?= form_error('machine_remark', '<small class="text-danger">', '</small>') ?>
-                                </td>
-                            </tr>
-                            <!-- Undercarriage -->
-                            <tr>
-                                <td>Undercarriage</td>
-                                <td colspan="2">Cleaness, wear, completeness and condition</td>
-                                <td colspan="3">Complete and normal condition</td>
-                                <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" value="<?= set_value('undercarriage') ?>" name="undercarriage" size="5">
-                                    <?= form_error('undercarriage', '<small class="text-danger">', '</small>') ?>
-                                </td>
-                                <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" value="<?= set_value('undercarriage_remark') ?>" name="undercarriage_remark" size="5">
-                                    <?= form_error('undercarriage_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                         </tbody>

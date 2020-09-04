@@ -97,7 +97,7 @@
                                     <?= form_error('engine_high_speed', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="engine_high_speed_remark">
+                                    <input type="text" class="form-control no-border" size="5" value="<?= set_value('engine_high_speed_remark') ?>" name="engine_high_speed_remark">
                                     <?= form_error('engine_high_speed_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
@@ -994,8 +994,8 @@
                                     <?= form_error('fire_suppression', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_high_speed') ?>" name="fire_suppression_remark" size="5">
-                                    <?= form_error('engine_high_speed', '<small class="text-danger">', '</small>') ?>
+                                    <input type="text" class="form-control no-border" value="<?= set_value('fire_suppression_remark') ?>" name="fire_suppression_remark" size="5">
+                                    <?= form_error('fire_suppression_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Fatique warning -->
@@ -1058,20 +1058,6 @@
                                 <td class="align-middle text-center">
                                     <input type="text" class="form-control no-border" value="<?= set_value('machine_remark') ?>" name="machine_remark" size="5">
                                     <?= form_error('machine_remark', '<small class="text-danger">', '</small>') ?>
-                                </td>
-                            </tr>
-                            <!-- Undercarriage -->
-                            <tr>
-                                <td>Undercarriage</td>
-                                <td colspan="2">Cleaness, wear, completeness and condition</td>
-                                <td colspan="3">Complete and normal condition</td>
-                                <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" value="<?= set_value('undercarriage') ?>" name="undercarriage" size="5">
-                                    <?= form_error('undercarriage', '<small class="text-danger">', '</small>') ?>
-                                </td>
-                                <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" value="<?= set_value('undercarriage_remark') ?>" name="undercarriage_remark" size="5">
-                                    <?= form_error('undercarriage_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                         </tbody>

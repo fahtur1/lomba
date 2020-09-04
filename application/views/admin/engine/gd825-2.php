@@ -97,7 +97,7 @@
                                     <?= form_error('engine_high_speed', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5" name="engine_high_speed_remark">
+                                    <input type="text" class="form-control no-border" size="5" value="<?= set_value('engine_high_speed_remark') ?>" name="engine_high_speed_remark">
                                     <?= form_error('engine_high_speed_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
