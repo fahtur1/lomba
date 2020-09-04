@@ -122,7 +122,13 @@ class Home extends CI_Controller
     public function ppm_report($detail = '')
     {
         $data = [
-            'reports' => $this->getDataDummy(),
+            'reports' => $this->Model_model->getModels(),
+            'actuals' => [
+                'pc2000' => $this->actual->getActualJoin('pc2000-8'),
+                'gd825' => $this->actual->getActualJoin('gd825-2'),
+                'hd787' => $this->actual->getActualJoin('hd785-7'),
+                'hd785' => $this->actual->getActualJoin('hd785-5')
+            ],
             'title' => 'PPM Report'
         ];
 
@@ -135,19 +141,31 @@ class Home extends CI_Controller
         } else {
             switch ($detail) {
                 case "PC2000-8":
-                    $data['detail'] = ["name" => "PC2000-8"];
+                    $data['detail'] = [
+                        "name" => "PC2000-8",
+                        'actual' => $this->actual->getActualJoin('pc2000-8')
+                    ];
                     $this->load->view('admin/ppm_report_detail', $data);
                     break;
-                case "GD825A-2":
-                    $data['detail'] = ["name" => "GD825A-2"];
+                case "GD825-2":
+                    $data['detail'] = [
+                        "name" => "GD825-2",
+                        'actual' => $this->actual->getActualJoin('gd825-2')
+                    ];
                     $this->load->view('admin/ppm_report_detail', $data);
                     break;
                 case "HD785-7":
-                    $data['detail'] = ["name" => "HD785-7"];
+                    $data['detail'] = [
+                        "name" => "HD785-7",
+                        'actual' => $this->actual->getActualJoin('hd785-5')
+                    ];
                     $this->load->view('admin/ppm_report_detail', $data);
                     break;
                 case "HD785-5":
-                    $data['detail'] = ["name" => "HD785-5"];
+                    $data['detail'] = [
+                        "name" => "HD785-5",
+                        'actual' => $this->actual->getActualJoin('hd785-7')
+                    ];
                     $this->load->view('admin/ppm_report_detail', $data);
                     break;
                 default:
@@ -165,7 +183,7 @@ class Home extends CI_Controller
                 "name" => "PC2000-8"
             ],
             [
-                "name" => "GD825A-2"
+                "name" => "GD825-2"
             ],
             [
                 "name" => "HD785-7"
