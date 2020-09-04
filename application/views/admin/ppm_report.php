@@ -611,7 +611,7 @@
                             drawBorder: false,
                             borderDash: [2],
                             zeroLineBorderDash: [2],
-                        },
+                        }
                     }, ],
                 },
                 legend: {

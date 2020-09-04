@@ -27,8 +27,58 @@ class Home extends CI_Controller
     public function dashboard()
     {
         $data = [
-            'reports' => $this->getDataDummy(),
-            'title' => 'Dashboard'
+            'reports' => $this->Model_model->getModels(),
+            'title' => 'Dashboard',
+            'results' => [
+                'pc2000' => [
+                    'actual' => [
+                        'ps2' => $this->actual->getActualRow('pc2000-8', 'ps2'),
+                        'ps3' => $this->actual->getActualRow('pc2000-8', 'ps3'),
+                        'ps4' => $this->actual->getActualRow('pc2000-8', 'ps4'),
+                    ],
+                    'plan' => [
+                        'ps2' => $this->Plan_model->getPlanRow('PC2000-8', 'ps2'),
+                        'ps3' => $this->Plan_model->getPlanRow('PC2000-8', 'ps3'),
+                        'ps4' => $this->Plan_model->getPlanRow('PC2000-8', 'ps4'),
+                    ]
+                ],
+                'gd825' => [
+                    'actual' => [
+                        'ps2' => $this->actual->getActualRow('gd825-2', 'ps2'),
+                        'ps3' => $this->actual->getActualRow('gd825-2', 'ps3'),
+                        'ps4' => $this->actual->getActualRow('gd825-2', 'ps4'),
+                    ],
+                    'plan' => [
+                        'ps2' => $this->Plan_model->getPlanRow('GD825-2', 'ps2'),
+                        'ps3' => $this->Plan_model->getPlanRow('GD825-2', 'ps3'),
+                        'ps4' => $this->Plan_model->getPlanRow('GD825-2', 'ps4'),
+                    ]
+                ],
+                'hd785' => [
+                    'actual' => [
+                        'ps2' => $this->actual->getActualRow('hd785-5', 'ps2'),
+                        'ps3' => $this->actual->getActualRow('hd785-5', 'ps3'),
+                        'ps4' => $this->actual->getActualRow('hd785-5', 'ps4'),
+                    ],
+                    'plan' => [
+                        'ps2' => $this->Plan_model->getPlanRow('HD785-5', 'ps2'),
+                        'ps3' => $this->Plan_model->getPlanRow('HD785-5', 'ps3'),
+                        'ps4' => $this->Plan_model->getPlanRow('HD785-5', 'ps4'),
+                    ]
+                ],
+                'hd787' => [
+                    'actual' => [
+                        'ps2' => $this->actual->getActualRow('hd785-7', 'ps2'),
+                        'ps3' => $this->actual->getActualRow('hd785-7', 'ps3'),
+                        'ps4' => $this->actual->getActualRow('hd785-7', 'ps4'),
+                    ],
+                    'plan' => [
+                        'ps2' => $this->Plan_model->getPlanRow('HD785-7', 'ps2'),
+                        'ps3' => $this->Plan_model->getPlanRow('HD785-7', 'ps3'),
+                        'ps4' => $this->Plan_model->getPlanRow('HD785-7', 'ps4'),
+                    ]
+                ]
+            ]
         ];
 
         $this->load->view('templates/header', $data);

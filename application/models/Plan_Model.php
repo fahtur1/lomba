@@ -35,4 +35,18 @@ class Plan_Model extends CI_Model
         $this->db->where($this->key, $id);
         return $this->db->get()->row_array();
     }
+
+    /**
+     * TODO : YANG INI DI UBAH JUGA DI
+     */
+    public function getPlanRow($model, $ps)
+    {
+        $this->db->select('*');
+        $this->db->from($this->table);
+        $this->db->join('product', 'product.product_id = plan.product_id');
+        $this->db->join('model', 'model.model_id = product.model_id');
+        $this->db->where('ps_type', $ps);
+        $this->db->where('model.model_id', $model);
+        return $this->db->get()->num_rows();
+    }
 }
