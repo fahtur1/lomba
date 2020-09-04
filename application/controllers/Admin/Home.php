@@ -343,7 +343,7 @@ class Home extends CI_Controller
 
     public function hd7855_validation()
     {
-        $this->actual_validation('engine_low', '235', '265');
+        $this->actual_validation('engine_low', '625', '675');
         $this->required_only_validation('engine_low_remark');
 
         $this->actual_validation('engine_hi', '970', '1030');
@@ -1031,7 +1031,8 @@ class Home extends CI_Controller
 
                     if ($ps == 'PS2') {
                         if ($this->Pc2000_model->insertPs2($dataModel, $actual_data)) {
-                            $this->flask('success', 'Actual Plan added Succesfuly', 'message');
+                            if ($this->Plan_model->updated_plan($plan, ['updated' => 1]) > 0)
+                                $this->flask('success', 'Actual Plan added Succesfuly', 'message');
                         } else {
                             $this->flask('danger', 'Failed to add Actual Plan', 'message');
                         }
@@ -1045,7 +1046,8 @@ class Home extends CI_Controller
                         }
 
                         if ($this->Pc2000_model->insertPs34($dataModel, $actual_data, $other)) {
-                            $this->flask('success', 'Actual Plan added Succesfuly', 'message');
+                            if ($this->Plan_model->updated_plan($plan, ['updated' => 1]) > 0)
+                                $this->flask('success', 'Actual Plan added Succesfuly', 'message');
                         } else {
                             $this->flask('danger', 'Failed to add Actual Plan', 'message');
                         }
@@ -1102,7 +1104,8 @@ class Home extends CI_Controller
 
                     if ($ps == 'PS2') {
                         if ($this->Gd825_model->insertPs2($dataModel, $actual_data)) {
-                            $this->flask('success', 'Actual Plan added Succesfuly', 'message');
+                            if ($this->Plan_model->updated_plan($plan, ['updated' => 1]) > 0)
+                                $this->flask('success', 'Actual Plan added Succesfuly', 'message');
                         } else {
                             $this->flask('danger', 'Failed to add Actual Plan', 'message');
                         }
@@ -1116,7 +1119,8 @@ class Home extends CI_Controller
                         }
 
                         if ($this->Gd825_model->insertPs34($dataModel, $actual_data, $other)) {
-                            $this->flask('success', 'Actual Plan added Succesfuly', 'message');
+                            if ($this->Plan_model->updated_plan($plan, ['updated' => 1]) > 0)
+                                $this->flask('success', 'Actual Plan added Succesfuly', 'message');
                         } else {
                             $this->flask('danger', 'Failed to add Actual Plan', 'message');
                         }
@@ -1175,7 +1179,8 @@ class Home extends CI_Controller
 
                     if ($ps == 'PS2') {
                         if ($this->Hd7855_model->insertPs2($dataModel, $actual_data)) {
-                            $this->flask('success', 'Actual Plan added Succesfuly', 'message');
+                            if ($this->Plan_model->updated_plan($plan, ['updated' => 1]) > 0)
+                                $this->flask('success', 'Actual Plan added Succesfuly', 'message');
                         } else {
                             $this->flask('danger', 'Failed to add Actual Plan', 'message');
                         }
@@ -1189,7 +1194,8 @@ class Home extends CI_Controller
                         }
 
                         if ($this->Hd7855_model->insertPs34($dataModel, $actual_data, $other)) {
-                            $this->flask('success', 'Actual Plan added Succesfuly', 'message');
+                            if ($this->Plan_model->updated_plan($plan, ['updated' => 1]) > 0)
+                                $this->flask('success', 'Actual Plan added Succesfuly', 'message');
                         } else {
                             $this->flask('danger', 'Failed to add Actual Plan', 'message');
                         }
@@ -1247,7 +1253,8 @@ class Home extends CI_Controller
 
                     if ($ps == 'PS2') {
                         if ($this->Hd7857_model->insertPs2($dataModel, $actual_data)) {
-                            $this->flask('success', 'Actual Plan added Succesfuly', 'message');
+                            if ($this->Plan_model->updated_plan($plan, ['updated' => 1]) > 0)
+                                $this->flask('success', 'Actual Plan added Succesfuly', 'message');
                         } else {
                             $this->flask('danger', 'Failed to add Actual Plan', 'message');
                         }
@@ -1261,7 +1268,8 @@ class Home extends CI_Controller
                         }
 
                         if ($this->Hd7857_model->insertPs34($dataModel, $actual_data, $other)) {
-                            $this->flask('success', 'Actual Plan added Succesfuly', 'message');
+                            if ($this->Plan_model->updated_plan($plan, ['updated' => 1]) > 0)
+                                $this->flask('success', 'Actual Plan added Succesfuly', 'message');
                         } else {
                             $this->flask('danger', 'Failed to add Actual Plan', 'message');
                         }
