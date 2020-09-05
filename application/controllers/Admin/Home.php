@@ -532,4 +532,10 @@ class Home extends CI_Controller
                 break;
         }
     }
+
+    public function export()
+    {
+        $this->load->library('pdf');
+        $this->pdf->generate('pdf/test');
+    }
 }
