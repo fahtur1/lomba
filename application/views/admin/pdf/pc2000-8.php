@@ -6,32 +6,34 @@
     <form action="<?= base_url("admin/home/update_plan") ?>" method="post">
 
         <div class="card shadow mb-4">
-            <table width="auto" cellpadding="7" class="m-3" border="1" class="">
-                <tr>
-                    <td class="font-weight-bold h4 text-center align-middle">QA3</td>
-                    <td class="font-weight-bold h4 text-center align-middle" colspan="4">Machine Condition Report</td>
-                </tr>
-                <tr>
-                    <td class="font-weight-bold h4 text-center align-middle" rowspan="3">MCR</td>
-                    <td class="font-weight-bold text-center align-middle" rowspan="3">INSPECTOR /LEADER</td>
-                    <td>Name</td>
-                    <td>Ardyyy </td>
-                </tr>
-                <tr>
-                    <td>Date</td>
-                    <td>Ardyyyuyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy </td>
-                </tr>
-                <tr>
-                    <td>Code Unit</td>
-                    <td>Ardyyy </td>
-                </tr>
-                <tr>
-                    <td class="font-weight-bold h4 text-center align-middle">PC2000-8</td>
-                    <td class="font-weight-bold text-center align-middle">Branch / Site</td>
-                    <td colspan="3">Tembilahan</td>
-                </tr>
-            </table>
             <div class="card-body">
+                <center>
+                    <table width="auto" cellpadding="7" class="m-3" border="1" class="">
+                        <tr>
+                            <td class="font-weight-bold h4 text-center align-middle">QA3</td>
+                            <td class="font-weight-bold h4 text-center align-middle" colspan="4">Machine Condition Report</td>
+                        </tr>
+                        <tr>
+                            <td class="font-weight-bold h4 text-center align-middle" rowspan="3">MCR</td>
+                            <td class="font-weight-bold text-center align-middle" rowspan="3">INSPECTOR /LEADER</td>
+                            <td>Name</td>
+                            <td>Ardyyy </td>
+                        </tr>
+                        <tr>
+                            <td>Date</td>
+                            <td>Ardyyyuyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy </td>
+                        </tr>
+                        <tr>
+                            <td>Code Unit</td>
+                            <td>Ardyyy </td>
+                        </tr>
+                        <tr>
+                            <td class="font-weight-bold h4 text-center align-middle">PC2000-8</td>
+                            <td class="font-weight-bold text-center align-middle">Branch / Site</td>
+                            <td colspan="3">Tembilahan</td>
+                        </tr>
+                    </table>
+                </center>
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" border="1">
                         <thead>
@@ -45,17 +47,6 @@
                                 <th>REMARK</th>
                             </tr>
                         </thead>
-                        <tfoot>
-                            <tr class="text-center">
-                                <th>Unit Model</th>
-                                <th colspan="2">CONDITION</th>
-                                <th>UNIT</th>
-                                <th>STD</th>
-                                <th>PMS</th>
-                                <th>ACTUAL</th>
-                                <th>REMARK</th>
-                            </tr>
-                        </tfoot>
                         <tbody>
                             <tr class="bg-primary">
                                 <td class="text-white text-center font-weight-bold font-italic" colspan="8">
