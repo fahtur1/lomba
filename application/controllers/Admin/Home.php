@@ -1295,4 +1295,10 @@ class Home extends CI_Controller
                 break;
         }
     }
+
+    public function export_pdf()
+    {
+        $this->load->view('templates/header');
+        $this->load->view('admin/pdf/pc2000-8');
+    }
 }
