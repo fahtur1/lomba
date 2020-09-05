@@ -1333,4 +1333,9 @@ class Home extends CI_Controller
                 break;
         }
     }
+
+    public function test()
+    {
+        $this->load->view('pdf/pc2000-8');
+    }
 }

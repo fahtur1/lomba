@@ -23,20 +23,23 @@
         .table td {
             text-align: center;
             vertical-align: middle;
-            position: relative;
+        }
+
+        .table.ttd .bottom td {
+            height: 130px;
+            vertical-align: bottom !important;
         }
     </style>
 </head>
 
 <body>
-
     <div class="container-fluid">
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <img width="300" src="assets/img/logo.jpeg" alt="">
+            <img width="200" src="assets/img/logo.jpeg" alt="">
         </div>
 
         <form action=" <?= base_url("admin/home/update_plan") ?>" method="post">
-            <table width="100%" cellpadding="7" border="1" cellspacing="0" class="table">
+            <table width="100%" cellpadding="2" border="1" cellspacing="0" class="table">
                 <tr>
                     <td class="font-weight-bold h4 text-center align-middle">QA3</td>
                     <td class="font-weight-bold h4 text-center align-middle" colspan="4">Machine Condition Report</td>
@@ -241,13 +244,14 @@
                         </tr>
                     </tbody>
                 </table>
-                <table cellpadding="30" width="100%" class="table" style="margin-top: 1.2rem;">
+                <br>
+                <table width="100%" class="table ttd">
                     <tr class="font-weight-bold">
                         <td>Approved by :</td>
                         <td>Acknowledge by:</td>
                         <td>Prepared by:</td>
                     </tr>
-                    <tr>
+                    <tr class="bottom">
                         <td>( UT SDH )</td>
                         <td>( UT Supervisor )</td>
                         <td>( UT Mechanic )</td>
