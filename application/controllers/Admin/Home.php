@@ -1296,9 +1296,41 @@ class Home extends CI_Controller
         }
     }
 
-    public function export()
+    public function export($unit = '', $actual_id = '', $ps = '')
     {
         $this->load->library('pdf');
-        $this->pdf->generate('pdf/pc2000-8');
+        $data = [];
+        switch ($unit) {
+            case "PC2000-8":
+                $data = [
+                    'pc2000' => $this->actual->getActualJoinById('pc2000-8', $actual_id)
+                ];
+                if ($ps == 'PS2') {
+                    $this->pdf->generate('pdf/engine/pc2000-8', $data);
+                } else if ($ps == 'PS3' || $ps == 'PS4') {
+                }
+                break;
+            case "GD825-2":
+                if ($ps == 'PS2') {
+                    $this->pdf->generate('pdf/engine/gd825-2');
+                } else if ($ps == 'PS3' || $ps == 'PS4') {
+                    $this->pdf->generate('pdf/complete/gd825-2');
+                }
+                break;
+            case "HD785-5":
+                if ($ps == 'PS2') {
+                    $this->pdf->generate('pdf/engine/hd785-5');
+                } else if ($ps == 'PS3' || $ps == 'PS4') {
+                    $this->pdf->generate('pdf/complete/hd785-5');
+                }
+                break;
+            case "HD785-7":
+                if ($ps == 'PS2') {
+                    $this->pdf->generate('pdf/engine/hd785-7');
+                } else if ($ps == 'PS3' || $ps == 'PS4') {
+                    $this->pdf->generate('pdf/complete/hd785-7');
+                }
+                break;
+        }
     }
 }
