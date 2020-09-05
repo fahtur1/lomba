@@ -1,26 +1,29 @@
 <div class="container-fluid">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">UPDATE GD825-2 / PS2</h1>
+        <h1 class="h3 mb-0 text-gray-800">UPDATE <?= $unit ?> / <?= $ps ?></h1>
     </div>
 
-    <form action="" method="post">
+    <form action="<?= base_url("admin/home/update_plan/$unit/$ps/$plan") ?>" method="post">
         <div class="row">
             <div class="col-lg-4">
                 <div class="form-group">
                     <label for="inputState">Name</label>
-                    <input type="text" class="form-control" id="name" name="name">
+                    <input type="text" class="form-control" value="<?= set_value('name') ?>" id="name" name="name">
+                    <?= form_error('name', '<small class="text-danger">', '</small>') ?>
                 </div>
                 <div class="form-group">
                     <label>Plan Date</label>
-                    <input type="date" id="date" name="date" max="2050-12-31" min="<?= date('Y-m-d') ?>" class="form-control">
+                    <input type="date" id="date" name="date" value="<?= set_value('date') ?>" max="2050-12-31" min="<?= date('Y-m-d') ?>" class="form-control">
+                    <?= form_error('date', '<small class="text-danger">', '</small>') ?>
                 </div>
                 <div class="form-group">
                     <label>Code Unit</label>
-                    <input type="text" class="form-control" id="codeunit" name="codeunit" disabled>
+                    <input type="text" class="form-control" id="codeunit" value="<?= $unit ?>" name="codeunit" disabled>
                 </div>
                 <div class="form-group">
                     <label>Branch Site</label>
-                    <input type="text" class="form-control" id="site" name="site">
+                    <input type="text" class="form-control" value="<?= set_value('site') ?>" id="site" name="site">
+                    <?= form_error('site', '<small class="text-danger">', '</small>') ?>
                 </div>
             </div>
         </div>
@@ -30,10 +33,6 @@
             <h6 class="card-title m-0 font-weight-bold text-primary">DataTables Example</h6>
         </div> -->
             <div class="card-body">
-
-
-
-
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
@@ -68,7 +67,7 @@
                             <!-- row 1 -->
                             <tr>
                                 <td class="align-middle" rowspan="2">
-
+                                    Engine Speed
                                 </td>
                                 <td class="align-middle">
                                     Eng. Low
@@ -78,10 +77,12 @@
                                 <td>600-700</td>
                                 <td class="text-center">-</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" size="5" value="<?= set_value('engine_low_speed') ?>" name="engine_low_speed">
+                                    <?= form_error('engine_low_speed', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" size="5" value="<?= set_value('engine_low_speed_remark') ?>" name="engine_low_speed_remark">
+                                    <?= form_error('engine_low_speed_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 2 -->
@@ -92,10 +93,12 @@
                                 <td></td>
                                 <td class="text-center" colspan="2">2300-2400</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" size="5" value="<?= set_value('engine_high_speed') ?>" name="engine_high_speed">
+                                    <?= form_error('engine_high_speed', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" size="5" value="<?= set_value('engine_high_speed_remark') ?>" name="engine_high_speed_remark">
+                                    <?= form_error('engine_high_speed_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Blow-by Press -->
@@ -108,26 +111,30 @@
                                 <td>Max. 100</td>
                                 <td>Max. 200</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('tc_stall_press') ?>" size="5" name="tc_stall_press">
+                                    <?= form_error('tc_stall_press', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('tc_stall_press_remark') ?>" size="5" name="tc_stall_press_remark">
+                                    <?= form_error('tc_stall_press_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Lub Oil -->
                             <!-- row 1 -->
                             <tr>
                                 <td class="align-middle" rowspan="2">Lub Oil Press.</td>
-                                <td>Eng. High</td>
-                                <td></td>
-                                <td class="align-middle text-center" rowspan="2">Kg/cm2.</td>
-                                <td>3,0 - 5,0</td>
-                                <td>2.0</td>
+                                <td>Eng. Low</td>
+                                <td>S6D140-1</td>
+                                <td class="align-middle text-center" rowspan="2"></td>
+                                <td>Min. 1</td>
+                                <td>Min. 0.7</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_low_press') ?>" size="5" name="engine_low_press">
+                                    <?= form_error('engine_low_press', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_low_press_remark') ?>" size="5" name="engine_low_press_remark">
+                                    <?= form_error('engine_low_press_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- row 2 -->
@@ -137,42 +144,48 @@
                                 <td>Min. 1.2</td>
                                 <td>Min. 0.7</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_low_press2') ?>" size="5" name="engine_low_press2">
+                                    <?= form_error('engine_low_press2', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_low_press2_remark') ?>" size="5" name="engine_low_press2_remark">
+                                    <?= form_error('engine_low_press2_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Boost Press -->
                             <!-- row 1 -->
                             <tr>
-                                <td class="align-middle"></td>
+                                <td class="align-middle">Boost Press.</td>
                                 <td class="align-middle">Eng. Rated</td>
                                 <td>S6D140E-2</td>
                                 <td class="align-middle text-center"></td>
                                 <td>Min. 590</td>
                                 <td>Min. 500</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_rated_press') ?>" size="5" name="engine_rated_press">
+                                    <?= form_error('engine_rated_press', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('engine_rated_press_remark') ?>" size="5" name="engine_rated_press_remark">
+                                    <?= form_error('engine_rated_press_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                             <!-- Exhaust Gas Temp -->
                             <!-- row 1 -->
                             <tr>
-                                <td class="align-middle"></td>
+                                <td class="align-middle">Exhaust Gas Temp</td>
                                 <td class="align-middle">T/C Stall</td>
                                 <td>S6D140E-2</td>
-                                <td class="align-middle text-center"></td>
+                                <td class="align-middle text-center">°C</td>
                                 <td>Min. 700</td>
                                 <td>Min. 700</td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('tc_stall_temp') ?>" size="5" name="tc_stall_temp">
+                                    <?= form_error('tc_stall_temp', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" size="5">
+                                    <input type="text" class="form-control no-border" value="<?= set_value('tc_stall_temp_remark') ?>" size="5" name="tc_stall_temp_remark">
+                                    <?= form_error('tc_stall_temp_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
                         </tbody>

@@ -1,38 +1,39 @@
 <div class="container-fluid">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">UPDATE <?= $unit ?> / <?= $ps ?></h1>
+        <image width="300" src="<?= base_url('assets/img/logo.jpeg') ?>"></image>
     </div>
 
-    <form action="<?= base_url("admin/home/update_plan/$unit/$ps/$plan") ?>" method="post">
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="form-group">
-                    <label for="inputState">Name</label>
-                    <input type="text" class="form-control" value="<?= set_value('name') ?>" id="name" name="name">
-                    <?= form_error('name', '<small class="text-danger">', '</small>') ?>
-                </div>
-                <div class="form-group">
-                    <label>Plan Date</label>
-                    <input type="date" id="date" name="date" value="<?= set_value('date') ?>" max="2050-12-31" min="<?= date('Y-m-d') ?>" class="form-control">
-                    <?= form_error('date', '<small class="text-danger">', '</small>') ?>
-                </div>
-                <div class="form-group">
-                    <label>Code Unit</label>
-                    <input type="text" class="form-control" id="codeunit" value="<?= $unit ?>" name="codeunit" disabled>
-                </div>
-                <div class="form-group">
-                    <label>Branch Site</label>
-                    <input type="text" class="form-control" value="<?= set_value('site') ?>" id="site" name="site">
-                    <?= form_error('site', '<small class="text-danger">', '</small>') ?>
-                </div>
-            </div>
-        </div>
+    <form action="<?= base_url("admin/home/update_plan") ?>" method="post">
 
         <div class="card shadow mb-4">
-
+            <table width="auto" cellpadding="7" class="m-3" border="1" class="">
+                <tr>
+                    <td class="font-weight-bold h4 text-center align-middle">QA3</td>
+                    <td class="font-weight-bold h4 text-center align-middle" colspan="4">Machine Condition Report</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold h4 text-center align-middle" rowspan="3">MCR</td>
+                    <td class="font-weight-bold text-center align-middle" rowspan="3">INSPECTOR /LEADER</td>
+                    <td>Name</td>
+                    <td>Ardyyy </td>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>Ardyyyuyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy </td>
+                </tr>
+                <tr>
+                    <td>Code Unit</td>
+                    <td>Ardyyy </td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold h4 text-center align-middle">PC2000-8</td>
+                    <td class="font-weight-bold text-center align-middle">Branch / Site</td>
+                    <td colspan="3">Tembilahan</td>
+                </tr>
+            </table>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" border="1">
                         <thead>
                             <tr class="text-center">
                                 <th>ITEM</th>
@@ -241,7 +242,23 @@
                             </tr>
                         </tbody>
                     </table>
-                    <button class="btn btn-warning px-3 py-2 float-right">Update</button>
+
+                    <center>
+
+                        <table cellpadding="80">
+                            <tr class="font-weight-bold">
+                                <td>Approved by :</td>
+                                <td>Acknowledge by:</td>
+                                <td>Prepared by:</td>
+                            </tr>
+                            <tr>
+                                <td>( UT SDH )</td>
+                                <td>( UT Supervisor )</td>
+                                <td>( UT Mechanic )</td>
+                            </tr>
+                        </table>
+                    </center>
+
                 </div>
             </div>
         </div>
