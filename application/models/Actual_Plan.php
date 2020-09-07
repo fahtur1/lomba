@@ -47,6 +47,7 @@ class Actual_Plan extends CI_Model
         $this->db->join('plan', 'plan.plan_id = actual.plan_id');
         $this->db->join('product', 'product.product_id = plan.product_id');
         $this->db->join('model', 'model.model_id = product.model_id');
+        $this->db->join('other_data', $table . '.id_other = other_data.id_other');
         $this->db->where($this->key, $actual_id);
         return $this->db->get()->row_array();
     }

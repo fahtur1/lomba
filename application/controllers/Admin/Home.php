@@ -6,6 +6,12 @@ class Home extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+
+        if (!($this->session->userdata('role'))) {
+            $this->flask('danger', 'you not login yet!', 'message');
+            redirect('admin/auth');
+        }
+
         $this->load->model('Product_model');
         $this->load->model('Plan_model');
         $this->load->model('Model_model');
@@ -107,17 +113,21 @@ class Home extends CI_Controller
 
             redirect('admin/home/planps');
         } else {
-            $data = [
-                'models' => $this->Model_model->getModels(),
-                'product' => $this->Product_model->getProducts(),
-                'title' => 'Create Plan'
-            ];
+            if ($this->session->userdata('role') == 1) {
+                $data = [
+                    'models' => $this->Model_model->getModels(),
+                    'product' => $this->Product_model->getProducts(),
+                    'title' => 'Create Plan'
+                ];
 
-            $this->load->view('templates/header', $data);
-            $this->load->view('templates/sidebar');
-            $this->load->view('templates/navbar');
-            $this->load->view('admin/create_plan', $data);
-            $this->load->view('templates/footer');
+                $this->load->view('templates/header', $data);
+                $this->load->view('templates/sidebar');
+                $this->load->view('templates/navbar');
+                $this->load->view('admin/create_plan', $data);
+                $this->load->view('templates/footer');
+            } else {
+                redirect('admin/home/dashboard');
+            }
         }
     }
 
@@ -1308,6 +1318,7 @@ class Home extends CI_Controller
                 if ($ps == 'PS2') {
                     $this->pdf->generate('pdf/engine/pc2000-8', $data);
                 } else if ($ps == 'PS3' || $ps == 'PS4') {
+                    $this->pdf->generate('pdf/complete/pc2000-8', $data);
                 }
                 break;
             case "GD825-2":
@@ -1334,8 +1345,15 @@ class Home extends CI_Controller
         }
     }
 
-    public function test()
+    public function test($unit = '', $actual_id = '', $ps = '')
     {
-        $this->load->view('pdf/pc2000-8');
+        $data = [
+            'pc2000' => $this->actual->getActualJoinById('pc2000-8', $actual_id)
+        ];
+        if ($ps == 'PS2') {
+            $this->load->view('pdf/engine/pc2000-8', $data);
+        } else if ($ps == 'PS3' || $ps == 'PS4') {
+            $this->load->view('pdf/complete/pc2000-8', $data);
+        }
     }
 }

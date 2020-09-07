@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" id="content">
     <div class="row">
         <div class="col-lg-3">
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -43,10 +43,7 @@
                                             <a href="<?= base_url("admin/home/export/") . $actual['model_name'] . '/' . $actual['actual_id'] . '/' . $actual['ps_type']  ?>" class="btn btn-warning btn-icon-split px-3 py-2 update_button">
                                                 PDF
                                             </a>
-                                        </td>
-                                    </tr>
-                                <?php endforeach; ?>
-                            </tbody>
+                                    </tr> <?php endforeach; ?> </tbody>
                         </table>
                     </div>
                 </div>
