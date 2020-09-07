@@ -1296,8 +1296,10 @@ class Home extends CI_Controller
         }
     }
 
-    public function export()
+    public function export($unit = '', $actual_id = '')
     {
-        $this->load->view('pdf/test');
+        $table = strtolower($unit);
+        $data['actual'] = $this->actual->getActualJoinById($table, $actual_id);
+        $this->load->view('pdf/complete/pc2000-8', $data);
     }
 }

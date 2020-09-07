@@ -83,9 +83,9 @@
             hoverBackgroundColor: "#19a875",
             borderColor: "#4e73df",
             data: [
-              data[i].actual.ps2,
-              data[i].actual.ps3,
-              data[i].actual.ps4
+              data[i].plan.ps2,
+              data[i].plan.ps3,
+              data[i].plan.ps4
             ],
           },
         ],

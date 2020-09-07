@@ -48,8 +48,8 @@ class Plan_Model extends CI_Model
         $this->db->join('product', 'product.product_id = plan.product_id');
         $this->db->join('model', 'model.model_id = product.model_id');
         $this->db->where('ps_type', $ps);
-        $this->db->where('model.model_id', $model);
-        $this->db->where($this->table . '.updated', '0');
+        $this->db->where('model.model_name', $model);
+        // $this->db->where($this->table . '.updated', '0');
         return $this->db->get()->num_rows();
     }
 

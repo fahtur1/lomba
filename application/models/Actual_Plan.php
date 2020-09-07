@@ -39,6 +39,19 @@ class Actual_Plan extends CI_Model
         return $this->db->get()->result_array();
     }
 
+    public function getActualJoinById($table, $actual_id)
+    {
+        $this->db->select("*");
+        $this->db->from($this->table);
+        $this->db->join($table, $table . '.id_update = ' . $this->table . '.id_update');
+        $this->db->join('plan', 'plan.plan_id = actual.plan_id');
+        $this->db->join('product', 'product.product_id = plan.product_id');
+        $this->db->join('model', 'model.model_id = product.model_id');
+        $this->db->join('other_data', $table . '.id_other = other_data.id_other');
+        $this->db->where($this->key, $actual_id);
+        return $this->db->get()->row_array();
+    }
+
     public function getActualRow($table, $ps)
     {
         $this->db->select("*");
