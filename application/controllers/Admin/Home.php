@@ -1298,12 +1298,6 @@ class Home extends CI_Controller
 
     public function export()
     {
-        $this->load->library('pdf');
-        $this->pdf->generate('pdf/pc2000-8');
-    }
-
-    public function test()
-    {
-        $this->load->view('pdf/pc2000-8');
+        $this->load->view('pdf/test');
     }
 }
