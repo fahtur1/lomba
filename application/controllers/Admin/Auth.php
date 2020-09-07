@@ -32,14 +32,13 @@ class Auth extends CI_Controller
             if ($user) {
                 if (password_verify($password, $user['password'])) {
                     $this->session->set_userdata('role', $user['role']);
-                    $this->flask('success', 'login success!', 'message');
                     redirect('admin/home/dashboard');
                 } else {
-                    $this->flask('danger', 'wrong password!', 'message');
+                    $this->flask('danger', 'Wrong Password!', 'logout');
                     redirect('admin/auth');
                 }
             } else {
-                $this->flask('danger', 'email not registered!', 'message');
+                $this->flask('danger', 'Email not Registered!', 'logout');
                 redirect('admin/auth');
             }
         } else {
@@ -52,7 +51,7 @@ class Auth extends CI_Controller
     public function logout()
     {
         $this->session->unset_userdata('role');
-        $this->flask('success', 'logout success', 'message');
+        $this->flask('success', 'Logout Success', 'logout');
         redirect('admin/auth');
     }
 

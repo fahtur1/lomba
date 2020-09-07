@@ -8,7 +8,7 @@ class Home extends CI_Controller
         parent::__construct();
 
         if (!($this->session->userdata('role'))) {
-            $this->flask('danger', 'you not login yet!', 'message');
+            $this->flask('danger', 'Login First!', 'logout');
             redirect('admin/auth');
         }
 
@@ -1314,37 +1314,10 @@ class Home extends CI_Controller
         }
     }
 
-<<<<<<< HEAD
     public function export($unit = '', $actual_id = '')
     {
         $table = strtolower($unit);
         $data['actual'] = $this->actual->getActualJoinById($table, $actual_id);
         $this->load->view('pdf/complete/pc2000-8', $data);
-=======
-    public function export($unit = '', $actual_id = '', $ps = '')
-    {
-        $data = ['ps' => $ps];
-        switch ($unit) {
-            case "PC2000-8":
-                $data = [
-                    'pc2000' => $this->actual->getActualJoinById('pc2000-8', $actual_id)
-                ];
-                $this->load->view('pdf/engine/pc2000-8', $data);
-                break;
-            case "GD825-2":
-                $data = [
-                    'gd825' => $this->actual->getActualJoinById('gd825-2', $actual_id)
-                ];
-                $this->load->view('pdf/gd825-2', $data);
-                break;
-            case "HD785-5":
-
-                break;
-            case "HD785-7":
-
-                break;
-        }
-        $this->load->view('pdf/test');
->>>>>>> 390aa31740d7464eab29eee1419bd3c2a7895b35
     }
 }

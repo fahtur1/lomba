@@ -75,10 +75,10 @@
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
-      <?= ($currentUrl == 'ppm_report') ? '<li class="nav-item active">' : '<li class="nav-item">' ?>
-      <a class="nav-link" href="<?= base_url('admin/auth/logout') ?>">
-        <i class="fas fa-fw fa-sign-out-alt"></i>
-        <span>Logout</span></a>
+      <li class="nav-item">
+        <a class="nav-link" href="<?= base_url('admin/auth/logout') ?>">
+          <i class="fas fa-fw fa-sign-out-alt"></i>
+          <span>Logout</span></a>
       </li>
 
       <!-- Sidebar Toggler (Sidebar) -->
