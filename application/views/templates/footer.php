@@ -66,6 +66,7 @@
 
         <!-- Page level custom scripts -->
         <script src="<?= base_url('assets') ?>/js/demo/datatables-demo.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.1.1/jspdf.umd.min.js"></script>
 
         </body>
 
