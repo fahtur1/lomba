@@ -1308,52 +1308,27 @@ class Home extends CI_Controller
 
     public function export($unit = '', $actual_id = '', $ps = '')
     {
-        $this->load->library('pdf');
-        $data = [];
+        $data = ['ps' => $ps];
         switch ($unit) {
             case "PC2000-8":
                 $data = [
                     'pc2000' => $this->actual->getActualJoinById('pc2000-8', $actual_id)
                 ];
-                if ($ps == 'PS2') {
-                    $this->pdf->generate('pdf/engine/pc2000-8', $data);
-                } else if ($ps == 'PS3' || $ps == 'PS4') {
-                    $this->pdf->generate('pdf/complete/pc2000-8', $data);
-                }
+                $this->load->view('pdf/pc2000-8');
                 break;
             case "GD825-2":
-                if ($ps == 'PS2') {
-                    $this->pdf->generate('pdf/engine/gd825-2');
-                } else if ($ps == 'PS3' || $ps == 'PS4') {
-                    $this->pdf->generate('pdf/complete/gd825-2');
-                }
+                $data = [
+                    'gd825' => $this->actual->getActualJoinById('gd825-2', $actual_id)
+                ];
+                $this->load->view('pdf/gd825-2', $data);
                 break;
             case "HD785-5":
-                if ($ps == 'PS2') {
-                    $this->pdf->generate('pdf/engine/hd785-5');
-                } else if ($ps == 'PS3' || $ps == 'PS4') {
-                    $this->pdf->generate('pdf/complete/hd785-5');
-                }
+
                 break;
             case "HD785-7":
-                if ($ps == 'PS2') {
-                    $this->pdf->generate('pdf/engine/hd785-7');
-                } else if ($ps == 'PS3' || $ps == 'PS4') {
-                    $this->pdf->generate('pdf/complete/hd785-7');
-                }
+
                 break;
         }
-    }
-
-    public function test($unit = '', $actual_id = '', $ps = '')
-    {
-        $data = [
-            'pc2000' => $this->actual->getActualJoinById('pc2000-8', $actual_id)
-        ];
-        if ($ps == 'PS2') {
-            $this->load->view('pdf/engine/pc2000-8', $data);
-        } else if ($ps == 'PS3' || $ps == 'PS4') {
-            $this->load->view('pdf/complete/pc2000-8', $data);
-        }
+        $this->load->view('pdf/test');
     }
 }
