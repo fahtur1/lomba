@@ -33,14 +33,15 @@
       <div class="sidebar-heading">
         Perodical Services
       </div>
-
-      <!-- Nav Item - Pages Collapse Menu -->
-      <?= ($currentUrl == 'create_plan') ? '<li class="nav-item active">' : '<li class="nav-item">' ?>
-      <a class="nav-link" href="<?= base_url('admin/home') ?>/create_plan">
-        <i class="fas fa-fw fa-cog"></i>
-        <span>Create Plan PS</span>
-      </a>
-      </li>
+      <?php if ($this->session->userdata('role') == 1) { ?>
+        <!-- Nav Item - Pages Collapse Menu -->
+        <?= ($currentUrl == 'create_plan') ? '<li class="nav-item active">' : '<li class="nav-item">' ?>
+        <a class="nav-link" href="<?= base_url('admin/home') ?>/create_plan">
+          <i class="fas fa-fw fa-cog"></i>
+          <span>Create Plan PS</span>
+        </a>
+        </li>
+      <?php } ?>
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <?= ($currentUrl == 'planps') ? '<li class="nav-item active">' : '<li class="nav-item">' ?>
@@ -74,6 +75,11 @@
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
+      <li class="nav-item">
+        <a class="nav-link" href="<?= base_url('admin/auth/logout') ?>">
+          <i class="fas fa-fw fa-sign-out-alt"></i>
+          <span>Logout</span></a>
+      </li>
 
       <!-- Sidebar Toggler (Sidebar) -->
       <div class="text-center d-none d-md-inline">

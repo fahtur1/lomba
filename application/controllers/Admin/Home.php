@@ -6,6 +6,12 @@ class Home extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+
+        if (!($this->session->userdata('role'))) {
+            $this->flask('danger', 'Login First!', 'logout');
+            redirect('admin/auth');
+        }
+
         $this->load->model('Product_model');
         $this->load->model('Plan_model');
         $this->load->model('Model_model');
@@ -107,17 +113,21 @@ class Home extends CI_Controller
 
             redirect('admin/home/planps');
         } else {
-            $data = [
-                'models' => $this->Model_model->getModels(),
-                'product' => $this->Product_model->getProducts(),
-                'title' => 'Create Plan'
-            ];
+            if ($this->session->userdata('role') == 1) {
+                $data = [
+                    'models' => $this->Model_model->getModels(),
+                    'product' => $this->Product_model->getProducts(),
+                    'title' => 'Create Plan'
+                ];
 
-            $this->load->view('templates/header', $data);
-            $this->load->view('templates/sidebar');
-            $this->load->view('templates/navbar');
-            $this->load->view('admin/create_plan', $data);
-            $this->load->view('templates/footer');
+                $this->load->view('templates/header', $data);
+                $this->load->view('templates/sidebar');
+                $this->load->view('templates/navbar');
+                $this->load->view('admin/create_plan', $data);
+                $this->load->view('templates/footer');
+            } else {
+                redirect('admin/home/dashboard');
+            }
         }
     }
 
