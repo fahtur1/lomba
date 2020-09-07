@@ -1,255 +1,284 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+//============================================================+
+// File name   : example_002.php
+// Begin       : 2008-03-04
+// Last Update : 2013-05-14
+//
+// Description : Example 002 for TCPDF class
+//               Removing Header and Footer
+//
+// Author: Nicola Asuni
+//
+// (c) Copyright:
+//               Nicola Asuni
+//               Tecnick.com LTD
+//               www.tecnick.com
+//               info@tecnick.com
+//============================================================+
 
-<head>
+/**
+ * Creates an example PDF TEST document using TCPDF
+ * @package com.tecnick.tcpdf
+ * @abstract TCPDF - Example: Removing Header and Footer
+ * @author Nicola Asuni
+ * @since 2008-03-04
+ */
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+// create new PDF document
+$pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
-    <style>
-        .table td {
-            text-align: center;
-            vertical-align: middle;
-        }
+// set document information
+$pdf->SetCreator(PDF_CREATOR);
+$pdf->SetAuthor('Nicola Asuni');
+$pdf->SetTitle('PPM Report');
+$pdf->SetSubject('PPM Report');
+$pdf->SetKeywords('PPM, PDF, Report');
 
-        .table.ttd .bottom td {
-            height: 130px;
-            vertical-align: bottom !important;
-        }
-    </style>
-</head>
+// remove default header/footer
+$pdf->setPrintHeader(false);
+$pdf->setPrintFooter(false);
 
-<body>
-    <div class="container-fluid">
-        <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <img width="200" src="assets/img/logo.jpeg" alt="">
-        </div>
+// set default monospaced font
+$pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
 
-        <form action=" <?= base_url("admin/home/update_plan") ?>" method="post">
-            <table width="100%" cellpadding="2" border="1" cellspacing="0" class="table">
-                <tr>
-                    <td class="font-weight-bold h4 text-center align-middle">QA3</td>
-                    <td class="font-weight-bold h4 text-center align-middle" colspan="4">Machine Condition Report</td>
-                </tr>
-                <tr>
-                    <td class="font-weight-bold h4 text-center align-middle" rowspan="3">MCR</td>
-                    <td class="font-weight-bold text-center align-middle" rowspan="3">INSPECTOR /LEADER</td>
-                    <td>Name</td>
-                    <td colspan="2"><?= $pc2000['leader_name'] ?></td>
-                </tr>
-                <tr>
-                    <td>Date</td>
-                    <td colspan="2"><?= $pc2000['actual_date'] ?> </td>
-                </tr>
-                <tr>
-                    <td>Code Unit</td>
-                    <td colspan="2"><?= $pc2000['model_name'] ?> </td>
-                </tr>
-                <tr>
-                    <td class="font-weight-bold h4 text-center align-middle">PC2000-8</td>
-                    <td class="font-weight-bold text-center align-middle">Branch / Site</td>
-                    <td colspan="3"><?= $pc2000['actual_branch'] ?> </td>
-                </tr>
-            </table>
-            <br>
-            <div class="table-responsive">
-                <table class="table" id="dataTable" width="100%" cellspacing="0" border="1">
-                    <thead>
-                        <tr class="text-center">
-                            <th>ITEM</th>
-                            <th style="width: 30%;" colspan="2">CONDITION</th>
-                            <th>UNIT</th>
-                            <th style="width: 10%;">STD</th>
-                            <th style="width: 10%;">PMS</th>
-                            <th>ACTUAL</th>
-                            <th>REMARK</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="bg-primary">
-                            <td class="text-white text-center font-weight-bold font-italic" colspan="8">
-                                ENGINE
-                            </td>
-                        </tr>
-                        <!-- Engine Speed -->
-                        <!-- row 1 -->
-                        <tr>
-                            <td class="align-middle" rowspan="5">
-                                Engine Speed (in DH Mode)
-                            </td>
-                            <td colspan="2" class="align-middle">
-                                Engine: Low idle
-                            </td>
-                            <td class="align-middle text-center" rowspan="5">Rpm</td>
-                            <td colspan="2" class="text-center">775 - 875</td>
-                            <td class="align-middle text-center">
-                                <?= $pc2000['engine_low_idle'] ?>
-                            </td>
-                            <td class="align-middle text-center">
-                                <?= $pc2000['engine_low_idle_remark'] ?>
-                            </td>
-                        </tr>
-                        <!-- row 2 -->
-                        <tr>
-                            <td colspan="2">
-                                Engine: High idle
-                            </td>
-                            <td class="text-center" colspan="2">1930 - 2030</td>
-                            <td class="align-middle text-center">
-                                <?= $pc2000['engine_high_idle'] ?>
-                            </td>
-                            <td class="align-middle text-center">
-                                <?= $pc2000['engine_high_idle_remark'] ?>
-                            </td>
-                        </tr>
-                        <!-- row 3 -->
-                        <tr>
-                            <td colspan="2">
-                                Engine: Full throttle. Boom: raise relieve.
-                            </td>
-                            <td class="text-center" colspan="2">1680 - 1880</td>
-                            <td class="align-middle text-center">
-                                <?= $pc2000['engine_full_throttle_raise'] ?>
+// set margins
+$pdf->SetMargins(8, 10, 8);
 
-                            </td>
-                            <td class="align-middle text-center">
-                                <?= $pc2000['engine_full_throttle_raise_remark'] ?>
+// set auto page breaks
+$pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
 
-                            </td>
-                        </tr>
-                        <!-- row 4 -->
-                        <tr>
-                            <td colspan="2">
-                                Engine: Full throttle. <br>Boom: raise relieve + Heavy lift : ON.
-                            </td>
-                            <td class="align-middle text-center" colspan="2">1680 - 1880</td>
-                            <td class="align-middle text-center">
-                                <?= $pc2000['engine_full_throttle_heavy'] ?>
-                            </td>
-                            <td class="align-middle text-center">
-                                <?= $pc2000['engine_full_throttle_heavy_remark'] ?>
-                            </td>
-                        </tr>
+// set image scale factor
+$pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 
-                        <!-- row 6 -->
-                        <tr>
-                            <td colspan="2" class="align-middle text-center">
-                                Auto decelaration switch: ON. Fuel control dial: Max. <br>Control Valve: neutral
-                            </td>
-                            <td class="align-middle text-center" colspan="2">1300 - 1500</td>
-                            <td class="align-middle text-center">
-                                <?= $pc2000['engine_control_valve_neutral'] ?>
-                            </td>
-                            <td class="align-middle text-center">
-                                <?= $pc2000['engine_control_valve_neutral_remark'] ?>
-                            </td>
-                        </tr>
+// ---------------------------------------------------------
 
-                        <!-- Blow-by Press -->
-                        <!-- row 1 -->
-                        <tr>
-                            <td>Blow-by Pressure</td>
-                            <td colspan="2">At rated horsepower. </td>
-                            <td class="align-middle text-center">kPa<br>{mmH2O}</td>
-                            <td>Max. 2.94 <br> { Max. 300 }</td>
-                            <td>Max. 5.88 <br> { Max. 600 }</td>
-                            <td class="align-middle text-center">
-                                <?= $pc2000['blow_horsepower'] ?>
-                            </td>
-                            <td class="align-middle text-center">
-                                <?= $pc2000['blow_horsepower_remark'] ?>
-                            </td>
-                        </tr>
-                        <!-- Engine oil -->
-                        <!-- row 1 -->
-                        <tr>
-                            <td class="align-middle" rowspan="2">Engine oil Pressure.</td>
-                            <td colspan="2" class="align-middle">Run engine at low idle (SAE30) </td>
-                            <td class="align-middle text-center" rowspan="2">Mpa <br> { kg/cm2 }</td>
-                            <td class="align-middle text-center">Min 0.08 <br> { Min 0.8 }</td>
-                            <td class="align-middle text-center">Min 0.06 <br> { Min 0.06 }</td>
-                            <td class="align-middle text-center">
-                                <?= $pc2000['oil_run_low_idle'] ?>
-                            </td>
-                            <td class="align-middle text-center">
-                                <?= $pc2000['oil_run_low_idle_remark'] ?>
-                            </td>
-                        </tr>
-                        <!-- row 2 -->
-                        <tr>
-                            <td colspan="2" class="align-middle">Run engine at high idle (SAE30)</td>
-                            <td class="align-middle text-center">0.29 - 0.44 <br> { 3.0 - 4.5 }</td>
-                            <td class="align-middle text-center">Min 0.2 <br> { Min 2.0 }</td>
-                            <td class="align-middle text-center">
-                                <?= $pc2000['oil_run_high_idle'] ?>
-                            </td>
-                            <td class="align-middle text-center">
-                                <?= $pc2000['oil_run_high_idle_remark'] ?>
-                            </td>
-                        </tr>
-                        <!-- Boost Press -->
-                        <!-- row 1 -->
-                        <tr>
-                            <td>Boost Pressure</td>
-                            <td colspan="2">At rated horsepower. </td>
-                            <td class="align-middle text-center">kPa<br>{mmHg}</td>
-                            <td class="align-middle text-center">Max. 125.7 <br> { Max. 950 }</td>
-                            <td class="align-middle text-center">Limit is not set</td>
-                            <td class="align-middle text-center">
-                                <?= $pc2000['boost_horsepower'] ?>
-                            </td>
-                            <td class="align-middle text-center">
-                                <?= $pc2000['boost_horsepower_remark'] ?>
-                            </td>
-                        </tr>
-                        <!-- Exhaust Temperature -->
-                        <!-- row 1 -->
-                        <tr>
-                            <td class="align-middle" rowspan="2">At all speed range.</td>
-                            <td class="align-middle" colspan="2">Ambient Temp.</td>
-                            <td class="align-middle text-center" rowspan="2">°C</td>
-                            <td class="text-center">Max 700</td>
-                            <td class="text-center">Max 750</td>
-                            <td class="align-middle text-center">
-                                <?= $pc2000['exhaust_speed_range'] ?>
-                            </td>
-                            <td class="align-middle text-center">
-                                <?= $pc2000['exhaust_speed_range_remark'] ?>
-                            </td>
-                        </tr>
-                        <!-- row 2 -->
-                        <tr>
-                            <td class="align-middle" colspan="2">Ambient temperature</td>
-                            <td class="align-middle text-center">20</td>
-                            <td class="align-middle text-center">20</td>
-                            <td class="align-middle text-center">
-                                <?= $pc2000['exhaust_ambient_temp'] ?>
-                            </td>
-                            <td class="align-middle text-center">
-                                <?= $pc2000['exhaust_ambient_temp_remark'] ?>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <br>
-                <table width="100%" class="table ttd">
-                    <tr class="font-weight-bold">
-                        <td>Approved by :</td>
-                        <td>Acknowledge by:</td>
-                        <td>Prepared by:</td>
-                    </tr>
-                    <tr class="bottom">
-                        <td>( UT SDH )</td>
-                        <td>( UT Supervisor )</td>
-                        <td>( UT Mechanic )</td>
-                    </tr>
-                </table>
-            </div>
-        </form>
-    </div>
-</body>
+// set font
+$pdf->SetFont('helvetica', '', 10);
 
-</html>
+// add a page
+$pdf->AddPage();
+
+$pdf->setJPEGQuality(75);
+
+// CSS
+$style = <<<EOD
+<style>
+    .table-header td {
+    }
+    .ft-bg {
+        font-size: 21rem;
+    }
+    .ft-md {
+        font-size: 13rem;
+    }
+    .al-c {
+        text-align: center;
+    }
+    .bg-heading {
+        background-color: #DCE6F1;
+    }
+    .bg-subhead {
+        background-color: #CCFFFF;
+    }
+</style>
+EOD;
+
+// src of logo
+$src = base_url('assets/img/logo.jpeg');
+
+// header table
+$headtbl = $style . <<<EOD
+<img src="$src" width="200">
+<br>
+<table border="1" class="table-header">
+    <tr>
+        <td class="ft-bg al-c"><b>QA3</b></td>
+        <td colspan="4" class="ft-bg al-c"><b>Machine Condition Report</b></td>
+    </tr>
+    <tr>
+        <td rowspan="3" class="ft-bg al-c"><b>MCR</b></td>
+        <td rowspan="3"><div>&nbsp;</div><b>INSPECTOR / LEADER</b></td>
+        <td width="15%" class="align-left"> Name</td>
+        <td width="45%"> Ardyyy</td>
+    </tr>
+    <tr>
+        <td width="15%"> Date</td>
+        <td width="45%"> 07-09-2020</td>
+    </tr>
+    <tr>
+        <td width="15%"> Code Unit</td>
+        <td width="45%"> Ardyyy</td>
+    </tr>
+    <tr>
+        <td class="al-c ft-md"><b>PC2000-8</b></td>
+        <td><b> Branch / Site</b></td>
+        <td colspan="3" width="60%"> Tembilahan</td>
+    </tr>
+</table>
+EOD;
+
+// row table
+$rowtbl = $style . <<<EOD
+<table class="table" width="100%" cellpadding="2" border="1">
+    <thead>
+        <tr class="al-c bg-heading">
+            <th><b>ITEM</b></th>
+            <th colspan="2"><b>CONDITION</b></th>
+            <th><b>UNIT</b></th>
+            <th><b>STD</b></th>
+            <th><b>PMS</b></th>
+            <th><b>ACTUAL</b></th>
+            <th><b>REMARK</b></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="al-c bg-subhead" colspan="8"><b><i>ENGINE</i></b></td>
+        </tr>
+        <!-- Engine Speed -->
+        <!-- row 1 -->
+        <tr>
+            <td class="" rowspan="5">
+                Engine Speed (in DH Mode)
+            </td>
+            <td colspan="2" class="">
+                Engine: Low idle
+            </td>
+            <td class="al-c" rowspan="5">Rpm</td>
+            <td colspan="2" class="al-c">775 - 875</td>
+            <td class="al-c"></td>
+            <td class="al-c"></td>
+        </tr>
+        <!-- row 2 -->
+        <tr>
+            <td colspan="2">
+                Engine: High idle
+            </td>
+            <td class="al-c" colspan="2">1930 - 2030</td>
+            <td class="al-c"></td>
+            <td class="al-c"></td>
+        </tr>
+        <!-- row 3 -->
+        <tr>
+            <td colspan="2">
+                Engine: Full throttle. Boom: raise relieve.
+            </td>
+            <td class="al-c" colspan="2">1680 - 1880</td>
+            <td class="al-c"></td>
+            <td class="al-c"></td>
+        </tr>
+        <!-- row 4 -->
+        <tr>
+            <td colspan="2">
+                Engine: Full throttle. <br>Boom: raise relieve + Heavy lift : ON.
+            </td>
+            <td class="al-c" colspan="2">1680 - 1880</td>
+            <td class="al-c"></td>
+            <td class="al-c"></td>
+        </tr>
+
+        <!-- row 6 -->
+        <tr>
+            <td colspan="2" class="al-c">
+                Auto decelaration switch: ON. Fuel control dial: Max. <br>Control Valve: neutral
+            </td>
+            <td class="al-c" colspan="2">1300 - 1500</td>
+            <td class="al-c"></td>
+            <td class="al-c"></td>
+        </tr>
+
+        <!-- Blow-by Press -->
+        <!-- row 1 -->
+        <tr>
+            <td>Blow-by Pressure</td>
+            <td colspan="2">At rated horsepower. </td>
+            <td class="al-c">kPa<br>{mmH2O}</td>
+            <td>Max. 2.94 <br> { Max. 300 }</td>
+            <td>Max. 5.88 <br> { Max. 600 }</td>
+            <td class="al-c"></td>
+            <td class="al-c"></td>
+        </tr>
+        <!-- Engine oil -->
+        <!-- row 1 -->
+        <tr>
+            <td class="" rowspan="2">Engine oil Pressure.</td>
+            <td colspan="2" class="">Run engine at low idle (SAE30) </td>
+            <td class="al-c" rowspan="2">Mpa <br> { kg/cm2 }</td>
+            <td class="al-c">Min 0.08 <br> { Min 0.8 }</td>
+            <td class="al-c">Min 0.06 <br> { Min 0.06 }</td>
+            <td class="al-c"></td>
+            <td class="al-c"></td>
+        </tr>
+        <!-- row 2 -->
+        <tr>
+            <td colspan="2" class="">Run engine at high idle (SAE30)</td>
+            <td class="al-c">0.29 - 0.44 <br> { 3.0 - 4.5 }</td>
+            <td class="al-c">Min 0.2 <br> { Min 2.0 }</td>
+            <td class="al-c"></td>
+            <td class="al-c"></td>
+        </tr>
+        <!-- Boost Press -->
+        <!-- row 1 -->
+        <tr>
+            <td>Boost Pressure</td>
+            <td colspan="2">At rated horsepower. </td>
+            <td class="al-c">kPa<br>{mmHg}</td>
+            <td class="al-c">Max. 125.7 <br> { Max. 950 }</td>
+            <td class="al-c">Limit is not set</td>
+            <td class="al-c"></td>
+            <td class="al-c"></td>
+        </tr>
+        <!-- Exhaust Temperature -->
+        <!-- row 1 -->
+        <tr>
+            <td class="" rowspan="2">At all speed range.</td>
+            <td class="" colspan="2">Ambient Temp.</td>
+            <td class="al-c" rowspan="2">°C</td>
+            <td class="al-c">Max 700</td>
+            <td class="al-c">Max 750</td>
+            <td class="al-c"></td>
+            <td class="al-c"></td>
+        </tr>
+        <!-- row 2 -->
+        <tr>
+            <td class="" colspan="2">Ambient temperature</td>
+            <td class="al-c">20</td>
+            <td class="al-c">20</td>
+            <td class="al-c"></td>
+            <td class="al-c"></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<table width="100%">
+    <br>
+    <br>
+    <br>
+    <tr class="al-c">
+        <td>Approved by :</td>
+        <td>Acknowledge by:</td>
+        <td>Prepared by:</td>
+    </tr>
+    <br>
+    <br>
+    <br>
+    <br>
+    <tr class="al-c">
+        <td>( UT SDH )</td>
+        <td>( UT Supervisor )</td>
+        <td>( UT Mechanic )</td>
+    </tr>
+</table>
+EOD;
+
+$pdf->writeHTML($headtbl, true, false, false, false, '');
+$pdf->writeHTML($rowtbl, true, false, false, false, '');
+
+// ---------------------------------------------------------
+
+//Close and output PDF document
+$pdf->Output('example_002.pdf', 'I');
+
+//============================================================+
+// END OF FILE
+//============================================================+
