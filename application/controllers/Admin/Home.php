@@ -1314,7 +1314,7 @@ class Home extends CI_Controller
                 $data = [
                     'pc2000' => $this->actual->getActualJoinById('pc2000-8', $actual_id)
                 ];
-                $this->load->view('pdf/pc2000-8');
+                $this->load->view('pdf/engine/pc2000-8', $data);
                 break;
             case "GD825-2":
                 $data = [

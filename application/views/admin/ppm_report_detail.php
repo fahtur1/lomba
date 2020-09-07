@@ -33,7 +33,7 @@
                                     <th>PPM Document</th>
                                 </tr>
                             </tfoot>
-                            <tbody>
+                            <tbody>`
                                 <?php foreach ($detail['actual'] as $actual) : ?>
                                     <tr>
                                         <td><?= $actual['model_name'] ?></td>
