@@ -197,7 +197,7 @@ class Home extends CI_Controller
         ]);
     }
 
-    public function gd825_validation()
+    public function gd825_validation($ps)
     {
         $this->actual_validation('engine_low_speed', '600', '700');
         $this->required_only_validation('engine_low_speed_remark');
@@ -220,125 +220,127 @@ class Home extends CI_Controller
         $this->min_only_validation('tc_stall_temp', '700');
         $this->required_only_validation('tc_stall_temp_remark');
 
-        $this->actual_validation('operating_effect', '8', '18');
-        $this->required_only_validation('operating_effect_remark');
+        if ($ps != 'PS2') :
+            $this->actual_validation('operating_effect', '8', '18');
+            $this->required_only_validation('operating_effect_remark');
 
-        $this->actual_validation('pedal_height', '90', '110');
-        $this->required_only_validation('pedal_height_remark');
+            $this->actual_validation('pedal_height', '90', '110');
+            $this->required_only_validation('pedal_height_remark');
 
-        $this->actual_validation('pedal_height_operated', '39', '48');
-        $this->required_only_validation('pedal_height_operated_remark');
+            $this->actual_validation('pedal_height_operated', '39', '48');
+            $this->required_only_validation('pedal_height_operated_remark');
 
-        $this->max_only_validation('pedal_travel', '65');
-        $this->required_only_validation('pedal_travel_remark');
+            $this->max_only_validation('pedal_travel', '65');
+            $this->required_only_validation('pedal_travel_remark');
 
-        $this->actual_validation('pilot_oil', '10', '12');
-        $this->required_only_validation('pilot_oil_remark');
+            $this->actual_validation('pilot_oil', '10', '12');
+            $this->required_only_validation('pilot_oil_remark');
 
-        $this->actual_validation('lubricating_oil', '1.0', '2.5');
-        $this->required_only_validation('lubricating_oil_remark');
+            $this->actual_validation('lubricating_oil', '1.0', '2.5');
+            $this->required_only_validation('lubricating_oil_remark');
 
-        $this->actual_validation('main_oil', '31', '34');
-        $this->required_only_validation('main_oil_remark');
+            $this->actual_validation('main_oil', '31', '34');
+            $this->required_only_validation('main_oil_remark');
 
-        $this->actual_validation('clutch_f', '31', '34');
-        $this->required_only_validation('clutch_f_remark');
+            $this->actual_validation('clutch_f', '31', '34');
+            $this->required_only_validation('clutch_f_remark');
 
-        $this->actual_validation('clutch_r', '31', '34');
-        $this->required_only_validation('clutch_r_remark');
+            $this->actual_validation('clutch_r', '31', '34');
+            $this->required_only_validation('clutch_r_remark');
 
-        $this->actual_validation('clutch_high', '31', '34');
-        $this->required_only_validation('clutch_high_remark');
+            $this->actual_validation('clutch_high', '31', '34');
+            $this->required_only_validation('clutch_high_remark');
 
-        $this->actual_validation('clutch_low', '31', '34');
-        $this->required_only_validation('clutch_low_remark');
+            $this->actual_validation('clutch_low', '31', '34');
+            $this->required_only_validation('clutch_low_remark');
 
-        $this->actual_validation('clutch_1', '31', '34');
-        $this->required_only_validation('clutch_1_remark');
+            $this->actual_validation('clutch_1', '31', '34');
+            $this->required_only_validation('clutch_1_remark');
 
-        $this->actual_validation('clutch_2', '31', '34');
-        $this->required_only_validation('clutch_2_remark');
+            $this->actual_validation('clutch_2', '31', '34');
+            $this->required_only_validation('clutch_2_remark');
 
-        $this->actual_validation('clutch_3', '31', '34');
-        $this->required_only_validation('clutch_3_remark');
+            $this->actual_validation('clutch_3', '31', '34');
+            $this->required_only_validation('clutch_3_remark');
 
-        $this->actual_validation('clutch_4', '31', '34');
-        $this->required_only_validation('clutch_4_remark');
+            $this->actual_validation('clutch_4', '31', '34');
+            $this->required_only_validation('clutch_4_remark');
 
-        $this->max_only_validation('steering_wheel', '45');
-        $this->required_only_validation('steering_wheel_remark');
+            $this->max_only_validation('steering_wheel', '45');
+            $this->required_only_validation('steering_wheel_remark');
 
-        $this->max_only_validation('operating_effort_wheel', '6');
-        $this->required_only_validation('operating_effort_wheel_remark');
+            $this->max_only_validation('operating_effort_wheel', '6');
+            $this->required_only_validation('operating_effort_wheel_remark');
 
-        $this->actual_validation('priority_relief', '165', '185');
-        $this->required_only_validation('priority_relief_remark');
+            $this->actual_validation('priority_relief', '165', '185');
+            $this->required_only_validation('priority_relief_remark');
 
-        $this->max_only_validation('operating_effort_brake', '50');
-        $this->required_only_validation('operating_effort_brake_remark');
+            $this->max_only_validation('operating_effort_brake', '50');
+            $this->required_only_validation('operating_effort_brake_remark');
 
-        $this->max_only_validation('engine_full_throtte', '3.7');
-        $this->required_only_validation('engine_full_throtte_remark');
+            $this->max_only_validation('engine_full_throtte', '3.7');
+            $this->required_only_validation('engine_full_throtte_remark');
 
-        $this->actual_validation('raise_speed', '115', '145');
-        $this->required_only_validation('raise_speed_remark');
+            $this->actual_validation('raise_speed', '115', '145');
+            $this->required_only_validation('raise_speed_remark');
 
-        $this->actual_validation('lower_speed', '115', '145');
-        $this->required_only_validation('lower_speed_remark');
+            $this->actual_validation('lower_speed', '115', '145');
+            $this->required_only_validation('lower_speed_remark');
 
-        $this->actual_validation('left_out', '115', '145');
-        $this->required_only_validation('left_out_remark');
+            $this->actual_validation('left_out', '115', '145');
+            $this->required_only_validation('left_out_remark');
 
-        $this->actual_validation('right_out', '115', '145');
-        $this->required_only_validation('right_out_remark');
+            $this->actual_validation('right_out', '115', '145');
+            $this->required_only_validation('right_out_remark');
 
-        $this->actual_validation('left_compared', '115', '145');
-        $this->required_only_validation('left_compared_remark');
+            $this->actual_validation('left_compared', '115', '145');
+            $this->required_only_validation('left_compared_remark');
 
-        $this->actual_validation('right_compared', '115', '145');
-        $this->required_only_validation('right_compared_remark');
+            $this->actual_validation('right_compared', '115', '145');
+            $this->required_only_validation('right_compared_remark');
 
-        $this->actual_validation('lower_ripper', '85', '115');
-        $this->required_only_validation('lower_ripper_remark');
+            $this->actual_validation('lower_ripper', '85', '115');
+            $this->required_only_validation('lower_ripper_remark');
 
-        $this->actual_validation('raise_ripper', '85', '115');
-        $this->required_only_validation('raise_ripper_remark');
+            $this->actual_validation('raise_ripper', '85', '115');
+            $this->required_only_validation('raise_ripper_remark');
 
-        $this->actual_validation('rotation_down', '8.5', '9.5');
-        $this->required_only_validation('rotation_down_remark');
+            $this->actual_validation('rotation_down', '8.5', '9.5');
+            $this->required_only_validation('rotation_down_remark');
 
-        $this->actual_validation('rotation_up', '6.5', '7.5');
-        $this->required_only_validation('rotation_up_remark');
+            $this->actual_validation('rotation_up', '6.5', '7.5');
+            $this->required_only_validation('rotation_up_remark');
 
-        $this->required_only_validation('drift_ext_blade');
-        $this->required_only_validation('drift_ext_blade_remark');
+            $this->required_only_validation('drift_ext_blade');
+            $this->required_only_validation('drift_ext_blade_remark');
 
-        $this->required_only_validation('drift_rtn_blade');
-        $this->required_only_validation('drift_rtn_blade_remark');
+            $this->required_only_validation('drift_rtn_blade');
+            $this->required_only_validation('drift_rtn_blade_remark');
 
-        $this->required_only_validation('drift_ext_ripper');
-        $this->required_only_validation('drift_ext_ripper_remark');
+            $this->required_only_validation('drift_ext_ripper');
+            $this->required_only_validation('drift_ext_ripper_remark');
 
-        $this->required_only_validation('drift_rtn_ripper');
-        $this->required_only_validation('drift_rtn_ripper_remark');
+            $this->required_only_validation('drift_rtn_ripper');
+            $this->required_only_validation('drift_rtn_ripper_remark');
 
-        $this->actual_validation('hydraulic_priority', '235', '265');
-        $this->required_only_validation('hydraulic_priority_remark');
+            $this->actual_validation('hydraulic_priority', '235', '265');
+            $this->required_only_validation('hydraulic_priority_remark');
 
-        $this->actual_validation('hydraulic_valve_rh', '235', '265');
-        $this->required_only_validation('hydraulic_valve_rh_remark');
+            $this->actual_validation('hydraulic_valve_rh', '235', '265');
+            $this->required_only_validation('hydraulic_valve_rh_remark');
 
-        $this->actual_validation('hydraulic_valve_lh', '235', '265');
-        $this->required_only_validation('hydraulic_valve_lh_remark');
+            $this->actual_validation('hydraulic_valve_lh', '235', '265');
+            $this->required_only_validation('hydraulic_valve_lh_remark');
 
-        $this->required_only_validation('diff_drain');
-        $this->required_only_validation('diff_drain_remark');
+            $this->required_only_validation('diff_drain');
+            $this->required_only_validation('diff_drain_remark');
 
-        $this->required_only_validation('tandem_drain_lh');
-        $this->required_only_validation('tandem_drain_lh_remark');
+            $this->required_only_validation('tandem_drain_lh');
+            $this->required_only_validation('tandem_drain_lh_remark');
 
-        $this->required_only_validation('tandem_drain_rh');
-        $this->required_only_validation('tandem_drain_rh_remark');
+            $this->required_only_validation('tandem_drain_rh');
+            $this->required_only_validation('tandem_drain_rh_remark');
+        endif;
     }
 
     public function hd7855_validation()
@@ -683,7 +685,7 @@ class Home extends CI_Controller
         $this->required_only_validation('final_drive_rh_remark');
     }
 
-    public function pc2000_validation()
+    public function pc2000_validation($ps)
     {
         $this->actual_validation('engine_low_idle', '775', '875');
         $this->required_only_validation('engine_low_idle_remark');
@@ -718,167 +720,169 @@ class Home extends CI_Controller
         $this->required_only_validation('exhaust_ambient_temp');
         $this->required_only_validation('exhaust_ambient_temp_remark');
 
-        $this->required_only_validation('visual_inspection');
-        $this->required_only_validation('visual_inspection_remark');
+        if ($ps == 'PS3' || $ps == 'PS4') :
+            $this->required_only_validation('visual_inspection');
+            $this->required_only_validation('visual_inspection_remark');
 
-        $this->required_only_validation('check_of_thermo');
-        $this->required_only_validation('check_of_thermo_remark');
+            $this->required_only_validation('check_of_thermo');
+            $this->required_only_validation('check_of_thermo_remark');
 
-        $this->max_only_validation('boom_raise', '90');
-        $this->required_only_validation('boom_raise_remark');
+            $this->max_only_validation('boom_raise', '90');
+            $this->required_only_validation('boom_raise_remark');
 
-        $this->max_only_validation('boom_lower', '6.4');
-        $this->required_only_validation('boom_lower_remark');
+            $this->max_only_validation('boom_lower', '6.4');
+            $this->required_only_validation('boom_lower_remark');
 
-        $this->max_only_validation('arm_in', '90');
-        $this->required_only_validation('arm_in_remark');
+            $this->max_only_validation('arm_in', '90');
+            $this->required_only_validation('arm_in_remark');
 
-        $this->max_only_validation('arm_out', '6.2');
-        $this->required_only_validation('arm_out_remark');
+            $this->max_only_validation('arm_out', '6.2');
+            $this->required_only_validation('arm_out_remark');
 
-        $this->max_only_validation('bucket_curl', '6');
-        $this->required_only_validation('bucket_curl_remark');
+            $this->max_only_validation('bucket_curl', '6');
+            $this->required_only_validation('bucket_curl_remark');
 
-        $this->max_only_validation('bucket_dump', '4.7');
-        $this->required_only_validation('bucket_dump_remark');
+            $this->max_only_validation('bucket_dump', '4.7');
+            $this->required_only_validation('bucket_dump_remark');
 
-        $this->max_only_validation('swing_5_turns', '70');
-        $this->required_only_validation('swing_5_turns_remark');
+            $this->max_only_validation('swing_5_turns', '70');
+            $this->required_only_validation('swing_5_turns_remark');
 
-        $this->max_only_validation('drive_right_track', '70');
-        $this->required_only_validation('drive_right_track_remark');
+            $this->max_only_validation('drive_right_track', '70');
+            $this->required_only_validation('drive_right_track_remark');
 
-        $this->max_only_validation('drive_left_track', '70');
-        $this->required_only_validation('drive_left_track_remark');
+            $this->max_only_validation('drive_left_track', '70');
+            $this->required_only_validation('drive_left_track_remark');
 
-        $this->max_only_validation('whole_work', '1000');
-        $this->required_only_validation('whole_work_remark');
+            $this->max_only_validation('whole_work', '1000');
+            $this->required_only_validation('whole_work_remark');
 
-        $this->max_only_validation('boom_cylinder', '50');
-        $this->required_only_validation('boom_cylinder_remark');
+            $this->max_only_validation('boom_cylinder', '50');
+            $this->required_only_validation('boom_cylinder_remark');
 
-        $this->max_only_validation('arm_cylinder', '105');
-        $this->required_only_validation('arm_cylinder_remark');
+            $this->max_only_validation('arm_cylinder', '105');
+            $this->required_only_validation('arm_cylinder_remark');
 
-        $this->max_only_validation('bucket_cylinder', '30');
-        $this->required_only_validation('bucket_cylinder_remark');
+            $this->max_only_validation('bucket_cylinder', '30');
+            $this->required_only_validation('bucket_cylinder_remark');
 
-        $this->actual_validation('control_pressure', '31', '38');
-        $this->required_only_validation('control_pressure_remark');
+            $this->actual_validation('control_pressure', '31', '38');
+            $this->required_only_validation('control_pressure_remark');
 
-        $this->min_only_validation('jet_control_lever', '13.1');
-        $this->required_only_validation('jet_control_lever_remark');
+            $this->min_only_validation('jet_control_lever', '13.1');
+            $this->required_only_validation('jet_control_lever_remark');
 
-        $this->min_only_validation('jet_right_travel_lever', '1.7');
-        $this->required_only_validation('jet_right_travel_lever_remark');
+            $this->min_only_validation('jet_right_travel_lever', '1.7');
+            $this->required_only_validation('jet_right_travel_lever_remark');
 
-        $this->min_only_validation('jet_left_travel_lever', '1.7');
-        $this->required_only_validation('jet_left_travel_lever_remark');
+            $this->min_only_validation('jet_left_travel_lever', '1.7');
+            $this->required_only_validation('jet_left_travel_lever_remark');
 
-        $this->actual_validation('pump_control_lever', '160', '280');
-        $this->required_only_validation('pump_control_lever_remark');
+            $this->actual_validation('pump_control_lever', '160', '280');
+            $this->required_only_validation('pump_control_lever_remark');
 
-        $this->actual_validation('pump_right_travel_lever', '390', '510');
-        $this->required_only_validation('pump_right_travel_lever_remark');
+            $this->actual_validation('pump_right_travel_lever', '390', '510');
+            $this->required_only_validation('pump_right_travel_lever_remark');
 
-        $this->actual_validation('pump_left_travel_lever', '390', '510');
-        $this->required_only_validation('pump_left_travel_lever_remark');
+            $this->actual_validation('pump_left_travel_lever', '390', '510');
+            $this->required_only_validation('pump_left_travel_lever_remark');
 
-        $this->actual_validation('p1f_boom_raise', '280', '310');
-        $this->required_only_validation('p1f_boom_raise_remark');
+            $this->actual_validation('p1f_boom_raise', '280', '310');
+            $this->required_only_validation('p1f_boom_raise_remark');
 
-        $this->actual_validation('p1f_boom_raise_heavy', '307', '337');
-        $this->required_only_validation('p1f_boom_raise_heavy_remark');
+            $this->actual_validation('p1f_boom_raise_heavy', '307', '337');
+            $this->required_only_validation('p1f_boom_raise_heavy_remark');
 
-        $this->actual_validation('p1f_arm_in', '280', '310');
-        $this->required_only_validation('p1f_arm_in_remark');
+            $this->actual_validation('p1f_arm_in', '280', '310');
+            $this->required_only_validation('p1f_arm_in_remark');
 
-        $this->actual_validation('p1f_arm_out', '280', '310');
-        $this->required_only_validation('p1f_arm_out_remark');
+            $this->actual_validation('p1f_arm_out', '280', '310');
+            $this->required_only_validation('p1f_arm_out_remark');
 
-        $this->actual_validation('p1f_bucket_curl', '280', '310');
-        $this->required_only_validation('p1f_bucket_curl_remark');
+            $this->actual_validation('p1f_bucket_curl', '280', '310');
+            $this->required_only_validation('p1f_bucket_curl_remark');
 
-        $this->actual_validation('p1f_swing', '280', '310');
-        $this->required_only_validation('p1f_swing_remark');
+            $this->actual_validation('p1f_swing', '280', '310');
+            $this->required_only_validation('p1f_swing_remark');
 
-        $this->actual_validation('p1r_boom_raise', '280', '310');
-        $this->required_only_validation('p1r_boom_raise_remark');
+            $this->actual_validation('p1r_boom_raise', '280', '310');
+            $this->required_only_validation('p1r_boom_raise_remark');
 
-        $this->actual_validation('p1r_boom_raise_heavy', '307', '337');
-        $this->required_only_validation('p1r_boom_raise_heavy_remark');
+            $this->actual_validation('p1r_boom_raise_heavy', '307', '337');
+            $this->required_only_validation('p1r_boom_raise_heavy_remark');
 
-        $this->actual_validation('p1r_arm_in', '280', '310');
-        $this->required_only_validation('p1r_arm_in_remark');
+            $this->actual_validation('p1r_arm_in', '280', '310');
+            $this->required_only_validation('p1r_arm_in_remark');
 
-        $this->actual_validation('p1r_arm_out', '280', '310');
-        $this->required_only_validation('p1r_arm_out_remark');
+            $this->actual_validation('p1r_arm_out', '280', '310');
+            $this->required_only_validation('p1r_arm_out_remark');
 
-        $this->actual_validation('p1r_bucket_curl', '280', '310');
-        $this->required_only_validation('p1r_bucket_curl_remark');
+            $this->actual_validation('p1r_bucket_curl', '280', '310');
+            $this->required_only_validation('p1r_bucket_curl_remark');
 
-        $this->actual_validation('p2f_boom_raise', '280', '310');
-        $this->required_only_validation('p2f_boom_raise_remark');
+            $this->actual_validation('p2f_boom_raise', '280', '310');
+            $this->required_only_validation('p2f_boom_raise_remark');
 
-        $this->actual_validation('p2f_boom_raise_heavy', '307', '337');
-        $this->required_only_validation('p2f_boom_raise_heavy_remark');
+            $this->actual_validation('p2f_boom_raise_heavy', '307', '337');
+            $this->required_only_validation('p2f_boom_raise_heavy_remark');
 
-        $this->actual_validation('p2f_arm_in', '280', '310');
-        $this->required_only_validation('p2f_arm_in_remark');
+            $this->actual_validation('p2f_arm_in', '280', '310');
+            $this->required_only_validation('p2f_arm_in_remark');
 
-        $this->actual_validation('p2f_arm_out', '280', '310');
-        $this->required_only_validation('p2f_arm_out_remark');
+            $this->actual_validation('p2f_arm_out', '280', '310');
+            $this->required_only_validation('p2f_arm_out_remark');
 
-        $this->actual_validation('p2f_bucket_curl', '280', '310');
-        $this->required_only_validation('p2f_bucket_curl_remark');
+            $this->actual_validation('p2f_bucket_curl', '280', '310');
+            $this->required_only_validation('p2f_bucket_curl_remark');
 
-        $this->actual_validation('p2r_boom_raise_heavy', '307', '337');
-        $this->required_only_validation('p2r_boom_raise_heavy_remark');
+            $this->actual_validation('p2r_boom_raise_heavy', '307', '337');
+            $this->required_only_validation('p2r_boom_raise_heavy_remark');
 
-        $this->actual_validation('p2r_arm_in', '280', '310');
-        $this->required_only_validation('p2r_arm_in_remark');
+            $this->actual_validation('p2r_arm_in', '280', '310');
+            $this->required_only_validation('p2r_arm_in_remark');
 
-        $this->actual_validation('p2r_arm_out', '280', '310');
-        $this->required_only_validation('p2r_arm_out_remark');
+            $this->actual_validation('p2r_arm_out', '280', '310');
+            $this->required_only_validation('p2r_arm_out_remark');
 
-        $this->actual_validation('p2r_bucket_curl', '280', '310');
-        $this->required_only_validation('p2r_bucket_curl_remark');
+            $this->actual_validation('p2r_bucket_curl', '280', '310');
+            $this->required_only_validation('p2r_bucket_curl_remark');
 
-        $this->actual_validation('fan_pump_radiator', '575', '675');
-        $this->required_only_validation('fan_pump_radiator_remark');
+            $this->actual_validation('fan_pump_radiator', '575', '675');
+            $this->required_only_validation('fan_pump_radiator_remark');
 
-        $this->actual_validation('fan_pump_oil', '600', '700');
-        $this->required_only_validation('fan_pump_oil_remark');
+            $this->actual_validation('fan_pump_oil', '600', '700');
+            $this->required_only_validation('fan_pump_oil_remark');
 
-        $this->actual_validation('fan_speed_radiator', '790', '890');
-        $this->required_only_validation('fan_speed_radiator_remark');
+            $this->actual_validation('fan_speed_radiator', '790', '890');
+            $this->required_only_validation('fan_speed_radiator_remark');
 
-        $this->actual_validation('fan_speed_oil', '710', '810');
-        $this->required_only_validation('fan_speed_oil_remark');
+            $this->actual_validation('fan_speed_oil', '710', '810');
+            $this->required_only_validation('fan_speed_oil_remark');
 
-        $this->max_only_validation('hydraulic_oil_temp', '100');
-        $this->required_only_validation('hydraulic_oil_temp_remark');
+            $this->max_only_validation('hydraulic_oil_temp', '100');
+            $this->required_only_validation('hydraulic_oil_temp_remark');
 
-        $this->required_only_validation('visual_check_hydraulic');
-        $this->required_only_validation('visual_check_hydraulic_remark');
+            $this->required_only_validation('visual_check_hydraulic');
+            $this->required_only_validation('visual_check_hydraulic_remark');
 
-        $this->required_only_validation('drive_drain_plug');
-        $this->required_only_validation('drive_drain_plug_remark');
+            $this->required_only_validation('drive_drain_plug');
+            $this->required_only_validation('drive_drain_plug_remark');
 
-        $this->required_only_validation('drive_oil_leak');
-        $this->required_only_validation('drive_oil_leak_remark');
+            $this->required_only_validation('drive_oil_leak');
+            $this->required_only_validation('drive_oil_leak_remark');
 
-        $this->required_only_validation('drive_abnormal_noise');
-        $this->required_only_validation('drive_abnormal_noise_remark');
+            $this->required_only_validation('drive_abnormal_noise');
+            $this->required_only_validation('drive_abnormal_noise_remark');
 
-        $this->required_only_validation('swing_drain_plug');
-        $this->required_only_validation('swing_drain_plug_remark');
+            $this->required_only_validation('swing_drain_plug');
+            $this->required_only_validation('swing_drain_plug_remark');
 
-        $this->required_only_validation('swing_oil_leak');
-        $this->required_only_validation('swing_oil_leak_remark');
+            $this->required_only_validation('swing_oil_leak');
+            $this->required_only_validation('swing_oil_leak_remark');
 
-        $this->required_only_validation('axial_play');
-        $this->required_only_validation('axial_play_remark');
+            $this->required_only_validation('axial_play');
+            $this->required_only_validation('axial_play_remark');
+        endif;
     }
 
     public function other_validation($check = 0)
@@ -998,8 +1002,9 @@ class Home extends CI_Controller
                 $id_update = uniqid("pc-");
 
                 $this->early_validation();
-                $this->pc2000_validation();
-                $this->other_validation(1);
+                $this->pc2000_validation($ps);
+                if ($ps != 'PS2')
+                    $this->other_validation(1);
 
                 if ($this->form_validation->run() == true) {
                     $data = $this->Column_model->getColumn('pc2000-8');
@@ -1072,8 +1077,9 @@ class Home extends CI_Controller
                 $id_update = uniqid("gd8-");
 
                 $this->early_validation();
-                $this->gd825_validation();
-                $this->other_validation(0);
+                $this->gd825_validation($ps);
+                if ($ps != 'PS2')
+                    $this->other_validation(0);
 
                 if ($this->form_validation->run() == true) {
                     $data = $this->Column_model->getColumn('gd825-2');
@@ -1146,8 +1152,9 @@ class Home extends CI_Controller
                 $id_update = uniqid("hd5-");
 
                 $this->early_validation();
-                $this->hd7855_validation();
-                $this->other_validation(0);
+                $this->hd7855_validation($ps);
+                if ($ps != 'PS2')
+                    $this->other_validation(0);
 
                 if ($this->form_validation->run() == true) {
                     $data = $this->Column_model->getColumn('hd785-5');
@@ -1220,8 +1227,9 @@ class Home extends CI_Controller
                 $id_update = uniqid("hd7-");
 
                 $this->early_validation();
-                $this->hd7857_validation();
-                $this->other_validation();
+                $this->hd7857_validation($ps);
+                if ($ps != 'PS2')
+                    $this->other_validation(0);
 
                 if ($this->form_validation->run() == true) {
                     $data = $this->Column_model->getColumn('hd785-7');

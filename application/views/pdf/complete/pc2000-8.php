@@ -1,6 +1,4 @@
 <?php
-var_dump($actual);
-die;
 //============================================================+
 // File name   : example_002.php
 // Begin       : 2008-03-04
@@ -31,7 +29,7 @@ $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8',
 
 // set document information
 $pdf->SetCreator(PDF_CREATOR);
-$pdf->SetAuthor('Nicola Asuni');
+$pdf->SetAuthor($actual['leader_name']);
 $pdf->SetTitle('PPM Report');
 $pdf->SetSubject('PPM Report');
 $pdf->SetKeywords('PPM, PDF, Report');
@@ -101,20 +99,20 @@ $headtbl = $style . <<<EOD
         <td rowspan="3" class="ft-bg al-c"><b>MCR</b></td>
         <td rowspan="3"><div>&nbsp;</div><b>INSPECTOR / LEADER</b></td>
         <td width="15%" class="align-left"> Name</td>
-        <td width="45%"> Ardyyy</td>
+        <td width="45%"> $actual[leader_name]</td>
     </tr>
     <tr>
         <td width="15%"> Date</td>
-        <td width="45%"> 07-09-2020</td>
+        <td width="45%"> $actual[actual_date]</td>
     </tr>
     <tr>
         <td width="15%"> Code Unit</td>
-        <td width="45%"> Ardyyy</td>
+        <td width="45%"> $actual[model_name]</td>
     </tr>
     <tr>
-        <td class="al-c ft-md"><b>PC2000-8</b></td>
+        <td class="al-c ft-md"><b>$actual[model_name]</b></td>
         <td><b> Branch / Site</b></td>
-        <td colspan="3" width="60%"> Tembilahan</td>
+        <td colspan="3" width="60%"> $actual[actual_branch]</td>
     </tr>
 </table>
 EOD;
