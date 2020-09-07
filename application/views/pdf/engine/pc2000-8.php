@@ -29,7 +29,7 @@ $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8',
 
 // set document information
 $pdf->SetCreator(PDF_CREATOR);
-$pdf->SetAuthor('Nicola Asuni');
+$pdf->SetAuthor($actual['leader_name']);
 $pdf->SetTitle('PPM Report');
 $pdf->SetSubject('PPM Report');
 $pdf->SetKeywords('PPM, PDF, Report');
@@ -79,6 +79,8 @@ $style = <<<EOD
     }
     .bg-subhead {
         background-color: #CCFFFF;
+        font-weight: bold;
+        font-style: italic;
     }
 </style>
 EOD;
@@ -99,20 +101,20 @@ $headtbl = $style . <<<EOD
         <td rowspan="3" class="ft-bg al-c"><b>MCR</b></td>
         <td rowspan="3"><div>&nbsp;</div><b>INSPECTOR / LEADER</b></td>
         <td width="15%" class="align-left"> Name</td>
-        <td width="45%"> Ardyyy</td>
+        <td width="45%"> $actual[leader_name]</td>
     </tr>
     <tr>
         <td width="15%"> Date</td>
-        <td width="45%"> 07-09-2020</td>
+        <td width="45%"> $actual[actual_date]</td>
     </tr>
     <tr>
         <td width="15%"> Code Unit</td>
-        <td width="45%"> Ardyyy</td>
+        <td width="45%"> $actual[model_name]</td>
     </tr>
     <tr>
-        <td class="al-c ft-md"><b>PC2000-8</b></td>
+        <td class="al-c ft-md"><b>$actual[model_name]</b></td>
         <td><b> Branch / Site</b></td>
-        <td colspan="3" width="60%"> Tembilahan</td>
+        <td colspan="3" width="60%"> $actual[actual_branch]</td>
     </tr>
 </table>
 EOD;
@@ -120,8 +122,8 @@ EOD;
 // row table
 $rowtbl = $style . <<<EOD
 <table class="table" width="100%" cellpadding="2" border="1">
-    <thead>
-        <tr class="al-c bg-heading">
+    <tbody>
+    <tr class="al-c bg-heading">
             <th><b>ITEM</b></th>
             <th colspan="2"><b>CONDITION</b></th>
             <th><b>UNIT</b></th>
@@ -130,10 +132,8 @@ $rowtbl = $style . <<<EOD
             <th><b>ACTUAL</b></th>
             <th><b>REMARK</b></th>
         </tr>
-    </thead>
-    <tbody>
         <tr>
-            <td class="al-c bg-subhead" colspan="8"><b><i>ENGINE</i></b></td>
+            <td class="al-c bg-subhead" colspan="8">ENGINE</td>
         </tr>
         <!-- Engine Speed -->
         <!-- row 1 -->
@@ -146,8 +146,8 @@ $rowtbl = $style . <<<EOD
             </td>
             <td class="al-c" rowspan="5">Rpm</td>
             <td colspan="2" class="al-c">775 - 875</td>
-            <td class="al-c"></td>
-            <td class="al-c"></td>
+            <td class="al-c">$actual[engine_low_idle]</td>
+            <td class="al-c">$actual[engine_low_idle_remark]</td>
         </tr>
         <!-- row 2 -->
         <tr>
@@ -155,8 +155,8 @@ $rowtbl = $style . <<<EOD
                 Engine: High idle
             </td>
             <td class="al-c" colspan="2">1930 - 2030</td>
-            <td class="al-c"></td>
-            <td class="al-c"></td>
+            <td class="al-c">$actual[engine_low_idle]</td>
+            <td class="al-c">$actual[engine_low_idle]</td>
         </tr>
         <!-- row 3 -->
         <tr>
@@ -164,8 +164,8 @@ $rowtbl = $style . <<<EOD
                 Engine: Full throttle. Boom: raise relieve.
             </td>
             <td class="al-c" colspan="2">1680 - 1880</td>
-            <td class="al-c"></td>
-            <td class="al-c"></td>
+            <td class="al-c">$actual[engine_high_idle]</td>
+            <td class="al-c">$actual[engine_high_idle_remark]</td>
         </tr>
         <!-- row 4 -->
         <tr>
@@ -173,8 +173,8 @@ $rowtbl = $style . <<<EOD
                 Engine: Full throttle. <br>Boom: raise relieve + Heavy lift : ON.
             </td>
             <td class="al-c" colspan="2">1680 - 1880</td>
-            <td class="al-c"></td>
-            <td class="al-c"></td>
+            <td class="al-c">$actual[engine_full_throttle_raise]</td>
+            <td class="al-c">$actual[engine_full_throttle_raise_remark]</td>
         </tr>
 
         <!-- row 6 -->
@@ -183,8 +183,8 @@ $rowtbl = $style . <<<EOD
                 Auto decelaration switch: ON. Fuel control dial: Max. <br>Control Valve: neutral
             </td>
             <td class="al-c" colspan="2">1300 - 1500</td>
-            <td class="al-c"></td>
-            <td class="al-c"></td>
+            <td class="al-c">$actual[engine_full_throttle_heavy]</td>
+            <td class="al-c">$actual[engine_full_throttle_heavy_remark]</td>
         </tr>
 
         <!-- Blow-by Press -->
@@ -195,8 +195,8 @@ $rowtbl = $style . <<<EOD
             <td class="al-c">kPa<br>{mmH2O}</td>
             <td>Max. 2.94 <br> { Max. 300 }</td>
             <td>Max. 5.88 <br> { Max. 600 }</td>
-            <td class="al-c"></td>
-            <td class="al-c"></td>
+            <td class="al-c">$actual[engine_control_valve_neutral]</td>
+            <td class="al-c">$actual[engine_control_valve_neutral_remark]</td>
         </tr>
         <!-- Engine oil -->
         <!-- row 1 -->
@@ -206,16 +206,16 @@ $rowtbl = $style . <<<EOD
             <td class="al-c" rowspan="2">Mpa <br> { kg/cm2 }</td>
             <td class="al-c">Min 0.08 <br> { Min 0.8 }</td>
             <td class="al-c">Min 0.06 <br> { Min 0.06 }</td>
-            <td class="al-c"></td>
-            <td class="al-c"></td>
+            <td class="al-c">$actual[blow_horsepower]</td>
+            <td class="al-c">$actual[blow_horsepower_remark]</td>
         </tr>
         <!-- row 2 -->
         <tr>
             <td colspan="2" class="">Run engine at high idle (SAE30)</td>
             <td class="al-c">0.29 - 0.44 <br> { 3.0 - 4.5 }</td>
             <td class="al-c">Min 0.2 <br> { Min 2.0 }</td>
-            <td class="al-c"></td>
-            <td class="al-c"></td>
+            <td class="al-c">$actual[oil_run_low_idle]</td>
+            <td class="al-c">$actual[oil_run_low_idle_remark]</td>
         </tr>
         <!-- Boost Press -->
         <!-- row 1 -->
@@ -225,8 +225,8 @@ $rowtbl = $style . <<<EOD
             <td class="al-c">kPa<br>{mmHg}</td>
             <td class="al-c">Max. 125.7 <br> { Max. 950 }</td>
             <td class="al-c">Limit is not set</td>
-            <td class="al-c"></td>
-            <td class="al-c"></td>
+            <td class="al-c">$actual[oil_run_high_idle]</td>
+            <td class="al-c">$actual[oil_run_high_idle_remark]</td>
         </tr>
         <!-- Exhaust Temperature -->
         <!-- row 1 -->
@@ -236,18 +236,18 @@ $rowtbl = $style . <<<EOD
             <td class="al-c" rowspan="2">°C</td>
             <td class="al-c">Max 700</td>
             <td class="al-c">Max 750</td>
-            <td class="al-c"></td>
-            <td class="al-c"></td>
+            <td class="al-c">$actual[boost_horsepower]</td>
+            <td class="al-c">$actual[boost_horsepower_remark]</td>
         </tr>
         <!-- row 2 -->
         <tr>
             <td class="" colspan="2">Ambient temperature</td>
             <td class="al-c">20</td>
             <td class="al-c">20</td>
-            <td class="al-c"></td>
-            <td class="al-c"></td>
+            <td class="al-c">$actual[exhaust_ambient_temp]</td>
+            <td class="al-c">$actual[exhaust_ambient_temp_remark]</td>
         </tr>
-    </tbody>
+        </tbody>
 </table>
 <br>
 <table width="100%">
@@ -277,7 +277,8 @@ $pdf->writeHTML($rowtbl, true, false, false, false, '');
 // ---------------------------------------------------------
 
 //Close and output PDF document
-$pdf->Output('example_002.pdf', 'I');
+$name_save = uniqid();
+$pdf->Output("$name_save.pdf", 'I');
 
 //============================================================+
 // END OF FILE

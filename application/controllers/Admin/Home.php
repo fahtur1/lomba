@@ -353,7 +353,7 @@ class Home extends CI_Controller
         endif;
     }
 
-    public function hd7855_validation()
+    public function hd7855_validation($ps)
     {
         $this->actual_validation('engine_low', '625', '675');
         $this->required_only_validation('engine_low_remark');
@@ -397,134 +397,136 @@ class Home extends CI_Controller
         $this->max_only_validation('exhaust_stall_lh', '700');
         $this->required_only_validation('exhaust_stall_lh_remark');
 
-        $this->actual_validation('inlet_high', '7', '9');
-        $this->required_only_validation('inlet_high_remark');
+        if ($ps == 'PS3' || $ps == 'PS4') :
+            $this->actual_validation('inlet_high', '7', '9');
+            $this->required_only_validation('inlet_high_remark');
 
-        $this->actual_validation('inlet_low', '0.8', '1.8');
-        $this->required_only_validation('inlet_low_remark');
+            $this->actual_validation('inlet_low', '0.8', '1.8');
+            $this->required_only_validation('inlet_low_remark');
 
-        $this->actual_validation('outlet_high', '3', '5');
-        $this->required_only_validation('outlet_high_remark');
+            $this->actual_validation('outlet_high', '3', '5');
+            $this->required_only_validation('outlet_high_remark');
 
-        $this->actual_validation('outlet_low', '0.5', '1.5');
-        $this->required_only_validation('outlet_low_remark');
+            $this->actual_validation('outlet_low', '0.5', '1.5');
+            $this->required_only_validation('outlet_low_remark');
 
-        $this->actual_validation('lock_high', '15.5', '16.5');
-        $this->required_only_validation('lock_high_remark');
+            $this->actual_validation('lock_high', '15.5', '16.5');
+            $this->required_only_validation('lock_high_remark');
 
-        $this->actual_validation('lock_low', '15.5', '16.5');
-        $this->required_only_validation('lock_low_remark');
+            $this->actual_validation('lock_low', '15.5', '16.5');
+            $this->required_only_validation('lock_low_remark');
 
-        $this->actual_validation('lubricating_full', '0.75', '1.75');
-        $this->required_only_validation('lubricating_full_remark');
+            $this->actual_validation('lubricating_full', '0.75', '1.75');
+            $this->required_only_validation('lubricating_full_remark');
 
-        $this->actual_validation('main_relieve_low', '32.5', '36.5');
-        $this->required_only_validation('main_relieve_low_remark');
+            $this->actual_validation('main_relieve_low', '32.5', '36.5');
+            $this->required_only_validation('main_relieve_low_remark');
 
-        $this->actual_validation('main_relieve_power', '37', '41');
-        $this->required_only_validation('main_relieve_power_remark');
+            $this->actual_validation('main_relieve_power', '37', '41');
+            $this->required_only_validation('main_relieve_power_remark');
 
-        $this->max_only_validation('steering_time_rl', '5');
-        $this->required_only_validation('steering_time_rl_remark');
+            $this->max_only_validation('steering_time_rl', '5');
+            $this->required_only_validation('steering_time_rl_remark');
 
-        $this->max_only_validation('steering_time_lr', '5');
-        $this->required_only_validation('steering_time_lr_remark');
+            $this->max_only_validation('steering_time_lr', '5');
+            $this->required_only_validation('steering_time_lr_remark');
 
-        $this->actual_validation('steering_relieve_low', '185', '195');
-        $this->required_only_validation('steering_relieve_low_remark');
+            $this->actual_validation('steering_relieve_low', '185', '195');
+            $this->required_only_validation('steering_relieve_low_remark');
 
-        $this->actual_validation('steering_relieve_power', '205', '225');
-        $this->required_only_validation('steering_relieve_power_remark');
+            $this->actual_validation('steering_relieve_power', '205', '225');
+            $this->required_only_validation('steering_relieve_power_remark');
 
-        $this->actual_validation('air_gov_cutin', '6.7', '7.3');
-        $this->required_only_validation('air_gov_cutin_remark');
+            $this->actual_validation('air_gov_cutin', '6.7', '7.3');
+            $this->required_only_validation('air_gov_cutin_remark');
 
-        $this->actual_validation('air_gov_cutout', '8', '8.6');
-        $this->required_only_validation('air_gov_cutout_remark');
+            $this->actual_validation('air_gov_cutout', '8', '8.6');
+            $this->required_only_validation('air_gov_cutout_remark');
 
-        $this->min_only_validation('service_brake1', '2000');
-        $this->required_only_validation('service_brake1_remark');
+            $this->min_only_validation('service_brake1', '2000');
+            $this->required_only_validation('service_brake1_remark');
 
-        $this->min_only_validation('service_brake2', '1750');
-        $this->required_only_validation('service_brake2_remark');
+            $this->min_only_validation('service_brake2', '1750');
+            $this->required_only_validation('service_brake2_remark');
 
-        $this->min_only_validation('retarder_brake1', '1500');
-        $this->required_only_validation('retarder_brake1_remark');
+            $this->min_only_validation('retarder_brake1', '1500');
+            $this->required_only_validation('retarder_brake1_remark');
 
-        $this->min_only_validation('retarder_brake2', '1300');
-        $this->required_only_validation('retarder_brake2_remark');
+            $this->min_only_validation('retarder_brake2', '1300');
+            $this->required_only_validation('retarder_brake2_remark');
 
-        $this->min_only_validation('parking_brake1', '2040');
-        $this->required_only_validation('parking_brake1_remark');
+            $this->min_only_validation('parking_brake1', '2040');
+            $this->required_only_validation('parking_brake1_remark');
 
-        $this->min_only_validation('parking_brake2', '1890');
-        $this->required_only_validation('parking_brake2_remark');
+            $this->min_only_validation('parking_brake2', '1890');
+            $this->required_only_validation('parking_brake2_remark');
 
-        $this->min_only_validation('emergency_brake1', '2040');
-        $this->required_only_validation('emergency_brake1_remark');
+            $this->min_only_validation('emergency_brake1', '2040');
+            $this->required_only_validation('emergency_brake1_remark');
 
-        $this->min_only_validation('emergency_brake2', '1890');
-        $this->required_only_validation('emergency_brake2_remark');
+            $this->min_only_validation('emergency_brake2', '1890');
+            $this->required_only_validation('emergency_brake2_remark');
 
-        $this->required_only_validation('front_brake_left');
-        $this->required_only_validation('front_brake_left_remark');
+            $this->required_only_validation('front_brake_left');
+            $this->required_only_validation('front_brake_left_remark');
 
-        $this->required_only_validation('front_brake_right');
-        $this->required_only_validation('front_brake_right_remark');
+            $this->required_only_validation('front_brake_right');
+            $this->required_only_validation('front_brake_right_remark');
 
-        $this->required_only_validation('rear_brake_left');
-        $this->required_only_validation('rear_brake_left_remark');
+            $this->required_only_validation('rear_brake_left');
+            $this->required_only_validation('rear_brake_left_remark');
 
-        $this->required_only_validation('rear_brake_right');
-        $this->required_only_validation('rear_brake_right_remark');
+            $this->required_only_validation('rear_brake_right');
+            $this->required_only_validation('rear_brake_right_remark');
 
-        $this->actual_validation('hoist_low', '185', '195');
-        $this->required_only_validation('hoist_low_remark');
+            $this->actual_validation('hoist_low', '185', '195');
+            $this->required_only_validation('hoist_low_remark');
 
-        $this->actual_validation('hoist_power', '200', '215');
-        $this->required_only_validation('hoist_power_remark');
+            $this->actual_validation('hoist_power', '200', '215');
+            $this->required_only_validation('hoist_power_remark');
 
-        $this->actual_validation('raising_speed', '11.5', '14.5');
-        $this->required_only_validation('raising_speed_remark');
+            $this->actual_validation('raising_speed', '11.5', '14.5');
+            $this->required_only_validation('raising_speed_remark');
 
-        $this->min_only_validation('hydrolic_drift', '170');
-        $this->required_only_validation('hydrolic_drift_remark');
+            $this->min_only_validation('hydrolic_drift', '170');
+            $this->required_only_validation('hydrolic_drift_remark');
 
-        $this->actual_validation('left_front_suspension', '242', '282');
-        $this->required_only_validation('left_front_suspension_remark');
+            $this->actual_validation('left_front_suspension', '242', '282');
+            $this->required_only_validation('left_front_suspension_remark');
 
-        $this->required_only_validation('left_front_oil');
-        $this->required_only_validation('left_front_oil_remark');
+            $this->required_only_validation('left_front_oil');
+            $this->required_only_validation('left_front_oil_remark');
 
-        $this->actual_validation('right_front_suspension', '242', '282');
-        $this->required_only_validation('right_front_suspension_remark');
+            $this->actual_validation('right_front_suspension', '242', '282');
+            $this->required_only_validation('right_front_suspension_remark');
 
-        $this->required_only_validation('right_front_oil');
-        $this->required_only_validation('right_front_oil_remark');
+            $this->required_only_validation('right_front_oil');
+            $this->required_only_validation('right_front_oil_remark');
 
-        $this->actual_validation('left_rear_suspension', '220', '260');
-        $this->required_only_validation('left_rear_suspension_remark');
+            $this->actual_validation('left_rear_suspension', '220', '260');
+            $this->required_only_validation('left_rear_suspension_remark');
 
-        $this->required_only_validation('left_rear_oil');
-        $this->required_only_validation('left_rear_oil_remark');
+            $this->required_only_validation('left_rear_oil');
+            $this->required_only_validation('left_rear_oil_remark');
 
-        $this->actual_validation('right_rear_suspension', '220', '260');
-        $this->required_only_validation('right_rear_suspension_remark');
+            $this->actual_validation('right_rear_suspension', '220', '260');
+            $this->required_only_validation('right_rear_suspension_remark');
 
-        $this->required_only_validation('right_rear_oil');
-        $this->required_only_validation('right_rear_oil_remark');
+            $this->required_only_validation('right_rear_oil');
+            $this->required_only_validation('right_rear_oil_remark');
 
-        $this->required_only_validation('diff_drain');
-        $this->required_only_validation('diff_drain_remark');
+            $this->required_only_validation('diff_drain');
+            $this->required_only_validation('diff_drain_remark');
 
-        $this->required_only_validation('final_drive_lh');
-        $this->required_only_validation('final_drive_lh_remark');
+            $this->required_only_validation('final_drive_lh');
+            $this->required_only_validation('final_drive_lh_remark');
 
-        $this->required_only_validation('final_drive_rh');
-        $this->required_only_validation('final_drive_rh_remark');
+            $this->required_only_validation('final_drive_rh');
+            $this->required_only_validation('final_drive_rh_remark');
+        endif;
     }
 
-    public function hd7857_validation()
+    public function hd7857_validation($ps)
     {
         $this->actual_validation('engine_low_idle_low', '625', '675');
         $this->required_only_validation('engine_low_idle_low_remark');
@@ -580,119 +582,121 @@ class Home extends CI_Controller
         $this->max_only_validation('exhaust_speed_lh', '750');
         $this->required_only_validation('exhaust_speed_lh_remark');
 
-        $this->max_only_validation('oil_inlet', '8.67');
-        $this->required_only_validation('oil_inlet_remark');
+        if ($ps == 'PS3' || $ps == 'PS4') :
+            $this->max_only_validation('oil_inlet', '8.67');
+            $this->required_only_validation('oil_inlet_remark');
 
-        $this->actual_validation('oil_outlet_on', '4.59', '5.41');
-        $this->required_only_validation('oil_outlet_on_remark');
+            $this->actual_validation('oil_outlet_on', '4.59', '5.41');
+            $this->required_only_validation('oil_outlet_on_remark');
 
-        $this->actual_validation('oil_outlet_off', '4.59', '6.01');
-        $this->required_only_validation('oil_outlet_off_remark');
+            $this->actual_validation('oil_outlet_off', '4.59', '6.01');
+            $this->required_only_validation('oil_outlet_off_remark');
 
-        $this->actual_validation('oil_lockup', '13.5', '17.5');
-        $this->required_only_validation('oil_lockup_remark');
+            $this->actual_validation('oil_lockup', '13.5', '17.5');
+            $this->required_only_validation('oil_lockup_remark');
 
-        $this->actual_validation('oil_main_f1', '34', '38');
-        $this->required_only_validation('oil_main_f1_remark');
+            $this->actual_validation('oil_main_f1', '34', '38');
+            $this->required_only_validation('oil_main_f1_remark');
 
-        $this->actual_validation('oil_main_f4', '20', '24');
-        $this->required_only_validation('oil_main_f4_remark');
+            $this->actual_validation('oil_main_f4', '20', '24');
+            $this->required_only_validation('oil_main_f4_remark');
 
-        $this->actual_validation('oil_transmission', '1.2', '2.2');
-        $this->required_only_validation('oil_transmission_remark');
+            $this->actual_validation('oil_transmission', '1.2', '2.2');
+            $this->required_only_validation('oil_transmission_remark');
 
-        $this->max_only_validation('turn_time_rl', '5');
-        $this->required_only_validation('turn_time_rl_remark');
+            $this->max_only_validation('turn_time_rl', '5');
+            $this->required_only_validation('turn_time_rl_remark');
 
-        $this->max_only_validation('turn_time_lr', '5');
-        $this->required_only_validation('turn_time_lr_remark');
+            $this->max_only_validation('turn_time_lr', '5');
+            $this->required_only_validation('turn_time_lr_remark');
 
-        $this->actual_validation('steering_low', '185', '195');
-        $this->required_only_validation('steering_low_remark');
+            $this->actual_validation('steering_low', '185', '195');
+            $this->required_only_validation('steering_low_remark');
 
-        $this->actual_validation('steering_rated', '206', '215');
-        $this->required_only_validation('steering_rated_remark');
+            $this->actual_validation('steering_rated', '206', '215');
+            $this->required_only_validation('steering_rated_remark');
 
-        $this->actual_validation('brake_oil_service', '93', '107');
-        $this->required_only_validation('brake_oil_service_remark');
+            $this->actual_validation('brake_oil_service', '93', '107');
+            $this->required_only_validation('brake_oil_service_remark');
 
-        $this->actual_validation('brake_oil_retarder', '59', '72');
-        $this->required_only_validation('brake_oil_retarder_remark');
+            $this->actual_validation('brake_oil_retarder', '59', '72');
+            $this->required_only_validation('brake_oil_retarder_remark');
 
-        $this->actual_validation('charge_cutin', '120', '130');
-        $this->required_only_validation('charge_cutin_remark');
+            $this->actual_validation('charge_cutin', '120', '130');
+            $this->required_only_validation('charge_cutin_remark');
 
-        $this->actual_validation('charge_cutout', '210', '220');
-        $this->required_only_validation('charge_cutout_remark');
+            $this->actual_validation('charge_cutout', '210', '220');
+            $this->required_only_validation('charge_cutout_remark');
 
-        $this->required_only_validation('service');
-        $this->required_only_validation('service_remark');
+            $this->required_only_validation('service');
+            $this->required_only_validation('service_remark');
 
-        $this->required_only_validation('retarder');
-        $this->required_only_validation('retarder_remark');
+            $this->required_only_validation('retarder');
+            $this->required_only_validation('retarder_remark');
 
-        $this->required_only_validation('parking');
-        $this->required_only_validation('parking_remark');
+            $this->required_only_validation('parking');
+            $this->required_only_validation('parking_remark');
 
-        $this->required_only_validation('emergency');
-        $this->required_only_validation('emergency_remark');
+            $this->required_only_validation('emergency');
+            $this->required_only_validation('emergency_remark');
 
-        $this->required_only_validation('oil_temp');
-        $this->required_only_validation('oil_temp_remark');
+            $this->required_only_validation('oil_temp');
+            $this->required_only_validation('oil_temp_remark');
 
-        $this->actual_validation('hoist_relief_rated', '206', '215');
-        $this->required_only_validation('hoist_relief_rated_remark');
+            $this->actual_validation('hoist_relief_rated', '206', '215');
+            $this->required_only_validation('hoist_relief_rated_remark');
 
-        $this->actual_validation('hoist_relief_low', '185', '195');
-        $this->required_only_validation('hoist_relief_low_remark');
+            $this->actual_validation('hoist_relief_low', '185', '195');
+            $this->required_only_validation('hoist_relief_low_remark');
 
-        $this->actual_validation('dump_epc_high', '30', '40');
-        $this->required_only_validation('dump_epc_high_remark');
+            $this->actual_validation('dump_epc_high', '30', '40');
+            $this->required_only_validation('dump_epc_high_remark');
 
-        $this->actual_validation('dump_epc_low', '22', '32');
-        $this->required_only_validation('dump_epc_low_remark');
+            $this->actual_validation('dump_epc_low', '22', '32');
+            $this->required_only_validation('dump_epc_low_remark');
 
-        $this->actual_validation('dump_raising_speed', '11.5', '14.5');
-        $this->required_only_validation('dump_raising_speed_remark');
+            $this->actual_validation('dump_raising_speed', '11.5', '14.5');
+            $this->required_only_validation('dump_raising_speed_remark');
 
-        $this->actual_validation('dump_lowering_speed', '12.5', '15.5');
-        $this->required_only_validation('dump_lowering_speed_remark');
+            $this->actual_validation('dump_lowering_speed', '12.5', '15.5');
+            $this->required_only_validation('dump_lowering_speed_remark');
 
-        $this->max_only_validation('hyd_drift', '170');
-        $this->required_only_validation('hyd_drift_remark');
+            $this->max_only_validation('hyd_drift', '170');
+            $this->required_only_validation('hyd_drift_remark');
 
-        $this->actual_validation('left_front_susp', '227', '267');
-        $this->required_only_validation('left_front_susp_remark');
+            $this->actual_validation('left_front_susp', '227', '267');
+            $this->required_only_validation('left_front_susp_remark');
 
-        $this->required_only_validation('left_front_oil');
-        $this->required_only_validation('left_front_oil_remark');
+            $this->required_only_validation('left_front_oil');
+            $this->required_only_validation('left_front_oil_remark');
 
-        $this->actual_validation('right_front_susp', '227', '267');
-        $this->required_only_validation('right_front_susp_remark');
+            $this->actual_validation('right_front_susp', '227', '267');
+            $this->required_only_validation('right_front_susp_remark');
 
-        $this->required_only_validation('right_front_oil');
-        $this->required_only_validation('right_front_oil_remark');
+            $this->required_only_validation('right_front_oil');
+            $this->required_only_validation('right_front_oil_remark');
 
-        $this->actual_validation('left_rear_susp', '179', '219');
-        $this->required_only_validation('left_rear_susp_remark');
+            $this->actual_validation('left_rear_susp', '179', '219');
+            $this->required_only_validation('left_rear_susp_remark');
 
-        $this->required_only_validation('left_rear_oil');
-        $this->required_only_validation('left_rear_oil_remark');
+            $this->required_only_validation('left_rear_oil');
+            $this->required_only_validation('left_rear_oil_remark');
 
-        $this->actual_validation('right_rear_susp', '179', '219');
-        $this->required_only_validation('right_rear_susp_remark');
+            $this->actual_validation('right_rear_susp', '179', '219');
+            $this->required_only_validation('right_rear_susp_remark');
 
-        $this->required_only_validation('right_rear_oil');
-        $this->required_only_validation('right_rear_oil_remark');
+            $this->required_only_validation('right_rear_oil');
+            $this->required_only_validation('right_rear_oil_remark');
 
-        $this->required_only_validation('diff_drain');
-        $this->required_only_validation('diff_drain_remark');
+            $this->required_only_validation('diff_drain');
+            $this->required_only_validation('diff_drain_remark');
 
-        $this->required_only_validation('final_drive_lh');
-        $this->required_only_validation('final_drive_lh_remark');
+            $this->required_only_validation('final_drive_lh');
+            $this->required_only_validation('final_drive_lh_remark');
 
-        $this->required_only_validation('final_drive_rh');
-        $this->required_only_validation('final_drive_rh_remark');
+            $this->required_only_validation('final_drive_rh');
+            $this->required_only_validation('final_drive_rh_remark');
+        endif;
     }
 
     public function pc2000_validation($ps)
@@ -958,14 +962,14 @@ class Home extends CI_Controller
                 case "HD785-7":
                     $data['detail'] = [
                         "name" => "HD785-7",
-                        'actual' => $this->actual->getActualJoin('hd785-5')
+                        'actual' => $this->actual->getActualJoin('hd785-7')
                     ];
                     $this->load->view('admin/ppm_report_detail', $data);
                     break;
                 case "HD785-5":
                     $data['detail'] = [
                         "name" => "HD785-5",
-                        'actual' => $this->actual->getActualJoin('hd785-7')
+                        'actual' => $this->actual->getActualJoin('hd785-5')
                     ];
                     $this->load->view('admin/ppm_report_detail', $data);
                     break;
@@ -1099,7 +1103,6 @@ class Home extends CI_Controller
                     foreach ($data as $dataa) {
                         if (!(substr($dataa['column'], 0, 2) == 'id')  && !($dataa['column'] == 'undercarriage')) {
                             $dataModel[$dataa['column']] = $this->input->post($dataa['column']);
-                            if ($ps == 'PS2' && $dataa['column'] == 'tc_stall_temp') break;
                         }
                     }
 
@@ -1314,10 +1317,39 @@ class Home extends CI_Controller
         }
     }
 
-    public function export($unit = '', $actual_id = '')
+    public function export($unit = '', $actual_id = '', $ps)
     {
         $table = strtolower($unit);
-        $data['actual'] = $this->actual->getActualJoinById($table, $actual_id);
-        $this->load->view('pdf/complete/pc2000-8', $data);
+        $data['actual'] = $this->actual->getActualJoinById($table, $actual_id, $ps);
+        switch ($table) {
+            case "pc2000-8":
+                if ($ps == "PS2") {
+                    $this->load->view('pdf/engine/pc2000-8', $data);
+                } else if ($ps == "PS3" || $ps == "PS4") {
+                    $this->load->view('pdf/complete/pc2000-8', $data);
+                }
+                break;
+            case "hd785-5":
+                if ($ps == "PS2") {
+                    $this->load->view('pdf/engine/hd785-5', $data);
+                } else if ($ps == "PS3" || $ps == "PS4") {
+                    $this->load->view('pdf/complete/hd785-5', $data);
+                }
+                break;
+            case "hd785-7":
+                if ($ps == "PS2") {
+                    $this->load->view('pdf/engine/hd785-7', $data);
+                } else if ($ps == "PS3" || $ps == "PS4") {
+                    $this->load->view('pdf/complete/hd785-7', $data);
+                }
+                break;
+            case "gd825-2":
+                if ($ps == "PS2") {
+                    $this->load->view('pdf/engine/gd825-2', $data);
+                } else if ($ps == "PS3" || $ps == "PS4") {
+                    $this->load->view('pdf/complete/gd825-2', $data);
+                }
+                break;
+        }
     }
 }

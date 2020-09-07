@@ -40,11 +40,7 @@
                                         <td><?= $actual['plan_date'] ?></td>
                                         <td><?= $actual['ps_type'] ?></td>
                                         <td class="text-center">
-<<<<<<< HEAD
-                                            <a href="<?= base_url("admin/home/export/$actual[model_name]/") . $actual['actual_id']  ?>" class="btn btn-warning btn-icon-split px-3 py-2 update_button">
-=======
-                                            <a href="<?= base_url("admin/home/export/") . $actual['model_name'] . '/' . $actual['actual_id'] . '/' . $actual['ps_type']  ?>" class="btn btn-warning btn-icon-split px-3 py-2 update_button">
->>>>>>> 390aa31740d7464eab29eee1419bd3c2a7895b35
+                                            <a href="<?= base_url("admin/home/export/$actual[model_name]/$actual[actual_id]/$actual[ps_type]")   ?>" class="btn btn-warning btn-icon-split px-3 py-2 update_button">
                                                 PDF
                                             </a>
                                     </tr> <?php endforeach; ?> </tbody>
