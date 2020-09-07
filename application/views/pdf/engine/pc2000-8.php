@@ -30,9 +30,9 @@ $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8',
 // set document information
 $pdf->SetCreator(PDF_CREATOR);
 $pdf->SetAuthor('Nicola Asuni');
-$pdf->SetTitle('TCPDF Example 002');
-$pdf->SetSubject('TCPDF Tutorial');
-$pdf->SetKeywords('TCPDF, PDF, example, test, guide');
+$pdf->SetTitle('PPM Report');
+$pdf->SetSubject('PPM Report');
+$pdf->SetKeywords('PPM, PDF, Report');
 
 // remove default header/footer
 $pdf->setPrintHeader(false);
