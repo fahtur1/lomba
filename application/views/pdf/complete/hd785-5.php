@@ -133,7 +133,7 @@ $rowtbl = $style . <<<EOD
             <th><b>REMARK</b></th>
         </tr>
         <tr class="bg-primary">
-        <td class="text-white text-center font-weight-bold font-italic" colspan="8">
+        <td class="al-c bg-subhead" colspan="8">
             ENGINE
         </td>
     </tr>
@@ -333,7 +333,7 @@ $rowtbl = $style . <<<EOD
 
     <!-- TORQUE CONVERTOR & TRANSMISSION -->
     <tr class="bg-primary">
-        <td class="text-white text-center font-weight-bold font-italic" colspan="8">
+        <td class="al-c bg-subhead" colspan="8">
             TORQUE CONVERTOR & TRANSMISSION
         </td>
     </tr>
@@ -450,7 +450,7 @@ $rowtbl = $style . <<<EOD
 
     <!-- STEERING -->
     <tr class="bg-primary">
-        <td class="text-white text-center font-weight-bold font-italic" colspan="8">
+        <td class="al-c bg-subhead" colspan="8">
             STEERING
         </td>
     </tr>
@@ -693,7 +693,7 @@ $rowtbl = $style . <<<EOD
 
     <!-- HYDRAULIC EQUIPMENT -->
     <tr class="bg-primary">
-        <td class="text-white text-center font-weight-bold font-italic" colspan="8">
+        <td class="al-c bg-subhead" colspan="8">
             HYDRAULIC EQUIPMENT
         </td>
     </tr>
@@ -769,7 +769,7 @@ $rowtbl = $style . <<<EOD
 
     <!-- SUSPENSION -->
     <tr class="bg-primary">
-        <td class="text-white text-center font-weight-bold font-italic" colspan="8">
+        <td class="al-c bg-subhead" colspan="8">
             SUSPENSION
         </td>
     </tr>
@@ -884,7 +884,7 @@ $rowtbl = $style . <<<EOD
 
     <!-- DIFFERENTIAL & FINAL DRIVE -->
     <tr class="bg-primary">
-        <td class="text-white text-center font-weight-bold font-italic" colspan="8">
+        <td class="al-c bg-subhead" colspan="8">
             DIFFERENTIAL & FINAL DRIVE
         </td>
     </tr>
@@ -1133,19 +1133,6 @@ $rowtbl = $style . <<<EOD
             $actual[machine_remark]
         </td>
     </tr>
-    <!-- Undercarriage -->
-    <tr>
-        <td>Undercarriage</td>
-        <td colspan="2">Cleaness, wear, completeness and condition</td>
-        <td colspan="3">Complete and normal condition</td>
-        <td class="align-middle text-center">
-            $actual[undercarriage]
-        </td>
-        <td class="align-middle text-center">
-            $actual[undercarriage_remark]
-        </td>
-    </tr>
-
  </tbody>
 </table>
 <br>

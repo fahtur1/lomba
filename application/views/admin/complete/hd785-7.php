@@ -921,7 +921,7 @@
 
                             <tr class="bg-primary">
                                 <td class="text-white text-center font-weight-bold font-italic" colspan="8">
-                                    HYDRAULIC
+                                    SUSPENSION
                                 </td>
                             </tr>
 

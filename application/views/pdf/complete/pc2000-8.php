@@ -155,8 +155,8 @@ $rowtbl = $style . <<<EOD
                 Engine: High idle
             </td>
             <td class="al-c" colspan="2">1930 - 2030</td>
-            <td class="al-c">$actual[engine_low_idle]</td>
-            <td class="al-c">$actual[engine_low_idle]</td>
+            <td class="al-c">$actual[engine_high_idle]</td>
+            <td class="al-c">$actual[engine_high_idle_remark]</td>
         </tr>
         <!-- row 3 -->
         <tr>
@@ -164,8 +164,8 @@ $rowtbl = $style . <<<EOD
                 Engine: Full throttle. Boom: raise relieve.
             </td>
             <td class="al-c" colspan="2">1680 - 1880</td>
-            <td class="al-c">$actual[engine_high_idle]</td>
-            <td class="al-c">$actual[engine_high_idle_remark]</td>
+            <td class="al-c">$actual[engine_full_throttle_raise]</td>
+            <td class="al-c">$actual[engine_full_throttle_raise_remark]</td>
         </tr>
         <!-- row 4 -->
         <tr>
@@ -173,8 +173,8 @@ $rowtbl = $style . <<<EOD
                 Engine: Full throttle. <br>Boom: raise relieve + Heavy lift : ON.
             </td>
             <td class="al-c" colspan="2">1680 - 1880</td>
-            <td class="al-c">$actual[engine_full_throttle_raise]</td>
-            <td class="al-c">$actual[engine_full_throttle_raise_remark]</td>
+            <td class="al-c">$actual[engine_full_throttle_heavy]</td>
+            <td class="al-c">$actual[engine_full_throttle_heavy_remark]</td>
         </tr>
 
         <!-- row 6 -->
@@ -183,8 +183,8 @@ $rowtbl = $style . <<<EOD
                 Auto decelaration switch: ON. Fuel control dial: Max. <br>Control Valve: neutral
             </td>
             <td class="al-c" colspan="2">1300 - 1500</td>
-            <td class="al-c">$actual[engine_full_throttle_heavy]</td>
-            <td class="al-c">$actual[engine_full_throttle_heavy_remark]</td>
+            <td class="al-c">$actual[engine_control_valve_neutral]</td>
+            <td class="al-c">$actual[engine_control_valve_neutral_remark]</td>
         </tr>
 
         <!-- Blow-by Press -->
@@ -195,8 +195,8 @@ $rowtbl = $style . <<<EOD
             <td class="al-c">kPa<br>{mmH2O}</td>
             <td>Max. 2.94 <br> { Max. 300 }</td>
             <td>Max. 5.88 <br> { Max. 600 }</td>
-            <td class="al-c">$actual[engine_control_valve_neutral]</td>
-            <td class="al-c">$actual[engine_control_valve_neutral_remark]</td>
+            <td class="al-c">$actual[blow_horsepower]</td>
+            <td class="al-c">$actual[blow_horsepower_remark]</td>
         </tr>
         <!-- Engine oil -->
         <!-- row 1 -->
@@ -206,16 +206,16 @@ $rowtbl = $style . <<<EOD
             <td class="al-c" rowspan="2">Mpa <br> { kg/cm2 }</td>
             <td class="al-c">Min 0.08 <br> { Min 0.8 }</td>
             <td class="al-c">Min 0.06 <br> { Min 0.06 }</td>
-            <td class="al-c">$actual[blow_horsepower]</td>
-            <td class="al-c">$actual[blow_horsepower_remark]</td>
+            <td class="al-c">$actual[oil_run_low_idle]</td>
+            <td class="al-c">$actual[oil_run_low_idle_remark]</td>
         </tr>
         <!-- row 2 -->
         <tr>
             <td colspan="2" class="">Run engine at high idle (SAE30)</td>
             <td class="al-c">0.29 - 0.44 <br> { 3.0 - 4.5 }</td>
             <td class="al-c">Min 0.2 <br> { Min 2.0 }</td>
-            <td class="al-c">$actual[oil_run_low_idle]</td>
-            <td class="al-c">$actual[oil_run_low_idle_remark]</td>
+            <td class="al-c">$actual[oil_run_high_idle]</td>
+            <td class="al-c">$actual[oil_run_high_idle_remark]</td>
         </tr>
         <!-- Boost Press -->
         <!-- row 1 -->
@@ -225,8 +225,8 @@ $rowtbl = $style . <<<EOD
             <td class="al-c">kPa<br>{mmHg}</td>
             <td class="al-c">Max. 125.7 <br> { Max. 950 }</td>
             <td class="al-c">Limit is not set</td>
-            <td class="al-c">$actual[oil_run_high_idle]</td>
-            <td class="al-c">$actual[oil_run_high_idle_remark]</td>
+            <td class="al-c">$actual[boost_horsepower]</td>
+            <td class="al-c">$actual[boost_horsepower_remark]</td>
         </tr>
         <!-- Exhaust Temperature -->
         <!-- row 1 -->
@@ -236,8 +236,8 @@ $rowtbl = $style . <<<EOD
             <td class="al-c" rowspan="2">°C</td>
             <td class="al-c">Max 700</td>
             <td class="al-c">Max 750</td>
-            <td class="al-c">$actual[boost_horsepower]</td>
-            <td class="al-c">$actual[boost_horsepower_remark]</td>
+            <td class="al-c">$actual[exhaust_speed_range]</td>
+            <td class="al-c">$actual[exhaust_speed_range_remark]</td>
         </tr>
         <!-- row 2 -->
         <tr>
@@ -257,11 +257,11 @@ $rowtbl = $style . <<<EOD
             <td class="align-middle" colspan="3">Visual inspection of strainer</td>
             <td class="text-center">-</td>
             <td class="text-center" colspan="2">Must not clogged with metal dust </td>
-            <td class="align-middle text-center">
-                <?= $actual[visual_inspection] ?>
+            <td class="al-c">
+                $actual[visual_inspection]
             </td>
-            <td class="align-middle text-center">
-                <?= $actual[visual_inspection_remark] ?>
+            <td class="al-c">
+                $actual[visual_inspection_remark]
             </td>
         </tr>
 
@@ -270,11 +270,11 @@ $rowtbl = $style . <<<EOD
             <td class="align-middle" colspan="3">Check of thermo-label of center bearing</td>
             <td class="text-center">°C</td>
             <td class="text-center" colspan="2">120 °C range must not be black</td>
-            <td class="align-middle text-center">
-                <?= $actual[check_of_thermo] ?>
+            <td class="al-c">
+                $actual[check_of_thermo]
             </td>
-            <td class="align-middle text-center">
-                <?= $actual[check_of_thermo_remark] ?>
+            <td class="al-c">
+                $actual[check_of_thermo_remark]
             </td>
         </tr>
         <!-- WORK EQUIPMENT SPEED -->
@@ -297,11 +297,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle" rowspan="9">Sec</td>
                         <td class="text-center align-middle">6.7 - 8.3</td>
                         <td class="text-center align-middle">Max. 90</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[boom_raise] ?>
+                        <td class="al-c">
+                            $actual[boom_raise]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[boom_raise_remark] ?>
+                        <td class="al-c">
+                            $actual[boom_raise_remark]
                         </td>
                     </tr>
 
@@ -310,11 +310,11 @@ $rowtbl = $style . <<<EOD
                         <td class="align-middle">Boom LOWER</td>
                         <td class="text-center align-middle">4.8 - 5.8</td>
                         <td class="text-center align-middle">Max. 6.4</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[boom_lower] ?>
+                        <td class="al-c">
+                            $actual[boom_lower]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[boom_lower_remark] ?>
+                        <td class="al-c">
+                            $actual[boom_lower_remark]
                         </td>
                     </tr>
 
@@ -323,11 +323,11 @@ $rowtbl = $style . <<<EOD
                         <td class="align-middle">Arm IN</td>
                         <td class="text-center align-middle">6.7 - 8.3</td>
                         <td class="text-center align-middle">Max. 90</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[arm_in] ?>
+                        <td class="al-c">
+                            $actual[arm_in]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[arm_in_remark] ?>
+                        <td class="al-c">
+                            $actual[arm_in_remark]
                         </td>
                     </tr>
 
@@ -336,11 +336,11 @@ $rowtbl = $style . <<<EOD
                         <td class="align-middle">Arm OUT</td>
                         <td class="text-center align-middle">4.7 - 5.7</td>
                         <td class="text-center align-middle">Max. 6.2</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[arm_out] ?>
+                        <td class="al-c">
+                            $actual[arm_out]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[arm_out_remark] ?>
+                        <td class="al-c">
+                            $actual[arm_out_remark]
                         </td>
                     </tr>
 
@@ -349,11 +349,11 @@ $rowtbl = $style . <<<EOD
                         <td class="align-middle">Bucked CURL</td>
                         <td class="text-center align-middle">4.5 - 5.5</td>
                         <td class="text-center align-middle">Max. 6.0</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[bucket_curl] ?>
+                        <td class="al-c">
+                            $actual[bucket_curl]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[bucket_curl_remark] ?>
+                        <td class="al-c">
+                            $actual[bucket_curl_remark]
                         </td>
                     </tr>
 
@@ -362,11 +362,11 @@ $rowtbl = $style . <<<EOD
                         <td class="align-middle">Bucked DUMP</td>
                         <td class="text-center align-middle">3.5 - 4.3</td>
                         <td class="text-center align-middle">Max. 4.7</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[bucket_dump] ?>
+                        <td class="al-c">
+                            $actual[bucket_dump]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[bucket_dump_remark] ?>
+                        <td class="al-c">
+                            $actual[bucket_dump_remark]
                         </td>
                     </tr>
 
@@ -375,11 +375,11 @@ $rowtbl = $style . <<<EOD
                         <td class="align-middle">Swing 5 turns</td>
                         <td class="text-center align-middle">57.5 - 67.5</td>
                         <td class="text-center align-middle">Max. 70.0</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[swing_5_turns] ?>
+                        <td class="al-c">
+                            $actual[swing_5_turns]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[swing_5_turns_remark] ?>
+                        <td class="al-c">
+                            $actual[swing_5_turns_remark]
                         </td>
                     </tr>
 
@@ -388,11 +388,11 @@ $rowtbl = $style . <<<EOD
                         <td class="align-middle">Drive right track 5 turns</td>
                         <td class="text-center align-middle">90.5 - 110.5</td>
                         <td class="text-center align-middle">Max. 70.0</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[drive_right_track] ?>
+                        <td class="al-c">
+                            $actual[drive_right_track]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[drive_right_track_remark] ?>
+                        <td class="al-c">
+                            $actual[drive_right_track_remark]
                         </td>
                     </tr>
 
@@ -401,11 +401,11 @@ $rowtbl = $style . <<<EOD
                         <td class="align-middle">Drive left track 5 turns</td>
                         <td class="text-center align-middle">90.5 - 110.5</td>
                         <td class="text-center align-middle">Max. 70.0</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[drive_left_track] ?>
+                        <td class="al-c">
+                            $actual[drive_left_track]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[drive_left_track_remark] ?>
+                        <td class="al-c">
+                            $actual[drive_left_track_remark]
                         </td>
                     </tr>
 
@@ -423,11 +423,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle" rowspan="4">mm/15 min.</td>
                         <td class="text-center align-middle">Max. 650</td>
                         <td class="text-center align-middle">Max. 1000</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[whole_work] ?>
+                        <td class="al-c">
+                            $actual[whole_work]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[whole_work_remark] ?>
+                        <td class="al-c">
+                            $actual[whole_work_remark]
                         </td>
                     </tr>
                     <!-- Boom cylinder -->
@@ -436,11 +436,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">Cyl. Retraction.</td>
                         <td class="text-center align-middle">Max. 35</td>
                         <td class="text-center align-middle">Max. 50</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[boom_cylinder] ?>
+                        <td class="al-c">
+                            $actual[boom_cylinder]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[boom_cylinder_remark] ?>
+                        <td class="al-c">
+                            $actual[boom_cylinder_remark]
                         </td>
                     </tr>
                     <!-- Arm cylinder -->
@@ -449,11 +449,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">Cyl. Retraction.</td>
                         <td class="text-center align-middle">Max. 70</td>
                         <td class="text-center align-middle">Max. 105</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[arm_cylinder] ?>
+                        <td class="al-c">
+                            $actual[arm_cylinder]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[arm_cylinder_remark] ?>
+                        <td class="al-c">
+                            $actual[arm_cylinder_remark]
                         </td>
                     </tr>
                     <!-- Bucket cylinder -->
@@ -462,11 +462,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">Cyl. Retraction.</td>
                         <td class="text-center align-middle">Max. 15</td>
                         <td class="text-center align-middle">Max. 30</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[bucket_cylinder] ?>
+                        <td class="al-c">
+                            $actual[bucket_cylinder]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[bucket_cylinder_remark] ?>
+                        <td class="al-c">
+                            $actual[bucket_cylinder_remark]
                         </td>
                     </tr>
 
@@ -489,11 +489,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle" rowspan="4">Kg/cm2</td>
                         <td class="text-center align-middle">33 - 38</td>
                         <td class="text-center align-middle">31 - 38</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[control_pressure] ?>
+                        <td class="al-c">
+                            $actual[control_pressure]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[control_pressure_remark] ?>
+                        <td class="al-c">
+                            $actual[control_pressure_remark]
                         </td>
                     </tr>
 
@@ -504,11 +504,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">Control lever: neutral</td>
                         <td class="text-center align-middle">Min 13.1</td>
                         <td class="text-center align-middle">Min 13.1</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[jet_control_lever] ?>
+                        <td class="al-c">
+                            $actual[jet_control_lever]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[jet_control_lever_remark] ?>
+                        <td class="al-c">
+                            $actual[jet_control_lever_remark]
                         </td>
                     </tr>
 
@@ -517,11 +517,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">Right travel lever: stroke end. Track: turning with no load.</td>
                         <td class="text-center align-middle">Min 1.7</td>
                         <td class="text-center align-middle">Min 1.7</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[jet_right_travel_lever] ?>
+                        <td class="al-c">
+                            $actual[jet_right_travel_lever]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[jet_right_travel_lever_remark] ?>
+                        <td class="al-c">
+                            $actual[jet_right_travel_lever_remark]
                         </td>
                     </tr>
 
@@ -530,11 +530,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">Left travel lever: stroke end. Track: turning with no load.</td>
                         <td class="text-center align-middle">Min 1.7</td>
                         <td class="text-center align-middle">Min 1.7</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[jet_left_travel_lever] ?>
+                        <td class="al-c">
+                            $actual[jet_left_travel_lever]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[jet_left_travel_lever_remark] ?>
+                        <td class="al-c">
+                            $actual[jet_left_travel_lever_remark]
                         </td>
                     </tr>
 
@@ -546,11 +546,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle" rowspan="3">mA</td>
                         <td class="text-center align-middle">160 - 280</td>
                         <td class="text-center align-middle">160 - 280</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[pump_control_lever] ?>
+                        <td class="al-c">
+                            $actual[pump_control_lever]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[pump_control_lever_remark] ?>
+                        <td class="al-c">
+                            $actual[pump_control_lever_remark]
                         </td>
                     </tr>
 
@@ -559,11 +559,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">Right travel lever: stroke end. Track: turning with no load.</td>
                         <td class="text-center align-middle">P1: 390 - 510<br>P2: 615 - 735</td>
                         <td class="text-center align-middle">P1: 390 - 510<br>P2: 615 - 735</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[pump_right_travel_lever] ?>
+                        <td class="al-c">
+                            $actual[pump_right_travel_lever]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[pump_right_travel_lever_remark] ?>
+                        <td class="al-c">
+                            $actual[pump_right_travel_lever_remark]
                         </td>
                     </tr>
 
@@ -572,11 +572,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">Left travel lever: stroke end. Track: turning with no load.</td>
                         <td class="text-center align-middle">P1: 390 - 510<br>P2: 615 - 735</td>
                         <td class="text-center align-middle">P1: 390 - 510<br>P2: 615 - 735</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[pump_left_travel_lever] ?>
+                        <td class="al-c">
+                            $actual[pump_left_travel_lever]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[pump_left_travel_lever_remark] ?>
+                        <td class="al-c">
+                            $actual[pump_left_travel_lever_remark]
                         </td>
                     </tr>
 
@@ -588,11 +588,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle" rowspan="6">Kg/cm2</td>
                         <td class="text-center align-middle">290 - 310</td>
                         <td class="text-center align-middle">280 - 310</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p1f_boom_raise] ?>
+                        <td class="al-c">
+                            $actual[p1f_boom_raise]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p1f_boom_raise_remark] ?>
+                        <td class="al-c">
+                            $actual[p1f_boom_raise_remark]
                         </td>
                     </tr>
 
@@ -601,11 +601,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">Boom: raise relieve (heavy lift ON)</td>
                         <td class="text-center align-middle">317 - 337</td>
                         <td class="text-center align-middle">307 - 337</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p1f_boom_raise_heavy] ?>
+                        <td class="al-c">
+                            $actual[p1f_boom_raise_heavy]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p1f_boom_raise_heavy_remark] ?>
+                        <td class="al-c">
+                            $actual[p1f_boom_raise_heavy_remark]
                         </td>
                     </tr>
 
@@ -614,11 +614,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">Arm: In relieve</td>
                         <td class="text-center align-middle">290 - 310</td>
                         <td class="text-center align-middle">280 - 310</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p1f_arm_in] ?>
+                        <td class="al-c">
+                            $actual[p1f_arm_in]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p1f_arm_in_remark] ?>
+                        <td class="al-c">
+                            $actual[p1f_arm_in_remark]
                         </td>
                     </tr>
 
@@ -627,11 +627,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">Arm: Out relieve</td>
                         <td class="text-center align-middle">290 - 310</td>
                         <td class="text-center align-middle">280 - 310</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p1f_arm_out] ?>
+                        <td class="al-c">
+                            $actual[p1f_arm_out]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p1f_arm_out_remark] ?>
+                        <td class="al-c">
+                            $actual[p1f_arm_out_remark]
                         </td>
                     </tr>
 
@@ -640,11 +640,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">Bucket: Curl relieve</td>
                         <td class="text-center align-middle">290 - 310</td>
                         <td class="text-center align-middle">280 - 310</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p1f_bucket_curl] ?>
+                        <td class="al-c">
+                            $actual[p1f_bucket_curl]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p1f_bucket_curl_remark] ?>
+                        <td class="al-c">
+                            $actual[p1f_bucket_curl_remark]
                         </td>
                     </tr>
                     <!-- row 6 -->
@@ -652,11 +652,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">Swing: Relieve</td>
                         <td class="text-center align-middle">290 - 310</td>
                         <td class="text-center align-middle">280 - 310</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p1f_swing] ?>
+                        <td class="al-c">
+                            $actual[p1f_swing]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p1f_swing_remark] ?>
+                        <td class="al-c">
+                            $actual[p1f_swing_remark]
                         </td>
                     </tr>
 
@@ -673,11 +673,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle" rowspan="14">Kg/cm2</td>
                         <td class="text-center align-middle">290 - 310</td>
                         <td class="text-center align-middle">280 - 310</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p1r_boom_raise] ?>
+                        <td class="al-c">
+                            $actual[p1r_boom_raise]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p1r_boom_raise_remark] ?>
+                        <td class="al-c">
+                            $actual[p1r_boom_raise_remark]
                         </td>
                     </tr>
 
@@ -686,11 +686,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">Boom: raise relieve (heavy lift ON)</td>
                         <td class="text-center align-middle">317 - 337</td>
                         <td class="text-center align-middle">307 - 337</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p1r_boom_raise_heavy] ?>
+                        <td class="al-c">
+                            $actual[p1r_boom_raise_heavy]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p1r_boom_raise_heavy_remark] ?>
+                        <td class="al-c">
+                            $actual[p1r_boom_raise_heavy_remark]
                         </td>
                     </tr>
 
@@ -699,11 +699,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">Arm: In relieve</td>
                         <td class="text-center align-middle">290 - 310</td>
                         <td class="text-center align-middle">280 - 310</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p1r_arm_in] ?>
+                        <td class="al-c">
+                            $actual[p1r_arm_in]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p1r_arm_in_remark] ?>
+                        <td class="al-c">
+                            $actual[p1r_arm_in_remark]
                         </td>
                     </tr>
 
@@ -712,11 +712,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">Arm: Out relieve</td>
                         <td class="text-center align-middle">290 - 310</td>
                         <td class="text-center align-middle">280 - 310</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p1r_arm_out] ?>
+                        <td class="al-c">
+                            $actual[p1r_arm_out]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p1r_arm_out_remark] ?>
+                        <td class="al-c">
+                            $actual[p1r_arm_out_remark]
                         </td>
                     </tr>
 
@@ -725,11 +725,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">Bucket: Curl relieve</td>
                         <td class="text-center align-middle">290 - 310</td>
                         <td class="text-center align-middle">280 - 310</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p1r_bucket_curl] ?>
+                        <td class="al-c">
+                            $actual[p1r_bucket_curl]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p1r_bucket_curl] ?>
+                        <td class="al-c">
+                            $actual[p1r_bucket_curl]
                         </td>
                     </tr>
 
@@ -740,11 +740,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">Boom: raise relieve (normal)</td>
                         <td class="text-center align-middle">290 - 310</td>
                         <td class="text-center align-middle">280 - 310</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p2f_boom_raise] ?>
+                        <td class="al-c">
+                            $actual[p2f_boom_raise]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p2f_boom_raise_remark] ?>
+                        <td class="al-c">
+                            $actual[p2f_boom_raise_remark]
                         </td>
                     </tr>
 
@@ -753,11 +753,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">Boom: raise relieve (heavy lift ON)</td>
                         <td class="text-center align-middle">317 - 337</td>
                         <td class="text-center align-middle">307 - 337</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p2f_boom_raise_heavy] ?>
+                        <td class="al-c">
+                            $actual[p2f_boom_raise_heavy]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p2f_boom_raise_heavy_remark] ?>
+                        <td class="al-c">
+                            $actual[p2f_boom_raise_heavy_remark]
                         </td>
                     </tr>
 
@@ -766,11 +766,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">Arm: In relieve</td>
                         <td class="text-center align-middle">290 - 310</td>
                         <td class="text-center align-middle">280 - 310</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p2f_arm_in] ?>
+                        <td class="al-c">
+                            $actual[p2f_arm_in]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p2f_arm_in_remark] ?>
+                        <td class="al-c">
+                            $actual[p2f_arm_in_remark]
                         </td>
                     </tr>
 
@@ -779,11 +779,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">Arm: Out relieve</td>
                         <td class="text-center align-middle">290 - 310</td>
                         <td class="text-center align-middle">280 - 310</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p2f_arm_out] ?>
+                        <td class="al-c">
+                            $actual[p2f_arm_out]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p2f_arm_out_remark] ?>
+                        <td class="al-c">
+                            $actual[p2f_arm_out_remark]
                         </td>
                     </tr>
 
@@ -792,11 +792,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">Bucket: Curl relieve</td>
                         <td class="text-center align-middle">290 - 310</td>
                         <td class="text-center align-middle">280 - 310</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p2f_bucket_curl] ?>
+                        <td class="al-c">
+                            $actual[p2f_bucket_curl]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p2f_bucket_curl_remark] ?>
+                        <td class="al-c">
+                            $actual[p2f_bucket_curl_remark]
                         </td>
                     </tr>
 
@@ -807,11 +807,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">Boom: raise relieve (heavy lift ON)</td>
                         <td class="text-center align-middle">317 - 337</td>
                         <td class="text-center align-middle">307 - 337</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p2r_boom_raise_heavy] ?>
+                        <td class="al-c">
+                            $actual[p2r_boom_raise_heavy]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p2r_boom_raise_heavy_remark] ?>
+                        <td class="al-c">
+                            $actual[p2r_boom_raise_heavy_remark]
                         </td>
                     </tr>
 
@@ -820,11 +820,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">Arm: In relieve</td>
                         <td class="text-center align-middle">290 - 310</td>
                         <td class="text-center align-middle">280 - 310</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p2r_arm_in] ?>
+                        <td class="al-c">
+                            $actual[p2r_arm_in]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p2r_arm_in_remark] ?>
+                        <td class="al-c">
+                            $actual[p2r_arm_in_remark]
                         </td>
                     </tr>
 
@@ -833,11 +833,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">Arm: Out relieve</td>
                         <td class="text-center align-middle">290 - 310</td>
                         <td class="text-center align-middle">280 - 310</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p2r_arm_out] ?>
+                        <td class="al-c">
+                            $actual[p2r_arm_out]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p2r_arm_out_remark] ?>
+                        <td class="al-c">
+                            $actual[p2r_arm_out_remark]
                         </td>
                     </tr>
 
@@ -846,11 +846,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">Bucket: Curl relieve</td>
                         <td class="text-center align-middle">290 - 310</td>
                         <td class="text-center align-middle">280 - 310</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p2r_bucket_curl] ?>
+                        <td class="al-c">
+                            $actual[p2r_bucket_curl]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[p2r_bucket_curl_remark] ?>
+                        <td class="al-c">
+                            $actual[p2r_bucket_curl_remark]
                         </td>
                     </tr>
 
@@ -861,11 +861,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle" rowspan="2">mA</td>
                         <td class="text-center align-middle">STD: 575-675<br>55⁰ C: 505-605</td>
                         <td class="text-center align-middle">STD: 575-675<br>55⁰ C: 505-605</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[fan_pump_radiator] ?>
+                        <td class="al-c">
+                            $actual[fan_pump_radiator]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[fan_pump_radiator_remark] ?>
+                        <td class="al-c">
+                            $actual[fan_pump_radiator_remark]
                         </td>
                     </tr>
 
@@ -875,11 +875,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">Control lever: neutral</td>
                         <td class="text-center align-middle">STD: 600-700<br>55⁰ C: 505-605</td>
                         <td class="text-center align-middle">STD: 600-700<br>55⁰ C: 505-605</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[fan_pump_oil] ?>
+                        <td class="al-c">
+                            $actual[fan_pump_oil]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[fan_pump_oil_remark] ?>
+                        <td class="al-c">
+                            $actual[fan_pump_oil_remark]
                         </td>
                     </tr>
 
@@ -890,11 +890,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle" rowspan="2">Rpm</td>
                         <td class="text-center align-middle">STD: 790-890<br>55⁰ C: 1050-1150</td>
                         <td class="text-center align-middle">STD: 790-890<br>55⁰ C: 1050-1150</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[fan_speed_radiator] ?>
+                        <td class="al-c">
+                            $actual[fan_speed_radiator]
                         </td>
-                        <td>
-                            <?= $actual[fan_speed_radiator_remark] ?>
+                        <td class="al-c">
+                            $actual[fan_speed_radiator_remark]
                         </td>
                     </tr>
 
@@ -904,11 +904,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">Control lever: neutral</td>
                         <td class="text-center align-middle">STD: 710-810<br>55⁰ C: 1050-1150</td>
                         <td class="text-center align-middle">STD: 710-810<br>55⁰ C: 1050-1150</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[fan_speed_oil] ?>
+                        <td class="al-c">
+                            $actual[fan_speed_oil]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[fan_speed_oil_remark] ?>
+                        <td class="al-c">
+                            $actual[fan_speed_oil_remark]
                         </td>
                     </tr>
 
@@ -922,11 +922,11 @@ $rowtbl = $style . <<<EOD
                         <td class="text-center align-middle">⁰C</td>
                         <td class="text-center align-middle">Max 100 ⁰ C</td>
                         <td class="text-center align-middle">Max 100 ⁰ C</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[hydraulic_oil_temp] ?>
+                        <td class="al-c">
+                            $actual[hydraulic_oil_temp]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[hydraulic_oil_temp_remark] ?>
+                        <td class="al-c">
+                            $actual[hydraulic_oil_temp_remark]
                         </td>
                     </tr>
 
@@ -934,11 +934,11 @@ $rowtbl = $style . <<<EOD
                     <tr>
                         <td class="align-middle" colspan="4">Visual check of hydraulic tank strainer.</td>
                         <td class="align-middle" colspan="2">There must not be excessive metal powder or foreignj matter.</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[visual_check_hydraulic] ?>
+                        <td class="al-c">
+                            $actual[visual_check_hydraulic]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[visual_check_hydraulic_remark] ?>
+                        <td class="al-c">
+                            $actual[visual_check_hydraulic_remark]
                         </td>
                     </tr>
 
@@ -952,15 +952,15 @@ $rowtbl = $style . <<<EOD
                     <!-- Drain Plug -->
                     <tr>
                         <td class="align-middle">Drain Plug</td>
-                        <td class="align-middle text-center" rowspan="2" colspan="3">
+                        <td class="al-c" rowspan="2" colspan="3">
                             Visual check, ngine stopped
                         </td>
                         <td class="text-center align-middle" colspan="2">No excessive Metalic Powder</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[drive_drain_plug] ?>
+                        <td class="al-c">
+                            $actual[drive_drain_plug]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[drive_drain_plug_remark] ?>
+                        <td class="al-c">
+                            $actual[drive_drain_plug_remark]
                         </td>
                     </tr>
 
@@ -968,11 +968,11 @@ $rowtbl = $style . <<<EOD
                     <tr>
                         <td class="align-middle">Oil Leak</td>
                         <td class="text-center align-middle" colspan="2">No leaked </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[drive_oil_leak] ?>
+                        <td class="al-c">
+                            $actual[drive_oil_leak]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[drive_oil_leak_remark] ?>
+                        <td class="al-c">
+                            $actual[drive_oil_leak_remark]
                         </td>
                     </tr>
 
@@ -981,11 +981,11 @@ $rowtbl = $style . <<<EOD
                         <td class="align-middle">Abnormal Noise</td>
                         <td class="text-center align-middle" colspan="3">travel raise and oparated track </td>
                         <td class="text-center align-middle" colspan="2">no abnormal noise</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[drive_abnormal_noise] ?>
+                        <td class="al-c">
+                            $actual[drive_abnormal_noise]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[drive_abnormal_noise_remark] ?>
+                        <td class="al-c">
+                            $actual[drive_abnormal_noise_remark]
                         </td>
                     </tr>
 
@@ -1000,15 +1000,15 @@ $rowtbl = $style . <<<EOD
                     <!-- Drain Plug -->
                     <tr>
                         <td class="align-middle">Drain Plug</td>
-                        <td class="align-middle text-center" rowspan="2" colspan="3">
+                        <td class="al-c" rowspan="2" colspan="3">
                             Visual check, ngine stopped
                         </td>
                         <td class="text-center align-middle" colspan="2">No excessive Metalic Powder</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[swing_drain_plug] ?>
+                        <td class="al-c">
+                            $actual[swing_drain_plug]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[swing_drain_plug_remark] ?>
+                        <td class="al-c">
+                            $actual[swing_drain_plug_remark]
                         </td>
                     </tr>
 
@@ -1016,11 +1016,11 @@ $rowtbl = $style . <<<EOD
                     <tr>
                         <td class="align-middle">Oil Leak</td>
                         <td class="text-center align-middle" colspan="2">No leaked </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[swing_oil_leak] ?>
+                        <td class="al-c">
+                            $actual[swing_oil_leak]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[swing_oil_leak_remark] ?>
+                        <td class="al-c">
+                            $actual[swing_oil_leak_remark]
                         </td>
                     </tr>
 
@@ -1034,17 +1034,17 @@ $rowtbl = $style . <<<EOD
                     <!-- Axial play -->
                     <tr>
                         <td class="align-middle">Axial play</td>
-                        <td class="align-middle text-center" colspan="2">
+                        <td class="al-c" colspan="2">
                             Play outer circle and inner circle bearing
                         </td>
                         <td class="text-center align-middle">mm</td>
                         <td class="text-center align-middle">0.5 - 1.5</td>
                         <td class="text-center align-middle">2.0</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[axial_play] ?>
+                        <td class="al-c">
+                            $actual[axial_play]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[axial_play_remark] ?>
+                        <td class="al-c">
+                            $actual[axial_play_remark]
                         </td>
                     </tr>
 
@@ -1059,11 +1059,11 @@ $rowtbl = $style . <<<EOD
                         <td>Instrument panel</td>
                         <td colspan="2">Completeness and function</td>
                         <td colspan="3">Complete and normal function</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[instrument_panel] ?>
+                        <td class="al-c">
+                            $actual[instrument_panel]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[instrument_panel_remark] ?>
+                        <td class="al-c">
+                            $actual[instrument_panel_remark]
                         </td>
                     </tr>
                     <!-- Starting system -->
@@ -1071,11 +1071,11 @@ $rowtbl = $style . <<<EOD
                         <td>Starting system</td>
                         <td colspan="2">Condition and function</td>
                         <td colspan="3">Good installation and normal function</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[starting_system] ?>
+                        <td class="al-c">
+                            $actual[starting_system]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[starting_system_remark] ?>
+                        <td class="al-c">
+                            $actual[starting_system_remark]
                         </td>
                     </tr>
                     <!-- Chargin System -->
@@ -1083,11 +1083,11 @@ $rowtbl = $style . <<<EOD
                         <td>Chargin System</td>
                         <td colspan="2">Condition and function</td>
                         <td colspan="3">Good installation and normal function</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[charging_system] ?>
+                        <td class="al-c">
+                            $actual[charging_system]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[charging_system_remark] ?>
+                        <td class="al-c">
+                            $actual[charging_system_remark]
                         </td>
                     </tr>
                     <!-- Lighting -->
@@ -1095,11 +1095,11 @@ $rowtbl = $style . <<<EOD
                         <td>Lighting</td>
                         <td colspan="2">Condition and function</td>
                         <td colspan="3">Complete and normal function</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[lighting] ?>
+                        <td class="al-c">
+                            $actual[lighting]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[lighting_remark] ?>
+                        <td class="al-c">
+                            $actual[lighting_remark]
                         </td>
                     </tr>
                     <!-- Battery -->
@@ -1107,11 +1107,11 @@ $rowtbl = $style . <<<EOD
                         <td>Battery</td>
                         <td colspan="2">Condition, electrolite level, specific grafity and load test. </td>
                         <td colspan="3">Good condition</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[battery] ?>
+                        <td class="al-c">
+                            $actual[battery]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[battery_remark] ?>
+                        <td class="al-c">
+                            $actual[battery_remark]
                         </td>
                     </tr>
                     <!-- Wiring harness -->
@@ -1119,11 +1119,11 @@ $rowtbl = $style . <<<EOD
                         <td>Wiring harness</td>
                         <td colspan="2">Condition, connection, clamping</td>
                         <td colspan="3">Good installation and condition</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[wiring_harness] ?>
+                        <td class="al-c">
+                            $actual[wiring_harness]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[wiring_harness_remark] ?>
+                        <td class="al-c">
+                            $actual[wiring_harness_remark]
                         </td>
                     </tr>
                     <!-- VHMS/Komtrak -->
@@ -1131,11 +1131,11 @@ $rowtbl = $style . <<<EOD
                         <td>VHMS/Komtrak</td>
                         <td colspan="2">Condition and function</td>
                         <td colspan="3">Good condition and function</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[vhms_komtrak] ?>
+                        <td class="al-c">
+                            $actual[vhms_komtrak]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[vhms_komtrak_remark] ?>
+                        <td class="al-c">
+                            $actual[vhms_komtrak_remark]
                         </td>
                     </tr>
                     <!-- OPTIONAL EQUIPMENT -->
@@ -1149,11 +1149,11 @@ $rowtbl = $style . <<<EOD
                         <td>Emergency shutdown</td>
                         <td colspan="2">Completeness, condition and function</td>
                         <td colspan="3">Complete and normal function</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[emergency_shutdown] ?>
+                        <td class="al-c">
+                            $actual[emergency_shutdown]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[emergency_shutdown_remark] ?>
+                        <td class="al-c">
+                            $actual[emergency_shutdown_remark]
                         </td>
                     </tr>
                     <!-- Logout Switch -->
@@ -1161,11 +1161,11 @@ $rowtbl = $style . <<<EOD
                         <td>Logout Switch</td>
                         <td colspan="2">Completeness, condition and function</td>
                         <td colspan="3">Complete and normal function</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[logout_switch] ?>
+                        <td class="al-c">
+                            $actual[logout_switch]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[logout_switch_remark] ?>
+                        <td class="al-c">
+                            $actual[logout_switch_remark]
                         </td>
                     </tr>
                     <!-- PDU -->
@@ -1173,11 +1173,11 @@ $rowtbl = $style . <<<EOD
                         <td>PDU</td>
                         <td colspan="2">Completeness, condition and function</td>
                         <td colspan="3">Complete and normal function</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[pdu] ?>
+                        <td class="al-c">
+                            $actual[pdu]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[pdu_remark] ?>
+                        <td class="al-c">
+                            $actual[pdu_remark]
                         </td>
                     </tr>
                     <!-- Autolube -->
@@ -1185,11 +1185,11 @@ $rowtbl = $style . <<<EOD
                         <td>Autolube</td>
                         <td colspan="2">Completeness, condition and function</td>
                         <td colspan="3">Complete and normal function</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[autolube] ?>
+                        <td class="al-c">
+                            $actual[autolube]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[autolube_remark] ?>
+                        <td class="al-c">
+                            $actual[autolube_remark]
                         </td>
                     </tr>
                     <!-- Fire suppression -->
@@ -1197,11 +1197,11 @@ $rowtbl = $style . <<<EOD
                         <td>Fire suppression</td>
                         <td colspan="2">Completeness, condition and function</td>
                         <td colspan="3">Complete and normal function</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[fire_suppression] ?>
+                        <td class="al-c">
+                            $actual[fire_suppression]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[fire_suppression_remark] ?>
+                        <td class="al-c">
+                            $actual[fire_suppression_remark]
                         </td>
                     </tr>
                     <!-- Fatique warning -->
@@ -1209,11 +1209,11 @@ $rowtbl = $style . <<<EOD
                         <td>Fatique warning</td>
                         <td colspan="2">Completeness, condition and function</td>
                         <td colspan="3">Complete and normal function</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[fatique_warning] ?>
+                        <td class="al-c">
+                            $actual[fatique_warning]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[fatique_warning_remark] ?>
+                        <td class="al-c">
+                            $actual[fatique_warning_remark]
                         </td>
                     </tr>
                     <!-- Backup alarm -->
@@ -1221,11 +1221,11 @@ $rowtbl = $style . <<<EOD
                         <td>Backup alarm</td>
                         <td colspan="2">Completeness, condition and function</td>
                         <td colspan="3">Complete and normal function</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[backup_alarm] ?>
+                        <td class="al-c">
+                            $actual[backup_alarm]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[backup_alarm_remark] ?>
+                        <td class="al-c">
+                            $actual[backup_alarm_remark]
                         </td>
                     </tr>
                     <!-- GENERAL MACHINE CONDITION -->
@@ -1239,11 +1239,11 @@ $rowtbl = $style . <<<EOD
                         <td>Attachment & Frame</td>
                         <td colspan="2">Completeness, worn and crack detection</td>
                         <td colspan="3">No crack</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[attachment_frame] ?>
+                        <td class="al-c">
+                            $actual[attachment_frame]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[attachment_frame_remark] ?>
+                        <td class="al-c">
+                            $actual[attachment_frame_remark]
                         </td>
                     </tr>
                     <!-- Machine -->
@@ -1251,11 +1251,11 @@ $rowtbl = $style . <<<EOD
                         <td>Machine</td>
                         <td colspan="2">Cleaness, wear, completeness and condition</td>
                         <td colspan="3">Complete and normal condition</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[machine] ?>
+                        <td class="al-c">
+                            $actual[machine]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[machine_remark] ?>
+                        <td class="al-c">
+                            $actual[machine_remark]
                         </td>
                     </tr>
                     <!-- Undercarriage -->
@@ -1263,11 +1263,11 @@ $rowtbl = $style . <<<EOD
                         <td>Undercarriage</td>
                         <td colspan="2">Cleaness, wear, completeness and condition</td>
                         <td colspan="3">Complete and normal condition</td>
-                        <td class="align-middle text-center">
-                            <?= $actual[undercarriage] ?>
+                        <td class="al-c">
+                            $actual[undercarriage]
                         </td>
-                        <td class="align-middle text-center">
-                            <?= $actual[undercarriage_remark] ?>
+                        <td class="al-c">
+                            $actual[undercarriage_remark]
                         </td>
                     </tr>
     </tbody>

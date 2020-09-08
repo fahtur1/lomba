@@ -1008,19 +1008,6 @@ $rowtbl = $style . <<<EOD
                             $actual[machine_remark]
                         </td>
                     </tr>
-                    <!-- Undercarriage -->
-                    <tr>
-                        <td>Undercarriage</td>
-                        <td colspan="2">Cleaness, wear, completeness and condition</td>
-                        <td colspan="3">Complete and normal condition</td>
-                        <td class="align-middle text-center">
-                            $actual[undercarriage]
-                        </td>
-                        <td class="align-middle text-center">
-                            $actual[undercarriage_remark]
-                        </td>
-                    </tr>
-
     </tbody>
 </table>
 <br>
