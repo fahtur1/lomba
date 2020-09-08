@@ -71,6 +71,9 @@ $style = <<<EOD
     .ft-md {
         font-size: 13rem;
     }
+    .ft-bold {
+        font-weight: bold;
+    }
     .al-c {
         text-align: center;
     }
@@ -82,6 +85,9 @@ $style = <<<EOD
         font-weight: bold;
         font-style: italic;
     }
+    br {
+        line-height: 10px;
+    }
 </style>
 EOD;
 
@@ -91,7 +97,7 @@ $src = base_url('assets/img/logo.jpeg');
 // header table
 $headtbl = $style . <<<EOD
 <img src="$src" width="200">
-<br>
+<br><br>
 <table border="1" class="table-header">
     <tr>
         <td class="ft-bg al-c"><b>QA3</b></td>
@@ -99,7 +105,7 @@ $headtbl = $style . <<<EOD
     </tr>
     <tr>
         <td rowspan="3" class="ft-bg al-c"><b>MCR</b></td>
-        <td rowspan="3"><div>&nbsp;</div><b>INSPECTOR / LEADER</b></td>
+        <td class="ft-bold" rowspan="3"><br><br><br> INSPECTOR/LEADER</td>
         <td width="15%" class="align-left"> Name</td>
         <td width="45%"> $actual[leader_name]</td>
     </tr>
@@ -113,7 +119,7 @@ $headtbl = $style . <<<EOD
     </tr>
     <tr>
         <td class="al-c ft-md"><b>$actual[model_name]</b></td>
-        <td><b> Branch / Site</b></td>
+        <td class="ft-bold"> Branch/Site</td>
         <td colspan="3" width="60%"> $actual[actual_branch]</td>
     </tr>
 </table>
@@ -123,7 +129,7 @@ EOD;
 $rowtbl = $style . <<<EOD
 <table class="table" width="100%" cellpadding="2" border="1">
     <tbody>
-    <tr class="al-c bg-heading">
+        <tr class="al-c bg-heading">
             <th><b>ITEM</b></th>
             <th colspan="2"><b>CONDITION</b></th>
             <th><b>UNIT</b></th>
@@ -138,102 +144,88 @@ $rowtbl = $style . <<<EOD
         <!-- Engine Speed -->
         <!-- row 1 -->
         <tr>
-            <td class="" rowspan="5">
-                Engine Speed (in DH Mode)
-            </td>
-            <td colspan="2" class="">
-                Engine: Low idle
-            </td>
-            <td class="al-c" rowspan="5">Rpm</td>
+            <td rowspan="5"><br><br><br><br><br><br><br>Engine Speed<br><br>(in DH Mode)</td>
+            <td colspan="2">Engine: Low idle</td>
+            <td class="al-c" rowspan="5"><br><br><br><br><br><br><br><br>Rpm</td>
             <td colspan="2" class="al-c">775 - 875</td>
             <td class="al-c">$actual[engine_low_idle]</td>
             <td class="al-c">$actual[engine_low_idle_remark]</td>
         </tr>
         <!-- row 2 -->
         <tr>
-            <td colspan="2">
-                Engine: High idle
-            </td>
+            <td colspan="2">Engine: High idle</td>
             <td class="al-c" colspan="2">1930 - 2030</td>
             <td class="al-c">$actual[engine_low_idle]</td>
-            <td class="al-c">$actual[engine_low_idle]</td>
+            <td class="al-c">$actual[engine_low_idle_remark]</td>
         </tr>
         <!-- row 3 -->
         <tr>
-            <td colspan="2">
-                Engine: Full throttle. Boom: raise relieve.
-            </td>
-            <td class="al-c" colspan="2">1680 - 1880</td>
-            <td class="al-c">$actual[engine_high_idle]</td>
-            <td class="al-c">$actual[engine_high_idle_remark]</td>
+            <td colspan="2">Engine: Full throttle. Boom: raise relieve.</td>
+            <td class="al-c" colspan="2"><br><br>1680 - 1880</td>
+            <td class="al-c"><br><br>$actual[engine_high_idle]</td>
+            <td class="al-c"><br><br>$actual[engine_high_idle_remark]</td>
         </tr>
         <!-- row 4 -->
         <tr>
-            <td colspan="2">
-                Engine: Full throttle. <br>Boom: raise relieve + Heavy lift : ON.
-            </td>
-            <td class="al-c" colspan="2">1680 - 1880</td>
-            <td class="al-c">$actual[engine_full_throttle_raise]</td>
-            <td class="al-c">$actual[engine_full_throttle_raise_remark]</td>
+            <td colspan="2">Engine: Full throttle. Boom: raise relieve + Heavy lift : ON</td>
+            <td class="al-c" colspan="2"><br><br>1680 - 1880</td>
+            <td class="al-c"><br><br>$actual[engine_full_throttle_raise]</td>
+            <td class="al-c"><br><br>$actual[engine_full_throttle_raise_remark]</td>
         </tr>
-
         <!-- row 6 -->
         <tr>
-            <td colspan="2" class="al-c">
-                Auto decelaration switch: ON. Fuel control dial: Max. <br>Control Valve: neutral
-            </td>
-            <td class="al-c" colspan="2">1300 - 1500</td>
-            <td class="al-c">$actual[engine_full_throttle_heavy]</td>
-            <td class="al-c">$actual[engine_full_throttle_heavy_remark]</td>
+            <td colspan="2">Auto decelaration switch: ON. Fuel control dial: Max. Control Valve: neutral</td>
+            <td class="al-c" colspan="2"><br><br><br>1300 - 1500</td>
+            <td class="al-c"><br><br><br>$actual[engine_full_throttle_heavy]</td>
+            <td class="al-c"><br><br><br>$actual[engine_full_throttle_heavy_remark]</td>
         </tr>
-
         <!-- Blow-by Press -->
         <!-- row 1 -->
         <tr>
             <td>Blow-by Pressure</td>
-            <td colspan="2">At rated horsepower. </td>
-            <td class="al-c">kPa<br>{mmH2O}</td>
-            <td>Max. 2.94 <br> { Max. 300 }</td>
-            <td>Max. 5.88 <br> { Max. 600 }</td>
-            <td class="al-c">$actual[engine_control_valve_neutral]</td>
-            <td class="al-c">$actual[engine_control_valve_neutral_remark]</td>
+            <td colspan="2"><br><br>At rated horsepower. </td>
+            <td class="al-c">kPa<br><br>{mmH2O}</td>
+            <td class="al-c">Max. 2.94<br><br>{Max. 300}</td>
+            <td class="al-c">Max. 5.88<br><br>{Max. 600}</td>
+            <td class="al-c"><br><br>$actual[engine_control_valve_neutral]</td>
+            <td class="al-c"><br><br>$actual[engine_control_valve_neutral_remark]</td>
         </tr>
         <!-- Engine oil -->
         <!-- row 1 -->
         <tr>
-            <td class="" rowspan="2">Engine oil Pressure.</td>
-            <td colspan="2" class="">Run engine at low idle (SAE30) </td>
-            <td class="al-c" rowspan="2">Mpa <br> { kg/cm2 }</td>
-            <td class="al-c">Min 0.08 <br> { Min 0.8 }</td>
-            <td class="al-c">Min 0.06 <br> { Min 0.06 }</td>
-            <td class="al-c">$actual[blow_horsepower]</td>
-            <td class="al-c">$actual[blow_horsepower_remark]</td>
+            <td rowspan="2">Engine oil Pressure.</td>
+            <td colspan="2">Run engine at low idle (SAE30) </td>
+            <td class="al-c" rowspan="2"><br><br><br>Mpa<br><br>{kg/cm2}</td>
+            <td class="al-c">Min 0.08<br><br>{Min 0.8}</td>
+            <td class="al-c">Min 0.06<br><br>{Min 0.06}</td>
+            <td class="al-c"><br><br>$actual[blow_horsepower]</td>
+            <td class="al-c"><br><br>$actual[blow_horsepower_remark]</td>
         </tr>
         <!-- row 2 -->
         <tr>
-            <td colspan="2" class="">Run engine at high idle (SAE30)</td>
-            <td class="al-c">0.29 - 0.44 <br> { 3.0 - 4.5 }</td>
-            <td class="al-c">Min 0.2 <br> { Min 2.0 }</td>
-            <td class="al-c">$actual[oil_run_low_idle]</td>
-            <td class="al-c">$actual[oil_run_low_idle_remark]</td>
+            <td colspan="2">Run engine at high idle (SAE30)</td>
+            <td class="al-c">0.29 - 0.44<br><br>{3.0 - 4.5}</td>
+            <td class="al-c">Min 0.2<br><br>{Min 2.0}</td>
+            <td class="al-c"><br><br>$actual[oil_run_low_idle]</td>
+            <td class="al-c"><br><br>$actual[oil_run_low_idle_remark]</td>
         </tr>
         <!-- Boost Press -->
         <!-- row 1 -->
         <tr>
             <td>Boost Pressure</td>
-            <td colspan="2">At rated horsepower. </td>
-            <td class="al-c">kPa<br>{mmHg}</td>
-            <td class="al-c">Max. 125.7 <br> { Max. 950 }</td>
-            <td class="al-c">Limit is not set</td>
-            <td class="al-c">$actual[oil_run_high_idle]</td>
-            <td class="al-c">$actual[oil_run_high_idle_remark]</td>
+            <td colspan="2"><br><br>At rated horsepower. </td>
+            <td class="al-c">kPa<br><br>{mmHg}</td>
+            <td class="al-c">Max. 125.7<br><br>{ Max. 950 }</td>
+            <td class="al-c"><br><br>Limit is not set</td>
+            <td class="al-c"><br><br>$actual[oil_run_high_idle]</td>
+            <td class="al-c"><br><br>$actual[oil_run_high_idle_remark]</td>
         </tr>
         <!-- Exhaust Temperature -->
         <!-- row 1 -->
         <tr>
-            <td class="" rowspan="2">At all speed range.</td>
-            <td class="" colspan="2">Ambient Temp.</td>
-            <td class="al-c" rowspan="2">°C</td>
+            <td rowspan="2">At all speed range.</td>
+            <td colspan="2">Ambient Temp.</td>
+            <td class="al-c" rowspan="2"><br><br>°C</td>
             <td class="al-c">Max 700</td>
             <td class="al-c">Max 750</td>
             <td class="al-c">$actual[boost_horsepower]</td>
@@ -241,28 +233,23 @@ $rowtbl = $style . <<<EOD
         </tr>
         <!-- row 2 -->
         <tr>
-            <td class="" colspan="2">Ambient temperature</td>
+            <td colspan="2">Ambient temperature</td>
             <td class="al-c">20</td>
             <td class="al-c">20</td>
             <td class="al-c">$actual[exhaust_ambient_temp]</td>
             <td class="al-c">$actual[exhaust_ambient_temp_remark]</td>
         </tr>
-        </tbody>
+    </tbody>
 </table>
-<br>
+<br><br>
 <table width="100%">
-    <br>
-    <br>
-    <br>
+    <br><br><br>
     <tr class="al-c">
         <td>Approved by :</td>
         <td>Acknowledge by:</td>
         <td>Prepared by:</td>
     </tr>
-    <br>
-    <br>
-    <br>
-    <br>
+    <br><br><br><br><br><br><br><br>
     <tr class="al-c">
         <td>( UT SDH )</td>
         <td>( UT Supervisor )</td>

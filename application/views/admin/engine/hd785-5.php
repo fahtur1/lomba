@@ -12,7 +12,7 @@
                     <?= form_error('name', '<small class="text-danger">', '</small>') ?>
                 </div>
                 <div class="form-group">
-                    <label>Plan Date</label>
+                    <label>Actual Date</label>
                     <input type="date" id="date" name="date" value="<?= set_value('date') ?>" max="2050-12-31" min="<?= date('Y-m-d') ?>" class="form-control">
                     <?= form_error('date', '<small class="text-danger">', '</small>') ?>
                 </div>
