@@ -71,6 +71,9 @@ $style = <<<EOD
     .ft-md {
         font-size: 13rem;
     }
+    .ft-bold {
+        font-weight: bold;
+    }
     .al-c {
         text-align: center;
     }
@@ -82,6 +85,9 @@ $style = <<<EOD
         font-weight: bold;
         font-style: italic;
     }
+    br {
+        line-height: 10px;
+    }
 </style>
 EOD;
 
@@ -91,7 +97,7 @@ $src = base_url('assets/img/logo.jpeg');
 // header table
 $headtbl = $style . <<<EOD
 <img src="$src" width="200">
-<br>
+<br><br>
 <table border="1" class="table-header">
     <tr>
         <td class="ft-bg al-c"><b>QA3</b></td>
@@ -99,7 +105,7 @@ $headtbl = $style . <<<EOD
     </tr>
     <tr>
         <td rowspan="3" class="ft-bg al-c"><b>MCR</b></td>
-        <td rowspan="3"><div>&nbsp;</div><b>INSPECTOR / LEADER</b></td>
+        <td class="ft-bold" rowspan="3"><br><br><br> INSPECTOR/LEADER</td>
         <td width="15%" class="align-left"> Name</td>
         <td width="45%"> $actual[leader_name]</td>
     </tr>
@@ -113,7 +119,7 @@ $headtbl = $style . <<<EOD
     </tr>
     <tr>
         <td class="al-c ft-md"><b>$actual[model_name]</b></td>
-        <td><b> Branch / Site</b></td>
+        <td class="ft-bold"> Branch/Site</td>
         <td colspan="3" width="60%"> $actual[actual_branch]</td>
     </tr>
 </table>
@@ -1135,26 +1141,20 @@ $rowtbl = $style . <<<EOD
     </tr>
  </tbody>
 </table>
-<br>
+<br><br>
 <table width="100%">
-    <br>
-    <br>
-    <br>
+    <br><br><br>
     <tr class="al-c">
         <td>Approved by :</td>
         <td>Acknowledge by:</td>
         <td>Prepared by:</td>
     </tr>
-    <br>
-    <br>
-    <br>
-    <br>
+    <br><br><br><br><br><br><br><br>
     <tr class="al-c">
         <td>( UT SDH )</td>
         <td>( UT Supervisor )</td>
         <td>( UT Mechanic )</td>
     </tr>
-    
 </table>
 EOD;
 
