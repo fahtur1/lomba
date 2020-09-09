@@ -97,7 +97,7 @@ $src = base_url('assets/img/logo.jpeg');
 // header table
 $headtbl = $style . <<<EOD
 <img src="$src" width="200">
-<br><br>
+<br>
 <table border="1" class="table-header">
     <tr>
         <td class="ft-bg al-c"><b>QA3</b></td>
@@ -105,7 +105,7 @@ $headtbl = $style . <<<EOD
     </tr>
     <tr>
         <td rowspan="3" class="ft-bg al-c"><b>MCR</b></td>
-        <td class="ft-bold" rowspan="3"><br><br><br> INSPECTOR/LEADER</td>
+        <td rowspan="3"><div>&nbsp;</div><b>INSPECTOR / LEADER</b></td>
         <td width="15%" class="align-left"> Name</td>
         <td width="45%"> $actual[leader_name]</td>
     </tr>
@@ -119,7 +119,7 @@ $headtbl = $style . <<<EOD
     </tr>
     <tr>
         <td class="al-c ft-md"><b>$actual[model_name]</b></td>
-        <td class="ft-bold"> Branch/Site</td>
+        <td><b> Branch / Site</b></td>
         <td colspan="3" width="60%"> $actual[actual_branch]</td>
     </tr>
 </table>
@@ -139,85 +139,119 @@ $rowtbl = $style . <<<EOD
             <th><b>REMARK</b></th>
         </tr>
         <tr class="bg-primary">
-            <td class="al-c bg-subhead" colspan="8">ENGINE</td>
-        </tr>
-        <!-- Engine Speed -->
-        <!-- row 1 -->
-        <tr>
-            <td rowspan="2">Engine Speed</td>
-            <td>Eng. Low</td>
-            <td>S6D140E-2</td>
-            <td rowspan="2"></td>
-            <td class="al-c">600-700</td>
-            <td class="al-c">-</td>
-            <td class="al-c">$actual[engine_low_speed]</td>
-            <td class="al-c">$actual[engine_low_speed_remark]</td>
-        </tr>
-        <!-- row 2 -->
-        <tr>
-            <td>Eng. High</td>
-            <td></td>
-            <td class="al-c" colspan="2">2300-2400</td>
-            <td class="al-c">$actual[engine_high_speed]</td>
-            <td class="al-c">$actual[engine_high_speed_remark]</td>
-        </tr>
-        <!-- Blow-by Press -->
-        <!-- row 1 -->
-        <tr>
-            <td>Blow-by Press</td>
-            <td>T/C Stall</td>
-            <td></td>
-            <td class="al-c">mm H2O</td>
-            <td class="al-c">Max. 100</td>
-            <td class="al-c">Max. 200</td>
-            <td class="al-c">$actual[tc_stall_press]</td>
-            <td class="al-c">$actual[tc_stall_press_remark]</td>
-        </tr>
-        <!-- Lub Oil -->
-        <!-- row 1 -->
-        <tr>
-            <td rowspan="2">Lub Oil Press.</td>
-            <td>Eng. Low</td>
-            <td>S6D140-1</td>
-            <td rowspan="2"></td>
-            <td class="al-c">Min. 1</td>
-            <td class="al-c">Min. 0.7</td>
-            <td class="al-c">$actual[engine_low_press]</td>
-            <td class="al-c">$actual[engine_low_press_remark]</td>
-        </tr>
-        <!-- row 2 -->
-        <tr>
-            <td>Eng. Low</td>
-            <td>S6D140E-2</td>
-            <td class="al-c">Min. 1.2</td>
-            <td class="al-c">Min. 0.7</td>
-            <td class="al-c">$actual[engine_low_press2]</td>
-            <td class="al-c">$actual[engine_low_press2_remark]</td>
-        </tr>
-        <!-- Boost Press -->
-        <!-- row 1 -->
-        <tr>
-            <td>Boost Press.</td>
-            <td>Eng. Rated</td>
-            <td>S6D140E-2</td>
-            <td></td>
-            <td class="al-c">Min. 590</td>
-            <td class="al-c">Min. 500</td>
-            <td class="al-c">$actual[engine_rated_press]</td>
-            <td class="al-c">$actual[engine_rated_press_remark]</td>
-        </tr>
-        <!-- Exhaust Gas Temp -->
-        <!-- row 1 -->
-        <tr>
-            <td>Exhaust Gas Temp</td>
-            <td><br><br>T/C Stall</td>
-            <td><br><br>S6D140E-2</td>
-            <td class="al-c"><br><br>°C</td>
-            <td class="al-c"><br><br>Min. 700</td>
-            <td class="al-c"><br><br>Min. 700</td>
-            <td class="al-c"><br><br>$actual[tc_stall_temp]</td>
-            <td class="al-c"><br><br>$actual[tc_stall_temp_remark]</td>
-        </tr>
+                                <td class="al-c bg-subhead" colspan="8">
+                                    ENGINE
+                                </td>
+                            </tr>
+                            <!-- Engine Speed -->
+                            <!-- row 1 -->
+                            <tr>
+                                <td class="align-middle" rowspan="2"><br><br>Engine Speed</td>
+                                <td class="align-middle">Eng. Low
+                                </td>
+                                <td>S6D140E-2</td>
+                                <td class="align-middle text-center al-c" rowspan="2"></td>
+                                <td class="al-c">600-700</td>
+                                <td class="text-center al-c">-</td>
+                                <td class="align-middle text-center al-c">
+                                $actual[engine_low_speed]
+                                </td>
+                                <td class="align-middle text-center al-c">
+                                $actual[engine_low_speed_remark]
+                                </td>
+                            </tr>
+                            <!-- row 2 -->
+                            <tr>
+                                <td>Eng. High
+                                </td>
+                                <td></td>
+                                <td class="text-center al-c" colspan="2">2300-2400</td>
+                                <td class="align-middle text-center al-c">
+                                $actual[engine_high_speed]
+                                </td>
+                                <td class="align-middle text-center al-c">
+                                $actual[engine_high_speed_remark]
+                                </td>
+                            </tr>
+                            <!-- Blow-by Press -->
+                            <!-- row 1 -->
+                            <tr>
+                                <td>Blow-by Press</td>
+                                <td>T/C Stall</td>
+                                <td></td>
+                                <td class="align-middle text-center al-c">mm H2O</td>
+                                <td class="al-c">Max. 100</td>
+                                <td class="al-c">Max. 200</td>
+                                <td class="align-middle text-center al-c">
+                                $actual[tc_stall_press]
+                                </td>
+                                <td class="align-middle text-center al-c">
+                                $actual[tc_stall_press_remark]
+                                </td>
+                            </tr>
+                            <!-- Lub Oil -->
+                            <!-- row 1 -->
+                            <tr>
+                                <td class="align-middle" rowspan="2"><br><br>Lub Oil Press.<br></td>
+                                <td>Eng. Low</td>
+                                <td>S6D140-1</td>
+                                <td class="align-middle text-center al-c" rowspan="2"></td>
+                                <td class="al-c">Min. 1</td>
+                                <td class="al-c">Min. 0.7</td>
+                                <td class="align-middle text-center al-c">
+                                $actual[engine_low_press]
+                                </td>
+                                <td class="align-middle text-center al-c">
+                                $actual[engine_low_press_remark]
+                                </td>
+                            </tr>
+                            <!-- row 2 -->
+                            <tr>
+                                <td class="align-middle">Eng. Low</td>
+                                <td>S6D140E-2</td>
+                                <td class="al-c">Min. 1.2</td>
+                                <td class="al-c">Min. 0.7</td>
+                                <td class="align-middle text-center al-c">
+                                $actual[engine_low_press2]
+                                </td>
+                                <td class="align-middle text-center al-c">
+                                $actual[engine_low_press2_remark]
+                                </td>
+                            </tr>
+                            <!-- Boost Press -->
+                            <!-- row 1 -->
+                            <tr>
+                                <td class="align-middle">Boost Press.</td>
+                                <td class="align-middle">Eng. Rated</td>
+                                <td>S6D140E-2</td>
+                                <td class="align-middle text-center al-c"></td>
+                                <td class="al-c">Min. 590</td>
+                                <td class="al-c">Min. 500</td>
+                                <td class="align-middle text-center al-c">
+                                $actual[engine_rated_press]
+                                </td>
+                                <td class="align-middle text-center al-c">
+                                $actual[engine_rated_press_remark]
+                                </td>
+                            </tr>
+                            <!-- Exhaust Gas Temp -->
+                            <!-- row 1 -->
+                            <tr>
+                                <td class="align-middle"><br><br>Exhaust Gas Temp<br></td>
+                                <td class="align-middle"><br><br>T/C Stall</td>
+                                <td><br><br>S6D140E-2</td>
+                                <td class="align-middle text-center al-c"><br><br>°C</td>
+                                <td class="al-c"><br><br>Min. 700</td>
+                                <td class="al-c"><br><br>Min. 700</td>
+                                <td class="align-middle text-center al-c">
+                                <br><br>
+                                $actual[tc_stall_temp]
+                                </td>
+                                <td class="align-middle text-center al-c">
+                                <br><br>
+                                $actual[tc_stall_temp_remark]
+                                </td>
+                            </tr>
     </tbody>
 </table>
 <br><br>

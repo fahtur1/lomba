@@ -802,7 +802,7 @@ $rowtbl = $style . <<<EOD
                                 $actual[tandem_drain_rh_remark]
                                 </td>
                             </tr>
-                           <!-- ELECTRICAL -->
+                            <!-- ELECTRICAL -->
         <tr>
             <td class="al-c bg-subhead" colspan="8">ELECTRICAL</td>
         </tr>
@@ -878,7 +878,7 @@ $rowtbl = $style . <<<EOD
         </tr>
         <!-- Logout Switch -->
         <tr>
-            <td>Logout Switch</td>
+            <td><br><br>Logout Switch</td>
             <td colspan="2">Completeness, condition and function</td>
             <td colspan="3"><br><br>Complete and normal function</td>
             <td class="al-c"><br><br>$actual[logout_switch]</td>
@@ -886,7 +886,7 @@ $rowtbl = $style . <<<EOD
         </tr>
         <!-- PDU -->
         <tr>
-            <td>PDU</td>
+            <td><br><br>PDU</td>
             <td colspan="2">Completeness, condition and function</td>
             <td colspan="3"><br><br>Complete and normal function</td>
             <td class="al-c"><br><br>$actual[pdu]</td>
@@ -894,7 +894,7 @@ $rowtbl = $style . <<<EOD
         </tr>
         <!-- Autolube -->
         <tr>
-            <td>Autolube</td>
+            <td><br><br>Autolube</td>
             <td colspan="2">Completeness, condition and function</td>
             <td colspan="3"><br><br>Complete and normal function</td>
             <td class="al-c"><br><br>$actual[autolube]</td>
@@ -918,7 +918,7 @@ $rowtbl = $style . <<<EOD
         </tr>
         <!-- Backup alarm -->
         <tr>
-            <td>Backup alarm</td>
+            <td><br><br>Backup alarm</td>
             <td colspan="2">Completeness, condition and function</td>
             <td colspan="3"><br><br>Complete and normal function</td>
             <td class="al-c"><br><br>$actual[backup_alarm]</td>
@@ -941,7 +941,7 @@ $rowtbl = $style . <<<EOD
         </tr>
         <!-- Machine -->
         <tr>
-            <td>Machine</td>
+            <td><br><br>Machine</td>
             <td colspan="2">Cleaness, wear, completeness and condition</td>
             <td colspan="3"><br><br>Complete and normal condition</td>
             <td class="al-c"><br><br>$actual[machine]</td>

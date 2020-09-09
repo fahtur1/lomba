@@ -146,283 +146,217 @@ $rowtbl = $style . <<<EOD
  <!-- Engine Speed -->
  <!-- row 1 -->
  <tr>
-     <td class="align-middle" rowspan="10">
-         Engine Speed
+     <td class="align-middle" rowspan="10"><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Engine Speed
      </td>
-     <td colspan="2" class="align-middle">
-         Low Idle, Low
+     <td colspan="2" class="align-middle">Low Idle, Low
      </td>
-     <td class="align-middle text-center" rowspan="10">Rpm</td>
-     <td colspan="2" class="text-center">625 - 675</td>
-     <td class="align-middle text-center">
-        $actual[engine_low_idle_low]
+     <td class="align-middle text-center al-c" rowspan="10"><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Rpm</td>
+     <td colspan="2" class="text-center al-c">625 - 675</td>
+     <td class="align-middle text-center al-c">$actual[engine_low_idle_low]
      </td>
-     <td class="align-middle text-center">
-        $actual[engine_low_idle_low_remark]
+     <td class="align-middle text-center al-c">$actual[engine_low_idle_low_remark]
      </td>
  </tr>
  <!-- row 2 -->
  <tr>
-     <td colspan="2">
-         Low Idle, Hi
+     <td colspan="2">Low Idle, Hi
      </td>
-     <td class="text-center" colspan="2">895 - 995</td>
-     <td class="align-middle text-center">
-        $actual[engine_low_idle_hi]
+     <td class="text-center al-c" colspan="2">895 - 995</td>
+     <td class="align-middle text-center al-c">$actual[engine_low_idle_hi]
      </td>
-     <td class="align-middle text-center">
-        $actual[engine_low_idle_hi_remark]
+     <td class="align-middle text-center al-c">$actual[engine_low_idle_hi_remark]
      </td>
  </tr>
  <!-- row 3 -->
  <tr>
-     <td colspan="2">
-         High Idle, Power mode
+     <td colspan="2">High Idle, Power mode
      </td>
-     <td class="text-center" colspan="2">2200 - 2300</td>
-     <td class="align-middle text-center">
-        $actual[engine_high_idle_power]
+     <td class="text-center al-c" colspan="2">2200 - 2300</td>
+     <td class="align-middle text-center al-c">$actual[engine_high_idle_power]
      </td>
-     <td class="align-middle text-center">
-        $actual[engine_high_idle_power_remark]
+     <td class="align-middle text-center al-c">$actual[engine_high_idle_power_remark]
      </td>
  </tr>
  <!-- row 4 -->
  <tr>
-     <td colspan="2">
-         High Idle, Economy mode
+     <td colspan="2">High Idle, Economy mode
      </td>
-     <td class="text-center" colspan="2">2,050 - 2,150</td>
-     <td class="align-middle text-center">
-        $actual[engine_high_idle_eco]
+     <td class="text-center al-c" colspan="2">2,050 - 2,150</td>
+     <td class="align-middle text-center al-c">$actual[engine_high_idle_eco]
      </td>
-     <td class="align-middle text-center">
-        $actual[engine_high_idle_eco_remark]
+     <td class="align-middle text-center al-c">$actual[engine_high_idle_eco_remark]
      </td>
  </tr>
  <!-- row 5 -->
  <tr>
-     <td colspan="2">
-         High Idle, Reverse RH
+     <td colspan="2">High Idle, Reverse RH
      </td>
-     <td class="text-center" colspan="2">2,000 - 2,100</td>
-     <td class="align-middle text-center">
-        $actual[engine_high_idle_rev]
+     <td class="text-center al-c" colspan="2">2,000 - 2,100</td>
+     <td class="align-middle text-center al-c">$actual[engine_high_idle_rev]
      </td>
-     <td class="align-middle text-center">
-        $actual[engine_high_idle_rev_remark]
+     <td class="align-middle text-center al-c">$actual[engine_high_idle_rev_remark]
      </td>
  </tr>
  <!-- row 6 -->
  <tr>
-     <td colspan="2">
-         High Idle, Reverse RH (Power Mode)
+     <td colspan="2">High Idle, Reverse RH (Power Mode)
      </td>
-     <td class="text-center" colspan="2">2,200 - 2,300</td>
-     <td class="align-middle text-center">
-        $actual[engine_high_idle_rev_power]
+     <td class="text-center al-c" colspan="2"><br><br>2,200 - 2,300</td>
+     <td class="align-middle text-center al-c"><br><br>$actual[engine_high_idle_rev_power]
      </td>
-     <td class="align-middle text-center">
-        $actual[engine_high_idle_rev_power_remark]
+     <td class="align-middle text-center al-c"><br><br>$actual[engine_high_idle_rev_power_remark]
      </td>
  </tr>
  <!-- row 7 -->
  <tr>
-     <td colspan="2">
-         Torque convertor stall, A mode
+     <td colspan="2">Torque convertor stall, A mode
      </td>
-     <td class="text-center" colspan="2">1,745 - 1,945 </td>
-     <td class="align-middle text-center">
-        $actual[engine_torque_a]
+     <td class="text-center al-c" colspan="2"><br><br>1,745 - 1,945 </td>
+     <td class="align-middle text-center al-c"><br><br>$actual[engine_torque_a]
      </td>
-     <td class="align-middle text-center">
-        $actual[engine_torque_a_remark]
+     <td class="align-middle text-center al-c"><br><br>$actual[engine_torque_a_remark]
      </td>
  </tr>
  <!-- row 8 -->
  <tr>
-     <td colspan="2">
-         Torque convertor stall, B mode
+     <td colspan="2">Torque convertor stall, B mode
      </td>
-     <td class="text-center" colspan="2">1,680 - 1,880</td>
-     <td class="align-middle text-center">
-        $actual[engine_torque_b]
+     <td class="text-center al-c" colspan="2"><br><br>1,680 - 1,880</td>
+     <td class="align-middle text-center al-c"><br><br>$actual[engine_torque_b]
      </td>
-     <td class="align-middle text-center">
-        $actual[engine_torque_b_remark]
+     <td class="align-middle text-center al-c"><br><br>$actual[engine_torque_b_remark]
      </td>
  </tr>
  <!-- row 9 -->
  <tr>
-     <td colspan="2">
-         Torque convertor stall, C mode
+     <td colspan="2">Torque convertor stall, C mode
      </td>
-     <td class="text-center" colspan="2">1,630 - 1,830</td>
-     <td class="align-middle text-center">
-        $actual[engine_torque_c]
+     <td class="text-center al-c" colspan="2"><br><br>1,630 - 1,830</td>
+     <td class="align-middle text-center al-c"><br><br>$actual[engine_torque_c]
      </td>
-     <td class="align-middle text-center">
-        $actual[engine_torque_c_remark]
+     <td class="align-middle text-center al-c"><br><br>$actual[engine_torque_c_remark]
      </td>
  </tr>
  <!-- row 10 -->
  <tr>
-     <td colspan="2">
-         Torque convertor stall, D mode
+     <td colspan="2">Torque convertor stall, D mode
      </td>
-     <td class="text-center" colspan="2">1,595 - 1,795</td>
-     <td class="align-middle text-center">
-        $actual[engine_torque_d]
+     <td class="text-center al-c" colspan="2"><br><br>1,595 - 1,795</td>
+     <td class="align-middle text-center al-c"><br><br>$actual[engine_torque_d]
      </td>
-     <td class="align-middle text-center">
-        $actual[engine_torque_d_remark]
+     <td class="align-middle text-center al-c"><br><br>$actual[engine_torque_d_remark]
      </td>
  </tr>
 
  <!-- Blow-by Press. -->
  <tr>
-     <td class="align-middle">
-         Blow-by Press.
+     <td class="align-middle">Blow-by Press.
      </td>
-     <td colspan="2" class="align-middle">
-         Power Mode T/C Stall
+     <td colspan="2" class="align-middle"><br><br>Power Mode T/C Stall
      </td>
-     <td class="align-middle text-center">kPa<br>(mmH2O)</td>
-     <td class="text-center">Max. 2,94<br>(Max. 300)</td>
-     <td class="text-center">Max. 5,88<br>(Max. 600)</td>
-     <td class="align-middle text-center">
-        $actual[blow_power]
+     <td class="align-middle text-center al-c">kPa<br><br>(mmH2O)</td>
+     <td class="text-center al-c">Max. 2,94<br><br>(Max. 300)</td>
+     <td class="text-center al-c">Max. 5,88<br><br>(Max. 600)</td>
+     <td class="align-middle text-center al-c"><br><br>$actual[blow_power]
      </td>
-     <td class="align-middle text-center">
-        $actual[blow_power_remark]
+     <td class="align-middle text-center al-c"><br><br>$actual[blow_power_remark]
      </td>
  </tr>
 
  <!-- Lub Oil Press -->
  <!-- row 1 -->
  <tr>
-     <td class="align-middle" rowspan="2">
-         Lub Oil Press
+     <td class="align-middle" rowspan="2"><br><br><br>Lub Oil Press
      </td>
-     <td colspan="2" class="align-middle">
-         Engine speed: 1,900 rpm (Rated speed)
+     <td colspan="2" class="align-middle">Engine speed: 1,900 rpm (Rated speed)
      </td>
-     <td class="align-middle text-center" rowspan="2">Kg/cm2</td>
-     <td class="text-center">3.0 - 4.5</td>
-     <td class="text-center">Min 2.0</td>
-     <td class="align-middle text-center">
-        $actual[lub_oil_rated]
+     <td class="align-middle text-center al-c" rowspan="2"><br><br><br>Kg/cm2</td>
+     <td class="text-center al-c"><br><br>3.0 - 4.5</td>
+     <td class="text-center al-c"><br><br>Min 2.0</td>
+     <td class="align-middle text-center al-c"><br><br>$actual[lub_oil_rated]
      </td>
-     <td class="align-middle text-center">
-        $actual[lub_oil_rated_remark]
+     <td class="align-middle text-center al-c"><br><br>$actual[lub_oil_rated_remark]
      </td>
  </tr>
  <!-- row 2 -->
  <tr>
-     <td colspan="2" class="align-middle">
-         Low Idle
+     <td colspan="2" class="align-middle">Low Idle
      </td>
-     <td class="text-center">Min. 0.8</td>
-     <td class="text-center">Min 0.7</td>
-     <td class="align-middle text-center">
-        $actual[lub_oil_low]
+     <td class="text-center al-c">Min. 0.8</td>
+     <td class="text-center al-c">Min 0.7</td>
+     <td class="align-middle text-center al-c">$actual[lub_oil_low]
      </td>
-     <td class="align-middle text-center">
-        $actual[lub_oil_low_remark]
+     <td class="align-middle text-center al-c">$actual[lub_oil_low_remark]
      </td>
  </tr>
 
  <!-- Boost Press. -->
  <!-- row 1 -->
  <tr>
-     <td class="align-middle" rowspan="2">
-         Boost Press.
+     <td class="align-middle" rowspan="2"><br><br><br>Boost Press.
      </td>
-     <td class="align-middle" rowspan="2">
-         Engine speed: 1,900 rpm (Rated speed)
+     <td class="align-middle" rowspan="2">Engine speed: 1,900 rpm (Rated speed)
      </td>
-     <td class="align-middle">
-         RH
+     <td class="align-middle">RH
      </td>
-     <td class="align-middle text-center" rowspan="2">kPa<br>(mmH2O)</td>
-     <td class="text-center align-middle" colspan="2">
-         Min. 165,40 <br> (min. 1,250)
+     <td class="align-middle text-center al-c" rowspan="2"><br><br>kPa<br><br>(mmH2O)</td>
+     <td class="text-center al-c align-middle" colspan="2">Min. 165,40 <br><br> (min. 1,250)
      </td>
-     <td class="align-middle text-center">
-        $actual[boost_press_rh]
+     <td class="align-middle text-center al-c"><br><br>$actual[boost_press_rh]
      </td>
-     <td class="align-middle text-center">
-        $actual[boost_press_rh_remark]
+     <td class="align-middle text-center al-c"><br><br>$actual[boost_press_rh_remark]
      </td>
  </tr>
  <!-- row 2 -->
  <tr>
-     <td class="align-middle">
-         LH
+     <td class="align-middle">LH
      </td>
-     <td class="text-center">Min. 0.8</td>
-     <td class="text-center">Min 0.7</td>
-     <td class="align-middle text-center">
-        $actual[boost_press_lh]
+     <td class="text-center al-c">Min. 0.8</td>
+     <td class="text-center al-c">Min 0.7</td>
+     <td class="align-middle text-center al-c">$actual[boost_press_lh]
      </td>
-     <td class="align-middle text-center">
-        $actual[boost_press_lh_remark]
+     <td class="align-middle text-center al-c">$actual[boost_press_lh_remark]
      </td>
  </tr>
 
  <!-- Exhaust Gas Temp. -->
  <!-- row 1 -->
  <tr>
-     <td class="align-middle" rowspan="3">
-         Exhaust Gas Temp.
+     <td class="align-middle" rowspan="3"><br><br>Exhaust Gas<br><br>Temp.
      </td>
-     <td class="align-middle" colspan="2">
-         Ambient Temp.
+     <td class="align-middle" colspan="2">Ambient Temp.
      </td>
-     <td class="align-middle text-center" rowspan="3">
-         °C
+     <td class="align-middle text-center al-c" rowspan="3"><br><br><br>°C
      </td>
-     <td class="align-middle text-center">20</td>
-     <td class="text-center align-middle">
-         -
+     <td class="align-middle text-center al-c">20</td>
+     <td class="text-center al-c align-middle">-
      </td>
-     <td class="align-middle text-center">
-        $actual[exhaust_ambient]
+     <td class="align-middle text-center al-c">$actual[exhaust_ambient]
      </td>
-     <td class="align-middle text-center">
-        $actual[exhaust_ambient_remark]
+     <td class="align-middle text-center al-c">$actual[exhaust_ambient_remark]
      </td>
  </tr>
  <tr>
-     <td class="align-middle" rowspan="2">
-         All speed range
+     <td class="align-middle" rowspan="2">All speed range
      </td>
-     <td class="align-middle">
-         RH
+     <td class="align-middle">RH
      </td>
-     <td class="text-center align-middle" rowspan="2">
-         Max. 700
+     <td class="text-center al-c align-middle" rowspan="2"><br><br>Max. 700
      </td>
-     <td class="text-center align-middle" rowspan="2">
-         Max. 750
+     <td class="text-center al-c align-middle" rowspan="2"><br><br>Max. 750
      </td>
-     <td class="align-middle text-center">
-        $actual[exhaust_speed_rh]
+     <td class="align-middle text-center al-c">$actual[exhaust_speed_rh]
      </td>
-     <td class="align-middle text-center">
-        $actual[exhaust_speed_rh_remark]
+     <td class="align-middle text-center al-c">$actual[exhaust_speed_rh_remark]
      </td>
  </tr>
  <!-- row 3 -->
  <tr>
-     <td class="align-middle">
-         LH
+     <td class="align-middle">LH
      </td>
-     <td class="align-middle text-center">
-        $actual[exhaust_speed_lh]
+     <td class="align-middle text-center al-c">$actual[exhaust_speed_lh]
      </td>
-     <td class="align-middle text-center">
-        $actual[exhaust_speed_lh_remark]
+     <td class="align-middle text-center al-c">$actual[exhaust_speed_lh_remark]
      </td>
  </tr>
 
@@ -434,662 +368,518 @@ $rowtbl = $style . <<<EOD
  <!-- Oil Pressure -->
  <!-- row 1 -->
  <tr>
-     <td class="align-middle" rowspan="7">
-         Oil Pressure
+     <td class="align-middle" rowspan="7"><br><br><br><br><br><br><br>Oil Pressure
      </td>
-     <td colspan="2" class="align-middle">
-         Inlet oil pressure
+     <td colspan="2" class="align-middle">Inlet oil pressure
      </td>
-     <td class="align-middle text-center" rowspan="7">Kg/cm2</td>
-     <td colspan="2" class="text-center">Max. 8.67</td>
-     <td class="align-middle text-center">
-        $actual[oil_inlet]
+     <td class="align-middle text-center al-c" rowspan="7"><br><br><br><br><br><br><br>Kg/cm2</td>
+     <td colspan="2" class="text-center al-c">Max. 8.67</td>
+     <td class="align-middle text-center al-c">$actual[oil_inlet]
      </td>
-     <td class="align-middle text-center">
-        $actual[oil_inlet_remark]
+     <td class="align-middle text-center al-c">$actual[oil_inlet_remark]
      </td>
  </tr>
 
  <!-- row 2 -->
  <tr>
-     <td class="align-middle" rowspan="2">
-         Outlet oil pressure
+     <td class="align-middle" rowspan="2">Outlet oil pressure
      </td>
-     <td class="align-middle">
-         brake is ON
+     <td class="align-middle">brake is ON
      </td>
-     <td colspan="2" class="text-center">4.59 - 5.41 </td>
-     <td class="align-middle text-center">
-        $actual[oil_outlet_on]
+     <td colspan="2" class="text-center al-c">4.59 - 5.41 </td>
+     <td class="align-middle text-center al-c">$actual[oil_outlet_on]
      </td>
-     <td class="align-middle text-center">
-        $actual[oil_outlet_on_remark]
+     <td class="align-middle text-center al-c">$actual[oil_outlet_on_remark]
      </td>
  </tr>
  <!-- row 3 -->
  <tr>
-     <td class="align-middle">
-         brake is OFF
+     <td class="align-middle">brake is OFF
      </td>
-     <td colspan="2" class="text-center">4.59 - 6.01 </td>
-     <td class="align-middle text-center">
-        $actual[oil_outlet_off]
+     <td colspan="2" class="text-center al-c">4.59 - 6.01 </td>
+     <td class="align-middle text-center al-c">$actual[oil_outlet_off]
      </td>
-     <td class="align-middle text-center">
-        $actual[oil_outlet_off_remark]
+     <td class="align-middle text-center al-c">$actual[oil_outlet_off_remark]
      </td>
  </tr>
 
  <!-- row 4 -->
  <tr>
-     <td class="align-middle" colspan="2">
-         Lockup operating pressure
+     <td class="align-middle" colspan="2">Lockup operating pressure
      </td>
-     <td colspan="2" class="text-center">13.5 - 17.5 </td>
-     <td class="align-middle text-center">
-        $actual[oil_lockup]
+     <td colspan="2" class="text-center al-c">13.5 - 17.5 </td>
+     <td class="align-middle text-center al-c">$actual[oil_lockup]
      </td>
-     <td class="align-middle text-center">
-        $actual[oil_lockup_remark]
+     <td class="align-middle text-center al-c">$actual[oil_lockup_remark]
      </td>
  </tr>
 
  <!-- row 5 -->
  <tr>
-     <td class="align-middle" rowspan="2">
-         Main relief valve
+     <td class="align-middle" rowspan="2">Main relief valve
      </td>
-     <td class="align-middle">
-         N, F1 - F3
+     <td class="align-middle">N, F1 - F3
      </td>
-     <td colspan="2" class="text-center">34.0 - 38.0</td>
-     <td class="align-middle text-center">
-        $actual[oil_main_f1]
+     <td colspan="2" class="text-center al-c">34.0 - 38.0</td>
+     <td class="align-middle text-center al-c">$actual[oil_main_f1]
      </td>
-     <td class="align-middle text-center">
-        $actual[oil_main_f1_remark]
+     <td class="align-middle text-center al-c">$actual[oil_main_f1_remark]
      </td>
  </tr>
  <!-- row 6 -->
  <tr>
-     <td class="align-middle">
-         F4 - F7
+     <td class="align-middle">F4 - F7
      </td>
-     <td colspan="2" class="text-center">20.0 - 24.0 </td>
-     <td class="align-middle text-center">
-        $actual[oil_main_f4]
+     <td colspan="2" class="text-center al-c">20.0 - 24.0 </td>
+     <td class="align-middle text-center al-c">$actual[oil_main_f4]
      </td>
-     <td class="align-middle text-center">
-        $actual[oil_main_f4_remark]
+     <td class="align-middle text-center al-c">$actual[oil_main_f4_remark]
      </td>
  </tr>
 
  <!-- row 7 -->
  <tr>
-     <td class="align-middle" colspan="2">
-         Transmission lubricating
+     <td class="align-middle" colspan="2">Transmission lubricating
      </td>
-     <td colspan="2" class="text-center">1.2 - 2.2 </td>
-     <td class="align-middle text-center">
-        $actual[oil_transmission]
+     <td colspan="2" class="text-center al-c">1.2 - 2.2 </td>
+     <td class="align-middle text-center al-c">$actual[oil_transmission]
      </td>
-     <td class="align-middle text-center">
-        $actual[oil_transmission_remark]
+     <td class="align-middle text-center al-c">$actual[oil_transmission_remark]
      </td>
  </tr>
-
+ </tbody>
+</table>
+EOD;
+$rowtbl2 = $style . <<<EOD
+<table width="100%" cellpadding="2" border="1">
+    <tbody>
  <tr class="bg-primary">
-     <td class="al-c bg-subhead" colspan="8">
-         STEERING
+     <td class="al-c bg-subhead" colspan="8">STEERING
      </td>
  </tr>
 
  <!-- Turn Time -->
  <!-- row 1 -->
  <tr>
-     <td class="align-middle" rowspan="2">
-         Turn Time
+     <td class="align-middle" rowspan="2"><br><br>Turn Time
      </td>
-     <td class="align-middle" rowspan="2">
-         Lock ----> Lock
+     <td class="align-middle" rowspan="2">Lock ----> Lock
      </td>
-     <td class="align-middle">
-         Right to Left
+     <td class="align-middle">Right to Left
      </td>
-     <td class="align-middle text-center" rowspan="2">
-         Sec.
+     <td class="align-middle text-center al-c" rowspan="2"><br><br>Sec.
      </td>
-     <td rowspan="2" class="text-center align-middle ">Max. 4</td>
-     <td rowspan="2" class="text-center align-middle ">Max. 5</td>
-     <td class="align-middle text-center">
-        $actual[turn_time_rl]
+     <td rowspan="2" class="text-center al-c align-middle"><br><br>Max. 4</td>
+     <td rowspan="2" class="text-center al-c align-middle"><br><br>Max. 5</td>
+     <td class="align-middle text-center al-c">$actual[turn_time_rl]
      </td>
-     <td class="align-middle text-center">
-        $actual[turn_time_rl_remark]
+     <td class="align-middle text-center al-c">$actual[turn_time_rl_remark]
      </td>
  </tr>
  <!-- row 2 -->
  <tr>
-     <td class="align-middle">
-         Left to Right
+     <td class="align-middle">Left to Right
      </td>
-     <td class="align-middle text-center">
-        $actual[turn_time_lr]
+     <td class="align-middle text-center al-c">$actual[turn_time_lr]
      </td>
-     <td class="align-middle text-center">
-        $actual[turn_time_lr_remark]
+     <td class="align-middle text-center al-c">$actual[turn_time_lr_remark]
      </td>
  </tr>
 
  <!-- Steering Relieve press. -->
  <!-- row 1 -->
  <tr>
-     <td class="align-middle" rowspan="2">
-         Steering Relieve press.
+     <td class="align-middle" rowspan="2">Steering Relieve press.
      </td>
-     <td class="align-middle" colspan="2">
-         Low idle (650 rpm)
+     <td class="align-middle" colspan="2">Low idle (650 rpm)
      </td>
-     <td class="align-middle text-center" rowspan="2">
-         Kg/cm2
+     <td class="align-middle text-center al-c" rowspan="2"><br><br>Kg/cm2
      </td>
-     <td colspan="2" class="text-center align-middle ">185 - 195</td>
-     <td class="align-middle text-center">
-        $actual[steering_low]
+     <td colspan="2" class="text-center al-c align-middle ">185 - 195</td>
+     <td class="align-middle text-center al-c">$actual[steering_low]
      </td>
-     <td class="align-middle text-center">
-        $actual[steering_low_remark]
+     <td class="align-middle text-center al-c">$actual[steering_low_remark]
      </td>
  </tr>
 
  <!-- row 2 -->
  <tr>
-     <td class="align-middle" colspan="2">
-         Rated speed (1,900 rpm)
+     <td class="align-middle" colspan="2">Rated speed (1,900 rpm)
      </td>
-     <td colspan="2" class="text-center align-middle ">206 - 215</td>
-     <td class="align-middle text-center">
-        $actual[steering_rated]
+     <td colspan="2" class="text-center al-c align-middle ">206 - 215</td>
+     <td class="align-middle text-center al-c">$actual[steering_rated]
      </td>
-     <td class="align-middle text-center">
-        $actual[steering_rated_remark]
+     <td class="align-middle text-center al-c">$actual[steering_rated_remark]
      </td>
  </tr>
 
  <tr class="bg-primary">
-     <td class="al-c bg-subhead" colspan="8">
-         BRAKE
+     <td class="al-c bg-subhead" colspan="8">BRAKE
      </td>
  </tr>
 
  <!-- Brake oil pressure -->
  <!-- row 1 -->
  <tr>
-     <td class="align-middle" rowspan="2">
-         Brake oil pressure
+     <td class="align-middle" rowspan="2"><br><br>Brake oil pressure
      </td>
-     <td class="align-middle">
-         Service brake
+     <td class="align-middle">Service brake
      </td>
-     <td class="align-middle text-center" rowspan="2">
-         1st oprt after charge accmltr
+     <td class="align-middle text-center al-c" rowspan="2">1st oprt after charge accmltr
      </td>
-     <td class="align-middle text-center" rowspan="4">
-         Kg/cm2.
+     <td class="align-middle text-center al-c" rowspan="4"><br><br><br><br><br>Kg/cm2.
      </td>
-     <td colspan="2" class="text-center align-middle ">93 - 107</td>
-     <td class="align-middle text-center">
-        $actual[brake_oil_service]
+     <td colspan="2" class="text-center al-c align-middle ">93 - 107</td>
+     <td class="align-middle text-center al-c">$actual[brake_oil_service]
      </td>
-     <td class="align-middle text-center">
-        $actual[brake_oil_service_remark]
+     <td class="align-middle text-center al-c">$actual[brake_oil_service_remark]
      </td>
  </tr>
  <!-- row 2 -->
  <tr>
-     <td class="align-middle">
-         Retarder
+     <td class="align-middle"><br><br>Retarder
      </td>
-     <td colspan="2" class="text-center align-middle ">59 - 72</td>
-     <td class="align-middle text-center">
-        $actual[brake_oil_retarder]
+     <td colspan="2" class="text-center al-c align-middle "><br><br>59 - 72</td>
+     <td class="align-middle text-center al-c"><br><br>$actual[brake_oil_retarder]
      </td>
-     <td class="align-middle text-center">
-        $actual[brake_oil_retarder_remark]
+     <td class="align-middle text-center al-c"><br><br>$actual[brake_oil_retarder_remark]
      </td>
  </tr>
 
  <!-- Charge valve set pressure -->
  <!-- row 1 -->
  <tr>
-     <td class="align-middle" rowspan="2">
-         Charge valve set pressure
+     <td class="align-middle" rowspan="2">Charge valve set pressure
      </td>
-     <td class="align-middle">
-         Cut-in
+     <td class="align-middle">Cut-in
      </td>
-     <td class="align-middle text-center" rowspan="2">
-         Engine full throttle
+     <td class="align-middle text-center al-c" rowspan="2">Engine full throttle
      </td>
-     <td colspan="2" class="text-center align-middle ">120 - 130</td>
-     <td class="align-middle text-center">
-        $actual[charge_cutin]
+     <td colspan="2" class="text-center al-c align-middle ">120 - 130</td>
+     <td class="align-middle text-center al-c">$actual[charge_cutin]
      </td>
-     <td class="align-middle text-center">
-        $actual[charge_cutin_remark]
+     <td class="align-middle text-center al-c">$actual[charge_cutin_remark]
      </td>
  </tr>
 
  <!-- row 2 -->
  <tr>
-     <td class="align-middle">
-         Cut-out
+     <td class="align-middle">Cut-out
      </td>
-     <td colspan="2" class="text-center align-middle ">210 - 220</td>
-     <td class="align-middle text-center">
-        $actual[charge_cutout]
+     <td colspan="2" class="text-center al-c align-middle ">210 - 220</td>
+     <td class="align-middle text-center al-c">$actual[charge_cutout]
      </td>
-     <td class="align-middle text-center">
-        $actual[charge_cutout_remark]
+     <td class="align-middle text-center al-c">$actual[charge_cutout_remark]
      </td>
  </tr>
 
  <!-- Service -->
  <tr>
-     <td class="align-middle">
-         Service
+     <td class="align-middle">Service
      </td>
-     <td class="align-middle" rowspan="4" colspan="2">
-         When brake is applied and engine speed in increased gradually in gear speed F2, machine must not start at speed shown in table.
+     <td class="align-middle" rowspan="4" colspan="2">When brake is applied and engine speed in increased gradually in gear speed F2, machine must not start at speed shown in table.
      </td>
-     <td class="align-middle text-center" rowspan="4">
-         Rpm
+     <td class="align-middle text-center al-c" rowspan="4"><br><br><br><br>Rpm
      </td>
-     <td class="text-center align-middle ">1760</td>
-     <td class="text-center align-middle ">1570</td>
-     <td class="align-middle text-center">
-        $actual[service]
+     <td class="text-center al-c align-middle ">1760</td>
+     <td class="text-center al-c align-middle ">1570</td>
+     <td class="align-middle text-center al-c">$actual[service]
      </td>
-     <td class="align-middle text-center">
-        $actual[service_remark]
+     <td class="align-middle text-center al-c">$actual[service_remark]
      </td>
  </tr>
 
  <!-- Retarder -->
  <tr>
-     <td class="align-middle">
-         Retarder
+     <td class="align-middle">Retarder
      </td>
-     <td class="text-center align-middle ">1345</td>
-     <td class="text-center align-middle ">1200</td>
-     <td class="align-middle text-center">
-        $actual[retarder]
+     <td class="text-center al-c align-middle ">1345</td>
+     <td class="text-center al-c align-middle ">1200</td>
+     <td class="align-middle text-center al-c">$actual[retarder]
      </td>
-     <td class="align-middle text-center">
-        $actual[retarder_remark]
+     <td class="align-middle text-center al-c">$actual[retarder_remark]
      </td>
  </tr>
 
  <!-- Parking -->
  <tr>
-     <td class="align-middle">
-         Parking
+     <td class="align-middle">Parking
      </td>
-     <td class="text-center align-middle ">1610</td>
-     <td class="text-center align-middle ">1610</td>
-     <td class="align-middle text-center">
-        $actual[parking]
+     <td class="text-center al-c align-middle ">1610</td>
+     <td class="text-center al-c align-middle ">1610</td>
+     <td class="align-middle text-center al-c">$actual[parking]
      </td>
-     <td class="align-middle text-center">
-        $actual[parking_remark]
+     <td class="align-middle text-center al-c">$actual[parking_remark]
      </td>
  </tr>
 
  <!-- Emergency -->
  <tr>
-     <td class="align-middle">
-         Emergency
+     <td class="align-middle">Emergency
      </td>
-     <td colspan="2" class="text-center align-middle ">T/C stall speed</td>
-     <td class="align-middle text-center">
-        $actual[emergency]
+     <td colspan="2" class="text-center al-c align-middle ">T/C stall speed</td>
+     <td class="align-middle text-center al-c">$actual[emergency]
      </td>
-     <td class="align-middle text-center">
-        $actual[emergency_remark]
+     <td class="align-middle text-center al-c">$actual[emergency_remark]
      </td>
  </tr>
 
 
  <tr class="bg-primary">
-     <td class="al-c bg-subhead" colspan="8">
-         SUSPENSION
+     <td class="al-c bg-subhead" colspan="8">SUSPENSION
      </td>
  </tr>
 
  <!-- Hyd. Oil Temp. -->
  <tr>
-     <td class="align-middle">
-         Hyd. Oil Temp.
+     <td class="align-middle">Hyd. Oil Temp.
      </td>
-     <td class="align-middle" colspan="2">
-         50 - 80
+     <td class="align-middle" colspan="2"><br><br>50 - 80
      </td>
-     <td class="align-middle text-center">
-         ° C
+     <td class="align-middle text-center al-c"><br><br>°C
      </td>
-     <td colspan="2" class="text-center align-middle ">-</td>
-     <td class="align-middle text-center">
-        $actual[oil_temp]
+     <td colspan="2" class="text-center al-c align-middle "><br><br>-</td>
+     <td class="align-middle text-center al-c"><br><br>$actual[oil_temp]
      </td>
-     <td class="align-middle text-center">
-        $actual[oil_temp_remark]
+     <td class="align-middle text-center al-c"><br><br>$actual[oil_temp_remark]
      </td>
  </tr>
 
  <!-- Hoist Relief Press. -->
  <!-- row 1 -->
  <tr>
-     <td class="align-middle" rowspan="2">
-         Hoist Relief Press.
+     <td class="align-middle" rowspan="2">Hoist Relief Press.
      </td>
-     <td class="align-middle" colspan="2">
-         Rated speed (1,900 rpm)
+     <td class="align-middle" colspan="2">Rated speed (1,900 rpm)
      </td>
-     <td class="align-middle text-center" rowspan="4">
-         Kg/cm2
+     <td class="align-middle text-center al-c" rowspan="4"><br><br><br><br>Kg/cm2
      </td>
-     <td colspan="2" class="text-center align-middle ">206 - 215</td>
-     <td class="align-middle text-center">
-        $actual[hoist_relief_rated]
+     <td colspan="2" class="text-center al-c align-middle ">206 - 215</td>
+     <td class="align-middle text-center al-c">$actual[hoist_relief_rated]
      </td>
-     <td class="align-middle text-center">
-        $actual[hoist_relief_rated_remark]
+     <td class="align-middle text-center al-c">$actual[hoist_relief_rated_remark]
      </td>
  </tr>
 
  <!-- row 2 -->
  <tr>
-     <td class="align-middle" colspan="2">
-         Low idle (650 rpm)
+     <td class="align-middle" colspan="2">Low idle (650 rpm)
      </td>
-     <td colspan="2" class="text-center align-middle ">185 - 195</td>
-     <td class="align-middle text-center">
-        $actual[hoist_relief_low]
+     <td colspan="2" class="text-center al-c align-middle ">185 - 195</td>
+     <td class="align-middle text-center al-c">$actual[hoist_relief_low]
      </td>
-     <td class="align-middle text-center">
-        $actual[hoist_relief_low_remark]
+     <td class="align-middle text-center al-c">$actual[hoist_relief_low_remark]
      </td>
  </tr>
 
  <!-- Dump EPC valve basic pressure -->
  <!-- row 1 -->
  <tr>
-     <td class="align-middle" rowspan="2">
-         Dump EPC valve basic pressure
+     <td class="align-middle" rowspan="2">Dump EPC valve basic pressure
      </td>
-     <td class="align-middle" colspan="2">
-         High idle (2,250 rpm)
+     <td class="align-middle" colspan="2">High idle (2,250 rpm)
      </td>
-     <td colspan="2" class="text-center align-middle ">30 - 40</td>
-     <td class="align-middle text-center">
-        $actual[dump_epc_high]
+     <td colspan="2" class="text-center al-c align-middle ">30 - 40</td>
+     <td class="align-middle text-center al-c">$actual[dump_epc_high]
      </td>
-     <td class="align-middle text-center">
-        $actual[dump_epc_high_remark]
+     <td class="align-middle text-center al-c">$actual[dump_epc_high_remark]
      </td>
  </tr>
 
  <!-- row 2 -->
  <tr>
-     <td class="align-middle" colspan="2">
-         Low idle (650 rpm)
+     <td class="align-middle" colspan="2"><br><br>Low idle (650 rpm)
      </td>
-     <td colspan="2" class="text-center align-middle ">22 - 32</td>
-     <td class="align-middle text-center">
-        $actual[dump_epc_low]
+     <td colspan="2" class="text-center al-c align-middle ">22 - 32</td>
+     <td class="align-middle text-center al-c"><br><br>$actual[dump_epc_low]
      </td>
-     <td class="align-middle text-center">
-        $actual[dump_epc_low_remark]
+     <td class="align-middle text-center al-c"><br><br>$actual[dump_epc_low_remark]
      </td>
  </tr>
 
  <!-- Dump raising speed -->
  <tr>
-     <td class="align-middle">
-         Dump raising speed
+     <td class="align-middle">Dump raising speed
      </td>
-     <td class="align-middle" colspan="2">
-         Rated speed (1,900 rpm)
+     <td class="align-middle" colspan="2"><br><br>Rated speed (1,900 rpm)
      </td>
-     <td class="align-middle text-center" rowspan="2">
-         Sec.
+     <td class="align-middle text-center al-c" rowspan="2"><br><br><br><br>Sec.
      </td>
-     <td colspan="2" class="text-center align-middle ">11.5 - 14.5</td>
-     <td class="align-middle text-center">
-        $actual[dump_raising_speed]
+     <td colspan="2" class="text-center al-c align-middle "><br><br>11.5 - 14.5</td>
+     <td class="align-middle text-center al-c"><br><br>$actual[dump_raising_speed]
      </td>
-     <td class="align-middle text-center">
-        $actual[dump_raising_speed_remark]
+     <td class="align-middle text-center al-c"><br><br>$actual[dump_raising_speed_remark]
      </td>
  </tr>
 
  <!-- Dump lowering speed -->
  <tr>
-     <td class="align-middle">
-         Dump lowering speed
+     <td class="align-middle">Dump lowering speed
      </td>
-     <td class="align-middle" colspan="2">
-         Low idle (650 rpm), dump lever float position
+     <td class="align-middle" colspan="2"><br><br>Low idle (650 rpm), dump lever float position
      </td>
-     <td colspan="2" class="text-center align-middle ">12.5 - 15.5 </td>
-     <td class="align-middle text-center">
-        $actual[dump_lowering_speed]
+     <td colspan="2" class="text-center al-c align-middle "><br><br><br>12.5 - 15.5 </td>
+     <td class="align-middle text-center al-c"><br><br><br>$actual[dump_lowering_speed]
      </td>
-     <td class="align-middle text-center">
-        $actual[dump_lowering_speed_remark]
+     <td class="align-middle text-center al-c"><br><br><br>$actual[dump_lowering_speed_remark]
      </td>
  </tr>
 
  <!-- Hyd. Drift -->
  <tr>
-     <td class="align-middle">
-         Hyd. Drift
+     <td class="align-middle"><br><br><br>Hyd. Drift
      </td>
-     <td class="align-middle" colspan="2">
-         Set With No. 2 Cylinder Extended 200 mm, Then Stop The Engine !
+     <td class="align-middle" colspan="2">Set With No. 2 Cylinder Extended 200 mm, Then Stop The Engine !
      </td>
-     <td class="align-middle text-center">
-         mm / 5 min.
+     <td class="align-middle text-center al-c"><br><br><br>mm / 5 min.
      </td>
-     <td class="text-center align-middle ">Max. 85</td>
-     <td class="text-center align-middle ">Max. 170</td>
-     <td class="align-middle text-center">
-        $actual[hyd_drift]
+     <td class="text-center al-c align-middle "><br><br><br>Max. 85</td>
+     <td class="text-center al-c align-middle "><br><br><br>Max. 170</td>
+     <td class="align-middle text-center al-c"><br><br><br>$actual[hyd_drift]
      </td>
-     <td class="align-middle text-center">
-        $actual[hyd_drift_remark]
+     <td class="align-middle text-center al-c"><br><br><br>$actual[hyd_drift_remark]
      </td>
  </tr>
 
  <tr class="bg-primary">
-     <td class="al-c bg-subhead" colspan="8">
-         HYDRAULIC
+     <td class="al-c bg-subhead" colspan="8">HYDRAULIC
      </td>
  </tr>
 
  <!-- Left front -->
  <!-- row 1 -->
  <tr>
-     <td class="align-middle" rowspan="2">
-         Left front
+     <td class="align-middle" rowspan="2"><br><br>Left front
      </td>
-     <td class="align-middle" colspan="2">
-         Suspension cylinder length
+     <td class="align-middle" colspan="2">Suspension cylinder length
      </td>
-     <td class="align-middle text-center">
-         mm
+     <td class="align-middle text-center al-c">mm
      </td>
-     <td class="text-center align-middle ">237 - 257</td>
-     <td class="text-center align-middle ">227 - 267</td>
-     <td class="align-middle text-center">
-        $actual[left_front_susp]
+     <td class="text-center al-c align-middle ">237 - 257</td>
+     <td class="text-center al-c align-middle ">227 - 267</td>
+     <td class="align-middle text-center al-c">$actual[left_front_susp]
      </td>
-     <td class="align-middle text-center">
-        $actual[left_front_susp_remark]
+     <td class="align-middle text-center al-c">$actual[left_front_susp_remark]
      </td>
  </tr>
 
  <!-- row 2 -->
  <tr>
-     <td class="align-middle" colspan="2">
-         Oil, gas leakage
+     <td class="align-middle" colspan="2">Oil, gas leakage
      </td>
-     <td class="align-middle text-center">
-         -
+     <td class="align-middle text-center al-c">-
      </td>
-     <td colspan="2" class="text-center align-middle ">There must be no leakage</td>
-     <td class="align-middle text-center">
-        $actual[left_front_oil]
+     <td colspan="2" class="text-center al-c align-middle ">There must be no leakage</td>
+     <td class="align-middle text-center al-c">$actual[left_front_oil]
      </td>
-     <td class="align-middle text-center">
-        $actual[left_front_oil_remark]
+     <td class="align-middle text-center al-c">$actual[left_front_oil_remark]
      </td>
  </tr>
 
  <!-- Right front -->
  <!-- row 1 -->
  <tr>
-     <td class="align-middle" rowspan="2">
-         Right front
+     <td class="align-middle" rowspan="2"><br><br>Right front
      </td>
-     <td class="align-middle" colspan="2">
-         Suspension cylinder length
+     <td class="align-middle" colspan="2">Suspension cylinder length
      </td>
-     <td class="align-middle text-center">
-         mm
+     <td class="align-middle text-center al-c">mm
      </td>
-     <td class="text-center align-middle ">237 - 257</td>
-     <td class="text-center align-middle ">227 - 267</td>
-     <td class="align-middle text-center">
-        $actual[right_front_susp]
+     <td class="text-center al-c align-middle ">237 - 257</td>
+     <td class="text-center al-c align-middle ">227 - 267</td>
+     <td class="align-middle text-center al-c">$actual[right_front_susp]
      </td>
-     <td class="align-middle text-center">
-        $actual[right_front_susp_remark]
+     <td class="align-middle text-center al-c">$actual[right_front_susp_remark]
      </td>
  </tr>
 
  <!-- row 2 -->
  <tr>
-     <td class="align-middle" colspan="2">
-         Oil, gas leakage
+     <td class="align-middle" colspan="2">Oil, gas leakage
      </td>
-     <td class="align-middle text-center">
-         -
+     <td class="align-middle text-center al-c">-
      </td>
-     <td colspan="2" class="text-center align-middle ">There must be no leakage</td>
-     <td class="align-middle text-center">
-        $actual[right_front_oil]
+     <td colspan="2" class="text-center al-c align-middle ">There must be no leakage</td>
+     <td class="align-middle text-center al-c">$actual[right_front_oil]
      </td>
-     <td class="align-middle text-center">
-        $actual[right_front_oil_remark]
+     <td class="align-middle text-center al-c">$actual[right_front_oil_remark]
      </td>
  </tr>
 
  <!-- Left rear -->
  <!-- row 1 -->
  <tr>
-     <td class="align-middle" rowspan="2">
-         Left rear
+     <td class="align-middle" rowspan="2"><br><br>Left rear
      </td>
-     <td class="align-middle" colspan="2">
-         Suspension cylinder length
+     <td class="align-middle" colspan="2">Suspension cylinder length
      </td>
-     <td class="align-middle text-center">
-         mm
+     <td class="align-middle text-center al-c">mm
      </td>
-     <td class="text-center align-middle ">189 - 209</td>
-     <td class="text-center align-middle ">179 - 219</td>
-     <td class="align-middle text-center">
-        $actual[left_rear_susp]
+     <td class="text-center al-c align-middle ">189 - 209</td>
+     <td class="text-center al-c align-middle ">179 - 219</td>
+     <td class="align-middle text-center al-c">$actual[left_rear_susp]
      </td>
-     <td class="align-middle text-center">
-        $actual[left_rear_susp_remark]
+     <td class="align-middle text-center al-c">$actual[left_rear_susp_remark]
      </td>
  </tr>
 
  <!-- row 2 -->
  <tr>
-     <td class="align-middle" colspan="2">
-         Oil, gas leakage
+     <td class="align-middle" colspan="2">Oil, gas leakage
      </td>
-     <td class="align-middle text-center">
-         -
+     <td class="align-middle text-center al-c">-
      </td>
-     <td colspan="2" class="text-center align-middle ">There must be no leakage</td>
-     <td class="align-middle text-center">
-        $actual[left_rear_oil]
+     <td colspan="2" class="text-center al-c align-middle ">There must be no leakage</td>
+     <td class="align-middle text-center al-c">$actual[left_rear_oil]
      </td>
-     <td class="align-middle text-center">
-        $actual[left_rear_oil_remark]
+     <td class="align-middle text-center al-c">$actual[left_rear_oil_remark]
      </td>
  </tr>
 
  <!-- Right rear -->
  <!-- row 1 -->
  <tr>
-     <td class="align-middle" rowspan="2">
-         Right rear
+     <td class="align-middle" rowspan="2"><br><br>Right rear
      </td>
-     <td class="align-middle" colspan="2">
-         Suspension cylinder length
+     <td class="align-middle" colspan="2">Suspension cylinder length
      </td>
-     <td class="align-middle text-center">
-         mm
+     <td class="align-middle text-center al-c">mm
      </td>
-     <td class="text-center align-middle ">189 - 209</td>
-     <td class="text-center align-middle ">179 - 219</td>
-     <td class="align-middle text-center">
-        $actual[right_rear_susp]
+     <td class="text-center al-c align-middle ">189 - 209</td>
+     <td class="text-center al-c align-middle ">179 - 219</td>
+     <td class="align-middle text-center al-c">$actual[right_rear_susp]
      </td>
-     <td class="align-middle text-center">
-        $actual[right_rear_susp_remark]
+     <td class="align-middle text-center al-c">$actual[right_rear_susp_remark]
      </td>
  </tr>
 
  <!-- row 2 -->
  <tr>
-     <td class="align-middle" colspan="2">
-         Oil, gas leakage
+     <td class="align-middle" colspan="2">Oil, gas leakage
      </td>
-     <td class="align-middle text-center">
-         -
+     <td class="align-middle text-center al-c">-
      </td>
-     <td colspan="2" class="text-center align-middle ">There must be no leakage</td>
-     <td class="align-middle text-center">
-        $actual[right_rear_oil]
+     <td colspan="2" class="text-center al-c align-middle ">There must be no leakage</td>
+     <td class="align-middle text-center al-c">$actual[right_rear_oil]
      </td>
-     <td class="align-middle text-center">
-        $actual[right_rear_oil_remark]
+     <td class="align-middle text-center al-c">$actual[right_rear_oil_remark]
      </td>
  </tr>
 
  <!-- DIFFERENTIAL & FINAL DRIVE -->
  <tr class="bg-primary">
-     <td class="text-white text-center font-weight-bold font-italic" colspan="8">
-         DIFFERENTIAL & FINAL DRIVE
+     <td class="al-c bg-subhead" colspan="8">DIFFERENTIAL & FINAL DRIVE
      </td>
  </tr>
  <!-- Diff. Drain Plug -->
  <tr>
      <td>Diff. Drain Plug</td>
-     <td class="align-middle text-center" rowspan="3">Visual Check</td>
+     <td class="align-middle text-center al-c" rowspan="3"><br><br><br><br>Visual Check</td>
      <td></td>
-     <td class="align-middle text-center" colspan="3" rowspan="3">No excessive metalic powder</td>
-     <td class="align-middle text-center">
-        $actual[diff_drain]
+     <td class="align-middle text-center al-c" colspan="3" rowspan="3"><br><br><br><br>No excessive metalic powder</td>
+     <td class="align-middle text-center al-c"><br><br>$actual[diff_drain]
      </td>
-     <td class="align-middle text-center">
-        $actual[diff_drain_remark]
+     <td class="align-middle text-center al-c"><br><br>$actual[diff_drain_remark]
      </td>
  </tr>
  <!-- Final Drive Drain Plug Check -->
@@ -1097,235 +887,171 @@ $rowtbl = $style . <<<EOD
  <tr>
      <td class="align-middle" rowspan="2">Final Drive Drain Plug Check</td>
      <td>L/H</td>
-     <td class="align-middle text-center">
-        $actual[final_drive_lh]
+     <td class="align-middle text-center al-c">$actual[final_drive_lh]
      </td>
-     <td class="align-middle text-center">
-        $actual[final_drive_lh_remark]
+     <td class="align-middle text-center al-c">$actual[final_drive_lh_remark]
      </td>
  </tr>
  <!-- row 2 -->
  <tr>
-     <td>R/H</td>
-     <td class="align-middle text-center">
-        $actual[final_drive_rh]
+     <td><br><br>R/H</td>
+     <td class="align-middle text-center al-c"><br><br>$actual[final_drive_rh]
      </td>
-     <td class="align-middle text-center">
-        $actual[final_drive_rh_remark]
-     </td>
- </tr>
- <!-- ELECTRICAL -->
- <tr class="bg-primary">
-     <td class="al-c bg-subhead" colspan="8">
-         ELECTRICAL
-     </td>
- </tr>
- <!-- Instrument panel -->
- <tr>
-     <td>Instrument panel</td>
-     <td colspan="2">Completeness and function</td>
-     <td colspan="3">Complete and normal function</td>
-     <td class="align-middle text-center">
-         $actual[instrument_panel]
-     </td>
-     <td class="align-middle text-center">
-         $actual[instrument_panel_remark]
-     </td>
- </tr>
- <!-- Starting system -->
- <tr>
-     <td>Starting system</td>
-     <td colspan="2">Condition and function</td>
-     <td colspan="3">Good installation and normal function</td>
-     <td class="align-middle text-center">
-         $actual[starting_system]
-     </td>
-     <td class="align-middle text-center">
-         $actual[starting_system_remark]
-     </td>
- </tr>
- <!-- Chargin System -->
- <tr>
-     <td>Chargin System</td>
-     <td colspan="2">Condition and function</td>
-     <td colspan="3">Good installation and normal function</td>
-     <td class="align-middle text-center">
-         $actual[charging_system]
-     </td>
-     <td class="align-middle text-center">
-         $actual[charging_system_remark]
-     </td>
- </tr>
- <!-- Lighting -->
- <tr>
-     <td>Lighting</td>
-     <td colspan="2">Condition and function</td>
-     <td colspan="3">Complete and normal function</td>
-     <td class="align-middle text-center">
-         $actual[lighting]
-     </td>
-     <td class="align-middle text-center">
-         $actual[lighting_remark]
-     </td>
- </tr>
- <!-- Battery -->
- <tr>
-     <td>Battery</td>
-     <td colspan="2">Condition, electrolite level, specific grafity and load test. </td>
-     <td colspan="3">Good condition</td>
-     <td class="align-middle text-center">
-         $actual[battery]
-     </td>
-     <td class="align-middle text-center">
-         $actual[battery_remark]
-     </td>
- </tr>
- <!-- Wiring harness -->
- <tr>
-     <td>Wiring harness</td>
-     <td colspan="2">Condition, connection, clamping</td>
-     <td colspan="3">Good installation and condition</td>
-     <td class="align-middle text-center">
-         $actual[wiring_harness]
-     </td>
-     <td class="align-middle text-center">
-         $actual[wiring_harness_remark]
-     </td>
- </tr>
- <!-- VHMS/Komtrak -->
- <tr>
-     <td>VHMS/Komtrak</td>
-     <td colspan="2">Condition and function</td>
-     <td colspan="3">Good condition and function</td>
-     <td class="align-middle text-center">
-         $actual[vhms_komtrak]
-     </td>
-     <td class="align-middle text-center">
-         $actual[vhms_komtrak_remark]
-     </td>
- </tr>
- <!-- OPTIONAL EQUIPMENT -->
- <tr class="bg-primary">
-     <td class="al-c bg-subhead" colspan="8">
-         OPTIONAL EQUIPMENT
-     </td>
- </tr>
- <!-- Emergency shutdown -->
- <tr>
-     <td>Emergency shutdown</td>
-     <td colspan="2">Completeness, condition and function</td>
-     <td colspan="3">Complete and normal function</td>
-     <td class="align-middle text-center">
-         $actual[emergency_shutdown]
-     </td>
-     <td class="align-middle text-center">
-         $actual[emergency_shutdown_remark]
-     </td>
- </tr>
- <!-- Logout Switch -->
- <tr>
-     <td>Logout Switch</td>
-     <td colspan="2">Completeness, condition and function</td>
-     <td colspan="3">Complete and normal function</td>
-     <td class="align-middle text-center">
-         $actual[logout_switch]
-     </td>
-     <td class="align-middle text-center">
-         $actual[logout_switch_remark]
-     </td>
- </tr>
- <!-- PDU -->
- <tr>
-     <td>PDU</td>
-     <td colspan="2">Completeness, condition and function</td>
-     <td colspan="3">Complete and normal function</td>
-     <td class="align-middle text-center">
-         $actual[pdu]
-     </td>
-     <td class="align-middle text-center">
-         $actual[pdu_remark]
-     </td>
- </tr>
- <!-- Autolube -->
- <tr>
-     <td>Autolube</td>
-     <td colspan="2">Completeness, condition and function</td>
-     <td colspan="3">Complete and normal function</td>
-     <td class="align-middle text-center">
-         $actual[autolube]
-     </td>
-     <td class="align-middle text-center">
-         $actual[autolube_remark]
-     </td>
- </tr>
- <!-- Fire suppression -->
- <tr>
-     <td>Fire suppression</td>
-     <td colspan="2">Completeness, condition and function</td>
-     <td colspan="3">Complete and normal function</td>
-     <td class="align-middle text-center">
-         $actual[fire_suppression]
-     </td>
-     <td class="align-middle text-center">
-         $actual[fire_suppression_remark]
-     </td>
- </tr>
- <!-- Fatique warning -->
- <tr>
-     <td>Fatique warning</td>
-     <td colspan="2">Completeness, condition and function</td>
-     <td colspan="3">Complete and normal function</td>
-     <td class="align-middle text-center">
-         $actual[fatique_warning]
-     </td>
-     <td class="align-middle text-center">
-         $actual[fatique_warning_remark]
-     </td>
- </tr>
- <!-- Backup alarm -->
- <tr>
-     <td>Backup alarm</td>
-     <td colspan="2">Completeness, condition and function</td>
-     <td colspan="3">Complete and normal function</td>
-     <td class="align-middle text-center">
-         $actual[backup_alarm]
-     </td>
-     <td class="align-middle text-center">
-         $actual[backup_alarm_remark]
-     </td>
- </tr>
- <!-- GENERAL MACHINE CONDITION -->
- <tr class="bg-primary">
-     <td class="al-c bg-subhead" colspan="8">
-         GENERAL MACHINE CONDITION
-     </td>
- </tr>
- <!-- Attachment & Frame -->
- <tr>
-     <td>Attachment & Frame</td>
-     <td colspan="2">Completeness, worn and crack detection</td>
-     <td colspan="3">No crack</td>
-     <td class="align-middle text-center">
-         $actual[attachment_frame]
-     </td>
-     <td class="align-middle text-center">
-         $actual[attachment_frame_remark]
-     </td>
- </tr>
- <!-- Machine -->
- <tr>
-     <td>Machine</td>
-     <td colspan="2">Cleaness, wear, completeness and condition</td>
-     <td colspan="3">Complete and normal condition</td>
-     <td class="align-middle text-center">
-         $actual[machine]
-     </td>
-     <td class="align-middle text-center">
-         $actual[machine_remark]
+     <td class="align-middle text-center al-c"><br><br>$actual[final_drive_rh_remark]
      </td>
  </tr>
  </tbody>
-    </tbody>
+ </table>
+EOD;
+$rowtbl3 = $style . <<<EOD
+ <table width="100%" cellpadding="2" border="1">
+     <tbody>
+ <!-- ELECTRICAL -->
+        <tr>
+            <td class="al-c bg-subhead" colspan="8">ELECTRICAL</td>
+        </tr>
+        <!-- Instrument panel -->
+        <tr>
+            <td>Instrument panel</td>
+            <td colspan="2"><br><br>Completeness and function</td>
+            <td colspan="3"><br><br>Complete and normal function</td>
+            <td class="al-c"><br><br>$actual[instrument_panel]</td>
+            <td class="al-c"><br><br>$actual[instrument_panel_remark]</td>
+        </tr>
+        <!-- Starting system -->
+        <tr>
+            <td>Starting system</td>
+            <td colspan="2"><br><br>Condition and function</td>
+            <td colspan="3"><br><br>Good installation and normal function</td>
+            <td class="al-c"><br><br>$actual[starting_system]</td>
+            <td class="al-c"><br><br>$actual[starting_system_remark]</td>
+        </tr>
+        <!-- Chargin System -->
+        <tr>
+            <td>Charging System</td>
+            <td colspan="2"><br><br>Condition and function</td>
+            <td colspan="3"><br><br>Good installation and normal function</td>
+            <td class="al-c"><br><br>$actual[charging_system]</td>
+            <td class="al-c"><br><br>$actual[charging_system_remark]</td>
+        </tr>
+        <!-- Lighting -->
+        <tr>
+            <td>Lighting</td>
+            <td colspan="2">Condition and function</td>
+            <td colspan="3">Complete and normal function</td>
+            <td class="al-c">$actual[lighting]</td>
+            <td class="al-c">$actual[lighting_remark]</td>
+        </tr>
+        <!-- Battery -->
+        <tr>
+            <td><br><br>Battery</td>
+            <td colspan="2">Condition, electrolite level, specific grafity and load test. </td>
+            <td colspan="3"><br><br>Good condition</td>
+            <td class="al-c"><br><br>$actual[battery]</td>
+            <td class="al-c"><br><br>$actual[battery_remark]</td>
+        </tr>
+        <!-- Wiring harness -->
+        <tr>
+            <td>Wiring harness</td>
+            <td colspan="2">Condition, connection, clamping</td>
+            <td colspan="3"><br><br>Good installation and condition</td>
+            <td class="al-c"><br><br>$actual[wiring_harness]</td>
+            <td class="al-c"><br><br>$actual[wiring_harness_remark]</td>
+        </tr>
+        <!-- VHMS/Komtrak -->
+        <tr>
+            <td>VHMS/Komtrak</td>
+            <td colspan="2"><br><br>Condition and function</td>
+            <td colspan="3"><br><br>Good condition and function</td>
+            <td class="al-c"><br><br>$actual[vhms_komtrak]</td>
+            <td class="al-c"><br><br>$actual[vhms_komtrak_remark]</td>
+        </tr>
+        <!-- OPTIONAL EQUIPMENT -->
+        <tr>
+            <td class="al-c bg-subhead" colspan="8">
+                OPTIONAL EQUIPMENT
+            </td>
+        </tr>
+        <!-- Emergency shutdown -->
+        <tr>
+            <td>Emergency shutdown</td>
+            <td colspan="2">Completeness, condition and function</td>
+            <td colspan="3"><br><br>Complete and normal function</td>
+            <td class="al-c"><br><br>$actual[emergency_shutdown]</td>
+            <td class="al-c"><br><br>$actual[emergency_shutdown_remark]</td>
+        </tr>
+        <!-- Logout Switch -->
+        <tr>
+            <td><br><br>Logout Switch</td>
+            <td colspan="2">Completeness, condition and function</td>
+            <td colspan="3"><br><br>Complete and normal function</td>
+            <td class="al-c"><br><br>$actual[logout_switch]</td>
+            <td class="al-c"><br><br>$actual[logout_switch_remark]</td>
+        </tr>
+        <!-- PDU -->
+        <tr>
+            <td><br><br>PDU</td>
+            <td colspan="2">Completeness, condition and function</td>
+            <td colspan="3"><br><br>Complete and normal function</td>
+            <td class="al-c"><br><br>$actual[pdu]</td>
+            <td class="al-c"><br><br>$actual[pdu_remark]</td>
+        </tr>
+        <!-- Autolube -->
+        <tr>
+            <td><br><br>Autolube</td>
+            <td colspan="2">Completeness, condition and function</td>
+            <td colspan="3"><br><br>Complete and normal function</td>
+            <td class="al-c"><br><br>$actual[autolube]</td>
+            <td class="al-c"><br><br>$actual[autolube_remark]</td>
+        </tr>
+        <!-- Fire suppression -->
+        <tr>
+            <td>Fire suppression</td>
+            <td colspan="2">Completeness, condition and function</td>
+            <td colspan="3"><br><br>Complete and normal function</td>
+            <td class="al-c"><br><br>$actual[fire_suppression]</td>
+            <td class="al-c"><br><br>$actual[fire_suppression_remark]</td>
+        </tr>
+        <!-- Fatique warning -->
+        <tr>
+            <td>Fatique warning</td>
+            <td colspan="2">Completeness, condition and function</td>
+            <td colspan="3"><br><br>Complete and normal function</td>
+            <td class="al-c"><br><br>$actual[fatique_warning]</td>
+            <td class="al-c"><br><br>$actual[fatique_warning_remark]</td>
+        </tr>
+        <!-- Backup alarm -->
+        <tr>
+            <td><br><br>Backup alarm</td>
+            <td colspan="2">Completeness, condition and function</td>
+            <td colspan="3"><br><br>Complete and normal function</td>
+            <td class="al-c"><br><br>$actual[backup_alarm]</td>
+            <td class="al-c"><br><br>$actual[backup_alarm_remark]</td>
+        </tr>
+        <!-- GENERAL MACHINE CONDITION -->
+        <tr>
+            <td class="al-c bg-subhead" colspan="8">
+                GENERAL MACHINE CONDITION
+            </td>
+        </tr>
+        <!-- Attachment & Frame -->
+        <tr>
+            <td>Attachment & Frame</td>
+            <td colspan="2">Completeness, worn and crack detection</td>
+            <td colspan="3"><br><br>No crack</td>
+            <td class="al-c"><br><br>$actual[attachment_frame]</td>
+            <td class="al-c"><br><br>$actual[attachment_frame_remark]
+            </td>
+        </tr>
+        <!-- Machine -->
+        <tr>
+            <td><br><br>Machine</td>
+            <td colspan="2">Cleaness, wear, completeness and condition</td>
+            <td colspan="3"><br><br>Complete and normal condition</td>
+            <td class="al-c"><br><br>$actual[machine]</td>
+            <td class="al-c"><br><br>$actual[machine_remark]</td>
+        </tr>
+ </tbody>
 </table>
 <br><br>
 <table width="100%">
@@ -1346,6 +1072,12 @@ EOD;
 
 $pdf->writeHTML($headtbl, true, false, false, false, '');
 $pdf->writeHTML($rowtbl, true, false, false, false, '');
+
+$pdf->AddPage();
+$pdf->writeHTML($rowtbl2, true, false, false, false, '');
+
+$pdf->AddPage();
+$pdf->writeHTML($rowtbl3, true, false, false, false, '');
 
 // ---------------------------------------------------------
 

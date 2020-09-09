@@ -195,7 +195,7 @@ $rowtbl = $style . <<<EOD
         <!-- Engine oil -->
         <!-- row 1 -->
         <tr>
-            <td rowspan="2">Engine oil Pressure.</td>
+            <td rowspan="2"><br><br><br>Engine oil Pressure.</td>
             <td colspan="2">Run engine at low idle (SAE30) </td>
             <td class="al-c" rowspan="2"><br><br><br>Mpa<br><br>{ kg/cm2 }</td>
             <td class="al-c">Min 0.08<br><br>{ Min 0.8 }</td>
@@ -248,7 +248,7 @@ $rowtbl = $style . <<<EOD
         </tr>
         <!-- Visual inspection of strainer -->
         <tr>
-            <td colspan="3">Visual inspection of strainer</td>
+            <td colspan="3"><br><br>Visual inspection of strainer</td>
             <td class="al-c"><br><br>-</td>
             <td colspan="2">Must not clogged with metal dust </td>
             <td class="al-c"><br><br>$actual[visual_inspection]</td>
@@ -257,7 +257,7 @@ $rowtbl = $style . <<<EOD
 
         <!-- Check of thermo-label of center bearing -->
         <tr>
-            <td colspan="3">Check of thermo-label of center bearing</td>
+            <td colspan="3"><br><br>Check of thermo-label of center bearing</td>
             <td class="al-c"><br><br>°C</td>
             <td colspan="2">120 °C range must not be black</td>
             <td class="al-c"><br><br>$actual[check_of_thermo]</td>
@@ -838,7 +838,7 @@ $rowtbl2 = $style . <<<EOD
         </tr>
         <!-- Logout Switch -->
         <tr>
-            <td>Logout Switch</td>
+            <td><br><br>Logout Switch</td>
             <td colspan="2">Completeness, condition and function</td>
             <td colspan="3"><br><br>Complete and normal function</td>
             <td class="al-c"><br><br>$actual[logout_switch]</td>
@@ -846,7 +846,7 @@ $rowtbl2 = $style . <<<EOD
         </tr>
         <!-- PDU -->
         <tr>
-            <td>PDU</td>
+            <td><br><br>PDU</td>
             <td colspan="2">Completeness, condition and function</td>
             <td colspan="3"><br><br>Complete and normal function</td>
             <td class="al-c"><br><br>$actual[pdu]</td>
@@ -854,7 +854,7 @@ $rowtbl2 = $style . <<<EOD
         </tr>
         <!-- Autolube -->
         <tr>
-            <td>Autolube</td>
+            <td><br><br>Autolube</td>
             <td colspan="2">Completeness, condition and function</td>
             <td colspan="3"><br><br>Complete and normal function</td>
             <td class="al-c"><br><br>$actual[autolube]</td>
@@ -878,7 +878,7 @@ $rowtbl2 = $style . <<<EOD
         </tr>
         <!-- Backup alarm -->
         <tr>
-            <td>Backup alarm</td>
+            <td><br><br>Backup alarm</td>
             <td colspan="2">Completeness, condition and function</td>
             <td colspan="3"><br><br>Complete and normal function</td>
             <td class="al-c"><br><br>$actual[backup_alarm]</td>
@@ -901,7 +901,7 @@ $rowtbl2 = $style . <<<EOD
         </tr>
         <!-- Machine -->
         <tr>
-            <td>Machine</td>
+            <td><br><br>Machine</td>
             <td colspan="2">Cleaness, wear, completeness and condition</td>
             <td colspan="3"><br><br>Complete and normal condition</td>
             <td class="al-c"><br><br>$actual[machine]</td>
@@ -909,7 +909,7 @@ $rowtbl2 = $style . <<<EOD
         </tr>
         <!-- Undercarriage -->
         <tr>
-            <td>Undercarriage</td>
+            <td><br><br>Undercarriage</td>
             <td colspan="2">Cleaness, wear, completeness and condition</td>
             <td colspan="3"><br><br>Complete and normal condition</td>
             <td class="al-c"><br><br>$actual[undercarriage]</td>

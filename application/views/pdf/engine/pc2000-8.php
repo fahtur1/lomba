@@ -193,7 +193,7 @@ $rowtbl = $style . <<<EOD
         <!-- Engine oil -->
         <!-- row 1 -->
         <tr>
-            <td rowspan="2">Engine oil Pressure.</td>
+            <td rowspan="2"><br><br><br>Engine oil Pressure.</td>
             <td colspan="2">Run engine at low idle (SAE30) </td>
             <td class="al-c" rowspan="2"><br><br><br>Mpa<br><br>{kg/cm2}</td>
             <td class="al-c">Min 0.08<br><br>{Min 0.8}</td>
