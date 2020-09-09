@@ -71,6 +71,9 @@ $style = <<<EOD
     .ft-md {
         font-size: 13rem;
     }
+    .ft-bold {
+        font-weight: bold;
+    }
     .al-c {
         text-align: center;
     }
@@ -81,6 +84,9 @@ $style = <<<EOD
         background-color: #CCFFFF;
         font-weight: bold;
         font-style: italic;
+    }
+    br {
+        line-height: 10px;
     }
 </style>
 EOD;
