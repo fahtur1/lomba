@@ -146,7 +146,7 @@ $rowtbl = $style . <<<EOD
                             <!-- Engine Speed -->
                             <!-- row 1 -->
                             <tr>
-                                <td class="align-middle" rowspan="2"><br>Engine Speed</td>
+                                <td class="align-middle" rowspan="2"><br><br>Engine Speed</td>
                                 <td class="align-middle">Eng. Low
                                 </td>
                                 <td>S6D140E-2</td>
@@ -237,7 +237,7 @@ $rowtbl = $style . <<<EOD
                             <!-- Exhaust Gas Temp -->
                             <!-- row 1 -->
                             <tr>
-                                <td class="align-middle"><br>Exhaust Gas Temp<br></td>
+                                <td class="align-middle"><br><br>Exhaust Gas Temp<br></td>
                                 <td class="align-middle"><br><br>T/C Stall</td>
                                 <td><br><br>S6D140E-2</td>
                                 <td class="align-middle text-center al-c"><br><br>°C</td>
@@ -262,69 +262,69 @@ $rowtbl = $style . <<<EOD
                             <!-- Inching Pedal -->
                             <!-- row 1 -->
                             <tr>
-                                <td class="align-middle" rowspan="4"><br><br><br><br><br>Inching Pedal</td>
+                                <td class="align-middle" rowspan="4"><br><br><br><br><br><br><br>Inching Pedal</td>
                                 <td>Operating Effect</td>
-                                <td>Engine Stop</td>
-                                <td class="text-center al-c">Kg</td>
-                                <td class="text-center al-c">11-15</td>
-                                <td class="text-center al-c">8-18</td>
+                                <td><br><br>Engine Stop</td>
+                                <td class="text-center al-c"><br><br>Kg</td>
+                                <td class="text-center al-c"><br><br>11-15</td>
+                                <td class="text-center al-c"><br><br>8-18</td>
                                 <td class="align-middle text-center al-c">
-                                $actual[operating_effect]
+                                <br><br>$actual[operating_effect]
                                 </td>
                                 <td class="align-middle text-center al-c">
-                                $actual[operating_effect_remark]
+                                <br><br>    $actual[operating_effect_remark]
                                 </td>
                             </tr>
                             <!-- row 2 -->
                             <tr>
-                                <td>Pedal height.</td>
+                                <td><br><br>Pedal height.</td>
                                 <td>When not operated</td>
-                                <td class="text-center al-c">mm</td>
-                                <td class="text-center al-c">95-105</td>
-                                <td class="text-center al-c">90-110</td>
+                                <td class="text-center al-c"><br><br>mm</td>
+                                <td class="text-center al-c"><br><br>95-105</td>
+                                <td class="text-center al-c"><br><br>90-110</td>
                                 <td class="align-middle text-center al-c">
-                                $actual[pedal_height]
+                                <br><br>$actual[pedal_height]
                                 </td>
                                 <td class="align-middle text-center al-c">
-                                $actual[pedal_height_remark]
+                                <br><br>$actual[pedal_height_remark]
                                 </td>
                             </tr>
                             <!-- row 3 -->
                             <tr>
-                                <td>Pedal height.</td>
+                                <td><br><br>Pedal height.</td>
                                 <td>When operated</td>
-                                <td class="text-center al-c">mm</td>
-                                <td class="text-center al-c">39-47</td>
-                                <td class="text-center al-c">39-48</td>
+                                <td class="text-center al-c"><br><br>mm</td>
+                                <td class="text-center al-c"><br><br>39-47</td>
+                                <td class="text-center al-c"><br><br>39-48</td>
                                 <td class="align-middle text-center al-c">
-                                $actual[pedal_height_operated]
+                                <br><br>$actual[pedal_height_operated]
                                 </td>
                                 <td class="align-middle text-center al-c">
-                                $actual[pedal_height_operated_remark]
+                                <br><br>$actual[pedal_height_operated_remark]
                                 </td>
                             </tr>
                             <!-- row 4 -->
                             <tr>
-                                <td>Pedal travel.</td>
+                                <td><br><br>Pedal travel.</td>
                                 <td>up-down movement</td>
-                                <td class="text-center al-c">mm</td>
-                                <td class="text-center al-c">55-65</td>
-                                <td class="text-center al-c">Max. 65</td>
+                                <td class="text-center al-c"><br><br>mm</td>
+                                <td class="text-center al-c"><br><br>55-65</td>
+                                <td class="text-center al-c"><br><br>Max. 65</td>
                                 <td class="align-middle text-center al-c">
-                                $actual[pedal_travel]
+                                <br><br>$actual[pedal_travel]
                                 </td>
                                 <td class="align-middle text-center al-c">
-                                $actual[pedal_travel_remark]
+                                <br><br>$actual[pedal_travel_remark]
                                 </td>
                             </tr>
 
                             <!-- T/M Valve Press -->
                             <!-- row 1 -->
                             <tr>
-                                <td class="align-middle" rowspan="11"><br><br><br><br><br><br><br>T/M Valve Press</td>
+                                <td class="align-middle" rowspan="11"><br><br><br><br><br><br><br><br><br>  <br>T/M Valve Press</td>
                                 <td>Pilot oil Press.</td>
                                 <td class="align-middle text-center al-c" rowspan="3">Engine at full throttle Oil Temp 40-60°C</td>
-                                <td class="align-middle text-center al-c" rowspan="11"><br><br><br><br><br><br><br>Kg/cm2.</td>
+                                <td class="align-middle text-center al-c" rowspan="11"><br><br><br><br><br><br><br><br><br><br><br> Kg/cm2.</td>
                                 <td class="text-center al-c">10 - 12</td>
                                 <td class="text-center al-c">-</td>
                                 <td class="align-middle text-center al-c">
@@ -337,19 +337,19 @@ $rowtbl = $style . <<<EOD
                             <!-- row 2 -->
                             <tr>
                                 <td>Lubricating Oil Press.</td>
-                                <td class="text-center al-c">1,0 - 2,5</td>
-                                <td class="text-center al-c">-</td>
+                                <td class="text-center al-c"><br><br>1,0 - 2,5</td>
+                                <td class="text-center al-c"><br><br>-</td>
                                 <td class="align-middle text-center al-c">
-                                $actual[lubricating_oil]
+                                <br><br>$actual[lubricating_oil]
                                 </td>
                                 <td class="align-middle text-center al-c">
-                                $actual[lubricating_oil_remark]
+                                <br><br>$actual[lubricating_oil_remark]
                                 </td>
                             </tr>
                             <!-- row 3 -->
                             <tr>
                                 <td>Main oil press.</td>
-                                <td class="align-middle text-center al-c" rowspan="9"><br><br><br><br><br><br>31 - 34</td>
+                                <td class="align-middle text-center al-c" rowspan="9"><br><br><br><br><br><br><br><br><br>31 - 34</td>
                                 <td class="text-center al-c">-</td>
                                 <td class="align-middle text-center al-c">
                                 $actual[main_oil]
@@ -361,7 +361,7 @@ $rowtbl = $style . <<<EOD
                             <!-- row 4 -->
                             <tr>
                                 <td>Clutch F</td>
-                                <td class="align-middle text-center al-c" rowspan="8"><br><br><br>Mannual Spool Engine at full throttle Oil Temp 40-60°C</td>
+                                <td class="align-middle text-center al-c" rowspan="8"><br><br><br><br><br><br>Mannual Spool Engine at full throttle Oil Temp 40-60°C</td>
                                 <td class="text-center al-c"></td>
                                 <td class="align-middle text-center al-c">
                                 $actual[clutch_f]
@@ -504,17 +504,17 @@ $rowtbl = $style . <<<EOD
                             <!-- Brake Pedal -->
                             <!-- row 1 -->
                             <tr>
-                                <td>Brake Pedal</td>
+                                <td><br><br>Brake Pedal</td>
                                 <td>Operating Effort.</td>
                                 <td>Engine at low idling.</td>
-                                <td class="text-center al-c">kg.</td>
-                                <td class="al-c">30 - 34</td>
-                                <td class="al-c">Max. 50</td>
+                                <td class="text-center al-c"><br><br>Kg.</td>
+                                <td class="al-c"><br><br>30 - 34</td>
+                                <td class="al-c"><br><br>Max. 50</td>
                                 <td class="align-middle text-center al-c">
-                                $actual[operating_effort_brake]
+                                <br><br>$actual[operating_effort_brake]
                                 </td>
                                 <td class="align-middle text-center al-c">
-                                $actual[operating_effort_brake_remark]
+                                <br><br>$actual[operating_effort_brake_remark]
                                 </td>
                             </tr>
                             <!-- Air Pressure -->
@@ -543,8 +543,8 @@ $rowtbl = $style . <<<EOD
                             <tr>
                                 <td class="align-middle" rowspan="2">Blade Lifting Speed</td>
                                 <td>Raise</td>
-                                <td class="align-middle text-center al-c" rowspan="17"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Engine rated speed.</td>
-                                <td class="align-middle text-center al-c" rowspan="8"><br><br><br><br><br><br><br>mm/Sec.</td>
+                                <td class="align-middle text-center al-c" rowspan="17"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Engine rated speed.</td>
+                                <td class="align-middle text-center al-c" rowspan="8"><br><br><br><br><br><br><br><br><br><br>mm/Sec.</td>
                                 <td class="al-c">115-145</td>
                                 <td class="al-c">115-145</td>
                                 <td class="align-middle text-center al-c">
@@ -569,7 +569,7 @@ $rowtbl = $style . <<<EOD
                             <!-- Balde side shift speed, with out move of circle -->
                             <!-- row 1 -->
                             <tr>
-                                <td class="align-middle" rowspan="2">Balde side shift speed, <br> with out move of circle</td>
+                                <td class="align-middle" rowspan="2">Balde side shift speed, with out move of circle</td>
                                 <td>Left</td>
                                 <td class="al-c">115-145</td>
                                 <td class="al-c">115-145</td>
@@ -584,18 +584,18 @@ $rowtbl = $style . <<<EOD
                             <tr>
                                 <td><br><br>Right</td>
                                 <td class="al-c"><br><br>115-145</td>
-                                <td class="al-c"><br><br>115-145</td>
-                                <td class="align-middle text-center al-c">
-                                <br><br>$actual[right_out]
+                                <td class="al-c"><br><br><br>115-145</td>
+                                <td class="align-middle text-center al-c"><br><br>
+                                $actual[right_out]
                                 </td>
-                                <td class="align-middle text-center al-c">
-                                <br><br>$actual[right_out_remark]
+                                <td class="align-middle text-center al-c"><br><br>
+                                $actual[right_out_remark]
                                 </td>
                             </tr>
                             <!-- Balde side shift speed, compared to circle -->
                             <!-- row 1 -->
                             <tr>
-                                <td class="align-middle" rowspan="2">Balde side shift speed, <br> compared to circle</td>
+                                <td class="align-middle" rowspan="2">Balde side shift speed, compared to circle</td>
                                 <td>Left</td>
                                 <td class="al-c">115-145</td>
                                 <td class="al-c">115-145</td>
@@ -608,13 +608,13 @@ $rowtbl = $style . <<<EOD
                             </tr>
                             <!-- row 2 -->
                             <tr>
-                                <td>Right</td>
-                                <td class="al-c">115-145</td>
-                                <td class="al-c">115-145</td>
-                                <td class="align-middle text-center al-c">
+                                <td><br><br>Right</td>
+                                <td class="al-c"><br><br>115-145</td>
+                                <td class="al-c"><br><br>115-145</td>
+                                <td class="align-middle text-center al-c"><br><br>
                                 $actual[right_compared]
                                 </td>
-                                <td class="align-middle text-center al-c">
+                                <td class="align-middle text-center al-c"><br><br>
                                 $actual[right_compared_remark]
                                 </td>
                             </tr>
@@ -674,90 +674,90 @@ $rowtbl = $style . <<<EOD
                             <!-- Hyd. Drift -->
                             <!-- row 1 -->
                             <tr>
-                                <td class="align-middle" rowspan="4"><br><br><br><br><br>Hyd. Drift</td>
+                                <td class="align-middle" rowspan="4"><br><br><br><br><br><br><br>Hyd. Drift</td>
                                 <td>Extension of Blade Cyl.</td>
-                                <td class="align-middle text-center al-c" rowspan="4"><br><br><br><br><br>mm/min.</td>
-                                <td class="al-c">10</td>
-                                <td class="al-c">10</td>
-                                <td class="align-middle text-center al-c">
+                                <td class="align-middle text-center al-c" rowspan="4"><br><br><br><br><br><br><br>mm/min.</td>
+                                <td class="al-c"><br><br>10</td>
+                                <td class="al-c"><br><br>10</td>
+                                <td class="align-middle text-center al-c"><br><br>
                                 $actual[drift_ext_blade]
                                 </td>
-                                <td class="align-middle text-center al-c">
+                                <td class="align-middle text-center al-c"><br><br>
                                 $actual[drift_ext_blade_remark]
                                 </td>
                             </tr>
                             <!-- row 2 -->
                             <tr>
                                 <td>Retraction of Blade Cyl.</td>
-                                <td class="al-c">10</td>
-                                <td class="al-c">10</td>
-                                <td class="align-middle text-center al-c">
+                                <td class="al-c"><br><br>10</td>
+                                <td class="al-c"><br><br>10</td>
+                                <td class="align-middle text-center al-c"><br><br>
                                 $actual[drift_rtn_blade]
                                 </td>
-                                <td class="align-middle text-center al-c">
+                                <td class="align-middle text-center al-c"><br><br>
                                 $actual[drift_rtn_blade_remark]
                                 </td>
                             </tr>
                             <!-- row 3 -->
                             <tr>
                                 <td>Extension of Riper Cyl.</td>
-                                <td class="al-c">20</td>
-                                <td class="al-c">20</td>
-                                <td class="align-middle text-center al-c">
+                                <td class="al-c"><br><br>20</td>
+                                <td class="al-c"><br><br>20</td>
+                                <td class="align-middle text-center al-c"><br><br>
                                 $actual[drift_ext_ripper]
                                 </td>
-                                <td class="align-middle text-center al-c">
+                                <td class="align-middle text-center al-c"><br><br>
                                 $actual[drift_ext_ripper_remark]
                                 </td>
                             </tr>
                             <!-- row 4 -->
                             <tr>
                                 <td>Retraction of Riper Cyl.</td>
-                                <td class="al-c">20</td>
-                                <td class="al-c">20</td>
-                                <td class="align-middle text-center al-c">
+                                <td class="al-c"><br><br>20</td>
+                                <td class="al-c"><br><br>20</td>
+                                <td class="align-middle text-center al-c"><br><br>
                                 $actual[drift_rtn_ripper]
                                 </td>
-                                <td class="align-middle text-center al-c">
+                                <td class="align-middle text-center al-c"><br><br>
                                 $actual[drift_rtn_ripper_remark]
                                 </td>
                             </tr>
                             <!-- Hydraulic pressure -->
                             <!-- row 1 -->
                             <tr>
-                                <td class="align-middle" rowspan="3"><br><br><br>Hydraulic pressure</td>
+                                <td class="align-middle" rowspan="3"><br><br><br><br><br>Hydraulic pressure</td>
                                 <td>Priority v relieve press.</td>
-                                <td class="align-middle text-center al-c" rowspan="3"><br><br><br>mm/min.</td>
-                                <td class="al-c">240 - 260</td>
-                                <td class="al-c">235 - 265</td>
-                                <td class="align-middle text-center al-c">
+                                <td class="align-middle text-center al-c" rowspan="3"><br><br><br><br><br>mm/min.</td>
+                                <td class="al-c"><br><br>240 - 260</td>
+                                <td class="al-c"><br><br>235 - 265</td>
+                                <td class="align-middle text-center al-c"><br><br>
                                 $actual[hydraulic_priority]
                                 </td>
-                                <td class="align-middle text-center al-c">
+                                <td class="align-middle text-center al-c"><br><br>
                                 $actual[hydraulic_priority_remark]
                                 </td>
                             </tr>
                             <!-- row 2 -->
                             <tr>
                                 <td>Control valve RH</td>
-                                <td class="al-c">240 - 260</td>
-                                <td class="al-c">235 - 265</td>
-                                <td class="align-middle text-center al-c">
+                                <td class="al-c"><br><br>240 - 260</td>
+                                <td class="al-c"><br><br>235 - 265</td>
+                                <td class="align-middle text-center al-c"><br><br>
                                 $actual[hydraulic_valve_rh]
                                 </td>
-                                <td class="align-middle text-center al-c">
+                                <td class="align-middle text-center al-c"><br><br>
                                 $actual[hydraulic_valve_rh_remark]
                                 </td>
                             </tr>
                             <!-- row 3 -->
                             <tr>
                                 <td>Control valve LH</td>
-                                <td class="al-c">240 - 260</td>
-                                <td class="al-c">235 - 265</td>
-                                <td class="align-middle text-center al-c">
+                                <td class="al-c"><br><br>240 - 260</td>
+                                <td class="al-c"><br><br>235 - 265</td>
+                                <td class="align-middle text-center al-c"><br><br>
                                 $actual[hydraulic_valve_lh]
                                 </td>
-                                <td class="align-middle text-center al-c">
+                                <td class="align-middle text-center al-c"><br><br>
                                 $actual[hydraulic_valve_lh_remark]
                                 </td>
                             </tr>
@@ -770,13 +770,13 @@ $rowtbl = $style . <<<EOD
                             <!-- Diff. Drain Plug -->
                             <tr>
                                 <td>Diff. Drain Plug</td>
-                                <td class="align-middle text-center al-c" rowspan="3"><br><br><br>Visual Check<br><br></td>
+                                <td class="align-middle text-center al-c" rowspan="3"><br><br><br><br>Visual Check<br><br></td>
                                 <td></td>
-                                <td class="align-middle text-center al-c" colspan="3" rowspan="3"><br><br><br>No excessive metalic powder<br><br></td>
-                                <td class="align-middle text-center al-c">
+                                <td class="align-middle text-center al-c" colspan="3" rowspan="3"><br><br><br><br>No excessive metalic powder<br><br></td>
+                                <td class="align-middle text-center al-c"><br><br>
                                 $actual[diff_drain]
                                 </td>
-                                <td class="align-middle text-center al-c">
+                                <td class="align-middle text-center al-c"><br><br>
                                 $actual[diff_drain_remark]
                                 </td>
                             </tr>
