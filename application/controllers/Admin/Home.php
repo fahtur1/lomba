@@ -27,7 +27,7 @@ class Home extends CI_Controller
 
     public function index()
     {
-        print('fahturrrr');
+        redirect('Admin/Home/dashboard');
     }
 
     public function dashboard()
