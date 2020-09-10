@@ -20,7 +20,7 @@
       <!-- Nav Item - Dashboard -->
       <?php 
       $url = explode("/", current_url());
-      $currentUrl = $url[count($url - 1)]; ?>
+      $currentUrl = $url[5]; ?>
 
       <?= ($currentUrl == 'dashboard') ? '<li class="nav-item active">' : '<li class="nav-item">' ?>
       <a class="nav-link" href="<?= base_url('admin') ?>/home/dashboard">
