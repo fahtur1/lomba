@@ -23,7 +23,7 @@
       $currentUrl = $url[5]; ?>
 
       <?= ($currentUrl == 'dashboard') ? '<li class="nav-item active">' : '<li class="nav-item">' ?>
-      <a class="nav-link" href="<?= base_url('admin') ?>/home/dashboard">
+      <a class="nav-link" href="<?= base_url('Admin/Home') ?>/dashboard">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Dashboard</span></a>
       </li>
