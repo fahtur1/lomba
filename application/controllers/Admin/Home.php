@@ -12,17 +12,17 @@ class Home extends CI_Controller
             redirect('Admin/Auth');
         }
 
-        $this->load->model('Product_model');
-        $this->load->model('Plan_model');
-        $this->load->model('Model_model');
+        $this->load->model('Product_Model');
+        $this->load->model('Plan_Model');
+        $this->load->model('Model_Model');
         $this->load->model('Actual_Plan', 'actual');
 
-        $this->load->model('Column_model');
+        $this->load->model('Column_Model');
 
-        $this->load->model('Pc2000_model');
-        $this->load->model('Hd7857_model');
-        $this->load->model('Hd7855_model');
-        $this->load->model('Gd825_model');
+        $this->load->model('Pc2000_Model');
+        $this->load->model('Hd7857_Model');
+        $this->load->model('Hd7855_Model');
+        $this->load->model('Gd825_Model');
     }
 
     public function index()
@@ -33,7 +33,7 @@ class Home extends CI_Controller
     public function dashboard()
     {
         $data = [
-            'reports' => $this->Model_model->getModels(),
+            'reports' => $this->Model_Model->getModels(),
             'title' => 'Dashboard',
             'results' => [
                 'pc2000' => [
@@ -43,9 +43,9 @@ class Home extends CI_Controller
                         'ps4' => $this->actual->getActualRow('pc2000-8', 'ps4'),
                     ],
                     'plan' => [
-                        'ps2' => $this->Plan_model->getPlanRow('PC2000-8', 'ps2'),
-                        'ps3' => $this->Plan_model->getPlanRow('PC2000-8', 'ps3'),
-                        'ps4' => $this->Plan_model->getPlanRow('PC2000-8', 'ps4'),
+                        'ps2' => $this->Plan_Model->getPlanRow('PC2000-8', 'ps2'),
+                        'ps3' => $this->Plan_Model->getPlanRow('PC2000-8', 'ps3'),
+                        'ps4' => $this->Plan_Model->getPlanRow('PC2000-8', 'ps4'),
                     ]
                 ],
                 'gd825' => [
@@ -55,9 +55,9 @@ class Home extends CI_Controller
                         'ps4' => $this->actual->getActualRow('gd825-2', 'ps4'),
                     ],
                     'plan' => [
-                        'ps2' => $this->Plan_model->getPlanRow('GD825-2', 'ps2'),
-                        'ps3' => $this->Plan_model->getPlanRow('GD825-2', 'ps3'),
-                        'ps4' => $this->Plan_model->getPlanRow('GD825-2', 'ps4'),
+                        'ps2' => $this->Plan_Model->getPlanRow('GD825-2', 'ps2'),
+                        'ps3' => $this->Plan_Model->getPlanRow('GD825-2', 'ps3'),
+                        'ps4' => $this->Plan_Model->getPlanRow('GD825-2', 'ps4'),
                     ]
                 ],
                 'hd785' => [
@@ -67,9 +67,9 @@ class Home extends CI_Controller
                         'ps4' => $this->actual->getActualRow('hd785-5', 'ps4'),
                     ],
                     'plan' => [
-                        'ps2' => $this->Plan_model->getPlanRow('HD785-5', 'ps2'),
-                        'ps3' => $this->Plan_model->getPlanRow('HD785-5', 'ps3'),
-                        'ps4' => $this->Plan_model->getPlanRow('HD785-5', 'ps4'),
+                        'ps2' => $this->Plan_Model->getPlanRow('HD785-5', 'ps2'),
+                        'ps3' => $this->Plan_Model->getPlanRow('HD785-5', 'ps3'),
+                        'ps4' => $this->Plan_Model->getPlanRow('HD785-5', 'ps4'),
                     ]
                 ],
                 'hd787' => [
@@ -79,9 +79,9 @@ class Home extends CI_Controller
                         'ps4' => $this->actual->getActualRow('hd785-7', 'ps4'),
                     ],
                     'plan' => [
-                        'ps2' => $this->Plan_model->getPlanRow('HD785-7', 'ps2'),
-                        'ps3' => $this->Plan_model->getPlanRow('HD785-7', 'ps3'),
-                        'ps4' => $this->Plan_model->getPlanRow('HD785-7', 'ps4'),
+                        'ps2' => $this->Plan_Model->getPlanRow('HD785-7', 'ps2'),
+                        'ps3' => $this->Plan_Model->getPlanRow('HD785-7', 'ps3'),
+                        'ps4' => $this->Plan_Model->getPlanRow('HD785-7', 'ps4'),
                     ]
                 ]
             ]
@@ -105,7 +105,7 @@ class Home extends CI_Controller
                 'product_id' => $this->input->post('unit_code')
             ];
 
-            if ($this->Plan_model->insertPlan($data) > 0) {
+            if ($this->Plan_Model->insertPlan($data) > 0) {
                 $this->flask('success', 'Plan has been Created!', 'message');
             } else {
                 $this->flask('danger', 'Failed to create Plan!', 'message');
@@ -115,8 +115,8 @@ class Home extends CI_Controller
         } else {
             if ($this->session->userdata('role') == 1) {
                 $data = [
-                    'models' => $this->Model_model->getModels(),
-                    'product' => $this->Product_model->getProducts(),
+                    'models' => $this->Model_Model->getModels(),
+                    'product' => $this->Product_Model->getProducts(),
                     'title' => 'Create Plan'
                 ];
 
@@ -134,7 +134,7 @@ class Home extends CI_Controller
     public function planps()
     {
         $data = [
-            'plans' => $this->Plan_model->getPlans(),
+            'plans' => $this->Plan_Model->getPlans(),
             'title' => 'Plan PS'
         ];
 
@@ -677,7 +677,7 @@ class Home extends CI_Controller
 
     public function other_validation($check = 0)
     {
-        $column_other = $this->Column_model->getColumn('other_data');
+        $column_other = $this->Column_Model->getColumn('other_data');
         foreach ($column_other as $column) {
             if (!(substr($column['column'], 0, 2) == 'id')) {
                 if ($column['column'] == 'undercarriage') {
@@ -702,7 +702,7 @@ class Home extends CI_Controller
     public function ppm_report($detail = '')
     {
         $data = [
-            'reports' => $this->Model_model->getModels(),
+            'reports' => $this->Model_Model->getModels(),
             'actuals' => [
                 'pc2000' => $this->actual->getActualJoin('pc2000-8'),
                 'gd825' => $this->actual->getActualJoin('gd825-2'),
@@ -796,8 +796,8 @@ class Home extends CI_Controller
                     $this->other_validation(1);
 
                 if ($this->form_validation->run() == true) {
-                    $data = $this->Column_model->getColumn('pc2000-8');
-                    $column_other = $this->Column_model->getColumn('other_data');
+                    $data = $this->Column_Model->getColumn('pc2000-8');
+                    $column_other = $this->Column_Model->getColumn('other_data');
                     $dataModel = [];
 
                     // Buat Array Untuk Insert Ke Database
@@ -824,8 +824,8 @@ class Home extends CI_Controller
                     ];
 
                     if ($ps == 'PS2') {
-                        if ($this->Pc2000_model->insertPs2($dataModel, $actual_data)) {
-                            if ($this->Plan_model->updated_plan($plan, ['updated' => 1]) > 0)
+                        if ($this->Pc2000_Model->insertPs2($dataModel, $actual_data)) {
+                            if ($this->Plan_Model->updated_plan($plan, ['updated' => 1]) > 0)
                                 $this->flask('success', 'Actual Plan added Succesfuly', 'message');
                         } else {
                             $this->flask('danger', 'Failed to add Actual Plan', 'message');
@@ -839,8 +839,8 @@ class Home extends CI_Controller
                             }
                         }
 
-                        if ($this->Pc2000_model->insertPs34($dataModel, $actual_data, $other)) {
-                            if ($this->Plan_model->updated_plan($plan, ['updated' => 1]) > 0)
+                        if ($this->Pc2000_Model->insertPs34($dataModel, $actual_data, $other)) {
+                            if ($this->Plan_Model->updated_plan($plan, ['updated' => 1]) > 0)
                                 $this->flask('success', 'Actual Plan added Succesfuly', 'message');
                         } else {
                             $this->flask('danger', 'Failed to add Actual Plan', 'message');
@@ -871,8 +871,8 @@ class Home extends CI_Controller
                     $this->other_validation(0);
 
                 if ($this->form_validation->run() == true) {
-                    $data = $this->Column_model->getColumn('gd825-2');
-                    $column_other = $this->Column_model->getColumn('other_data');
+                    $data = $this->Column_Model->getColumn('gd825-2');
+                    $column_other = $this->Column_Model->getColumn('other_data');
                     $dataModel = [];
                     // Buat Array Untuk Insert Ke Database
                     foreach ($data as $dataa) {
@@ -897,8 +897,8 @@ class Home extends CI_Controller
                     ];
 
                     if ($ps == 'PS2') {
-                        if ($this->Gd825_model->insertPs2($dataModel, $actual_data)) {
-                            if ($this->Plan_model->updated_plan($plan, ['updated' => 1]) > 0)
+                        if ($this->Gd825_Model->insertPs2($dataModel, $actual_data)) {
+                            if ($this->Plan_Model->updated_plan($plan, ['updated' => 1]) > 0)
                                 $this->flask('success', 'Actual Plan added Succesfuly', 'message');
                         } else {
                             $this->flask('danger', 'Failed to add Actual Plan', 'message');
@@ -912,8 +912,8 @@ class Home extends CI_Controller
                             }
                         }
 
-                        if ($this->Gd825_model->insertPs34($dataModel, $actual_data, $other)) {
-                            if ($this->Plan_model->updated_plan($plan, ['updated' => 1]) > 0)
+                        if ($this->Gd825_Model->insertPs34($dataModel, $actual_data, $other)) {
+                            if ($this->Plan_Model->updated_plan($plan, ['updated' => 1]) > 0)
                                 $this->flask('success', 'Actual Plan added Succesfuly', 'message');
                         } else {
                             $this->flask('danger', 'Failed to add Actual Plan', 'message');
@@ -945,8 +945,8 @@ class Home extends CI_Controller
                     $this->other_validation(0);
 
                 if ($this->form_validation->run() == true) {
-                    $data = $this->Column_model->getColumn('hd785-5');
-                    $column_other = $this->Column_model->getColumn('other_data');
+                    $data = $this->Column_Model->getColumn('hd785-5');
+                    $column_other = $this->Column_Model->getColumn('other_data');
                     $dataModel = [];
 
                     // Buat Array Untuk Insert Ke Database
@@ -973,8 +973,8 @@ class Home extends CI_Controller
                     ];
 
                     if ($ps == 'PS2') {
-                        if ($this->Hd7855_model->insertPs2($dataModel, $actual_data)) {
-                            if ($this->Plan_model->updated_plan($plan, ['updated' => 1]) > 0)
+                        if ($this->Hd7855_Model->insertPs2($dataModel, $actual_data)) {
+                            if ($this->Plan_Model->updated_plan($plan, ['updated' => 1]) > 0)
                                 $this->flask('success', 'Actual Plan added Succesfuly', 'message');
                         } else {
                             $this->flask('danger', 'Failed to add Actual Plan', 'message');
@@ -988,8 +988,8 @@ class Home extends CI_Controller
                             }
                         }
 
-                        if ($this->Hd7855_model->insertPs34($dataModel, $actual_data, $other)) {
-                            if ($this->Plan_model->updated_plan($plan, ['updated' => 1]) > 0)
+                        if ($this->Hd7855_Model->insertPs34($dataModel, $actual_data, $other)) {
+                            if ($this->Plan_Model->updated_plan($plan, ['updated' => 1]) > 0)
                                 $this->flask('success', 'Actual Plan added Succesfuly', 'message');
                         } else {
                             $this->flask('danger', 'Failed to add Actual Plan', 'message');
@@ -1020,8 +1020,8 @@ class Home extends CI_Controller
                     $this->other_validation(0);
 
                 if ($this->form_validation->run() == true) {
-                    $data = $this->Column_model->getColumn('hd785-7');
-                    $column_other = $this->Column_model->getColumn('other_data');
+                    $data = $this->Column_Model->getColumn('hd785-7');
+                    $column_other = $this->Column_Model->getColumn('other_data');
                     $dataModel = [];
 
                     // Buat Array Untuk Insert Ke Database
@@ -1048,8 +1048,8 @@ class Home extends CI_Controller
                     ];
 
                     if ($ps == 'PS2') {
-                        if ($this->Hd7857_model->insertPs2($dataModel, $actual_data)) {
-                            if ($this->Plan_model->updated_plan($plan, ['updated' => 1]) > 0)
+                        if ($this->Hd7857_Model->insertPs2($dataModel, $actual_data)) {
+                            if ($this->Plan_Model->updated_plan($plan, ['updated' => 1]) > 0)
                                 $this->flask('success', 'Actual Plan added Succesfuly', 'message');
                         } else {
                             $this->flask('danger', 'Failed to add Actual Plan', 'message');
@@ -1063,8 +1063,8 @@ class Home extends CI_Controller
                             }
                         }
 
-                        if ($this->Hd7857_model->insertPs34($dataModel, $actual_data, $other)) {
-                            if ($this->Plan_model->updated_plan($plan, ['updated' => 1]) > 0)
+                        if ($this->Hd7857_Model->insertPs34($dataModel, $actual_data, $other)) {
+                            if ($this->Plan_Model->updated_plan($plan, ['updated' => 1]) > 0)
                                 $this->flask('success', 'Actual Plan added Succesfuly', 'message');
                         } else {
                             $this->flask('danger', 'Failed to add Actual Plan', 'message');
