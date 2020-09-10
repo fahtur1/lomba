@@ -18,7 +18,9 @@
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <?php $currentUrl = explode("/", current_url())[6]; ?>
+      <?php 
+      $url = explode("/", current_url());
+      $currentUrl = $url[count($url)]; ?>
 
       <?= ($currentUrl == 'dashboard') ? '<li class="nav-item active">' : '<li class="nav-item">' ?>
       <a class="nav-link" href="<?= base_url('admin') ?>/home/dashboard">
