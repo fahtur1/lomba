@@ -5,6 +5,6 @@ class Redirect extends CI_Controller
 {
     public function index()
     {
-        redirect('Admin/Home/dashboard');
+        redirect('Admin/Auth');
     }
 }
