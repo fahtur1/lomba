@@ -7,7 +7,7 @@
         </div>
         <div class="col-lg-3 offset-lg-6">
             <div class="text-center align-middle">
-                <img src="<?= base_url('assets/img/') . $image ?>" class="img-fluid" alt="..." width="500">
+                <img src="<?= base_url('assets/img/') . $detail['image'] ?>" class="img-fluid" alt="..." width="500">
             </div>
         </div>
     </div>
