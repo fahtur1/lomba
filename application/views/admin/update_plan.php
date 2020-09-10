@@ -939,24 +939,4 @@
             </div>
         </div>
     </div>
-
-    <!-- <div class="row">
-        <div class="col-lg-4">
-            <form method="post" action="<?= base_url('admin') ?>/home/create_plan">
-                <div class="form-group">
-                    <label for="remark" class="font-weight-bold">Engine Speed</label>
-                    <div class="row">
-                        <div class="col-lg-12 ml-lg-4">
-                            <label for="remark">Engine Low</label>
-                            <input type="text" class="form-control" id="remark" name="remark">
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                        </div>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-primary btn-icon-split">
-                    <span class="text">Submit</span>
-                </button>
-            </form>
-        </div>
-    </div> -->
 </div>
