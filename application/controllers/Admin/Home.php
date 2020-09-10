@@ -9,7 +9,7 @@ class Home extends CI_Controller
 
         if (!($this->session->userdata('role'))) {
             $this->flask('danger', 'Login First!', 'logout');
-            redirect('admin/auth');
+            redirect('Admin/Auth');
         }
 
         $this->load->model('Product_model');
@@ -111,7 +111,7 @@ class Home extends CI_Controller
                 $this->flask('danger', 'Failed to create Plan!', 'message');
             }
 
-            redirect('admin/home/planps');
+            redirect('Admin/Home/planps');
         } else {
             if ($this->session->userdata('role') == 1) {
                 $data = [
@@ -126,7 +126,7 @@ class Home extends CI_Controller
                 $this->load->view('admin/create_plan', $data);
                 $this->load->view('templates/footer');
             } else {
-                redirect('admin/home/dashboard');
+                redirect('Admin/Home/dashboard');
             }
         }
     }
@@ -847,7 +847,7 @@ class Home extends CI_Controller
                         }
                     }
 
-                    redirect('admin/home/actualps');
+                    redirect('Admin/Home/actualps');
                 } else {
                     $this->load->view('templates/sidebar');
                     $this->load->view('templates/navbar', $dataa);
@@ -920,7 +920,7 @@ class Home extends CI_Controller
                         }
                     }
 
-                    redirect('admin/home/actualps');
+                    redirect('Admin/Home/actualps');
                 } else {
                     $this->load->view('templates/sidebar');
                     $this->load->view('templates/navbar', $dataa);
@@ -996,7 +996,7 @@ class Home extends CI_Controller
                         }
                     }
 
-                    redirect('admin/home/actualps');
+                    redirect('Admin/Home/actualps');
                 } else {
                     $this->load->view('templates/sidebar');
                     $this->load->view('templates/navbar', $dataa);
@@ -1071,7 +1071,7 @@ class Home extends CI_Controller
                         }
                     }
 
-                    redirect('admin/home/actualps');
+                    redirect('Admin/Home/actualps');
                 } else {
                     $this->load->view('templates/sidebar');
                     $this->load->view('templates/navbar', $dataa);
