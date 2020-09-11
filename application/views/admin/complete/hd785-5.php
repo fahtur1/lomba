@@ -957,8 +957,8 @@
                                     <?= form_error('final_drive_rh', '<small class="text-danger">', '</small>') ?>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <input type="text" class="form-control no-border" value="<?= set_value('site') ?>" name="final_drive_rh_remark" size="5">
-                                    <?= form_error('site', '<small class="text-danger">', '</small>') ?>
+                                    <input type="text" class="form-control no-border" value="<?= set_value('final_drive_rh_remark') ?>" name="final_drive_rh_remark" size="5">
+                                    <?= form_error('final_drive_rh_remark', '<small class="text-danger">', '</small>') ?>
                                 </td>
                             </tr>
 
