@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">PLAN PS</h1>
-        <a href="<?= base_url('admin/home/create_plan') ?>" class="btn btn-primary float-right text-white">Add Data</a>
+        <a href="<?= base_url('Admin/Home/create_plan') ?>" class="btn btn-primary float-right text-white">Add Data</a>
     </div>
     <?= $this->session->flashdata('message'); ?>
     <div class="card shadow mb-4">
@@ -40,7 +40,7 @@
                                 <td><?= $plan['ps_type'] ?></td>
                                 <td><?= $plan['remark'] ?></td>
                                 <td class="text-center">
-                                    <a href="<?= base_url("admin/home/update_plan/") . $plan['model_name'] . "/" . $plan['ps_type'] . "/" . $plan['plan_id']  ?>" class="btn btn-warning btn-icon-split px-3 py-2 update_button">
+                                    <a href="<?= base_url("Admin/Home/update_plan/") . $plan['model_name'] . "/" . $plan['ps_type'] . "/" . $plan['plan_id']  ?>" class="btn btn-warning btn-icon-split px-3 py-2 update_button">
                                         Update
                                     </a>
                                 </td>

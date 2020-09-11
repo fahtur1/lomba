@@ -17,7 +17,7 @@
                                         <h1 class="h4 text-gray-900 mb-4">Login Page</h1>
                                     </div>
                                     <?= $this->session->flashdata('logout'); ?>
-                                    <form class="user" method="post" action="<?= base_url('admin/auth') ?>">
+                                    <form class="user" method="post" action="<?= base_url('Admin/Auth') ?>">
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user" name="email" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
                                         </div>

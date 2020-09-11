@@ -15,7 +15,7 @@
                 <!-- Bar Chart -->
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
-                        <a href="<?= base_url('admin/home') ?>/ppm_report/<?= $report['model_name'] ?>">
+                        <a href="<?= base_url('Admin/Home') ?>/ppm_report/<?= $report['model_name'] ?>">
                             <h6 class="m-0 font-weight-bold text-primary"><?= $report['model_name'] ?></h6>
                         </a>
                     </div>

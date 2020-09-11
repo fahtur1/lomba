@@ -18,10 +18,12 @@
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <?php $currentUrl = explode("/", current_url())[6]; ?>
+      <?php 
+      $url = explode("/", current_url());
+      $currentUrl = $url[5]; ?>
 
       <?= ($currentUrl == 'dashboard') ? '<li class="nav-item active">' : '<li class="nav-item">' ?>
-      <a class="nav-link" href="<?= base_url('admin') ?>/home/dashboard">
+      <a class="nav-link" href="<?= base_url('Admin/Home') ?>/dashboard">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Dashboard</span></a>
       </li>
@@ -36,7 +38,7 @@
       <?php if ($this->session->userdata('role') == 1) { ?>
         <!-- Nav Item - Pages Collapse Menu -->
         <?= ($currentUrl == 'create_plan') ? '<li class="nav-item active">' : '<li class="nav-item">' ?>
-        <a class="nav-link" href="<?= base_url('admin/home') ?>/create_plan">
+        <a class="nav-link" href="<?= base_url('Admin/Home') ?>/create_plan">
           <i class="fas fa-fw fa-cog"></i>
           <span>Create Plan PS</span>
         </a>
@@ -45,14 +47,14 @@
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <?= ($currentUrl == 'planps') ? '<li class="nav-item active">' : '<li class="nav-item">' ?>
-      <a class="nav-link" href="<?= base_url('admin/home') ?>/planps">
+      <a class="nav-link" href="<?= base_url('Admin/Home') ?>/planps">
         <i class="fas fa-fw fa-wrench"></i>
         <span>Plan PS</span>
       </a>
       </li>
 
       <?= ($currentUrl == 'actualps') ? '<li class="nav-item active">' : '<li class="nav-item">' ?>
-      <a class="nav-link collapsed" href="<?= base_url('admin/home') ?>/actualps">
+      <a class="nav-link collapsed" href="<?= base_url('Admin/Home') ?>/actualps">
         <i class="fas fa-fw fa-table"></i>
         <span>Actual PS</span>
       </a>
@@ -68,7 +70,7 @@
 
       <!-- Nav Item - Charts -->
       <?= ($currentUrl == 'ppm_report') ? '<li class="nav-item active">' : '<li class="nav-item">' ?>
-      <a class="nav-link" href="<?= base_url('admin/home') ?>/ppm_report">
+      <a class="nav-link" href="<?= base_url('Admin/Home') ?>/ppm_report">
         <i class="fas fa-fw fa-chart-area"></i>
         <span>PPM Report</span></a>
       </li>
@@ -76,7 +78,7 @@
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
       <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('admin/auth/logout') ?>">
+        <a class="nav-link" href="<?= base_url('Admin/Auth/logout') ?>">
           <i class="fas fa-fw fa-sign-out-alt"></i>
           <span>Logout</span></a>
       </li>

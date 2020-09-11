@@ -1,4 +1,4 @@
-<div class="container-fluid" id="content">
+<div class="container-fluid" id="content" name="content">
     <div class="row">
         <div class="col-lg-3">
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -7,7 +7,7 @@
         </div>
         <div class="col-lg-3 offset-lg-6">
             <div class="text-center align-middle">
-                <img src="<?= base_url('assets/img') ?>/teruk.jpeg" class="img-fluid" alt="..." width="500">
+                <img src="<?= base_url('assets/img/') . $detail['image'] ?>" class="img-fluid" alt="..." width="500">
             </div>
         </div>
     </div>
@@ -33,14 +33,14 @@
                                     <th>PPM Document</th>
                                 </tr>
                             </tfoot>
-                            <tbody>`
+                            <tbody>
                                 <?php foreach ($detail['actual'] as $actual) : ?>
                                     <tr>
                                         <td><?= $actual['model_name'] ?></td>
                                         <td><?= $actual['plan_date'] ?></td>
                                         <td><?= $actual['ps_type'] ?></td>
                                         <td class="text-center">
-                                            <a href="<?= base_url("admin/home/export/$actual[model_name]/$actual[actual_id]/$actual[ps_type]")   ?>" class="btn btn-warning btn-icon-split px-3 py-2 update_button">
+                                            <a href="<?= base_url("Admin/Home/export/$actual[model_name]/$actual[actual_id]/$actual[ps_type]")   ?>" class="btn btn-warning btn-icon-split px-3 py-2 update_button">
                                                 PDF
                                             </a>
                                     </tr> <?php endforeach; ?> </tbody>
