@@ -19,6 +19,8 @@
   <link href="<?= base_url('assets') ?>/css/sb-admin-2.min.css" rel="stylesheet">
   <link href="<?= base_url('assets') ?>/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
+  <!-- Logo Icon -->
+  <link rel="icon" type="image/png" href="<?= base_url('assets/img') ?>/UT.png">
   <script src="<?= base_url('assets') ?>/vendor/chart.js/Chart.min.js"></script>
 
 </head>
