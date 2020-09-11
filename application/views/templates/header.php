@@ -20,8 +20,8 @@
   <link href="<?= base_url('assets') ?>/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
   <!-- Logo Icon -->
-  <link rel="shortcut icon" href="<?= base_url('assets/img') ?>/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="<?= base_url('assets/img') ?>/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="<?= base_url('assets/img') ?>/icon.png" type="image/x-icon">
+  <link rel="icon" href="<?= base_url('assets/img') ?>/icon.png" type="image/x-icon">
 
   <!-- JS For Chart -->
   <script src="<?= base_url('assets') ?>/vendor/chart.js/Chart.min.js"></script>
