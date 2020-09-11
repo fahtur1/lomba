@@ -724,6 +724,7 @@ class Home extends CI_Controller
                     $data['detail'] = [
                         "name" => "PC2000-8",
                         'actual' => $this->actual->getActualJoin('pc2000-8'),
+                        'image' => 'PC2000-8.png'
                     ];
                     $this->load->view('admin/ppm_report_detail', $data);
                     break;
@@ -731,7 +732,7 @@ class Home extends CI_Controller
                     $data['detail'] = [
                         "name" => "GD825-2",
                         'actual' => $this->actual->getActualJoin('gd825-2'),
-                        'image' => 'gd825.jpeg'
+                        'image' => 'GD825A-2.png'
                     ];
                     $this->load->view('admin/ppm_report_detail', $data);
                     break;
@@ -739,7 +740,7 @@ class Home extends CI_Controller
                     $data['detail'] = [
                         "name" => "HD785-7",
                         'actual' => $this->actual->getActualJoin('hd785-7'),
-                        'image' => 'hd787.jpeg'
+                        'image' => 'HD785-7.png'
                     ];
                     $this->load->view('admin/ppm_report_detail', $data);
                     break;
@@ -747,7 +748,7 @@ class Home extends CI_Controller
                     $data['detail'] = [
                         "name" => "HD785-5",
                         'actual' => $this->actual->getActualJoin('hd785-5'),
-                        'image' => 'hd785.jpeg'
+                        'image' => 'HD785-5.png'
                     ];
                     $this->load->view('admin/ppm_report_detail', $data);
                     break;
@@ -757,24 +758,6 @@ class Home extends CI_Controller
             }
         }
         $this->load->view('templates/footer');
-    }
-
-    public function getDataDummy()
-    {
-        return $data = [
-            [
-                "name" => "PC2000-8"
-            ],
-            [
-                "name" => "GD825-2"
-            ],
-            [
-                "name" => "HD785-7"
-            ],
-            [
-                "name" => "HD785-5"
-            ]
-        ];
     }
 
     public function update_plan($unit = '', $ps = '', $plan =  '')

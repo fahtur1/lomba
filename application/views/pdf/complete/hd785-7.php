@@ -92,7 +92,7 @@ $style = <<<EOD
 EOD;
 
 // src of logo
-$src = base_url('assets/img/logo.jpeg');
+$src = base_url('assets/img/UT.png');
 
 // header table
 $headtbl = $style . <<<EOD
