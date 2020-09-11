@@ -111,7 +111,8 @@
             dec: {
                 engine: 0,
                 complete: 0
-            }
+            },
+            sum: 0
         },
         gd825: {
             jan: {
@@ -161,7 +162,8 @@
             dec: {
                 engine: 0,
                 complete: 0
-            }
+            },
+            sum: 0
         },
         hd787: {
             jan: {
@@ -211,7 +213,8 @@
             dec: {
                 engine: 0,
                 complete: 0
-            }
+            },
+            sum: 0
         },
         hd785: {
             jan: {
@@ -261,7 +264,8 @@
             dec: {
                 engine: 0,
                 complete: 0
-            }
+            },
+            sum: 0
         }
     }
 
@@ -271,254 +275,374 @@
             switch (date.getMonth() + 1) {
                 case 1:
                     if (element.ps_type == 'PS2') {
-                        if (element.model_name == 'PC2000-8')
+                        if (element.model_name == 'PC2000-8') {
                             number.pc2000.jan.engine++
-                        else if (element.model_name == 'GD825-2')
+                            number.pc2000.sum++
+                        } else if (element.model_name == 'GD825-2') {
                             number.gd825.jan.engine++
-                        else if (element.model_name == 'HD785-5')
+                            number.gd825.sum++
+                        } else if (element.model_name == 'HD785-5') {
                             number.hd785.jan.engine++
-                        else if (element.model_name == 'HD785-7')
+                            number.hd785.sum++
+                        } else if (element.model_name == 'HD785-7') {
                             number.hd787.jan.engine++
+                            number.hd787.sum++
+                        }
                     } else {
-                        if (element.model_name == 'PC2000-8')
+                        if (element.model_name == 'PC2000-8') {
                             number.pc2000.jan.complete++
-                        else if (element.model_name == 'GD825-2')
+                            number.pc2000.sum++
+                        } else if (element.model_name == 'GD825-2') {
                             number.gd825.jan.complete++
-                        else if (element.model_name == 'HD785-5')
+                            number.gd825.sum++
+                        } else if (element.model_name == 'HD785-5') {
                             number.hd785.jan.complete++
-                        else if (element.model_name == 'HD785-7')
+                            number.hd785.sum++
+                        } else if (element.model_name == 'HD785-7') {
                             number.hd787.jan.complete++
+                            number.hd787.sum++
+                        }
                     }
                     break;
                 case 2:
                     if (element.ps_type == 'PS2') {
-                        if (element.model_name == 'PC2000-8')
+                        if (element.model_name == 'PC2000-8') {
                             number.pc2000.feb.engine++
-                        else if (element.model_name == 'GD825-2')
+                            number.pc2000.sum++
+                        } else if (element.model_name == 'GD825-2') {
                             number.gd825.feb.engine++
-                        else if (element.model_name == 'HD785-5')
+                            number.gd825.sum++
+                        } else if (element.model_name == 'HD785-5') {
                             number.hd785.feb.engine++
-                        else if (element.model_name == 'HD785-7')
+                            number.hd785.sum++
+                        } else if (element.model_name == 'HD785-7') {
                             number.hd787.feb.engine++
+                            number.hd787.sum++
+                        }
                     } else {
-                        if (element.model_name == 'PC2000-8')
+                        if (element.model_name == 'PC2000-8') {
                             number.pc2000.feb.complete++
-                        else if (element.model_name == 'GD825-2')
+                            number.pc2000.sum++
+                        } else if (element.model_name == 'GD825-2') {
                             number.gd825.feb.complete++
-                        else if (element.model_name == 'HD785-5')
+                            number.gd825.sum++
+                        } else if (element.model_name == 'HD785-5') {
                             number.hd785.feb.complete++
-                        else if (element.model_name == 'HD785-7')
+                            number.hd785.sum++
+                        } else if (element.model_name == 'HD785-7') {
                             number.hd787.feb.complete++
+                            number.hd787.sum++
+                        }
                     }
                     break;
                 case 3:
                     if (element.ps_type == 'PS2') {
-                        if (element.model_name == 'PC2000-8')
+                        if (element.model_name == 'PC2000-8') {
                             number.pc2000.mar.engine++
-                        else if (element.model_name == 'GD825-2')
+                            number.pc2000.sum++
+                        } else if (element.model_name == 'GD825-2') {
                             number.gd825.mar.engine++
-                        else if (element.model_name == 'HD785-5')
+                            number.gd825.sum++
+                        } else if (element.model_name == 'HD785-5') {
                             number.hd785.mar.engine++
-                        else if (element.model_name == 'HD785-7')
+                            number.hd785.sum++
+                        } else if (element.model_name == 'HD785-7') {
                             number.hd787.mar.engine++
+                            number.hd787.sum++
+                        }
                     } else {
-                        if (element.model_name == 'PC2000-8')
+                        if (element.model_name == 'PC2000-8') {
                             number.pc2000.mar.complete++
-                        else if (element.model_name == 'GD825-2')
+                            number.pc2000.sum++
+                        } else if (element.model_name == 'GD825-2') {
                             number.gd825.mar.complete++
-                        else if (element.model_name == 'HD785-5')
+                            number.gd825.sum++
+                        } else if (element.model_name == 'HD785-5') {
                             number.hd785.mar.complete++
-                        else if (element.model_name == 'HD785-7')
+                            number.hd785.sum++
+                        } else if (element.model_name == 'HD785-7') {
                             number.hd787.mar.complete++
+                            number.hd787.sum++
+                        }
                     }
                     break;
                 case 4:
                     if (element.ps_type == 'PS2') {
-                        if (element.model_name == 'PC2000-8')
+                        if (element.model_name == 'PC2000-8') {
                             number.pc2000.apr.engine++
-                        else if (element.model_name == 'GD825-2')
+                            number.pc2000.sum++
+                        } else if (element.model_name == 'GD825-2') {
                             number.gd825.apr.engine++
-                        else if (element.model_name == 'HD785-5')
+                            number.gd825.sum++
+                        } else if (element.model_name == 'HD785-5') {
                             number.hd785.apr.engine++
-                        else if (element.model_name == 'HD785-7')
+                            number.hd785.sum++
+                        } else if (element.model_name == 'HD785-7') {
                             number.hd787.apr.engine++
+                            number.hd787.sum++
+                        }
                     } else {
-                        if (element.model_name == 'PC2000-8')
+                        if (element.model_name == 'PC2000-8') {
                             number.pc2000.apr.complete++
-                        else if (element.model_name == 'GD825-2')
+                            number.pc2000.sum++
+                        } else if (element.model_name == 'GD825-2') {
                             number.gd825.apr.complete++
-                        else if (element.model_name == 'HD785-5')
+                            number.gd825.sum++
+                        } else if (element.model_name == 'HD785-5') {
                             number.hd785.apr.complete++
-                        else if (element.model_name == 'HD785-7')
+                            number.hd785.sum++
+                        } else if (element.model_name == 'HD785-7') {
                             number.hd787.apr.complete++
+                            number.hd787.sum++
+                        }
                     }
                     break;
                 case 5:
                     if (element.ps_type == 'PS2') {
-                        if (element.model_name == 'PC2000-8')
+                        if (element.model_name == 'PC2000-8') {
                             number.pc2000.may.engine++
-                        else if (element.model_name == 'GD825-2')
+                            number.pc2000.sum++
+                        } else if (element.model_name == 'GD825-2') {
                             number.gd825.may.engine++
-                        else if (element.model_name == 'HD785-5')
+                            number.gd825.sum++
+                        } else if (element.model_name == 'HD785-5') {
                             number.hd785.may.engine++
-                        else if (element.model_name == 'HD785-7')
+                            number.hd785.sum++
+                        } else if (element.model_name == 'HD785-7') {
                             number.hd787.may.engine++
+                            number.hd787.sum++
+                        }
                     } else {
-                        if (element.model_name == 'PC2000-8')
+                        if (element.model_name == 'PC2000-8') {
                             number.pc2000.may.complete++
-                        else if (element.model_name == 'GD825-2')
+                            number.pc2000.sum++
+                        } else if (element.model_name == 'GD825-2') {
                             number.gd825.may.complete++
-                        else if (element.model_name == 'HD785-5')
+                            number.gd825.sum++
+                        } else if (element.model_name == 'HD785-5') {
                             number.hd785.may.complete++
-                        else if (element.model_name == 'HD785-7')
+                            number.hd785.sum++
+                        } else if (element.model_name == 'HD785-7') {
                             number.hd787.may.complete++
+                            number.hd787.sum++
+                        }
                     }
                     break;
                 case 6:
                     if (element.ps_type == 'PS2') {
-                        if (element.model_name == 'PC2000-8')
+                        if (element.model_name == 'PC2000-8') {
                             number.pc2000.jun.engine++
-                        else if (element.model_name == 'GD825-2')
+                            number.pc2000.sum++
+                        } else if (element.model_name == 'GD825-2') {
                             number.gd825.jun.engine++
-                        else if (element.model_name == 'HD785-5')
+                            number.gd825.sum++
+                        } else if (element.model_name == 'HD785-5') {
                             number.hd785.jun.engine++
-                        else if (element.model_name == 'HD785-7')
+                            number.hd785.sum++
+                        } else if (element.model_name == 'HD785-7') {
                             number.hd787.jun.engine++
+                            number.hd787.sum++
+                        }
                     } else {
-                        if (element.model_name == 'PC2000-8')
+                        if (element.model_name == 'PC2000-8') {
                             number.pc2000.jun.complete++
-                        else if (element.model_name == 'GD825-2')
+                            number.pc2000.sum++
+                        } else if (element.model_name == 'GD825-2') {
                             number.gd825.jun.complete++
-                        else if (element.model_name == 'HD785-5')
+                            number.gd825.sum++
+                        } else if (element.model_name == 'HD785-5') {
                             number.hd785.jun.complete++
-                        else if (element.model_name == 'HD785-7')
+                            number.hd785.sum++
+                        } else if (element.model_name == 'HD785-7') {
                             number.hd787.jun.complete++
+                            number.hd787.sum++
+                        }
                     }
                     break;
                 case 7:
                     if (element.ps_type == 'PS2') {
-                        if (element.model_name == 'PC2000-8')
+                        if (element.model_name == 'PC2000-8') {
                             number.pc2000.jul.engine++
-                        else if (element.model_name == 'GD825-2')
+                            number.pc2000.sum++
+                        } else if (element.model_name == 'GD825-2') {
                             number.gd825.jul.engine++
-                        else if (element.model_name == 'HD785-5')
+                            number.gd825.sum++
+                        } else if (element.model_name == 'HD785-5') {
                             number.hd785.jul.engine++
-                        else if (element.model_name == 'HD785-7')
+                            number.hd785.sum++
+                        } else if (element.model_name == 'HD785-7') {
                             number.hd787.jul.engine++
+                            number.hd787.sum++
+                        }
                     } else {
-                        if (element.model_name == 'PC2000-8')
+                        if (element.model_name == 'PC2000-8') {
                             number.pc2000.jul.complete++
-                        else if (element.model_name == 'GD825-2')
+                            number.pc2000.sum++
+                        } else if (element.model_name == 'GD825-2') {
                             number.gd825.jul.complete++
-                        else if (element.model_name == 'HD785-5')
+                            number.gd825.sum++
+                        } else if (element.model_name == 'HD785-5') {
                             number.hd785.jul.complete++
-                        else if (element.model_name == 'HD785-7')
+                            number.hd785.sum++
+                        } else if (element.model_name == 'HD785-7') {
                             number.hd787.jul.complete++
+                            number.hd787.sum++
+                        }
                     }
                     break;
                 case 8:
                     if (element.ps_type == 'PS2') {
-                        if (element.model_name == 'PC2000-8')
+                        if (element.model_name == 'PC2000-8') {
                             number.pc2000.aug.engine++
-                        else if (element.model_name == 'GD825-2')
+                            number.pc2000.sum++
+                        } else if (element.model_name == 'GD825-2') {
                             number.gd825.aug.engine++
-                        else if (element.model_name == 'HD785-5')
+                            number.gd825.sum++
+                        } else if (element.model_name == 'HD785-5') {
                             number.hd785.aug.engine++
-                        else if (element.model_name == 'HD785-7')
+                            number.hd785.sum++
+                        } else if (element.model_name == 'HD785-7') {
                             number.hd787.aug.engine++
+                            number.hd787.sum++
+                        }
                     } else {
-                        if (element.model_name == 'PC2000-8')
+                        if (element.model_name == 'PC2000-8') {
                             number.pc2000.aug.complete++
-                        else if (element.model_name == 'GD825-2')
+                            number.pc2000.sum++
+                        } else if (element.model_name == 'GD825-2') {
                             number.gd825.aug.complete++
-                        else if (element.model_name == 'HD785-5')
+                            number.gd825.sum++
+                        } else if (element.model_name == 'HD785-5') {
                             number.hd785.aug.complete++
-                        else if (element.model_name == 'HD785-7')
+                            number.hd785.sum++
+                        } else if (element.model_name == 'HD785-7') {
                             number.hd787.aug.complete++
+                            number.hd787.sum++
+                        }
                     }
                     break;
                 case 9:
                     if (element.ps_type == 'PS2') {
-                        if (element.model_name == 'PC2000-8')
+                        if (element.model_name == 'PC2000-8') {
                             number.pc2000.sep.engine++
-                        else if (element.model_name == 'GD825-2')
+                            number.pc2000.sum++
+                        } else if (element.model_name == 'GD825-2') {
                             number.gd825.sep.engine++
-                        else if (element.model_name == 'HD785-5')
+                            number.gd825.sum++
+                        } else if (element.model_name == 'HD785-5') {
                             number.hd785.sep.engine++
-                        else if (element.model_name == 'HD785-7')
+                            number.hd785.sum++
+                        } else if (element.model_name == 'HD785-7') {
                             number.hd787.sep.engine++
+                            number.hd787.sum++
+                        }
                     } else {
-                        if (element.model_name == 'PC2000-8')
+                        if (element.model_name == 'PC2000-8') {
                             number.pc2000.sep.complete++
-                        else if (element.model_name == 'GD825-2')
+                            number.pc2000.sum++
+                        } else if (element.model_name == 'GD825-2') {
                             number.gd825.sep.complete++
-                        else if (element.model_name == 'HD785-5')
+                            number.gd825.sum++
+                        } else if (element.model_name == 'HD785-5') {
                             number.hd785.sep.complete++
-                        else if (element.model_name == 'HD785-7')
+                            number.hd785.sum++
+                        } else if (element.model_name == 'HD785-7') {
                             number.hd787.sep.complete++
+                            number.hd787.sum++
+                        }
                     }
                     break;
                 case 10:
                     if (element.ps_type == 'PS2') {
-                        if (element.model_name == 'PC2000-8')
+                        if (element.model_name == 'PC2000-8') {
                             number.pc2000.oct.engine++
-                        else if (element.model_name == 'GD825-2')
+                            number.pc2000.sum++
+                        } else if (element.model_name == 'GD825-2') {
                             number.gd825.oct.engine++
-                        else if (element.model_name == 'HD785-5')
+                            number.gd825.sum++
+                        } else if (element.model_name == 'HD785-5') {
                             number.hd785.oct.engine++
-                        else if (element.model_name == 'HD785-7')
+                            number.hd785.sum++
+                        } else if (element.model_name == 'HD785-7') {
                             number.hd787.oct.engine++
+                            number.hd787.sum++
+                        }
                     } else {
-                        if (element.model_name == 'PC2000-8')
+                        if (element.model_name == 'PC2000-8') {
                             number.pc2000.oct.complete++
-                        else if (element.model_name == 'GD825-2')
+                            number.pc2000.sum++
+                        } else if (element.model_name == 'GD825-2') {
                             number.gd825.oct.complete++
-                        else if (element.model_name == 'HD785-5')
+                            number.gd825.sum++
+                        } else if (element.model_name == 'HD785-5') {
                             number.hd785.oct.complete++
-                        else if (element.model_name == 'HD785-7')
+                            number.hd785.sum++
+                        } else if (element.model_name == 'HD785-7') {
                             number.hd787.oct.complete++
+                            number.hd787.sum++
+                        }
                     }
                     break;
                 case 11:
                     if (element.ps_type == 'PS2') {
-                        if (element.model_name == 'PC2000-8')
+                        if (element.model_name == 'PC2000-8') {
                             number.pc2000.nov.engine++
-                        else if (element.model_name == 'GD825-2')
+                            number.pc2000.sum++
+                        } else if (element.model_name == 'GD825-2') {
                             number.gd825.nov.engine++
-                        else if (element.model_name == 'HD785-5')
+                            number.gd825.sum++
+                        } else if (element.model_name == 'HD785-5') {
                             number.hd785.nov.engine++
-                        else if (element.model_name == 'HD785-7')
+                            number.hd785.sum++
+                        } else if (element.model_name == 'HD785-7') {
                             number.hd787.nov.engine++
+                            number.hd787.sum++
+                        }
                     } else {
-                        if (element.model_name == 'PC2000-8')
+                        if (element.model_name == 'PC2000-8') {
                             number.pc2000.nov.complete++
-                        else if (element.model_name == 'GD825-2')
+                            number.pc2000.sum++
+                        } else if (element.model_name == 'GD825-2') {
                             number.gd825.nov.complete++
-                        else if (element.model_name == 'HD785-5')
+                            number.gd825.sum++
+                        } else if (element.model_name == 'HD785-5') {
                             number.hd785.nov.complete++
-                        else if (element.model_name == 'HD785-7')
+                            number.hd785.sum++
+                        } else if (element.model_name == 'HD785-7') {
                             number.hd787.nov.complete++
+                            number.hd787.sum++
+                        }
                     }
                     break;
                 case 12:
                     if (element.ps_type == 'PS2') {
-                        if (element.model_name == 'PC2000-8')
+                        if (element.model_name == 'PC2000-8') {
                             number.pc2000.dec.engine++
-                        else if (element.model_name == 'GD825-2')
+                            number.pc2000.sum++
+                        } else if (element.model_name == 'GD825-2') {
                             number.gd825.dec.engine++
-                        else if (element.model_name == 'HD785-5')
+                            number.gd825.sum++
+                        } else if (element.model_name == 'HD785-5') {
                             number.hd785.dec.engine++
-                        else if (element.model_name == 'HD785-7')
+                            number.hd785.sum++
+                        } else if (element.model_name == 'HD785-7') {
                             number.hd787.dec.engine++
+                            number.hd787.sum++
+                        }
                     } else {
-                        if (element.model_name == 'PC2000-8')
+                        if (element.model_name == 'PC2000-8') {
                             number.pc2000.dec.complete++
-                        else if (element.model_name == 'GD825-2')
+                            number.pc2000.sum++
+                        } else if (element.model_name == 'GD825-2') {
                             number.gd825.dec.complete++
-                        else if (element.model_name == 'HD785-5')
+                            number.gd825.sum++
+                        } else if (element.model_name == 'HD785-5') {
                             number.hd785.dec.complete++
-                        else if (element.model_name == 'HD785-7')
+                            number.hd785.sum++
+                        } else if (element.model_name == 'HD785-7') {
                             number.hd787.dec.complete++
+                            number.hd787.sum++
+                        }
                     }
                     break;
             }
@@ -527,7 +651,7 @@
 
     let no = 0
     for (let i in number) {
-        var ctx = document.getElementById(`myBarChart${no}`);
+        var ctx = document.getElementById(`myBarChart${no++}`);
         var myBarChart = new Chart(ctx, {
             type: "bar",
             data: {
@@ -601,7 +725,7 @@
                     yAxes: [{
                         ticks: {
                             min: 0,
-                            max: 10,
+                            max: number[i].sum + 2,
                             maxTicksLimit: 5,
                             padding: 3,
                         },
@@ -628,17 +752,9 @@
                     xPadding: 15,
                     yPadding: 15,
                     displayColors: false,
-                    caretPadding: 10,
-                    // callbacks: {
-                    //     label: function(tooltipItem, chart) {
-                    //         var datasetLabel =
-                    //             chart.datasets[tooltipItem.datasetIndex].label || "";
-                    //         return datasetLabel + ": $" + number_format(tooltipItem.yLabel);
-                    //     },
-                    // },
+                    caretPadding: 10
                 },
             },
         });
-        no++
     }
 </script>

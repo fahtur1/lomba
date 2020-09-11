@@ -75,4 +75,29 @@ class Actual_Plan extends CI_Model
         $this->db->where($this->key, $id);
         return $this->db->get_where()->row_array();
     }
+
+    public function getSumRow($ppm_name)
+    {
+        $ppm = 0;
+
+        switch ($ppm_name) {
+            case "pc2000-8":
+                $ppm = 1;
+                break;
+            case "gd825-2":
+                $ppm = 2;
+                break;
+            case "hd785-7":
+                $ppm = 3;
+                break;
+            case "hd785-5":
+                $ppm = 4;
+                break;
+        }
+
+        $this->db->select('*');
+        $this->db->from($this->table);
+        $this->db->where('ppm_id', $ppm);
+        return $this->db->get()->num_rows();
+    }
 }
