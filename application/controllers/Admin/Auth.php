@@ -7,10 +7,6 @@ class Auth extends CI_Controller
     {
         parent::__construct();
         $this->load->model('User_model');
-
-        if (($this->session->userdata('role'))) {
-            redirect('Admin/Home');
-        }
     }
 
     public function flask($class, $message, $tag)
@@ -28,6 +24,7 @@ class Auth extends CI_Controller
 
     public function index()
     {
+
         if ($this->input->post()) {
             $email = $this->input->post('email');
             $password = $this->input->post('password');
@@ -46,15 +43,20 @@ class Auth extends CI_Controller
                 redirect('Admin/Auth');
             }
         } else {
-            $this->load->view('auth/header');
-            $this->load->view('auth/index');
-            $this->load->view('auth/footer');
+            if (($this->session->userdata('role'))) {
+                redirect('Admin/Home');
+            } else {
+                $this->load->view('auth/header');
+                $this->load->view('auth/index');
+                $this->load->view('auth/footer');
+            }
         }
     }
 
     public function logout()
     {
-        $this->session->sess_destroy();
+        $this->session->unset_userdata('role');
+        // $this->session->sess_destroy();
         $this->flask('success', 'Logout Success', 'logout');
         redirect('Admin/Auth');
     }
