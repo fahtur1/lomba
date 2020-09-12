@@ -7,6 +7,10 @@ class Auth extends CI_Controller
     {
         parent::__construct();
         $this->load->model('User_model');
+
+        if (($this->session->userdata('role'))) {
+            redirect('Admin/Home');
+        }
     }
 
     public function flask($class, $message, $tag)

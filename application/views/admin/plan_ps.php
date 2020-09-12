@@ -1,7 +1,9 @@
 <div class="container-fluid">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">PLAN PS</h1>
-        <a href="<?= base_url('Admin/Home/create_plan') ?>" class="btn btn-primary float-right text-white">Add Data</a>
+        <?php if ($this->session->userdata('role') == 1) : ?>
+            <a href="<?= base_url('Admin/Home/create_plan') ?>" class="btn btn-primary float-right text-white">Add Data</a>
+        <?php endif; ?>
     </div>
     <?= $this->session->flashdata('message'); ?>
     <div class="card shadow mb-4">
