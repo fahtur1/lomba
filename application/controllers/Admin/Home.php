@@ -46,7 +46,8 @@ class Home extends CI_Controller
                         'ps2' => $this->Plan_Model->getPlanRow('PC2000-8', 'ps2'),
                         'ps3' => $this->Plan_Model->getPlanRow('PC2000-8', 'ps3'),
                         'ps4' => $this->Plan_Model->getPlanRow('PC2000-8', 'ps4'),
-                    ]
+                    ],
+                    'sum_row' => ($this->actual->getSumRow('pc2000-8') + $this->Plan_Model->getRowPlansWithModelName('PC2000-8'))
                 ],
                 'gd825' => [
                     'actual' => [
@@ -58,7 +59,8 @@ class Home extends CI_Controller
                         'ps2' => $this->Plan_Model->getPlanRow('GD825-2', 'ps2'),
                         'ps3' => $this->Plan_Model->getPlanRow('GD825-2', 'ps3'),
                         'ps4' => $this->Plan_Model->getPlanRow('GD825-2', 'ps4'),
-                    ]
+                    ],
+                    'sum_row' => ($this->actual->getSumRow('gd825-2') + $this->Plan_Model->getRowPlansWithModelName('GD825-2'))
                 ],
                 'hd785' => [
                     'actual' => [
@@ -70,7 +72,8 @@ class Home extends CI_Controller
                         'ps2' => $this->Plan_Model->getPlanRow('HD785-5', 'ps2'),
                         'ps3' => $this->Plan_Model->getPlanRow('HD785-5', 'ps3'),
                         'ps4' => $this->Plan_Model->getPlanRow('HD785-5', 'ps4'),
-                    ]
+                    ],
+                    'sum_row' => ($this->actual->getSumRow('hd785-5') + $this->Plan_Model->getRowPlansWithModelName('HD785-5'))
                 ],
                 'hd787' => [
                     'actual' => [
@@ -82,7 +85,8 @@ class Home extends CI_Controller
                         'ps2' => $this->Plan_Model->getPlanRow('HD785-7', 'ps2'),
                         'ps3' => $this->Plan_Model->getPlanRow('HD785-7', 'ps3'),
                         'ps4' => $this->Plan_Model->getPlanRow('HD785-7', 'ps4'),
-                    ]
+                    ],
+                    'sum_row' => ($this->actual->getSumRow('hd785-7') + $this->Plan_Model->getRowPlansWithModelName('HD785-7'))
                 ]
             ]
         ];
@@ -724,6 +728,7 @@ class Home extends CI_Controller
                     $data['detail'] = [
                         "name" => "PC2000-8",
                         'actual' => $this->actual->getActualJoin('pc2000-8'),
+                        'image' => 'PC2000-8.png'
                     ];
                     $this->load->view('admin/ppm_report_detail', $data);
                     break;
@@ -731,7 +736,7 @@ class Home extends CI_Controller
                     $data['detail'] = [
                         "name" => "GD825-2",
                         'actual' => $this->actual->getActualJoin('gd825-2'),
-                        'image' => 'gd825.jpeg'
+                        'image' => 'GD825A-2.png'
                     ];
                     $this->load->view('admin/ppm_report_detail', $data);
                     break;
@@ -739,7 +744,7 @@ class Home extends CI_Controller
                     $data['detail'] = [
                         "name" => "HD785-7",
                         'actual' => $this->actual->getActualJoin('hd785-7'),
-                        'image' => 'hd787.jpeg'
+                        'image' => 'HD785-7.png'
                     ];
                     $this->load->view('admin/ppm_report_detail', $data);
                     break;
@@ -747,7 +752,7 @@ class Home extends CI_Controller
                     $data['detail'] = [
                         "name" => "HD785-5",
                         'actual' => $this->actual->getActualJoin('hd785-5'),
-                        'image' => 'hd785.jpeg'
+                        'image' => 'HD785-5.png'
                     ];
                     $this->load->view('admin/ppm_report_detail', $data);
                     break;
@@ -757,24 +762,6 @@ class Home extends CI_Controller
             }
         }
         $this->load->view('templates/footer');
-    }
-
-    public function getDataDummy()
-    {
-        return $data = [
-            [
-                "name" => "PC2000-8"
-            ],
-            [
-                "name" => "GD825-2"
-            ],
-            [
-                "name" => "HD785-7"
-            ],
-            [
-                "name" => "HD785-5"
-            ]
-        ];
     }
 
     public function update_plan($unit = '', $ps = '', $plan =  '')
@@ -822,7 +809,7 @@ class Home extends CI_Controller
                         'leader_name' => $this->input->post('name'),
                         'actual_branch' => $this->input->post('site'),
                         'plan_id' => $plan,
-                        'ppm_id' => '3',
+                        'ppm_id' => '1',
                         'id_update' => $id_update
                     ];
 
@@ -895,7 +882,7 @@ class Home extends CI_Controller
                         'leader_name' => $this->input->post('name'),
                         'actual_branch' => $this->input->post('site'),
                         'plan_id' => $plan,
-                        'ppm_id' => '1',
+                        'ppm_id' => '2',
                         'id_update' => $id_update
                     ];
 
@@ -1046,7 +1033,7 @@ class Home extends CI_Controller
                         'leader_name' => $this->input->post('name'),
                         'actual_branch' => $this->input->post('site'),
                         'plan_id' => $plan,
-                        'ppm_id' => '3',
+                        'ppm_id' => '4',
                         'id_update' => $id_update
                     ];
 

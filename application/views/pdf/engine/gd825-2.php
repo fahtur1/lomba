@@ -92,12 +92,12 @@ $style = <<<EOD
 EOD;
 
 // src of logo
-$src = base_url('assets/img/logo.jpeg');
+$src = base_url('assets/img/UT.png');
 
 // header table
 $headtbl = $style . <<<EOD
 <img src="$src" width="200">
-<br>
+<br><br>
 <table border="1" class="table-header">
     <tr>
         <td class="ft-bg al-c"><b>QA3</b></td>

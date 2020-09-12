@@ -58,10 +58,9 @@
 
   let data = <?= json_encode($results) ?>;
   let no = 0;
-  console.log(data);
 
   for (let i in data) {
-    var ctx = document.getElementById(`myBarChart${no}`);
+    var ctx = document.getElementById(`myBarChart${no++}`);
     var myBarChart = new Chart(ctx, {
       type: "bar",
       data: {
@@ -117,7 +116,7 @@
           yAxes: [{
             ticks: {
               min: 0,
-              max: 10,
+              max: data[i].sum_row + 2,
               maxTicksLimit: 5,
               padding: 3,
             },
@@ -144,17 +143,9 @@
           xPadding: 15,
           yPadding: 15,
           displayColors: false,
-          caretPadding: 10,
-          // callbacks: {
-          //   label: function(tooltipItem, chart) {
-          //     var datasetLabel =
-          //       chart.datasets[tooltipItem.datasetIndex].label || "";
-          //     return datasetLabel + ": $" + number_format(tooltipItem.yLabel);
-          //   },
-          // },
+          caretPadding: 10
         },
-      },
+      }
     });
-    no++;
   }
 </script>
