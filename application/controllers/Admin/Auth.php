@@ -54,7 +54,7 @@ class Auth extends CI_Controller
 
     public function logout()
     {
-        $this->session->unset_userdata('role');
+        $this->session->sess_destory();
         $this->flask('success', 'Logout Success', 'logout');
         redirect('Admin/Auth');
     }
