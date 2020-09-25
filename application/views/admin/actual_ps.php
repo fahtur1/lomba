@@ -17,16 +17,6 @@
                             <th>Leader Name</th>
                         </tr>
                     </thead>
-                    <tfoot>
-                        <tr>
-                            <th>Unit Model</th>
-                            <th>Unit Code</th>
-                            <th>Plan Date</th>
-                            <th>Actual Date</th>
-                            <th>PS Type</th>
-                            <th>Leader Name</th>
-                        </tr>
-                    </tfoot>
                     <tbody>
                         <?php foreach ($gd825 as $gd) : ?>
                             <tr>

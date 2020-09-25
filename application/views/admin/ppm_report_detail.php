@@ -25,14 +25,6 @@
                                     <th>PPM Document</th>
                                 </tr>
                             </thead>
-                            <tfoot>
-                                <tr>
-                                    <th>Unit Model</th>
-                                    <th>Actual Date</th>
-                                    <th>PS Type</th>
-                                    <th>PPM Document</th>
-                                </tr>
-                            </tfoot>
                             <tbody>
                                 <?php foreach ($detail['actual'] as $actual) : ?>
                                     <tr>

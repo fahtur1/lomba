@@ -23,16 +23,6 @@
                             <th>PPM Sheet</th>
                         </tr>
                     </thead>
-                    <tfoot>
-                        <tr>
-                            <th>Unit Model</th>
-                            <th>Unit Code</th>
-                            <th>Plan Date</th>
-                            <th>PS Type</th>
-                            <th>Remark</th>
-                            <th>PPM Sheet</th>
-                        </tr>
-                    </tfoot>
                     <tbody>
                         <?php foreach ($plans as $plan) : ?>
                             <tr>
