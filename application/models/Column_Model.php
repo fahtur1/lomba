@@ -8,7 +8,7 @@ class Column_Model extends CI_Model
         $this->db->select("COLUMN_NAME as column");
         $this->db->from("information_schema.columns");
         $this->db->where("table_name", $table);
-        $this->db->where("table_schema", "lomba");
+        $this->db->where("table_schema", "u1096527_utppm");
         return $this->db->get()->result_array();
     }
 }
