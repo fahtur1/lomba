@@ -864,12 +864,9 @@ class Home extends CI_Controller
                     $data = $this->Column_Model->getColumn('gd825-2');
                     $column_other = $this->Column_Model->getColumn('other_data');
                     $dataModel = [];
-                    // Buat Array Untuk Insert Ke Database
-                    foreach ($data as $dataa) {
-                        if (!(substr($dataa['column'], 0, 2) == 'id')  && !($dataa['column'] == 'undercarriage')) {
-                            $dataModel[$dataa['column']] = $this->input->post($dataa['column']);
-                        }
-                    }
+
+                    var_dump($data);
+                    die;
 
                     $dataModel += [
                         'id_update' => $id_update,
