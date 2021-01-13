@@ -429,25 +429,27 @@ class Home extends CI_Controller
 
     public function hd7857_validation($ps)
     {
-        $this->actual_validation('engine_low_idle_low', '625', '675');
+        $this->required_only_validation('engine_low_idle_low');
 
-        $this->actual_validation('engine_low_idle_hi', '895', '995');
+        $this->required_only_validation('engine_low_idle_hi');
 
-        $this->actual_validation('engine_high_idle_power', '2200', '2300');
+        $this->required_only_validation('engine_high_idle_power');
 
-        $this->actual_validation('engine_high_idle_eco', '2050', '2150');
+        $this->required_only_validation('engine_high_idle_eco');
 
-        $this->actual_validation('engine_high_idle_rev', '2000', '2100');
+        $this->required_only_validation('engine_high_idle_rev');
 
-        $this->actual_validation('engine_high_idle_rev_power', '2200', '2300');
+        $this->required_only_validation('engine_high_idle_rev_power');
 
-        $this->actual_validation('engine_torque_a', '1745', '1945');
+        $this->required_only_validation('engine_torque_a');
 
-        $this->actual_validation('engine_torque_b', '1680', '1880');
+        $this->required_only_validation('engine_torque_b');
 
-        $this->actual_validation('engine_torque_c', '1630', '1830');
+        $this->required_only_validation('engine_torque_c');
 
-        $this->actual_validation('engine_torque_d', '1595', '1795');
+        $this->required_only_validation('engine_torque_d');
+
+        ###############################################################################
 
         $this->max_only_validation('blow_power', '5.88');
 
