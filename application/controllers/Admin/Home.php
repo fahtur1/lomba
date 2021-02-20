@@ -877,7 +877,10 @@ class Home extends CI_Controller
                             if ($ps == 'PS2' && $dataa['column'] == 'tc_stall_temp') break;
                         }
                     }
-                    
+
+                    var_dump($dataModel);
+                    die;
+                
 
                     $dataModel += [
                         'id_update' => $id_update,
