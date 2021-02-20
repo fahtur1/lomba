@@ -870,6 +870,13 @@ class Home extends CI_Controller
                     $column_other = $this->Column_Model->getColumn('other_data');
                     $dataModel = [];
 
+                    // Buat Array Untuk Insert Ke Database
+                    foreach ($data as $dataa) {
+                        if (!(substr($dataa['column'], 0, 2) == 'id')) {
+                            $dataModel[$dataa['column']] = $this->input->post($dataa['column']);
+                            if ($ps == 'PS2' && $dataa['column'] == 'tc_stall_temp') break;
+                        }
+                    }
                     
 
                     $dataModel += [
