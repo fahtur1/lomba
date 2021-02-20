@@ -877,7 +877,7 @@ class Home extends CI_Controller
                         }
                     }
 
-                    var_dump($data);
+                    var_dump($dataModel);
                     die;
                 
 
