@@ -874,7 +874,6 @@ class Home extends CI_Controller
                     foreach ($data as $dataa) {
                         if (!(substr($dataa['column'], 0, 2) == 'id')) {
                             $dataModel[$dataa['column']] = $this->input->post($dataa['column']);
-                            if ($ps == 'PS2' && $dataa['column'] == 'tc_stall_temp') break;
                         }
                     }
 
