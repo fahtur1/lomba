@@ -19,7 +19,7 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Unit Model</th>
+                                    <th>Unit Code</th>
                                     <th>Actual Date</th>
                                     <th>PS Type</th>
                                     <th>PPM Document</th>
@@ -28,7 +28,7 @@
                             <tbody>
                                 <?php foreach ($detail['actual'] as $actual) : ?>
                                     <tr>
-                                        <td><?= $actual['model_name'] ?></td>
+                                        <td><?= $actual['product_code'] ?></td>
                                         <td><?= $actual['plan_date'] ?></td>
                                         <td><?= $actual['ps_type'] ?></td>
                                         <td class="text-center">

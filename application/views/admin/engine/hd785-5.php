@@ -3,7 +3,7 @@
         <h1 class="h3 mb-0 text-gray-800">UPDATE <?= $unit ?> / <?= $ps ?></h1>
     </div>
 
-    <form action="<?= base_url("Admin/Home/update_plan/$unit/$ps/$plan") ?>" method="post">
+    <form action="<?= base_url("Admin/Home/update_plan/$unit/$ps/$plan/$code") ?>" method="post">
         <div class="row">
             <div class="col-lg-4">
                 <div class="form-group">
@@ -18,7 +18,7 @@
                 </div>
                 <div class="form-group">
                     <label>Code Unit</label>
-                    <input type="text" class="form-control" id="codeunit" value="<?= $unit ?>" name="codeunit" disabled>
+                    <input type="text" class="form-control" id="codeunit" value="<?= $code ?>" name="codeunit" disabled>
                 </div>
                 <div class="form-group">
                     <label>Branch Site</label>

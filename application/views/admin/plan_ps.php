@@ -32,7 +32,7 @@
                                 <td><?= $plan['ps_type'] ?></td>
                                 <td><?= $plan['remark'] ?></td>
                                 <td class="text-center">
-                                    <a href="<?= base_url("Admin/Home/update_plan/") . $plan['model_name'] . "/" . $plan['ps_type'] . "/" . $plan['plan_id']  ?>" class="btn btn-warning btn-icon-split px-3 py-2 update_button">
+                                    <a href="<?= base_url("Admin/Home/update_plan/") . $plan['model_name'] . "/" . $plan['ps_type'] . "/" . $plan['plan_id'] . "/" . $plan['product_code']  ?>" class="btn btn-warning btn-icon-split px-3 py-2 update_button">
                                         Update
                                     </a>
                                 </td>

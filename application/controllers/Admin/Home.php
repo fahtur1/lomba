@@ -213,9 +213,9 @@ class Home extends CI_Controller
 
     public function gd825_validation($ps)
     {
-        $this->actual_validation('engine_low_speed', '600', '700');
+        $this->required_only_validation('engine_low_speed');
 
-        $this->actual_validation('engine_high_speed', '2300', '2400');
+        $this->required_only_validation('engine_high_speed');
 
         $this->max_only_validation('tc_stall_press', '200');
 
@@ -225,68 +225,68 @@ class Home extends CI_Controller
 
         $this->min_only_validation('engine_rated_press', '500');
 
-        $this->min_only_validation('tc_stall_temp', '700');
+        $this->required_only_validation('tc_stall_temp');
 
         if ($ps != 'PS2') :
-            $this->actual_validation('operating_effect', '8', '18');
+            $this->required_only_validation('operating_effect');
 
-            $this->actual_validation('pedal_height', '90', '110');
+            $this->required_only_validation('pedal_height');
 
-            $this->actual_validation('pedal_height_operated', '39', '48');
+            $this->required_only_validation('pedal_height_operated');
 
-            $this->max_only_validation('pedal_travel', '65');
+            $this->required_only_validation('pedal_travel');
 
-            $this->actual_validation('pilot_oil', '10', '12');
+            $this->required_only_validation('pilot_oil');
 
-            $this->actual_validation('lubricating_oil', '1.0', '2.5');
+            $this->required_only_validation('lubricating_oil');
 
-            $this->actual_validation('main_oil', '31', '34');
+            $this->required_only_validation('main_oil');
 
-            $this->actual_validation('clutch_f', '31', '34');
+            $this->required_only_validation('clutch_f');
 
-            $this->actual_validation('clutch_r', '31', '34');
+            $this->required_only_validation('clutch_r');
 
-            $this->actual_validation('clutch_high', '31', '34');
+            $this->required_only_validation('clutch_high');
 
-            $this->actual_validation('clutch_low', '31', '34');
+            $this->required_only_validation('clutch_low');
 
-            $this->actual_validation('clutch_1', '31', '34');
+            $this->required_only_validation('clutch_1');
 
-            $this->actual_validation('clutch_2', '31', '34');
+            $this->required_only_validation('clutch_2');
 
-            $this->actual_validation('clutch_3', '31', '34');
+            $this->required_only_validation('clutch_3');
 
-            $this->actual_validation('clutch_4', '31', '34');
+            $this->required_only_validation('clutch_4');
 
-            $this->max_only_validation('steering_wheel', '45');
+            $this->required_only_validation('steering_wheel');
 
-            $this->max_only_validation('operating_effort_wheel', '6');
+            $this->required_only_validation('operating_effort_wheel');
 
-            $this->actual_validation('priority_relief', '165', '185');
+            $this->required_only_validation('priority_relief');
 
-            $this->max_only_validation('operating_effort_brake', '50');
+            $this->required_only_validation('operating_effort_brake');
 
-            $this->min_only_validation('engine_full_throtte', '3.7');
+            $this->required_only_validation('engine_full_throtte');
 
-            $this->actual_validation('raise_speed', '115', '145');
+            $this->required_only_validation('raise_speed');
 
-            $this->actual_validation('lower_speed', '115', '145');
+            $this->required_only_validation('lower_speed');
 
-            $this->actual_validation('left_out', '115', '145');
+            $this->required_only_validation('left_out');
 
-            $this->actual_validation('right_out', '115', '145');
+            $this->required_only_validation('right_out');
 
-            $this->actual_validation('left_compared', '115', '145');
+            $this->required_only_validation('left_compared');
 
-            $this->actual_validation('right_compared', '115', '145');
+            $this->required_only_validation('right_compared');
 
-            $this->actual_validation('lower_ripper', '85', '115');
+            $this->required_only_validation('lower_ripper');
 
-            $this->actual_validation('raise_ripper', '85', '115');
+            $this->required_only_validation('raise_ripper');
 
-            $this->actual_validation('rotation_down', '8.5', '9.5');
+            $this->required_only_validation('rotation_down');
 
-            $this->actual_validation('rotation_up', '6.5', '7.5');
+            $this->required_only_validation('rotation_up');
 
             $this->required_only_validation('drift_ext_blade');
 
@@ -296,11 +296,11 @@ class Home extends CI_Controller
 
             $this->required_only_validation('drift_rtn_ripper');
 
-            $this->actual_validation('hydraulic_priority', '235', '265');
+            $this->required_only_validation('hydraulic_priority');
 
-            $this->actual_validation('hydraulic_valve_rh', '235', '265');
+            $this->required_only_validation('hydraulic_valve_rh');
 
-            $this->actual_validation('hydraulic_valve_lh', '235', '265');
+            $this->required_only_validation('hydraulic_valve_lh');
 
             $this->required_only_validation('diff_drain');
 
@@ -463,40 +463,40 @@ class Home extends CI_Controller
 
         $this->required_only_validation('exhaust_ambient');
 
-        $this->max_only_validation('exhaust_speed_rh', '750');
+        $this->required_only_validation('exhaust_speed_rh');
 
-        $this->max_only_validation('exhaust_speed_lh', '750');
+        $this->required_only_validation('exhaust_speed_lh');
 
         if ($ps == 'PS3' || $ps == 'PS4') :
-            $this->max_only_validation('oil_inlet', '8.67');
+            $this->required_only_validation('oil_inlet');
 
-            $this->actual_validation('oil_outlet_on', '4.59', '5.41');
+            $this->required_only_validation('oil_outlet_on');
 
-            $this->actual_validation('oil_outlet_off', '4.59', '6.01');
+            $this->required_only_validation('oil_outlet_off');
 
-            $this->actual_validation('oil_lockup', '13.5', '17.5');
+            $this->required_only_validation('oil_lockup');
 
-            $this->actual_validation('oil_main_f1', '34', '38');
+            $this->required_only_validation('oil_main_f1');
 
-            $this->actual_validation('oil_main_f4', '20', '24');
+            $this->required_only_validation('oil_main_f4');
 
-            $this->actual_validation('oil_transmission', '1.2', '2.2');
+            $this->required_only_validation('oil_transmission');
 
-            $this->max_only_validation('turn_time_rl', '5');
+            $this->required_only_validation('turn_time_rl');
 
-            $this->max_only_validation('turn_time_lr', '5');
+            $this->required_only_validation('turn_time_lr');
 
-            $this->actual_validation('steering_low', '185', '195');
+            $this->required_only_validation('steering_low');
 
-            $this->actual_validation('steering_rated', '206', '215');
+            $this->required_only_validation('steering_rated');
 
-            $this->actual_validation('brake_oil_service', '93', '107');
+            $this->required_only_validation('brake_oil_service');
 
-            $this->actual_validation('brake_oil_retarder', '59', '72');
+            $this->required_only_validation('brake_oil_retarder');
 
-            $this->actual_validation('charge_cutin', '120', '130');
+            $this->required_only_validation('charge_cutin');
 
-            $this->actual_validation('charge_cutout', '210', '220');
+            $this->required_only_validation('charge_cutout');
 
             $this->required_only_validation('service');
 
@@ -508,33 +508,33 @@ class Home extends CI_Controller
 
             $this->required_only_validation('oil_temp');
 
-            $this->actual_validation('hoist_relief_rated', '206', '215');
+            $this->required_only_validation('hoist_relief_rated');
 
-            $this->actual_validation('hoist_relief_low', '185', '195');
+            $this->required_only_validation('hoist_relief_low');
 
-            $this->actual_validation('dump_epc_high', '30', '40');
+            $this->required_only_validation('dump_epc_high');
 
-            $this->actual_validation('dump_epc_low', '22', '32');
+            $this->required_only_validation('dump_epc_low');
 
-            $this->actual_validation('dump_raising_speed', '11.5', '14.5');
+            $this->required_only_validation('dump_raising_speed');
 
-            $this->actual_validation('dump_lowering_speed', '12.5', '15.5');
+            $this->required_only_validation('dump_lowering_speed');
 
-            $this->max_only_validation('hyd_drift', '170');
+            $this->required_only_validation('hyd_drift');
 
-            $this->actual_validation('left_front_susp', '227', '267');
+            $this->required_only_validation('left_front_susp');
 
             $this->required_only_validation('left_front_oil');
 
-            $this->actual_validation('right_front_susp', '227', '267');
+            $this->required_only_validation('right_front_susp');
 
             $this->required_only_validation('right_front_oil');
 
-            $this->actual_validation('left_rear_susp', '179', '219');
+            $this->required_only_validation('left_rear_susp');
 
             $this->required_only_validation('left_rear_oil');
 
-            $this->actual_validation('right_rear_susp', '179', '219');
+            $this->required_only_validation('right_rear_susp');
 
             $this->required_only_validation('right_rear_oil');
 
@@ -766,10 +766,11 @@ class Home extends CI_Controller
         $this->load->view('templates/footer');
     }
 
-    public function update_plan($unit = '', $ps = '', $plan =  '')
+    public function update_plan($unit = '', $ps = '', $plan =  '', $code = '')
     {
         $dataa = [
             'unit' => $unit,
+            'code' => $code,
             'ps' => $ps,
             'plan' => $plan,
             'title' => "Update Plan $unit"
@@ -799,6 +800,8 @@ class Home extends CI_Controller
                             if ($ps == 'PS2' && $dataa['column'] == 'tc_stall_temp') break;
                         }
                     }
+
+                    
 
                     $dataModel += [
                         'id_update' => $id_update,
@@ -867,8 +870,7 @@ class Home extends CI_Controller
                     $column_other = $this->Column_Model->getColumn('other_data');
                     $dataModel = [];
 
-                    var_dump($data);
-                    die;
+                    
 
                     $dataModel += [
                         'id_update' => $id_update,
@@ -1020,7 +1022,7 @@ class Home extends CI_Controller
                             if ($ps == 'PS2' && $dataa['column'] == 'tc_stall_temp') break;
                         }
                     }
-
+                    
                     $dataModel += [
                         'id_update' => $id_update,
                         'id_other' => $id_other
