@@ -29,7 +29,7 @@
                                 <?php foreach ($detail['actual'] as $actual) : ?>
                                     <tr>
                                         <td><?= $actual['product_code'] ?></td>
-                                        <td><?= $actual['plan_date'] ?></td>
+                                        <td><?= $actual['actual_date'] ?></td>
                                         <td><?= $actual['ps_type'] ?></td>
                                         <td class="text-center">
                                             <a href="<?= base_url("Admin/Home/export/$actual[model_name]/$actual[actual_id]/$actual[ps_type]")   ?>" class="btn btn-warning btn-icon-split px-3 py-2 update_button">
