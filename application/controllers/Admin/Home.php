@@ -1096,6 +1096,10 @@ class Home extends CI_Controller
     {
         $table = strtolower($unit);
         $data['actual'] = $this->actual->getActualJoinById($table, $actual_id, $ps);
+
+        var_dump($data);
+        die;
+
         switch ($table) {
             case "pc2000-8":
                 if ($ps == "PS2") {
