@@ -22,6 +22,7 @@ class Product_Model extends CI_Model
         $this->db->select('*');
         $this->db->from($this->table);
         $this->db->join('model', 'model.model_id = product.model_id');
+        $this->db->order_by('product_code','asc');
         return $this->db->get()->result_array();
     }
 
