@@ -306,8 +306,9 @@
                                 <td class="align-middle">
                                     LH
                                 </td>
-                                <td class="text-center">Min. 0.8</td>
-                                <td class="text-center">Min 0.7</td>
+								<td class="text-center align-middle" colspan="2">
+									Min. 165,40 <br> (min. 1,250)
+								</td>
                                 <td class="align-middle text-center">
                                     <input type="text" class="form-control no-border" value="<?= set_value('boost_press_lh') ?>" name="boost_press_lh" size="5">
                                     <?= form_error('boost_press_lh', '<small class="text-danger">', '</small>') ?>

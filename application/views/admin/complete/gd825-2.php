@@ -158,7 +158,7 @@
                                 <td class="align-middle">Boost Press.</td>
                                 <td class="align-middle">Eng. Rated</td>
                                 <td>S6D140E-2</td>
-                                <td class="align-middle text-center"></td>
+                                <td class="align-middle text-center">mmHg</td>
                                 <td>Min. 590</td>
                                 <td>Min. 500</td>
                                 <td class="align-middle text-center">
