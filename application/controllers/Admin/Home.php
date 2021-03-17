@@ -91,9 +91,6 @@ class Home extends CI_Controller
             ]
         ];
 
-        var_dump($data);
-        die;
-
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar');
         $this->load->view('templates/navbar');
