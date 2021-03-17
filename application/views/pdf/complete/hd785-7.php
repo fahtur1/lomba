@@ -115,7 +115,7 @@ $headtbl = $style . <<<EOD
     </tr>
     <tr>
         <td width="15%"> Code Unit</td>
-        <td width="45%"> $actual[model_name]</td>
+        <td width="45%"> $actual[product_code]</td>
     </tr>
     <tr>
         <td class="al-c ft-md"><b>$actual[model_name]</b></td>
