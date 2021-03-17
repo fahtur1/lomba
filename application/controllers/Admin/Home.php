@@ -62,6 +62,19 @@ class Home extends CI_Controller
                     ],
                     'sum_row' => ($this->actual->getSumRow('gd825-2') + $this->Plan_Model->getRowPlansWithModelName('GD825-2'))
                 ],
+				'hd787' => [
+					'actual' => [
+						'ps2' => $this->actual->getActualRow('hd785-7', 'ps2'),
+						'ps3' => $this->actual->getActualRow('hd785-7', 'ps3'),
+						'ps4' => $this->actual->getActualRow('hd785-7', 'ps4'),
+					],
+					'plan' => [
+						'ps2' => $this->Plan_Model->getPlanRow('HD785-7', 'ps2'),
+						'ps3' => $this->Plan_Model->getPlanRow('HD785-7', 'ps3'),
+						'ps4' => $this->Plan_Model->getPlanRow('HD785-7', 'ps4'),
+					],
+					'sum_row' => ($this->actual->getSumRow('hd785-7') + $this->Plan_Model->getRowPlansWithModelName('HD785-7'))
+				],
                 'hd785' => [
                     'actual' => [
                         'ps2' => $this->actual->getActualRow('hd785-5', 'ps2'),
@@ -75,19 +88,6 @@ class Home extends CI_Controller
                     ],
                     'sum_row' => ($this->actual->getSumRow('hd785-5') + $this->Plan_Model->getRowPlansWithModelName('HD785-5'))
                 ],
-                'hd787' => [
-                    'actual' => [
-                        'ps2' => $this->actual->getActualRow('hd785-7', 'ps2'),
-                        'ps3' => $this->actual->getActualRow('hd785-7', 'ps3'),
-                        'ps4' => $this->actual->getActualRow('hd785-7', 'ps4'),
-                    ],
-                    'plan' => [
-                        'ps2' => $this->Plan_Model->getPlanRow('HD785-7', 'ps2'),
-                        'ps3' => $this->Plan_Model->getPlanRow('HD785-7', 'ps3'),
-                        'ps4' => $this->Plan_Model->getPlanRow('HD785-7', 'ps4'),
-                    ],
-                    'sum_row' => ($this->actual->getSumRow('hd785-7') + $this->Plan_Model->getRowPlansWithModelName('HD785-7'))
-                ]
             ]
         ];
 
